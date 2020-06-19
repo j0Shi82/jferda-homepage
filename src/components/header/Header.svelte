@@ -1,18 +1,65 @@
 <script>
 import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
 import IconButton from '@smui/icon-button';
+import Icon from 'fa-svelte';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import avatarImage from 'assets/media/images/profile/avatar.jpg';
+
+import store from 'store/index';
+import { setMobileMenuState } from 'store/app/helpers';
+
+// store values we need
+const { mobileState } = store.app.menu;
+
+function mailMe() {
+  window.location.href = 'mailto:janosch.ferda@e-domizil.de';
+}
+
 </script>
 
-<TopAppBar variant="static" color='primary'>
+<style lang="scss">
+
+:global(.mdc-top-app-bar) {
+  z-index: 7;
+}
+
+:global(.app-bar) {
+  position: absolute;
+}
+
+@import 'src/assets/style/variables.scss';
+
+:global(.mdc-top-app-bar .jdev-drawer-toggle) {
+  display: none;
+
+  @media #{$breakpoint-mobile} {
+    display: block;
+  }
+
+  @media #{$breakpoint-tablet} {
+    display: block;
+  }
+}
+
+</style>
+
+<TopAppBar variant="static" dense color='primary' class="app-bar">
     <Row>
         <Section>
-            <IconButton class="material-icons">menu</IconButton>
-            <Title>Flex Static</Title>
+            <IconButton class="material-icons jdev-drawer-toggle" on:click="{setMobileMenuState(!$mobileState)}">{$mobileState ? 'menu_open' : 'menu'}</IconButton>
+            
+        </Section>
+        <Section>
+          <div class="jdev-avatar">
+            <div style="background-image: url({avatarImage});"></div>
+          </div>
         </Section>
         <Section align="end" toolbar>
-            <IconButton class="material-icons" aria-label="Download">file_download</IconButton>
-            <IconButton class="material-icons" aria-label="Print this page">print</IconButton>
-            <IconButton class="material-icons" aria-label="Bookmark this page">bookmark</IconButton>
+            <a href="https://github.com/j0Shi82" target="_blank">
+              <IconButton class="material-icons"><Icon icon={faGithub}></Icon></IconButton>
+            </a>
+            <IconButton on:click={mailMe} class="material-icons"><Icon icon={faEnvelope}></Icon></IconButton>
         </Section>
     </Row>
 </TopAppBar>

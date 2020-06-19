@@ -1,0 +1,60 @@
+@import "@material/typography/mdc-typography";
+@import "@material/layout-grid/mdc-layout-grid.scss";
+@import "_smui-theme.scss";
+@import "@smui/snackbar";
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.mdc-top-app-bar__section {
+  flex: 1 1 0;
+}
+
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+@import 'src/assets/style/variables.scss';
+
+.jfd-d-desktop-none {
+  @media #{$breakpoint-desktop} {
+    display: none;
+  }
+}
+
+.jfd-d-tablet-none {
+  @media #{$breakpoint-tablet} {
+    display: none;
+  }
+}
+
+.jfd-d-mobile-none {
+  @media #{$breakpoint-mobile} {
+    display: none;
+  }
+}
+
+.jdev-avatar {
+  margin: 0 auto;
+  width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
+  height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
+  border: 2px solid #{$mdc-theme-primary};
+  border-radius: 50%;
+
+  > div {
+    width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height} - 4px);
+    height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height} - 4px);
+    border-radius: 50%;
+    border: 2px solid #{$mdc-theme-on-primary};
+    background-size: contain;
+  }
+}

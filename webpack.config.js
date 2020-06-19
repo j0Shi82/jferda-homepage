@@ -1,4 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Visualizer = require('webpack-visualizer-plugin');
+
 const path = require('path');
 
 const sveltePreprocess = require('svelte-preprocess');
@@ -16,6 +18,7 @@ module.exports = {
     },
     extensions: ['.mjs', '.js', '.svelte'],
     mainFields: ['svelte', 'browser', 'module', 'main'],
+    modules: ['src', 'node_modules'],
   },
   output: {
     path: `${__dirname}/public`,
@@ -56,11 +59,16 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           prod ? MiniCssExtractPlugin.loader : 'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: { sourceMap: true },
+          },
           'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
+              webpackImporter: false,
+              implementation: require('sass'),
               sassOptions: {
                 includePaths: [
                   './src/assets/style',
@@ -77,6 +85,9 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
+    }),
+    new Visualizer({
+      filename: './statistics.html',
     }),
   ],
   devtool: prod ? false : 'source-map',

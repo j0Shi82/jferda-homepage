@@ -33,6 +33,7 @@ function go(key) {
 }
 </style>
 
+{#if $location !== '/'}
 <Drawer variant="dismissible" bind:open={$isMenuOpen} class="mdc-top-app-bar--dense-fixed-adjust">
   <Content>
     <List>
@@ -70,3 +71,4 @@ function go(key) {
     </List>
   </Content>
 </Drawer>
+{/if}

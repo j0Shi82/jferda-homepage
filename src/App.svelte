@@ -16,6 +16,10 @@ const { isMobile } = store.app.breakpoints;
 <style lang="scss">
 </style>
 
+<svelte:head>
+	<title>>_ j0Shi.dev --help</title>
+</svelte:head>
+
 <Header />
 <Drawer />
 {#if !$isMobile || !$isMenuOpen}

@@ -12,7 +12,7 @@
       if ($transitionsActive) {
         const options = {
           strings: [
-            'Hey, my name is <b>Janosch</b>. I\'m a <b>full-stack web developer</b> from Germany with a focus on creating performant and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>.',
+            'Hey, my name is <b>Janosch</b>. I\'m a <b>full-stack web developer</b> from Germany with a focus on creating performant and modern <b>JavaScript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>.',
           ],
           typeSpeed: 28,
           showCursor: false,
@@ -26,18 +26,15 @@
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
 .jdev-typewriter {
-  font-family: 'Source Code Pro', monospace;
   text-align: center;
 }
 </style>
 
 {#if $transitionsActive}
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-typewriter jdev-typedjs"></div>
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-typewriter jdev-typedjs mdc-typography--body1"></div>
 {:else}
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-typewriter">
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-typewriter mdc-typography--body1">
     Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating performant and modern <b>Javascript</b> applications. Explore this website to learn more about my philosophy and my work.
 </div>
 {/if}

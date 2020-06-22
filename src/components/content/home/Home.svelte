@@ -1,5 +1,6 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
+    import { location } from 'svelte-spa-router';
     import h2 from '@smui/common/H2.svelte';
     import HomeCancelAnimationSnackbar from 'components/content/home/HomeCancelAnimationSnackbar.svelte';
     import HomeTypewriterIntro from 'components/content/home/HomeTypewriterIntro.svelte';
@@ -9,6 +10,7 @@
 
     import 'assets/style/home.scss';
 
+// store and config values we need
     import store from 'store/index';
     // store values we need
     const { transitionsActive } = store.home;

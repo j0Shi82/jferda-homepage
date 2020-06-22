@@ -11,6 +11,7 @@ import { setMobileMenuState } from 'store/app/helpers';
 
 // store values we need
 const { mobileState } = store.app.menu;
+const { isMobile } = store.app.breakpoints;
 
 function mailMe() {
   window.location.href = 'mailto:janosch.ferda@e-domizil.de';
@@ -19,9 +20,15 @@ function mailMe() {
 </script>
 
 <style lang="scss">
-
 :global(.mdc-top-app-bar) {
   z-index: 7;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.75);
+
+  :global(.jdev-title) {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 :global(.app-bar) {
@@ -46,15 +53,21 @@ function mailMe() {
 
 <TopAppBar variant="static" dense color='primary' class="app-bar">
     <Row>
+        {#if $isMobile}
         <Section>
             <IconButton class="material-icons jdev-drawer-toggle" on:click="{setMobileMenuState(!$mobileState)}">{$mobileState ? 'menu_open' : 'menu'}</IconButton>
-            
         </Section>
+        {/if}
         <Section>
           <div class="jdev-avatar">
             <div style="background-image: url({avatarImage});"></div>
           </div>
         </Section>
+        {#if !$isMobile}
+        <Section>
+            <Title class="jdev-title">>_ j0Shi.dev --help</Title>
+        </Section>
+        {/if}
         <Section align="end" toolbar>
             <a href="https://github.com/j0Shi82" target="_blank">
               <IconButton class="material-icons"><Icon icon={faGithub}></Icon></IconButton>

@@ -18,6 +18,10 @@ body {
   position: relative;
 }
 
+.mdc-drawer .mdc-list-divider {
+  border-bottom-color: $material-color-grey-300;
+}
+
 .main-content {
   overflow: auto;
   height: 100%;
@@ -45,6 +49,12 @@ body {
 
 .jdev-avatar {
   margin: 0 auto;
+
+  @media #{$breakpoint-desktop} {
+    margin: 0;
+    margin-left: 12px;
+  }
+
   width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
   height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
   border: 2px solid #{$mdc-theme-primary};

@@ -7,9 +7,6 @@ import h3 from '@smui/common/H3.svelte';
 import { push } from 'svelte-spa-router';
 import { slide } from 'svelte/transition';
 
-import satisfactionImage from 'assets/media/images/home/heros/satisfaction.jpg';
-import communityImage from 'assets/media/images/home/heros/community.jpg';
-import artImage from 'assets/media/images/home/heros/art.jpg';
 import moneyballLogo from 'assets/media/images/home/projects/moneyball.png';
 import edomLogo from 'assets/media/images/home/projects/e-domizil.png';
 import lwLogo from 'assets/media/images/home/projects/lastwar.png';
@@ -20,24 +17,6 @@ import store from 'store/index';
 const { transitionsActive } = store.home;
 
 export let visible = false;
-
-// const homeHeros = [
-//   {
-//     image: satisfactionImage,
-//     headline: 'Satisfaction',
-//     text: 'Coding is a world in which pretty much all problems can be solved. Within an app or project, there\'s not much you won\'t be able to do. It\'s a constant reward system that just keeps on giving.',
-//   },
-//   {
-//     image: communityImage,
-//     headline: 'Community',
-//     text: 'Participating in the open-source community is a great way to drive change, stay open-minded, and yield great results.',
-//   },
-//   {
-//     image: artImage,
-//     headline: 'Art',
-//     text: 'Nobody would compare coding to classic art. But why? Devs are able to create software out of thin air just using their imagination and creativity.',
-//   },
-// ];
 
 const projects = [
   {
@@ -64,8 +43,8 @@ const projects = [
   {
     image: edomLogo,
     headline: 'e-domizil.de',
-    subtitle: 'Node.js, Vue.js, SEO, Performance, Lumen',
-    text: 'e-domizil.de is a commercial project based on Vue.js with SSR. I designed or integrated most of the essential features and Vue.js infrastructure like routing, server-side rendering',
+    subtitle: 'Node.js, Vue.js, SEO, Performance, Lumen, Docker',
+    text: 'e-domizil.de is a commercial project based on Vue.js with SSR running on a Node server. I designed or integrated most of the essential features and Vue.js infrastructure like routing logic, api logic, server-side rendering, internalization, testing environment, and white-label capability.',
     route: '/projects-to',
   },
 ];

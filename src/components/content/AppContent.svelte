@@ -5,6 +5,9 @@ import routes from 'router/index';
 </script>
 
 <style lang="scss">
+.main-content {
+  overflow-x: hidden;
+}
 </style>
 
 <AppContent class="mdc-top-app-bar--dense-fixed-adjust">

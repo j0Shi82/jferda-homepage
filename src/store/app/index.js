@@ -15,7 +15,7 @@ isMobile = writable(mqlMobile.matches);
 
 // isMenuOpen.set(true) because menu is alwys visible on table and desktop
 const mqlTablet = window.matchMedia('(min-width: 600px) and (max-width: 839px)');
-const mqlTabletListener = (v) => { isTablet.set(v.matches); if (v.matches) isMenuOpen.set(isMobileOpen); };
+const mqlTabletListener = (v) => { isTablet.set(v.matches); if (v.matches) isMenuOpen.set(true); };
 mqlTablet.addListener(mqlTabletListener);
 isTablet = writable(mqlTablet.matches);
 

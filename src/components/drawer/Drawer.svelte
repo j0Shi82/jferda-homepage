@@ -11,14 +11,20 @@ import { push, location } from 'svelte-spa-router';
 
 // store and config values we need
 const { open: isMenuOpen } = store.app.menu;
-const { isDesktop } = store.app.breakpoints;
+const { isMobile } = store.app.breakpoints;
 const {
   home: menuHomeIcon, about: menuAboutIcon, resume: menuResumeIcon, skills: menuSkillsIcon,
 } = config.menu.icons;
 
 function go(key) {
-  if (!$isDesktop) setMobileMenuState(false);
+  if ($isMobile) setMobileMenuState(false);
   push(`${key}`);
+}
+
+// control drawer visibility on desktop, home never shows menu
+$: if (!$isMobile) {
+  if ($location === '/') isMenuOpen.set(false);
+  else isMenuOpen.set(true);
 }
 </script>
 
@@ -33,8 +39,7 @@ function go(key) {
 }
 </style>
 
-{#if $location !== '/'}
-<Drawer variant="dismissible" bind:open={$isMenuOpen} class="mdc-top-app-bar--dense-fixed-adjust">
+<Drawer variant="dismissible" bind:open={$isMenuOpen} class="mdc-top-app-bar--fixed-adjust">
   <Content>
     <List>
       <Item href="javascript:void(0)" on:click={() => go('/')} activated={$location === '/'}>
@@ -71,4 +76,3 @@ function go(key) {
     </List>
   </Content>
 </Drawer>
-{/if}

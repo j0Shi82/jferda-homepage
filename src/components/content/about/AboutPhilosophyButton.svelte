@@ -49,7 +49,7 @@ onMount(() => {
   tippy(el, {
     content: homeHeros[id].text,
     animation: 'shift-away',
-    placement: 'bottom',
+    placement: 'top',
     offset: [0, 0],
   });
 });

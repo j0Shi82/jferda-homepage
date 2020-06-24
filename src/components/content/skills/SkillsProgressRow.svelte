@@ -1,0 +1,15 @@
+<script>
+import LinearProgress from '@smui/linear-progress';
+
+export let logoSrc;
+export let progress;
+export let logoAlt;
+export let themeClass;
+</script>
+
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-1-phone">
+    <div class="jdev-skills-logo" title="{logoAlt}" style="background-image: url({logoSrc});" />
+</div>
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-3-phone jdev-skills-progress-align">
+    <LinearProgress class="jdev-skills-progress {themeClass}" progress="{progress}" />
+</div>

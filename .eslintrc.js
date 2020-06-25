@@ -6,6 +6,7 @@ module.exports = {
   env: {
     es6: true,
     browser: true,
+    jest: true,
   },
   overrides: [
     {
@@ -24,16 +25,10 @@ module.exports = {
       },
     },
   ],
+  parser: 'babel-eslint',
   parserOptions: {
-    parser: 'babel-eslint',
     sourceType: 'module',
-  },
-  settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-      },
-    },
+    allowImportExportEverywhere: true,
   },
   rules: {
     'max-len': ['error', 150, 2, {
@@ -47,5 +42,10 @@ module.exports = {
   settings: {
     'svelte3/ignore-styles': () => true,
     'import/core-modules': ['svelte'],
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+      },
+    },
   },
 };

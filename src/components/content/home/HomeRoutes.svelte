@@ -6,6 +6,8 @@ import { backOut } from 'svelte/easing';
 
 import store from 'store/index';
 import config from 'config/index';
+import { getLocalizedLink } from 'locale/utils/routeHelper';
+import { _ } from 'svelte-i18n';
 // store values we need
 const { transitionsActive } = store.home;
 const {
@@ -17,18 +19,18 @@ export let routeVisibility = false;
 const homeRoutes = [
   {
     icon: menuAboutIcon,
-    text: 'About',
-    route: '/about',
+    text: $_('navigation.about'),
+    route: getLocalizedLink('about'),
   },
   {
     icon: menuResumeIcon,
-    text: 'Resume',
-    route: '/resume',
+    text: $_('navigation.resume'),
+    route: getLocalizedLink('resume'),
   },
   {
     icon: menuSkillsIcon,
-    text: 'Skills',
-    route: '/skills',
+    text: $_('navigation.skills'),
+    route: getLocalizedLink('skills'),
   },
 ];
 </script>

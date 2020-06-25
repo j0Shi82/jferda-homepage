@@ -40,6 +40,7 @@ const store = {
   },
   router: {
     isRouting: writable(false), // ongoing route change
+    routeName: writable('home'), // current route name because spa router only offers path
   },
 };
 

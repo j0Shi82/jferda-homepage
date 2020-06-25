@@ -1,5 +1,7 @@
 import setIsLoadingFalse from 'router/events/setIsLoadingFalse';
+import appStore from 'store/app/index';
 
-export default () => {
+export default (event) => {
+  appStore.router.routeName.set(event.detail.userData.routeName);
   setIsLoadingFalse();
 };

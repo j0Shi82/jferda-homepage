@@ -7,7 +7,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import avatarImage from 'assets/media/images/profile/avatar.jpg';
 
 import store from 'store/index';
-import { setMobileMenuState } from 'store/app/helpers';
+import { setMobileMenuState } from 'store/app/setter';
 
 // store values we need
 const { mobileState } = store.app.menu;

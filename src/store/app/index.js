@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import config from 'config/index';
 
 let isMobile; let isTablet; let isDesktop;
 const isMenuOpen = writable(true);
@@ -7,19 +8,19 @@ let isMobileOpen = false;
 /**
  * set up media queries that update store values
  */
-const mqlMobile = window.matchMedia('(max-width: 599px)');
+const mqlMobile = window.matchMedia(config.app.breakpoints.mobile);
 // when switching to mobile state the menu should reappear based on user interaction
 const mqlMobileListener = (v) => { isMobile.set(v.matches); if (v.matches) isMenuOpen.set(isMobileOpen); };
 mqlMobile.addListener(mqlMobileListener);
 isMobile = writable(mqlMobile.matches);
 
 // isMenuOpen.set(true) because menu is alwys visible on table and desktop
-const mqlTablet = window.matchMedia('(min-width: 600px) and (max-width: 839px)');
+const mqlTablet = window.matchMedia(config.app.breakpoints.mobile);
 const mqlTabletListener = (v) => { isTablet.set(v.matches); if (v.matches) isMenuOpen.set(true); };
 mqlTablet.addListener(mqlTabletListener);
 isTablet = writable(mqlTablet.matches);
 
-const mqlDesktop = window.matchMedia('(min-width: 840px)');
+const mqlDesktop = window.matchMedia(config.app.breakpoints.mobile);
 const mqlDesktopListener = (v) => { isDesktop.set(v.matches); if (v.matches) isMenuOpen.set(true); };
 mqlDesktop.addListener(mqlDesktopListener);
 isDesktop = writable(mqlDesktop.matches);
@@ -29,13 +30,16 @@ if (mqlMobile.matches) isMenuOpen.set(false);
 
 const store = {
   menu: {
-    open: isMenuOpen,
-    mobileState: writable(false),
+    open: isMenuOpen, // menu state
+    mobileState: writable(false), // mobile menu state (menu is collapsible on mobile)
   },
   breakpoints: {
-    isMobile,
-    isTablet,
-    isDesktop,
+    isMobile, // mobile breakpoint
+    isTablet, // tablet breakpoint
+    isDesktop, // desktop breakpoint
+  },
+  router: {
+    isRouting: writable(false), // ongoing route change
   },
 };
 

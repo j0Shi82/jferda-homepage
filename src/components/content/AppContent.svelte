@@ -2,6 +2,8 @@
 import { AppContent } from '@smui/drawer';
 import Router from 'svelte-spa-router';
 import routes from 'router/index';
+
+import routeLoaded from 'router/routeLoaded';
 </script>
 
 <style lang="scss">
@@ -12,6 +14,6 @@ import routes from 'router/index';
 
 <AppContent class="mdc-top-app-bar--dense-fixed-adjust">
     <main class="main-content" id="main-content">
-      <Router {routes}/>
+      <Router {routes} on:routeLoaded="{routeLoaded}" />
     </main>
 </AppContent>

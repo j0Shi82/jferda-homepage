@@ -107,10 +107,6 @@
       @include mdc-linear-progress-bar-color(#f05133);
     }
 
-    &.css {
-      @include mdc-linear-progress-bar-color(#29a9df);
-    }
-
     &.jira {
       @include mdc-linear-progress-bar-color(#156fea);
     }

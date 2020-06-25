@@ -6,15 +6,16 @@ import List, {
 import H6 from '@smui/common/H6.svelte';
 import store from 'store/index';
 import config from 'config/index';
-import { setMobileMenuState } from 'store/app/helpers';
+import { setMobileMenuState } from 'store/app/setter';
 import { push, location } from 'svelte-spa-router';
+import { _ } from 'svelte-i18n';
 
 // store and config values we need
 const { open: isMenuOpen } = store.app.menu;
 const { isMobile } = store.app.breakpoints;
 const {
   home: menuHomeIcon, about: menuAboutIcon, resume: menuResumeIcon, skills: menuSkillsIcon,
-} = config.menu.icons;
+} = config.app.menu.icons;
 
 function go(key) {
   if ($isMobile) setMobileMenuState(false);
@@ -44,19 +45,19 @@ $: if (!$isMobile) {
     <List>
       <Item href="javascript:void(0)" on:click={() => go('/')} activated={$location === '/'}>
         <Graphic class="material-icons" aria-hidden="true">{menuHomeIcon}</Graphic>
-        <Text>Home</Text>
+        <Text>{$_('navigation.home')}</Text>
       </Item>
       <Item href="javascript:void(0)" on:click={() => go('/about')} activated={$location === '/about'}>
         <Graphic class="material-icons" aria-hidden="true">{menuAboutIcon}</Graphic>
-        <Text>About</Text>
+        <Text>{$_('navigation.about')}</Text>
       </Item>
       <Item href="javascript:void(0)" on:click={() => go('/resume')} activated={$location === '/resume'}>
         <Graphic class="material-icons" aria-hidden="true">{menuResumeIcon}</Graphic>
-        <Text>Resume</Text>
+        <Text>{$_('navigation.resume')}</Text>
       </Item>
       <Item href="javascript:void(0)" on:click={() => go('/skills')} activated={$location === '/skills'}>
         <Graphic class="material-icons" aria-hidden="true">{menuSkillsIcon}</Graphic>
-        <Text>Skills</Text>
+        <Text>{$_('navigation.skills')}</Text>
       </Item>
 
       <Separator nav />

@@ -1,9 +1,11 @@
 <script>
 import { onMount } from 'svelte';
+import { fade } from 'svelte/transition';
 import AboutPhilosophyButton from 'components/content/about/AboutPhilosophyButton';
 import Glide from '@glidejs/glide';
 import IconButton from '@smui/icon-button';
 import Chip, { Text } from '@smui/chips';
+import config from 'config/index';
 
 import store from 'store/index';
 // store and config values we need
@@ -43,7 +45,7 @@ $: {
 }
 </style>
 
-<div class="mdc-layout-grid mdc-typography--body1 jdev-route-about">
+<div class="mdc-layout-grid mdc-typography--body1 jdev-route-about" in:fade="{{ duration: config.app.router.routingFadeDuration }}">
   <h2 class="mdc-typography--headline6">Bio</h2>
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">

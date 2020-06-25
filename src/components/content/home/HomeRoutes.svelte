@@ -10,7 +10,7 @@ import config from 'config/index';
 const { transitionsActive } = store.home;
 const {
   about: menuAboutIcon, resume: menuResumeIcon, skills: menuSkillsIcon,
-} = config.menu.icons;
+} = config.app.menu.icons;
 
 export let routeVisibility = false;
 

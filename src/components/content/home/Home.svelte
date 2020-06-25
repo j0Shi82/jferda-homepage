@@ -1,12 +1,12 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
-    import { location } from 'svelte-spa-router';
-    import h2 from '@smui/common/H2.svelte';
+    import { fade } from 'svelte/transition';
     import HomeCancelAnimationSnackbar from 'components/content/home/HomeCancelAnimationSnackbar.svelte';
     import HomeTypewriterIntro from 'components/content/home/HomeTypewriterIntro.svelte';
     import HomeKnowledgeLogos from 'components/content/home/HomeKnowledgeLogos.svelte';
     import HomeRoutes from 'components/content/home/HomeRoutes.svelte';
     import HomeProjectLinks from 'components/content/home/HomeProjectLinks.svelte';
+    import config from 'config/index';
 
     import 'assets/style/home.scss';
 
@@ -46,7 +46,7 @@
     });
 </script>
 
-<div class="jdev-route-home">
+<div class="jdev-route-home" in:fade="{{ duration: config.app.router.routingFadeDuration }}">
     <div class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
             <HomeTypewriterIntro on:typewriter:done="{onTypewriterFinished}" />

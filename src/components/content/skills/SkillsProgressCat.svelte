@@ -1,8 +1,14 @@
 <script>
 import SkillsProgressRow from 'components/content/skills/SkillsProgressRow.svelte';
 import { slide } from 'svelte/transition';
-import { createEventDispatcher } from 'svelte';
+import { location } from 'svelte-spa-router';
+import { createEventDispatcher, onDestroy } from 'svelte';
 import { skills } from 'config/data/skills';
+
+// store and config values we need
+import appStore from 'store/app/index';
+
+const { isRouting } = appStore.router;
 
 function getSortedSkillList(type = 'lang') {
   return skills.filter((el) => el.type === type).sort((a, b) => {
@@ -37,7 +43,7 @@ export let catOpen = false;
 </h2>
     
 {#if catOpen}
-<div class="mdc-layout-grid__inner" transition:slide="{{ delay: 0, duration: 200 }}">
+<div class="mdc-layout-grid__inner" in:slide="{{ delay: 0, duration: 200 }}" out:slide="{{ delay: 0, duration: $isRouting ? 0 : 200 }}">
     {#each getSortedSkillList(catIdent) as skill}
     <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} />
     {/each}

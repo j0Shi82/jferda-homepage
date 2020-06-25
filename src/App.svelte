@@ -1,4 +1,5 @@
 <script>
+import initLocale from 'plugins/i18n';
 import Header from './components/header/Header.svelte';
 import Drawer from './components/drawer/Drawer.svelte';
 import AppContent from './components/content/AppContent.svelte';
@@ -10,6 +11,8 @@ import store from 'store/index';
 
 const { open: isMenuOpen } = store.app.menu;
 const { isMobile } = store.app.breakpoints;
+
+initLocale();
 
 </script>
 

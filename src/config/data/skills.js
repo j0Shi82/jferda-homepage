@@ -29,6 +29,7 @@ import mysqlLogo from 'assets/media/images/skills/software/mysql.png';
 import photoshopLogo from 'assets/media/images/skills/software/photoshop.svg';
 import sentryLogo from 'assets/media/images/skills/software/sentry.svg';
 import vscodeLogo from 'assets/media/images/skills/software/vscode.png';
+import nodeLogo from 'assets/media/images/skills/software/node.svg';
 
 const cats = [
   { name: 'Languages', ident: 'lang' },
@@ -79,6 +80,9 @@ const skills = [
   },
   {
     type: 'software', name: 'vscode', class: 'vscode', logo: vscodeLogo, progress: 0.9,
+  },
+  {
+    type: 'software', name: 'node', class: 'node', logo: nodeLogo, progress: 0.5,
   },
   {
     type: 'frameworks', name: 'VUE.js', class: 'vue', logo: vueLogo, progress: 0.85,

@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    'svelte3',
-  ],
+  plugins: ['svelte3'],
   extends: ['airbnb-base'],
   env: {
     es6: true,
@@ -18,10 +16,13 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'import/no-mutable-exports': 'off',
-        'no-multiple-empty-lines': ['error', {
-          max: 1,
-          maxBOF: 2,
-        }],
+        'no-multiple-empty-lines': [
+          'error',
+          {
+            max: 1,
+            maxBOF: 2,
+          },
+        ],
       },
     },
   ],
@@ -31,13 +32,18 @@ module.exports = {
     allowImportExportEverywhere: true,
   },
   rules: {
-    'max-len': ['error', 150, 2, {
-      ignoreUrls: true,
-      ignoreComments: true,
-      ignoreRegExpLiterals: true,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-    }],
+    'max-len': [
+      'error',
+      150,
+      2,
+      {
+        ignoreUrls: true,
+        ignoreComments: true,
+        ignoreRegExpLiterals: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+      },
+    ],
   },
   settings: {
     'svelte3/ignore-styles': () => true,

@@ -1,0 +1,14 @@
+.jdev-language-select {
+  padding-left: 30px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: 0 27px;
+
+  &.en {
+    background-image: url('../media/images/flags/en.svg');
+  }
+
+  &.de {
+    background-image: url('../media/images/flags/de.svg');
+  }
+}

@@ -1,52 +1,38 @@
-import { wrap } from 'svelte-spa-router';
-import { ChunkGenerator } from 'svelte-spa-chunk';
-import ChunkComponent from 'svelte-spa-chunk/Chunk.svelte';
-import routeLocales from 'locale/dict/routes';
-import config from 'config/index';
-import getGuards from 'router/utils/getGuards';
-
-const Chunk = ChunkGenerator(ChunkComponent);
-
-// route components, loaded async thanks to svelte-spa-chunk
-const Home = Chunk(() => import('components/content/home/Home.svelte'));
-const About = Chunk(() => import('components/content/about/About.svelte'));
-const Resume = Chunk(() => import('components/content/resume/Resume.svelte'));
-const Skills = Chunk(() => import('components/content/skills/Skills.svelte'));
+import { routeWrapper, getLocalizedRoute, getRouteGuards } from 'utils/imports/core';
+import { localeStandardLanguage, localeSupportedLanguages } from 'utils/imports/config';
+import {
+  HomeRoute, AboutRoute, ResumeRoute, SkillsRoute,
+} from 'utils/imports/routes';
 
 const baseRoutes = [
-  { name: 'home', component: Home },
-  { name: 'about', component: About },
-  { name: 'resume', component: Resume },
-  { name: 'skills', component: Skills },
-  { name: '404', component: Home },
+  { name: 'home', component: HomeRoute },
+  { name: 'about', component: AboutRoute },
+  { name: 'resume', component: ResumeRoute },
+  { name: 'skills', component: SkillsRoute },
+  { name: '404', component: HomeRoute },
 ];
 
 const routes = {};
 
 // add routes with lang param
-config.app.locale.supportedLanguages.filter((lang) => lang !== config.app.locale.standardLanguage).forEach((lang) => {
+localeSupportedLanguages.filter((lang) => lang !== localeStandardLanguage).forEach((lang) => {
   Object.assign(routes, baseRoutes.reduce((prev, cur) => {
-    const localizedRoute = `/${lang}${routeLocales[lang][cur.name]}`;
-    prev[localizedRoute] = wrap(
+    prev[getLocalizedRoute(cur.name, lang)] = routeWrapper(
       cur.component,
       { lang, routeName: cur.name },
-      ...getGuards(cur.name),
+      ...getRouteGuards(cur.name),
     );
     return prev;
   }, {}));
 });
 
-// add standard routes without lang param
 Object.assign(routes, baseRoutes.reduce((prev, cur) => {
-  const localizedRoute = routeLocales[config.app.locale.standardLanguage][cur.name];
-  prev[localizedRoute] = wrap(
+  prev[getLocalizedRoute(cur.name, localeStandardLanguage)] = routeWrapper(
     cur.component,
-    { lang: config.app.locale.standardLanguage, routeName: cur.name },
-    ...getGuards(cur.name),
+    { lang: localeStandardLanguage, routeName: cur.name },
+    ...getRouteGuards(cur.name),
   );
   return prev;
 }, {}));
-
-console.log(routes);
 
 export default routes;

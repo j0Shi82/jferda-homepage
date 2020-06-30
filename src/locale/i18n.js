@@ -1,13 +1,13 @@
-import { register, init } from 'svelte-i18n';
-import config from 'config/index';
+import { registerLocaleDict, initLocalization } from 'utils/imports/core';
+import { localeSupportedLanguages, localeStandardLanguage } from 'utils/imports/config';
 
 export default () => {
-  config.app.locale.supportedLanguages.forEach((lang) => {
-    register(lang, () => import(`locale/dict/${lang}.json`));
-  });
+  localeSupportedLanguages.forEach((lang) => {
+    registerLocaleDict(lang, () => import(`locale/dict/${lang}.json`))
+  })
 
-  init({
+  initLocalization({
     fallbackLocale: 'en',
-    initialLocale: config.app.locale.standardLanguage,
-  });
-};
+    initialLocale: localeStandardLanguage,
+  })
+}

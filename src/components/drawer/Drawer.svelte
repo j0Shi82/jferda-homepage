@@ -1,34 +1,71 @@
 <script>
-import Drawer, { Content } from '@smui/drawer';
-import List, {
-  Graphic, Item, Text, Separator, Subheader,
-} from '@smui/list';
-import H6 from '@smui/common/H6.svelte';
-import store from 'store/index';
-import config from 'config/index';
-import { setMobileMenuState } from 'store/app/setter';
-import { getLocalizedLink } from 'locale/utils/routeHelper';
-import { push } from 'svelte-spa-router';
-import { _ } from 'svelte-i18n';
+import { svelteLifecycleOnDestroy } from 'utils/imports/svelte';
 
-// store and config values we need
-const { open: isMenuOpen } = store.app.menu;
-const { routeName } = store.app.router;
-const { isMobile } = store.app.breakpoints;
-const {
-  home: menuHomeIcon, about: menuAboutIcon, resume: menuResumeIcon, skills: menuSkillsIcon,
-} = config.app.menu.icons;
+import {
+  MaterialDrawer,
+  MaterialContent,
+  MaterialList,
+  MaterialGraphic,
+  MaterialItem,
+  MaterialListText,
+  MaterialSeparator,
+  MaterialSubheader,
+  MaterialSelect,
+  MaterialOption,
+} from 'utils/imports/material';
 
+import {
+  getLocalizedRoute,
+  routerPush,
+  localize,
+} from 'utils/imports/core';
+import {
+  currentRouteName,
+  isMobileBreakpoint,
+  currentLocale,
+  locales,
+  menuMobileState,
+} from 'utils/imports/store';
+import {
+  drawerMenuItems,
+  drawerMenuProjectIdents,
+} from 'utils/imports/data';
+
+import 'assets/style/drawer.scss';
+
+let drawer;
+
+// basic routing function
 function go(key) {
-  if ($isMobile) setMobileMenuState(false);
-  push(getLocalizedLink(key));
+  if ($isMobileBreakpoint) menuMobileState.set(false);
+  routerPush(getLocalizedRoute(key));
 }
 
 // control drawer visibility on desktop, home never shows menu
-$: if (!$isMobile) {
-  if ($routeName === 'home') isMenuOpen.set(false);
-  else isMenuOpen.set(true);
+$: {
+  if (drawer && $currentRouteName !== null) {
+    if (!$isMobileBreakpoint && $currentRouteName === 'home') {
+      drawer.setOpen(false);
+    } else {
+      drawer.setOpen(true);
+    }
+
+    if ($isMobileBreakpoint) {
+      drawer.setOpen($menuMobileState);
+    }
+  }
 }
+
+// re-route to localized url on lang change
+const localeUnsub = currentLocale.subscribe(() => {
+  // to prevent re-routing to default routeName store value, check whether a route name has been set already
+  // on page load routeName is still null
+  if ($currentRouteName !== null) routerPush(getLocalizedRoute($currentRouteName));
+});
+
+svelteLifecycleOnDestroy(() => {
+  localeUnsub();
+});
 </script>
 
 <style lang="scss">
@@ -42,40 +79,35 @@ $: if (!$isMobile) {
 }
 </style>
 
-<Drawer variant="dismissible" bind:open={$isMenuOpen} class="mdc-top-app-bar--fixed-adjust">
-  <Content>
-    <List>
-      <Item href="javascript:void(0)" on:click={() => go('home')} activated={$routeName === 'home'}>
-        <Graphic class="material-icons" aria-hidden="true">{menuHomeIcon}</Graphic>
-        <Text>{$_('navigation.home')}</Text>
-      </Item>
-      <Item href="javascript:void(0)" on:click={() => go('about')} activated={$routeName === 'about'}>
-        <Graphic class="material-icons" aria-hidden="true">{menuAboutIcon}</Graphic>
-        <Text>{$_('navigation.about')}</Text>
-      </Item>
-      <Item href="javascript:void(0)" on:click={() => go('resume')} activated={$routeName === 'resume'}>
-        <Graphic class="material-icons" aria-hidden="true">{menuResumeIcon}</Graphic>
-        <Text>{$_('navigation.resume')}</Text>
-      </Item>
-      <Item href="javascript:void(0)" on:click={() => go('skills')} activated={$routeName === 'skills'}>
-        <Graphic class="material-icons" aria-hidden="true">{menuSkillsIcon}</Graphic>
-        <Text>{$_('navigation.skills')}</Text>
-      </Item>
+<MaterialDrawer variant="dismissible" bind:this="{drawer}" class="mdc-top-app-bar--fixed-adjust">
+  <MaterialContent>
+    <MaterialList>
+      {#each drawerMenuItems as item}
+        <MaterialItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
+          <MaterialGraphic class="material-icons" aria-hidden="true">{item.icon}</MaterialGraphic>
+          <MaterialListText>{$localize(`navigation.${item.routeName}`)}</MaterialListText>
+        </MaterialItem>
+      {/each}
 
-      <Separator nav />
-      <Subheader component={H6}>Projects</Subheader>
-      <Item href="javascript:void(0)" on:click={() => go('projects-mmb')} activated={$routeName === 'projects-mmb'}>
-        <Text>MavsMoneyball</Text>
-      </Item>
-      <Item href="javascript:void(0)" on:click={() => go('projects-nwoun')} activated={$routeName === 'projects-nwoun'}>
-        <Text>Neverwinter Uncensored</Text>
-      </Item>
-      <Item href="javascript:void(0)" on:click={() => go('projects-lastwar')} activated={$routeName === 'projects-lastwar'}>
-        <Text>Last War</Text>
-      </Item>
-      <Item href="javascript:void(0)" on:click={() => go('projects-to')} activated={$routeName === 'projects-to'}>
-        <Text>E-Domizil</Text>
-      </Item>
-    </List>
-  </Content>
-</Drawer>
+      <MaterialSeparator nav />
+
+      <MaterialSubheader>{$localize('navigation.projects.headline')}</MaterialSubheader>
+
+      {#each drawerMenuProjectIdents as ident}
+        <MaterialItem href="javascript:void(0)" on:click={() => go(`projects-${ident}`)} activated={$currentRouteName === `projects-${ident}`}>
+          <MaterialListText>{$localize(`navigation.projects.${ident}`)}</MaterialListText>
+        </MaterialItem>
+      {/each}
+
+      <MaterialSeparator nav />
+
+      <MaterialItem>
+        <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}">
+          {#each                                                                                                                                     $locales as loc}
+            <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption>
+          {/each}
+        </MaterialSelect>
+      </MaterialItem>
+    </MaterialList>
+  </MaterialContent>
+</MaterialDrawer>

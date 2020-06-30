@@ -3,8 +3,9 @@
 @import 'src/assets/style/variables.scss';
 @import "@material/shape/_variables.scss";
 @import "@material/fab/_variables.scss";
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@import "@glidejs/glide/src/assets/sass/glide.core";
+@import "@glidejs/glide/src/assets/sass/glide.theme";
+@import "tippy.js/animations/shift-away";
 
 div[data-tippy-root] {
   max-width: calc(100% - 5px) !important;

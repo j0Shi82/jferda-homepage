@@ -1,5 +1,5 @@
 <script>
-import LinearProgress from '@smui/linear-progress';
+import { MaterialLinearProgress } from 'utils/imports/material';
 
 export let logoSrc;
 export let progress;
@@ -11,5 +11,5 @@ export let themeClass;
     <div class="jdev-skills-logo" title="{logoAlt}" style="background-image: url({logoSrc});" />
 </div>
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-3-phone jdev-skills-progress-align">
-    <LinearProgress class="jdev-skills-progress {themeClass}" progress="{progress}" />
+    <MaterialLinearProgress class="jdev-skills-progress {themeClass}" progress="{progress}" />
 </div>

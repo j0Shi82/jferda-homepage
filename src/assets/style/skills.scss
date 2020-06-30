@@ -51,6 +51,10 @@
       @include mdc-linear-progress-bar-color(#0769ad);
     }
 
+    &.node {
+      @include mdc-linear-progress-bar-color( #72aa62);
+    }
+
     &.laravel {
       @include mdc-linear-progress-bar-color(#fc5642);
     }

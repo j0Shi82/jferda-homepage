@@ -1,13 +1,13 @@
-import { locale } from 'svelte-i18n';
-import config from 'config/index';
+import { currentLocale } from 'utils/imports/store';
+import { localeSupportedLanguages } from 'utils/imports/config';
 
 export default (detail) => {
   if (
     detail.userData
     && detail.userData.lang
-    && config.app.locale.supportedLanguages.includes(detail.userData.lang)
+    && localeSupportedLanguages.includes(detail.userData.lang)
   ) {
-    locale.set(detail.userData.lang);
+    currentLocale.set(detail.userData.lang);
   }
   return true;
 };

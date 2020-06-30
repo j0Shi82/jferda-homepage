@@ -1,63 +1,35 @@
 <script>
-    import { onMount, onDestroy } from 'svelte';
-    import { fade } from 'svelte/transition';
-    import HomeCancelAnimationSnackbar from 'components/content/home/HomeCancelAnimationSnackbar.svelte';
-    import HomeTypewriterIntro from 'components/content/home/HomeTypewriterIntro.svelte';
-    import HomeKnowledgeLogos from 'components/content/home/HomeKnowledgeLogos.svelte';
-    import HomeRoutes from 'components/content/home/HomeRoutes.svelte';
-    import HomeProjectLinks from 'components/content/home/HomeProjectLinks.svelte';
-    import config from 'config/index';
+import { svelteTransitionFade } from 'utils/imports/svelte';
+import { HomeRoutes } from 'utils/imports/components';
+import { routingFadeDuration } from 'utils/imports/config';
 
-    import 'assets/style/home.scss';
+const knowledgeLogoSet = ['vue', 'svelte', 'javascript', 'php', 'wordpress', 'docker', 'node', 'git'];
+let currentKnowledgeLogoIndex = 0;
+let colorClass = knowledgeLogoSet[currentKnowledgeLogoIndex];
+$: {
+  colorClass = knowledgeLogoSet[currentKnowledgeLogoIndex];
+}
 
-// store and config values we need
-    import store from 'store/index';
-    // store values we need
-    const { transitionsActive } = store.home;
+setInterval(() => {
+  if (knowledgeLogoSet[currentKnowledgeLogoIndex + 1]) currentKnowledgeLogoIndex += 1;
+  else currentKnowledgeLogoIndex = 0;
+}, 3000);
 
-    let knowledgeLogosVisible = false;
-    let homeRouteVisible = false;
-    let homeProjectsVisible = false;
-    let cancelAnimationSnackbarOpen = false;
-
-    function setAnimationVisbility() {
-      knowledgeLogosVisible = true;
-      homeRouteVisible = true;
-      homeProjectsVisible = true;
-    }
-
-    function onTypewriterFinished() {
-      setAnimationVisbility();
-      setTimeout(() => {
-        cancelAnimationSnackbarOpen = false;
-      }, 2700);
-    }
-
-    onMount(() => {
-      if ($transitionsActive) {
-        cancelAnimationSnackbarOpen = true;
-      } else {
-        setAnimationVisbility();
-      }
-    });
-
-    onDestroy(() => {
-      transitionsActive.set(false);
-    });
+import 'assets/style/home.scss';
 </script>
 
-<div class="jdev-route-home" in:fade="{{ duration: config.app.router.routingFadeDuration }}">
+<div class="jdev-route-home" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
     <div class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
-            <HomeTypewriterIntro on:typewriter:done="{onTypewriterFinished}" />
-            <HomeKnowledgeLogos logosVisible={knowledgeLogosVisible} />
-            <HomeRoutes routeVisibility={homeRouteVisible} />
-            <HomeProjectLinks visible="{homeProjectsVisible}" />
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-knowledge-logo">
+            {#each knowledgeLogoSet as logo, i}
+              {#if currentKnowledgeLogoIndex === i}<div class="{logo}"></div>{/if}
+            {/each}
+          </div>
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-typography--headline5 jdev-intro-text {colorClass}">
+            Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating performant and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>.
+          </div>
+          <HomeRoutes colorClass="{colorClass}" />
         </div>
     </div>
-
-    <HomeCancelAnimationSnackbar 
-        open={cancelAnimationSnackbarOpen} 
-        on:click={() => { cancelAnimationSnackbarOpen = false; transitionsActive.set(false); setAnimationVisbility(); }}
-    />
 </div>

@@ -1,19 +1,20 @@
 <script>
-import { fade } from 'svelte/transition';
-import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
-import 'assets/style/skills.scss';
-import { cats } from 'config/data/skills';
-import config from 'config/index';
+import { svelteTransitionFade } from 'utils/imports/svelte';
+import { SkillsProgressCat } from 'utils/imports/components';
+import { skillCategories } from 'utils/imports/data';
+import { routingFadeDuration } from 'utils/imports/config';
 
-let currentCat = 'lang';
+import 'assets/style/skills.scss';
+
+let currentCat = skillCategories[0].ident;
 
 function handleCatClick(e) {
   currentCat = e.detail;
 }
 </script>
 
-<div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:fade="{{ duration: config.app.router.routingFadeDuration }}">
-    {#each cats as cat}
+<div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
+    {#each skillCategories as cat}
         <SkillsProgressCat catName="{cat.name}" catIdent="{cat.ident}" catOpen={cat.ident === currentCat} on:catOpened="{handleCatClick}" />
     {/each}
     

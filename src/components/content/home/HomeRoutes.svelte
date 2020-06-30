@@ -1,56 +1,37 @@
 <script>
-import Chip, { Text, Icon } from '@smui/chips';
+import { MaterialChip, MaterialChipText, MaterialIcon } from 'utils/imports/material';
 import { push } from 'svelte-spa-router';
 import { fly } from 'svelte/transition';
 import { backOut } from 'svelte/easing';
 
-import store from 'store/index';
 import config from 'config/index';
-import { getLocalizedLink } from 'locale/utils/routeHelper';
+import { getLocalizedRoute } from 'locale/utils/routeHelper';
 import { _ } from 'svelte-i18n';
 // store values we need
-const { transitionsActive } = store.home;
 const {
-  about: menuAboutIcon, resume: menuResumeIcon, skills: menuSkillsIcon,
+  about: menuAboutIcon, skills: menuSkillsIcon,
 } = config.app.menu.icons;
-
-export let routeVisibility = false;
 
 const homeRoutes = [
   {
     icon: menuAboutIcon,
     text: $_('navigation.about'),
-    route: getLocalizedLink('about'),
-  },
-  {
-    icon: menuResumeIcon,
-    text: $_('navigation.resume'),
-    route: getLocalizedLink('resume'),
+    route: getLocalizedRoute('about'),
   },
   {
     icon: menuSkillsIcon,
-    text: $_('navigation.skills'),
-    route: getLocalizedLink('skills'),
+    text: $_('navigation.projects'),
+    route: getLocalizedRoute('projects'),
   },
 ];
+
+export let colorClass;
 </script>
 
-{#if $transitionsActive}
-    {#each homeRoutes as item, i}
-        {#if routeVisibility}
-        <div class="mdc-layout-grid__cell home-routes" in:fly="{{
-            x: -500, duration: 350, delay: i * 350 + 500, easing: backOut,
-        }}">
-            <Chip on:click={() => push(item.route)}><Icon class="material-icons" leading tabindex="0">{item.icon}</Icon><Text>{item.text}</Text></Chip>
-        </div>
-        {/if}
-    {/each}
-{:else}
-    {#each homeRoutes as item, i}
-        {#if routeVisibility}
-        <div class="mdc-layout-grid__cell home-routes">
-            <Chip on:click={() => push(item.route)}><Icon class="material-icons" leading tabindex="0">{item.icon}</Icon><Text>{item.text}</Text></Chip>
-        </div>
-        {/if}
-    {/each}
-{/if}
+{#each homeRoutes as item, i}
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone home-routes {colorClass}" in:fly="{{
+        x: -500, duration: 350, delay: i * 350, easing: backOut,
+    }}">
+        <MaterialChip on:click={() => push(item.route)}><MaterialIcon class="material-icons" leading tabindex="0">{item.icon}</MaterialIcon><MaterialChipText>{item.text}</MaterialChipText></MaterialChip>
+    </div>
+{/each}

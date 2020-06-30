@@ -12,7 +12,159 @@
 
 @import "@material/drawer/_variables.scss";
 @import "@material/shape/_variables.scss";
+@import "@material/top-app-bar/_variables.scss";
 @import 'src/assets/style/variables.scss';
+@import "_smui-theme.scss";
+@import "@material/typography/mdc-typography";
+
+.jdev-route-home {
+  min-height: calc(100vh - #{$mdc-top-app-bar-dense-row-height});
+  display: flex;
+  align-items: center;
+  transition: background-image 1s ease-in-out;
+
+  .jdev-knowledge-logo {
+    > div {
+      position: absolute;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 80%;
+      left: 10%;
+      animation: flipX 3s linear;
+
+      &.vue {
+        background-image: url(../media/images/knowledge-logos/vuejs.png);
+      }
+
+      &.javascript {
+        background-image: url(../media/images/skills/language/javascript.svg);
+      }
+
+      &.svelte {
+        background-image: url(../media/images/skills/frameworks/svelte.svg);
+      }
+
+      &.wordpress {
+        background-image: url(../media/images/skills/frameworks/wordpress.svg);
+      }
+
+      &.php {
+        background-image: url(../media/images/skills/language/php.png);
+      }
+
+      &.docker {
+        background-image: url(../media/images/skills/software/docker.png);
+      }
+
+      &.node {
+        background-image: url(../media/images/skills/software/node.svg);
+      }
+
+      &.git {
+        background-image: url(../media/images/skills/software/git.svg);
+      }
+    }
+
+    position: relative;
+    height: 30vh;
+  }
+
+  @keyframes flipX {
+    0% {
+      opacity: 0;
+      -webkit-transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
+      transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
+    }
+
+    10% {
+      opacity: 1;
+      -webkit-transform: perspective(400px) translateZ(0) rotateX(0) scale(1);
+      transform: perspective(400px) translateZ(0) rotateX(0) scale(1);
+    }
+
+    90% {
+      opacity: 1;
+      -webkit-transform: perspective(400px) translateZ(0) rotateX(0) scale(1);
+      transform: perspective(400px) translateZ(0) rotateX(0) scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      -webkit-transform: perspective(400px) translateZ(0) rotateX(-90deg) scale(1);
+      transform: perspective(400px) translateZ(0) rotateX(-90deg) scale(1);
+    }
+  }
+
+  .jdev-intro-text {
+    text-align: center;
+
+    b {
+      transition: color 1s;
+    }
+
+    &.vue b { color: $vue-primary-color; text-shadow: 1px 1px 2px $vue-secondary-color; }
+    &.php b { color: $php-primary-color; text-shadow: 1px 1px 2px $php-secondary-color; }
+    &.javascript b { color: $javascript-primary-color; text-shadow: 1px 1px 2px $javascript-secondary-color; }
+    &.docker b { color: $docker-primary-color; text-shadow: 1px 1px 2px $docker-secondary-color; }
+    &.svelte b { color: $svelte-primary-color; text-shadow: 1px 1px 2px $svelte-secondary-color; }
+    &.wordpress b { color: $wp-primary-color; text-shadow: 1px 1px 2px $wp-primary-color; }
+    &.node b { color: $node-primary-color; text-shadow: 1px 1px 2px $node-secondary-color; }
+    &.git b { color: $git-primary-color; text-shadow: 1px 1px 2px $git-secondary-color; }
+
+    img {
+      max-height: 300px;
+    }
+  }
+
+  .home-routes {
+    &.vue .mdc-chip { background-color: $vue-secondary-color; }
+    &.php .mdc-chip { background-color: $php-secondary-color; }
+    &.javascript .mdc-chip { background-color: $javascript-secondary-color; }
+    &.docker .mdc-chip { background-color: $docker-primary-color; }
+    &.svelte .mdc-chip { background-color: $svelte-secondary-color; }
+    &.wordpress .mdc-chip { background-color: $wp-primary-color; }
+    &.node .mdc-chip { background-color: $node-secondary-color; }
+    &.git .mdc-chip { background-color: $git-secondary-color; }
+
+    .mdc-chip {
+      height: 48px;
+      border-radius: 24px;
+      width: 100%;
+      padding: 0;
+      background-color: $mdc-theme-primary;
+
+      .image {
+        width: 44px;
+        height: 44px;
+        background-size: cover;
+        border-radius: 44px;
+        margin-left: 2px;
+        margin-right: 2px;
+        flex: 0 0 44px;
+      }
+
+      .material-icons {
+        font-size: 52px;
+        width: 52px;
+        height: 52px;
+        margin-left: -2px;
+        color: $mdc-theme-on-primary;
+      }
+
+      .mdc-chip__text {
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+
+        @include mdc-typography(subtitle2);
+
+        color: $mdc-theme-on-primary;
+      }
+    }
+  }
+}
 
 .mdc-card-jfd {
   box-shadow: none;
@@ -50,9 +202,6 @@
     height: 48px;
   }
 }
-
-@import "_smui-theme.scss";
-@import "@material/typography/mdc-typography";
 
 .home-hero,
 .home-routes {

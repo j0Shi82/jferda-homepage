@@ -1,37 +1,31 @@
-import { writable } from 'svelte/store';
-import config from 'config/index';
+import { storeTypeWritable } from 'utils/imports/svelte';
+import { mobileBreakpointQueryString } from 'utils/imports/config';
 
 let isMobile; let isTablet; let isDesktop;
-const isMenuOpen = writable(true);
-let isMobileOpen = false;
 
 /**
  * set up media queries that update store values
  */
-const mqlMobile = window.matchMedia(config.app.breakpoints.mobile);
+const mqlMobile = window.matchMedia(mobileBreakpointQueryString);
 // when switching to mobile state the menu should reappear based on user interaction
-const mqlMobileListener = (v) => { isMobile.set(v.matches); if (v.matches) isMenuOpen.set(isMobileOpen); };
+const mqlMobileListener = (v) => { isMobile.set(v.matches); };
 mqlMobile.addListener(mqlMobileListener);
-isMobile = writable(mqlMobile.matches);
+isMobile = storeTypeWritable(mqlMobile.matches);
 
 // isMenuOpen.set(true) because menu is alwys visible on table and desktop
-const mqlTablet = window.matchMedia(config.app.breakpoints.mobile);
-const mqlTabletListener = (v) => { isTablet.set(v.matches); if (v.matches) isMenuOpen.set(true); };
+const mqlTablet = window.matchMedia(mobileBreakpointQueryString);
+const mqlTabletListener = (v) => { isTablet.set(v.matches); };
 mqlTablet.addListener(mqlTabletListener);
-isTablet = writable(mqlTablet.matches);
+isTablet = storeTypeWritable(mqlTablet.matches);
 
-const mqlDesktop = window.matchMedia(config.app.breakpoints.mobile);
-const mqlDesktopListener = (v) => { isDesktop.set(v.matches); if (v.matches) isMenuOpen.set(true); };
+const mqlDesktop = window.matchMedia(mobileBreakpointQueryString);
+const mqlDesktopListener = (v) => { isDesktop.set(v.matches); };
 mqlDesktop.addListener(mqlDesktopListener);
-isDesktop = writable(mqlDesktop.matches);
-
-// on mobile devices set menu to invisible on page load
-if (mqlMobile.matches) isMenuOpen.set(false);
+isDesktop = storeTypeWritable(mqlDesktop.matches);
 
 const store = {
   menu: {
-    open: isMenuOpen, // menu state
-    mobileState: writable(false), // mobile menu state (menu is collapsible on mobile)
+    mobileState: storeTypeWritable(false), // mobile menu state (menu is collapsible on mobile)
   },
   breakpoints: {
     isMobile, // mobile breakpoint
@@ -39,14 +33,9 @@ const store = {
     isDesktop, // desktop breakpoint
   },
   router: {
-    isRouting: writable(false), // ongoing route change
-    routeName: writable('home'), // current route name because spa router only offers path
+    isRouting: storeTypeWritable(false), // ongoing route change
+    routeName: storeTypeWritable(null), // current route name because spa router only offers path
   },
 };
-
-// save mobile state into variable that we use to set isMenuOpen on mobile devices
-store.menu.mobileState.subscribe((value) => {
-  isMobileOpen = value;
-});
 
 export default store;

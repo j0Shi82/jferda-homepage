@@ -1,5 +1,5 @@
-import { writable } from 'svelte/store';
+import { storeTypeWritable } from 'utils/imports/svelte';
 
 export default {
-  transitionsActive: writable(true),
+  transitionsActive: storeTypeWritable(true),
 };

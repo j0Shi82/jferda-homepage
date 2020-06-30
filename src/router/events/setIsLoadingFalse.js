@@ -1,5 +1,5 @@
-import { setRouterIsRouting } from 'store/app/setter';
+import { storeSetRouterIsRouting } from 'utils/imports/store';
 
 export default () => {
-  setRouterIsRouting(false);
+  storeSetRouterIsRouting(false);
 };

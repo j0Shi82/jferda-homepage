@@ -7,7 +7,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import avatarImage from 'assets/media/images/profile/avatar.jpg';
 
 import store from 'store/index';
-import { setMobileMenuState } from 'store/app/setter';
 
 // store values we need
 const { mobileState } = store.app.menu;
@@ -16,7 +15,6 @@ const { isMobile } = store.app.breakpoints;
 function mailMe() {
   window.location.href = 'mailto:janosch.ferda@e-domizil.de';
 }
-
 </script>
 
 <style lang="scss">
@@ -55,7 +53,7 @@ function mailMe() {
     <Row>
         {#if $isMobile}
         <Section>
-            <IconButton class="material-icons jdev-drawer-toggle" on:click="{setMobileMenuState(!$mobileState)}">{$mobileState ? 'menu_open' : 'menu'}</IconButton>
+            <IconButton class="material-icons jdev-drawer-toggle" on:click="{mobileState.set(!$mobileState)}">{$mobileState ? 'menu_open' : 'menu'}</IconButton>
         </Section>
         {/if}
         <Section>
@@ -65,7 +63,7 @@ function mailMe() {
         </Section>
         {#if !$isMobile}
         <Section>
-            <Title class="jdev-title">>_ j0Shi.dev --help</Title>
+            <Title class="jdev-title">&gt;_ j0Shi.dev --help</Title>
         </Section>
         {/if}
         <Section align="end" toolbar>

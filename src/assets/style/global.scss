@@ -30,19 +30,22 @@ body {
 
 @import 'src/assets/style/variables.scss';
 
-.jfd-d-desktop-none {
+.jfd-d-desktop-none,
+.jdev-d-desktop-none {
   @media #{$breakpoint-desktop} {
     display: none;
   }
 }
 
-.jfd-d-tablet-none {
+.jfd-d-tablet-none,
+.jdev-d-tablet-none {
   @media #{$breakpoint-tablet} {
     display: none;
   }
 }
 
-.jfd-d-mobile-none {
+.jfd-d-mobile-none,
+.jdev-d-mobile-none {
   @media #{$breakpoint-mobile} {
     display: none;
   }

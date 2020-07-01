@@ -6,6 +6,7 @@ export default {
         about: 'help',
         resume: 'face',
         skills: 'stars',
+        projects: 'devices',
       },
     },
     // make sure these match the values in assets/style/variables

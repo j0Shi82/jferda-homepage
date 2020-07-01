@@ -1,5 +1,5 @@
 import { storeTypeWritable } from 'utils/imports/svelte';
-import { mobileBreakpointQueryString } from 'utils/imports/config';
+import { mobileBreakpointQueryString, tabletBreakpointQueryString, desktopBreakpointQueryString } from 'utils/imports/config';
 
 let isMobile; let isTablet; let isDesktop;
 
@@ -13,12 +13,12 @@ mqlMobile.addListener(mqlMobileListener);
 isMobile = storeTypeWritable(mqlMobile.matches);
 
 // isMenuOpen.set(true) because menu is alwys visible on table and desktop
-const mqlTablet = window.matchMedia(mobileBreakpointQueryString);
+const mqlTablet = window.matchMedia(tabletBreakpointQueryString);
 const mqlTabletListener = (v) => { isTablet.set(v.matches); };
 mqlTablet.addListener(mqlTabletListener);
 isTablet = storeTypeWritable(mqlTablet.matches);
 
-const mqlDesktop = window.matchMedia(mobileBreakpointQueryString);
+const mqlDesktop = window.matchMedia(desktopBreakpointQueryString);
 const mqlDesktopListener = (v) => { isDesktop.set(v.matches); };
 mqlDesktop.addListener(mqlDesktopListener);
 isDesktop = storeTypeWritable(mqlDesktop.matches);

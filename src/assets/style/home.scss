@@ -1,15 +1,3 @@
-.jfd-shadow {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
-}
-
-.jfd-media-content-wrapper {
-  color: #fff;
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-}
-
 @import "@material/drawer/_variables.scss";
 @import "@material/shape/_variables.scss";
 @import "@material/top-app-bar/_variables.scss";
@@ -39,23 +27,23 @@
       }
 
       &.javascript {
-        background-image: url(../media/images/skills/language/javascript.svg);
+        background-image: url(../media/images/knowledge-logos/javascript.png);
       }
 
       &.svelte {
-        background-image: url(../media/images/skills/frameworks/svelte.svg);
+        background-image: url(../media/images/knowledge-logos/svelte.png);
       }
 
       &.wordpress {
-        background-image: url(../media/images/skills/frameworks/wordpress.svg);
+        background-image: url(../media/images/knowledge-logos/wp.png);
       }
 
       &.php {
-        background-image: url(../media/images/skills/language/php.png);
+        background-image: url(../media/images/knowledge-logos/php.png);
       }
 
       &.docker {
-        background-image: url(../media/images/skills/software/docker.png);
+        background-image: url(../media/images/knowledge-logos/docker.png);
       }
 
       &.node {
@@ -69,6 +57,10 @@
 
     position: relative;
     height: 30vh;
+
+    @media #{$breakpoint-mobile} {
+      height: 20vh;
+    }
   }
 
   @keyframes flipX {
@@ -164,86 +156,4 @@
       }
     }
   }
-}
-
-.mdc-card-jfd {
-  box-shadow: none;
-  border-radius: $mdc-shape-small-component-radius;
-
-  .mdc-card__media {
-    @media #{$breakpoint-desktop} {
-      border-radius: $mdc-shape-small-component-radius;
-    }
-  }
-
-  .mdc-card__actions {
-    background-color: rgba(mdc-theme-prop-value($mdc-drawer-divider-color), $mdc-drawer-divider-opacity);
-    border-radius: 0 0 $mdc-shape-small-component-radius $mdc-shape-small-component-radius;
-  }
-
-  .smui-card__content {
-    border-left: 1px solid rgba(mdc-theme-prop-value($mdc-drawer-divider-color), $mdc-drawer-divider-opacity);
-    border-right: 1px solid rgba(mdc-theme-prop-value($mdc-drawer-divider-color), $mdc-drawer-divider-opacity);
-    border-bottom: 1px solid rgba(mdc-theme-prop-value($mdc-drawer-divider-color), $mdc-drawer-divider-opacity);
-    border-radius: 0 0 $mdc-shape-small-component-radius $mdc-shape-small-component-radius;
-  }
-}
-
-.knowledge-logos {
-  height: 48px;
-  justify-content: space-around;
-  display: none;
-
-  &.visible {
-    display: flex;
-  }
-
-  > img {
-    height: 48px;
-  }
-}
-
-.home-hero,
-.home-routes {
-  .mdc-chip {
-    height: 48px;
-    border-radius: 24px;
-    width: 100%;
-    padding: 0;
-    background-color: $mdc-theme-primary;
-
-    .image {
-      width: 44px;
-      height: 44px;
-      background-size: cover;
-      border-radius: 44px;
-      margin-left: 2px;
-      margin-right: 2px;
-      flex: 0 0 44px;
-    }
-
-    .material-icons {
-      font-size: 52px;
-      width: 52px;
-      height: 52px;
-      margin-left: -2px;
-      color: $mdc-theme-on-primary;
-    }
-
-    .mdc-chip__text {
-      white-space: normal;
-      text-align: center;
-      width: 100%;
-
-      @include mdc-typography(subtitle2);
-
-      color: $mdc-theme-on-primary;
-    }
-  }
-}
-
-.mdc-snackbar .mdc-snackbar__actions .jdev-snackbar-dismiss {
-  padding: 4px;
-  font-size: 28px;
-  color: $mdc-theme-error;
 }

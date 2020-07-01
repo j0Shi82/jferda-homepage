@@ -10,7 +10,7 @@ import bootstrapLogo from 'assets/media/images/skills/frameworks/bootstrap.png';
 import laravelLogo from 'assets/media/images/skills/frameworks/laravel.png';
 import phpbbLogo from 'assets/media/images/skills/frameworks/phpbb.png';
 import vueLogo from 'assets/media/images/skills/frameworks/vue.svg';
-import svelteLogo from 'assets/media/images/skills/frameworks/svelte.svg';
+import svelteLogo from 'assets/media/images/skills/frameworks/svelte.png';
 import wordpressLogo from 'assets/media/images/skills/frameworks/wordpress.svg';
 import jqueryLogo from 'assets/media/images/skills/frameworks/jquery.svg';
 import materialLogo from 'assets/media/images/skills/frameworks/material.svg';

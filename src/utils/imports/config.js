@@ -9,7 +9,7 @@ const {
 
 const { routingFadeDuration } = config.app.router;
 const { standardLanguage, supportedLanguages } = config.app.locale;
-const { mobile } = config.app.breakpoints;
+const { mobile, tablet, desktop } = config.app.breakpoints;
 
 export {
   menuHomeIcon, menuAboutIcon, menuResumeIcon, menuSkillsIcon,
@@ -17,4 +17,6 @@ export {
   standardLanguage as localeStandardLanguage,
   supportedLanguages as localeSupportedLanguages,
   mobile as mobileBreakpointQueryString,
+  tablet as tabletBreakpointQueryString,
+  desktop as desktopBreakpointQueryString,
 };

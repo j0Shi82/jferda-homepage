@@ -13,7 +13,7 @@ svelteLifecycleOnMount(() => {
   Tooltip(el, {
     content: $localize(textLocaleIdent),
     animation: 'shift-away',
-    placement: 'top',
+    placement: 'bottom',
     offset: [0, 0],
   });
 });

@@ -3,6 +3,7 @@ import communityImage from 'assets/media/images/home/heros/community.jpg';
 import artImage from 'assets/media/images/home/heros/art.jpg';
 import progressiveImage from 'assets/media/images/home/heros/progressive.jpg';
 import litImage from 'assets/media/images/home/heros/lit.jpg';
+import givingBackImage from 'assets/media/images/home/heros/handshake.jpg';
 
 const aboutPhilosophies = [
   {
@@ -29,6 +30,11 @@ const aboutPhilosophies = [
     image: litImage,
     headlineLocaleIdent: 'about.philosophy.lit.headline',
     textLocaleIdent: 'about.philosophy.lit.text',
+  },
+  {
+    image: givingBackImage,
+    headlineLocaleIdent: 'about.philosophy.givingback.headline',
+    textLocaleIdent: 'about.philosophy.givingback.text',
   },
 ];
 

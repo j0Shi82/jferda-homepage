@@ -18,6 +18,9 @@
         "en": "English",
         "de": "Deutsch"
     },
+    "home": {
+        "maintext": "Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating performant and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>."
+    },
     "about": {
         "bio": {
             "headline": "Biography",
@@ -26,14 +29,14 @@
             "bio3": "Over the years I naturally touched many areas of development. The first code I've ever written was in Visual Basic before trying (and failing at) C. Then my focus for years were web apps based on PHP/SQL (back end) and plain HTML/CSS (front end). The infamous jQuery library then got me into JavaScript and currently it's most of what I'm doing. This surely isn't the end of the road however and I'm eager to learn what's next and evolve as developer and person."
         },
         "philosophy": {
-            "headline": "Things I Like About Coding",
+            "headline": "Coding is...",
             "satisfaction": {
                 "headline": "Satisfaction",
                 "text": "Within an app or project, there's not much you won't be able to do. That's why coding is a constant reward system that just keeps on giving, because you're    operating in a world in which pretty much all problems are solvable."
             },
             "community": {
                 "headline": "Community",
-                "text": "Participating in the open-source community is a great way to drive change, stay open-minded, and yield great results thanks to collective intelligence."
+                "text": "Participating in different coding communities is a great way to drive change, stay open-minded, and yield great results thanks to collective intelligence."
             },
             "creativity": {
                 "headline": "Creativity",
@@ -46,6 +49,10 @@
             "lit": {
                 "headline": "Lit",
                 "text": "The term 'nerdy' is no longer a contemporary label for developers. The new generation is a modern, open-minded, and social bunch. We do still consume energy drinks though."
+            },
+            "givingback": {
+                "headline": "Giving Back",
+                "text": "I'm eager to learn and evolve, but also always want to share or publish my personal experience to help others grow as well."
             }
         }
     }

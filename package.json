@@ -43,7 +43,6 @@
     "@fortawesome/fontawesome-free": "^5.13.1",
     "@fortawesome/free-brands-svg-icons": "^5.13.1",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
-    "@glidejs/glide": "^3.4.1",
     "@material/layout-grid": "^7.0.0",
     "@smui/button": "^1.0.0-beta.21",
     "@smui/card": "^1.0.0-beta.21",

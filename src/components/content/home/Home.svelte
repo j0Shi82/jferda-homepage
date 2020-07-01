@@ -1,11 +1,12 @@
 <script>
+import { localize } from 'utils/imports/core';
 import { svelteTransitionFade } from 'utils/imports/svelte';
 import { HomeRoutes } from 'utils/imports/components';
 import { routingFadeDuration } from 'utils/imports/config';
 import { isMobileBreakpoint, isDesktopBreakpoint, isTabletBreakpoint } from 'utils/imports/store';
 
 const knowledgeLogoSet = ['vue', 'svelte', 'javascript', 'php', 'wordpress', 'docker', 'node', 'git'];
-let currentKnowledgeLogoIndex = 0;
+let currentLogo = 'vue';
 let typographyTextClass;
 $: {
   if ($isMobileBreakpoint) typographyTextClass = 'mdc-typography--headline6';
@@ -14,8 +15,9 @@ $: {
 }
 
 setInterval(() => {
-  if (knowledgeLogoSet[currentKnowledgeLogoIndex + 1]) currentKnowledgeLogoIndex += 1;
-  else currentKnowledgeLogoIndex = 0;
+  const currentIndex = knowledgeLogoSet.indexOf(currentLogo);
+  if (knowledgeLogoSet[currentIndex + 1]) currentLogo = knowledgeLogoSet[currentIndex + 1];
+  else [currentLogo] = knowledgeLogoSet;
 }, 3000);
 
 import 'assets/style/home.scss';
@@ -26,13 +28,13 @@ import 'assets/style/home.scss';
         <div class="mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-knowledge-logo">
             {#each knowledgeLogoSet as logo, i}
-              {#if currentKnowledgeLogoIndex === i}<div class="{logo}"></div>{/if}
+              {#if currentLogo === logo}<div class="{logo}"></div>{/if}
             {/each}
           </div>
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 {typographyTextClass} jdev-intro-text {knowledgeLogoSet[currentKnowledgeLogoIndex]}">
-            Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating performant and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>.
+          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 {typographyTextClass} jdev-intro-text {currentLogo}">
+            {@html $localize('home.maintext')}
           </div>
-          <HomeRoutes colorClass="{knowledgeLogoSet[currentKnowledgeLogoIndex]}" />
+          <HomeRoutes colorClass="{currentLogo}" />
         </div>
     </div>
 </div>

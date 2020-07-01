@@ -3,9 +3,8 @@
 @import 'src/assets/style/variables.scss';
 @import "@material/shape/_variables.scss";
 @import "@material/fab/_variables.scss";
-@import "@glidejs/glide/src/assets/sass/glide.core";
-@import "@glidejs/glide/src/assets/sass/glide.theme";
 @import "tippy.js/animations/shift-away";
+@import 'src/assets/style/variables.scss';
 
 div[data-tippy-root] {
   max-width: calc(100% - 5px) !important;
@@ -21,51 +20,16 @@ div[data-tippy-root] {
 }
 
 .jdev-route-about {
-  span.material-icons {
-    color: rgb(0, 0, 0);
-    font-size: 36px;
-  }
+  .jdev-philosophy-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 
-  .jdev-glide-page {
-    text-align: center;
-    width: 100%;
-
-    .mdc-chip {
-      background-color: $mdc-theme-secondary;
-      color: $mdc-theme-on-secondary;
-      font-weight: bold;
-      border-radius: 24px;
-      text-align: center;
-      width: 100px;
-      height: 48px;
-
-      span {
-        margin: 0 auto;
-      }
-    }
-  }
-
-  .glide__arrows {
-    button {
-      //   transform: translateY(-50%);
-      top: calc(100% - 48px);
-      position: absolute;
-      background-color: $mdc-theme-secondary;
-      border-radius: 50%;
-      color: $mdc-theme-on-secondary;
-      font-weight: bold;
-
-      &.hidden {
-        display: none;
-      }
-
-      &.glide-left {
-        left: 0;
-      }
-
-      &.glide-right {
-        right: 0;
-      }
+    @media #{$breakpoint-desktop} {
+      position: -webkit-sticky; /* Safari */
+      position: sticky;
+      top: 20px;
     }
   }
 

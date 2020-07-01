@@ -6,7 +6,9 @@ import { ChunkGenerator } from 'svelte-spa-chunk';
 import ChunkComponent from 'svelte-spa-chunk/Chunk.svelte';
 
 // locale
-import { _, register, init } from 'svelte-i18n';
+import {
+  _, register, init, date,
+} from 'svelte-i18n';
 
 const Chunk = ChunkGenerator(ChunkComponent);
 
@@ -17,6 +19,7 @@ export {
   wrap as routeWrapper,
   Chunk as applyCodeSplittingToRoute,
   _ as localize,
+  date as formatDate,
   register as registerLocaleDict,
   init as initLocalization,
 };

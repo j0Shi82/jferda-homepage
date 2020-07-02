@@ -66,10 +66,10 @@
         },
         "experience": {
             "headline": "Experience",
-            "hs": "Side gig as editor and software developer at sports agency Heim:Spiel Medien GmbH & Co. KG in Münster.",
-            "mmb": "Author, editor, and sotware developer at MavsMoneyball, a NBA basketball community.",
-            "nwoun": "Admin of Neverwinter Uncensored, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Perfect World Entertainment.",
-            "edom": "Software development team member at e-domizil.de, an online travel agency for holiday homes."
+            "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Developed complementary and assisting web apps and scripts for personal use.",
+            "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps and scripts for personal use.",
+            "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Perfect World Entertainment.",
+            "edom": "Software development team member at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes."
         }
     }
 }

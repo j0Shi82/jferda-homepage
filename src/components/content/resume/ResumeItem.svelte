@@ -50,5 +50,5 @@ setTimeout(() => {
         x: screenWidth / 2, duration: transitionDuration, delay, easing: svelteEasingBackOut,
     }}"
 >
-    {$localize(item.textLocaleIdent)}
+    {@html $localize(item.textLocaleIdent)}
 </div>

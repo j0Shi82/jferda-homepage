@@ -21,7 +21,7 @@ initLocale();
 
 {#if !$isLoading}
 <Header />
-<Drawer />
+<Drawer modal="{$isMobile}" />
 {#if !$isMobile || !$isMenuOpen}
 <AppContent  />
 {/if}

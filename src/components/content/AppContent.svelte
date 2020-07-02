@@ -1,7 +1,8 @@
 <script>
-import { AppContent } from '@smui/drawer';
+import { AppContent, Scrim } from '@smui/drawer';
 import Router from 'svelte-spa-router';
 import routes from 'router/index';
+import { isMobileBreakpoint } from 'utils/imports/store';
 
 import routeLoaded from 'router/routeLoaded';
 </script>
@@ -12,6 +13,7 @@ import routeLoaded from 'router/routeLoaded';
 }
 </style>
 
+{#if $isMobileBreakpoint}<Scrim />{/if}
 <AppContent class="mdc-top-app-bar--dense-fixed-adjust">
     <main class="main-content" id="main-content">
       <Router {routes} on:routeLoaded="{routeLoaded}" />

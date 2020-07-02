@@ -33,6 +33,10 @@ import {
 
 import 'assets/style/drawer.scss';
 
+export let modal = false;
+
+// set variant based on breakpoint
+const drawerVariant = modal ? 'modal' : 'dismissible';
 let drawer;
 
 // basic routing function
@@ -44,13 +48,13 @@ function go(key) {
 // control drawer visibility on desktop, home never shows menu
 $: {
   if (drawer && $currentRouteName !== null) {
-    if (!$isMobileBreakpoint && $currentRouteName === 'home') {
+    if (!modal && $currentRouteName === 'home') {
       drawer.setOpen(false);
     } else {
       drawer.setOpen(true);
     }
 
-    if ($isMobileBreakpoint) {
+    if (modal) {
       drawer.setOpen($menuMobileState);
     }
   }
@@ -77,9 +81,14 @@ svelteLifecycleOnDestroy(() => {
     width: 100%;
   }
 }
+
+:global(.mdc-drawer--modal, .mdc-drawer-scrim) {
+  /* This is not needed for a page-wide modal. */
+  position: absolute;
+}
 </style>
 
-<MaterialDrawer variant="dismissible" bind:this="{drawer}" class="mdc-top-app-bar--fixed-adjust">
+<MaterialDrawer variant="{drawerVariant}" bind:this="{drawer}" class="mdc-top-app-bar--fixed-adjust">
   <MaterialContent>
     <MaterialList>
       {#each drawerMenuItems as item}

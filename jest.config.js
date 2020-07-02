@@ -1,11 +1,11 @@
 module.exports = {
-  testMatch: ['**/*.(test|spec).js'],
+  testMatch: ['**/__tests__/*.spec.js'],
   transform: {
-    '^.+\\.js$': 'babel-jest',
+    '^.+\\.[t|j]sx?$': 'babel-jest',
     '^.+\\.svelte$': 'jest-transform-svelte',
   },
-  moduleFileExtensions: ['js', 'svelte'],
-  bail: false,
+  moduleFileExtensions: ['js', 'svelte', 'json'],
+  moduleDirectories: ['src', 'node_modules'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },

@@ -1,7 +1,7 @@
 import { routeWrapper, getLocalizedRoute, getRouteGuards } from 'utils/imports/core';
 import { localeStandardLanguage, localeSupportedLanguages } from 'utils/imports/config';
 import {
-  HomeRoute, AboutRoute, ResumeRoute, SkillsRoute,
+  HomeRoute, AboutRoute, ResumeRoute, SkillsRoute, ProjectsRoute,
 } from 'utils/imports/routes';
 
 const baseRoutes = [
@@ -9,6 +9,7 @@ const baseRoutes = [
   { name: 'about', component: AboutRoute },
   { name: 'resume', component: ResumeRoute },
   { name: 'skills', component: SkillsRoute },
+  { name: 'projects', component: ProjectsRoute },
   { name: '404', component: HomeRoute },
 ];
 

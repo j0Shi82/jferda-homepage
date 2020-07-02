@@ -8,7 +8,8 @@ const HomeRoute = applyCodeSplittingToRoute(() => import('components/content/hom
 const AboutRoute = applyCodeSplittingToRoute(() => import('components/content/about/About.svelte'));
 const ResumeRoute = applyCodeSplittingToRoute(() => import('components/content/resume/Resume.svelte'));
 const SkillsRoute = applyCodeSplittingToRoute(() => import('components/content/skills/Skills.svelte'));
+const ProjectsRoute = applyCodeSplittingToRoute(() => import('components/content/projects/Projects.svelte'));
 
 export {
-  HomeRoute, AboutRoute, ResumeRoute, SkillsRoute,
+  HomeRoute, AboutRoute, ResumeRoute, SkillsRoute, ProjectsRoute,
 };

@@ -4,6 +4,7 @@ export default {
     about: '/ueber-mich',
     resume: '/lebenslauf',
     skills: '/kompetenzen',
+    projects: '/projekte',
     404: '/*',
   },
   en: {
@@ -11,6 +12,7 @@ export default {
     about: '/about',
     resume: '/resume',
     skills: '/skills',
+    projects: '/projects',
     404: '/*',
   },
 };

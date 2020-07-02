@@ -4,7 +4,6 @@
 @import "@material/shape/_variables.scss";
 @import "@material/fab/_variables.scss";
 @import "tippy.js/animations/shift-away";
-@import 'src/assets/style/variables.scss';
 
 div[data-tippy-root] {
   max-width: calc(100% - 5px) !important;
@@ -20,6 +19,20 @@ div[data-tippy-root] {
 }
 
 .jdev-route-about {
+  .jdev-headline-underline {
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #000;
+    margin-bottom: $h2-margin;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: $h2-margin;
+    margin-bottom: 0;
+    transition: all 1s ease-in-out;
+  }
+
   .jdev-philosophy-wrapper {
     display: flex;
     justify-content: space-evenly;

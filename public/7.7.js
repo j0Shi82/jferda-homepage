@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{60:function(e){e.exports=JSON.parse('{"navigation":{"home":"Startseite","about":"Über Mich","resume":"Lebenslauf","skills":"Kompetenzen"}}')}}]);

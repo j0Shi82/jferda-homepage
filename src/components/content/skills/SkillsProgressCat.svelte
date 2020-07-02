@@ -38,8 +38,8 @@ export let catOpen = false;
     
 {#if catOpen}
 <div class="mdc-layout-grid__inner" in:svelteTransitionSlide="{{ delay: 0, duration: 200 }}" out:svelteTransitionSlide="{{ delay: 0, duration: $isRoutingInProgress ? 0 : 200 }}">
-    {#each getSortedSkillList(catIdent) as skill}
-    <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} />
+    {#each getSortedSkillList(catIdent) as skill, i}
+    <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} delay="{100 * i}" />
     {/each}
 </div>
 {/if}

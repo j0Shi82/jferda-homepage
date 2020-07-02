@@ -19,7 +19,7 @@
         "de": "Deutsch"
     },
     "home": {
-        "maintext": "Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating performant and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>."
+        "maintext": "Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating lightweight, fast, and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>."
     },
     "about": {
         "bio": {
@@ -54,6 +54,22 @@
                 "headline": "Giving Back",
                 "text": "I'm eager to learn and evolve, but also always want to share or publish my personal experience to help others grow as well."
             }
+        }
+    },
+    "resume": {
+        "stillgoing": "since",
+        "education": {
+            "headline": "Education",
+            "gym": "German university entrance qualification at different schools in Gelsenkirchen.",
+            "uni": "Student of Bsc Psychology at Westfälische-Wilhelm-University in Münster.",
+            "edom": "Apprentice as software developer at e-domizil.de in Münster."
+        },
+        "experience": {
+            "headline": "Experience",
+            "hs": "Side gig as editor and software developer at sports agency Heim:Spiel Medien GmbH & Co. KG in Münster.",
+            "mmb": "Author, editor, and sotware developer at MavsMoneyball, a NBA basketball community.",
+            "nwoun": "Admin of Neverwinter Uncensored, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Perfect World Entertainment.",
+            "edom": "Software development team member at e-domizil.de, an online travel agency for holiday homes."
         }
     }
 }

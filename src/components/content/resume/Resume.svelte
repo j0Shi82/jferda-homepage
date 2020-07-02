@@ -1,18 +1,30 @@
 <script>
-import { formatDate } from 'utils/imports/core';
+import { localize } from 'utils/imports/core';
+import { svelteTransitionFade, svelteTransitionFly } from 'utils/imports/svelte';
+import { routingFadeDuration } from 'utils/imports/config';
+import { resumeEducationList, resumeExperienceList } from 'utils/imports/data';
+import { ResumeItem } from 'utils/imports/components';
+
+import 'assets/style/resume.scss';
+
+const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+const itemIransitionDuration = 500;
+const headerTransitionDuration = routingFadeDuration * 5;
 </script>
 
-<style lang="scss">
-.mdc-typography--headline6 {
-  text-align: center;
-  border-bottom: 1px solid #000;
-}
-</style>
-
-<div class="mdc-layout-grid mdc-typography--body1">
-    <h2 class="mdc-typography--headline6">Education</h2>
+<div class="mdc-layout-grid mdc-typography--body1 jdev-route-resume" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
+    <h2 class="mdc-typography--headline6" in:svelteTransitionFly="{{ x: screenWidth / -2, duration: headerTransitionDuration }}">{$localize('resume.education.headline')}</h2>
+    <div class="jdev-headline-underline" in:svelteTransitionFly="{{ x: screenWidth / 2, duration: headerTransitionDuration }}"></div>
     <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">{$formatDate(new Date(1993, 8, 1))} - {$formatDate(new Date(2001, 12, 31))}</div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">Besuch des Ricarda-Huch-Gymnasiums in Gelsenkirchen mit Abschluss der Fach-hochschulreife nach 11 (schulischer Teil)</div>
+        {#each resumeEducationList as item, i}
+        <ResumeItem item="{item}" delay="{(i * itemIransitionDuration) + (headerTransitionDuration)}" transitionDuration="{itemIransitionDuration}" />
+        {/each}
+    </div>
+    <h2 class="mdc-typography--headline6" in:svelteTransitionFly="{{ x: screenWidth / -2, duration: headerTransitionDuration }}">{$localize('resume.experience.headline')}</h2>
+    <div class="jdev-headline-underline" in:svelteTransitionFly="{{ x: screenWidth / 2, duration: headerTransitionDuration }}"></div>
+    <div class="mdc-layout-grid__inner">
+        {#each resumeExperienceList as item, i}
+        <ResumeItem item="{item}" delay="{(i * itemIransitionDuration) + (headerTransitionDuration)}" transitionDuration="{itemIransitionDuration}" />
+        {/each}
     </div>
 </div>

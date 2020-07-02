@@ -1,4 +1,4 @@
-import Drawer, { Content } from '@smui/drawer';
+import Drawer, { Content, AppContent, Scrim } from '@smui/drawer';
 import List, {
   Graphic, Item, Text, Separator, Subheader,
 } from '@smui/list';
@@ -10,6 +10,8 @@ import LinearProgress from '@smui/linear-progress';
 
 export {
   Drawer as MaterialDrawer,
+  AppContent as MaterialAppContent,
+  Scrim as MaterialDrawerScrim,
   Content as MaterialContent,
   List as MaterialList,
   Graphic as MaterialGraphic,

@@ -1,3 +1,7 @@
+import Header from 'components/header/Header.svelte';
+import Drawer from 'components/drawer/Drawer.svelte';
+import AppContent from 'components/content/AppContent.svelte';
+
 import HomeRoutes from 'components/content/home/HomeRoutes.svelte';
 
 import AboutPhilosophyButton from 'components/content/about/AboutPhilosophyButton';
@@ -9,6 +13,9 @@ import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelt
 import SkillsProgressRow from 'components/content/skills/SkillsProgressRow.svelte';
 
 export {
+  Header as MainHeader,
+  Drawer as MainDrawer,
+  AppContent,
   HomeRoutes,
   AboutPhilosophyButton, AboutBio, SkillsProgressCat, SkillsProgressRow, ResumeItem,
 };

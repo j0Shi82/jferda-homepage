@@ -1,28 +1,20 @@
 <script>
-import initLocale from 'locale/i18n';
-import { isLoading } from 'svelte-i18n';
-import store from 'store/index';
-import Header from './components/header/Header.svelte';
-import Drawer from './components/drawer/Drawer.svelte';
-import AppContent from './components/content/AppContent.svelte';
+import { isLocalizationLoading, setupLocalization } from 'utils/imports/core';
+import { isMobileBreakpoint } from 'utils/imports/store';
+import { MainHeader, MainDrawer, AppContent } from 'utils/imports/components';
 
 // global SCSS
-import './assets/style/global.scss';
+import 'assets/style/global.scss';
 
-const { open: isMenuOpen } = store.app.menu;
-const { isMobile } = store.app.breakpoints;
-
-initLocale();
+setupLocalization();
 </script>
 
 <svelte:head>
-	<title>>_ j0Shi.dev --help</title>
+	<title>&gt;_ j0Shi.dev --help</title>
 </svelte:head>
 
-{#if !$isLoading}
-<Header />
-<Drawer modal="{$isMobile}" />
-{#if !$isMobile || !$isMenuOpen}
+{#if !$isLocalizationLoading}
+<MainHeader />
+<MainDrawer modal="{$isMobileBreakpoint}" />
 <AppContent  />
-{/if}
 {/if}

@@ -1,10 +1,7 @@
 <script>
-import { AppContent, Scrim } from '@smui/drawer';
-import Router from 'svelte-spa-router';
-import routes from 'router/index';
+import { MaterialAppContent, MaterialDrawerScrim } from 'utils/imports/material';
 import { isMobileBreakpoint } from 'utils/imports/store';
-
-import routeLoaded from 'router/routeLoaded';
+import { RouterComponent, routes, routerOnRouteLoaded } from 'utils/imports/core';
 </script>
 
 <style lang="scss">
@@ -13,9 +10,9 @@ import routeLoaded from 'router/routeLoaded';
 }
 </style>
 
-{#if $isMobileBreakpoint}<Scrim />{/if}
-<AppContent class="mdc-top-app-bar--dense-fixed-adjust">
+{#if $isMobileBreakpoint}<MaterialDrawerScrim />{/if}
+<MaterialAppContent class="mdc-top-app-bar--dense-fixed-adjust">
     <main class="main-content" id="main-content">
-      <Router {routes} on:routeLoaded="{routeLoaded}" />
+      <RouterComponent {routes} on:routeLoaded="{routerOnRouteLoaded}" />
     </main>
-</AppContent>
+</MaterialAppContent>

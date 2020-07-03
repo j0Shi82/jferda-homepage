@@ -15,6 +15,8 @@ setupLocalization();
 
 {#if !$isLocalizationLoading}
 <MainHeader />
-<MainDrawer modal="{$isMobileBreakpoint}" />
-<AppContent  />
+<div style="width: 100%; max-width: 1240px; margin: 0 auto;">
+	<MainDrawer modal="{$isMobileBreakpoint}" />
+	<AppContent  />
+</div>
 {/if}

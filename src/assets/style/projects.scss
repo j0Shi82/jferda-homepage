@@ -1,0 +1,26 @@
+@import 'src/assets/style/variables.scss';
+@import "_smui-theme.scss";
+
+.jdev-route-projects {
+  .jdev-headline-underline {
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #000;
+    margin-bottom: $h2-margin;
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: $h2-margin;
+    margin-bottom: 0;
+    transition: all 1s ease-in-out;
+  }
+
+  .card-media-square {
+    background-size: contain;
+
+    &.nwoun {
+      background-image: url('../media/images/projects/logo-un.png');
+    }
+  }
+}

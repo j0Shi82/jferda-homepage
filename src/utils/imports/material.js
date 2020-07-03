@@ -1,4 +1,5 @@
 import Drawer, { Content, AppContent, Scrim } from '@smui/drawer';
+import Card, { Content as CardContent, Media as CardMedia, MediaContent as CardMediaContent } from '@smui/card';
 import List, {
   Graphic, Item, Text, Separator, Subheader,
 } from '@smui/list';
@@ -9,6 +10,10 @@ import Fab, { Label } from '@smui/fab';
 import LinearProgress from '@smui/linear-progress';
 
 export {
+  Card as MaterialCard,
+  CardContent as MaterialCardContent,
+  CardMedia as MaterialCardMedia,
+  CardMediaContent as MaterialCardMediaContent,
   Drawer as MaterialDrawer,
   AppContent as MaterialAppContent,
   Scrim as MaterialDrawerScrim,

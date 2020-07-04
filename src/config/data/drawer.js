@@ -12,6 +12,6 @@ const generalMenuItems = [
   { routeName: 'skills', icon: menuSkillsIcon },
 ];
 
-const projectMenuIdents = ['mmb', 'nwoun', 'lw', 'edom'];
+const projectMenuIdents = ['mmb'/* , 'nwoun' */, 'lw', 'edom'];
 
 export { generalMenuItems, projectMenuIdents };

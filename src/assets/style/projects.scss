@@ -16,11 +16,39 @@
     transition: all 1s ease-in-out;
   }
 
-  .card-media-square {
-    background-size: contain;
+  .card-media-16x9 {
+    background-size: cover;
 
     &.nwoun {
       background-image: url('../media/images/projects/logo-un.png');
+    }
+  }
+
+  .jdev-project-hover-content {
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(230,230,230,0.95);
+    // background: linear-gradient(0deg, rgba(230,230,230,0) 0%, rgba(230,230,230,0.8) 30%, rgba(230,230,230,0.95) 100%);
+
+    span {
+      text-align: center;
+    }
+
+    a {
+      font-weight: bold;
+      color: $mdc-theme-primary;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }

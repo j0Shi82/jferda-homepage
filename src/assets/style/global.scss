@@ -26,6 +26,8 @@ body {
 .main-content {
   overflow: auto;
   height: 100%;
+  max-width: calc(1240px - 255px);
+  margin: 0 auto;
 }
 
 @import 'src/assets/style/variables.scss';

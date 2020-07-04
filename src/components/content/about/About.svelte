@@ -20,6 +20,12 @@ const flyOptionsReverse = {
   ...flyOptions,
   x,
 };
+
+// preload images to smoothen transitions
+aboutPhilosophies.forEach((philo) => {
+  let img = new Image();
+  img.src = philo.image;
+});
 </script>
 
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-about" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">

@@ -1,10 +1,8 @@
 <script>
-import { svelteTransitionSlide, svelteCreateEventDispatcher } from 'utils/imports/svelte';
+import { svelteTransitionSlide } from 'utils/imports/svelte';
 import { SkillsProgressRow } from 'utils/imports/components';
 import { skillList } from 'utils/imports/data';
 import { isRoutingInProgress } from 'utils/imports/store';
-
-const svelteDispatchEvent = svelteCreateEventDispatcher();
 
 function getSortedSkillList(type = 'lang') {
   return skillList.filter((el) => el.type === type).sort((a, b) => {
@@ -14,7 +12,6 @@ function getSortedSkillList(type = 'lang') {
   });
 }
 
-export let catName;
 export let catIdent;
 export let catOpen = false;
 </script>
@@ -30,16 +27,12 @@ export let catOpen = false;
 }
 </style>
 
-<h2 class="mdc-typography--headline6" on:click="{() => { catOpen = !catOpen; if (catOpen) svelteDispatchEvent('catOpened', catIdent); }}">
-  <span>{catName}</span>
-  {#if !catOpen}<span class="material-icons" aria-hidden="true">add_circle</span>{/if}
-  {#if catOpen}<span class="material-icons" aria-hidden="true">remove_circle</span>{/if}
-</h2>
-    
 {#if catOpen}
-<div class="mdc-layout-grid__inner" in:svelteTransitionSlide="{{ delay: 0, duration: 200 }}" out:svelteTransitionSlide="{{ delay: 0, duration: $isRoutingInProgress ? 0 : 200 }}">
-    {#each getSortedSkillList(catIdent) as skill, i}
-    <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} delay="{100 * i}" />
-    {/each}
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+  <div class="mdc-layout-grid__inner" in:svelteTransitionSlide="{{ delay: 0, duration: 500 }}">
+      {#each getSortedSkillList(catIdent) as skill, i}
+      <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} delay="{100 * i}" />
+      {/each}
+  </div>
 </div>
 {/if}

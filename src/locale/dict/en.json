@@ -71,5 +71,11 @@
             "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Perfect World Entertainment.",
             "edom": "Software development team member at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes."
         }
+    },
+    "skills": {
+        "software": "Software",
+        "frameworks": "Frameworks / CMS",
+        "jspackages": "Javascript Packages",
+        "lang": "Languages"
     }
 }

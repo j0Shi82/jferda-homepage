@@ -10,8 +10,14 @@ import Chip, { Icon, Text as ChipText } from '@smui/chips';
 import IconButton from '@smui/icon-button';
 import Fab, { Label } from '@smui/fab';
 import LinearProgress from '@smui/linear-progress';
+import Tab, { Icon as TabIcon, Label as TabLabel } from '@smui/tab';
+import TabBar from '@smui/tab-bar';
 
 export {
+  Tab as MaterialTab,
+  TabIcon as MaterialTabIcon,
+  TabLabel as MaterialTabLabel,
+  TabBar as MaterialTabBar,
   Card as MaterialCard,
   CardContent as MaterialCardContent,
   CardMedia as MaterialCardMedia,

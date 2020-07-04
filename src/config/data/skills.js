@@ -31,12 +31,7 @@ import sentryLogo from 'assets/media/images/skills/software/sentry.svg';
 import vscodeLogo from 'assets/media/images/skills/software/vscode.png';
 import nodeLogo from 'assets/media/images/skills/software/node.svg';
 
-const cats = [
-  { name: 'Languages', ident: 'lang' },
-  { name: 'Frameworks / CMS', ident: 'frameworks' },
-  { name: 'Javascript Packages', ident: 'jspackages' },
-  { name: 'Software', ident: 'software' },
-];
+const cats = ['lang', 'frameworks', 'jspackages', 'software'];
 
 const skills = [
   {

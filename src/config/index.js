@@ -19,6 +19,9 @@ export default {
       // transition between routes, 0 to disable
       routingFadeDuration: 250,
     },
+    animations: {
+      headerTransitionDuration: 1250,
+    },
     locale: {
       supportedLanguages: ['en', 'de'],
       standardLanguage: 'en',

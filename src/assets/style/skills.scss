@@ -1,35 +1,43 @@
 @import "@material/linear-progress/mixins";
+@import "_smui-theme.scss";
 
 .jdev-route-skills {
   .mdc-linear-progress__bar.mdc-linear-progress__primary-bar {
     transition: transform 1s 0s ease-in-out;
   }
 
+  .mdc-tab-bar {
+    background-color: $mdc-theme-surface;
+  }
+
   .mdc-layout-grid__cell {
     position: relative;
   }
 
-  .jdev-right-arrow {
+  .jdev-arrow {
     position: absolute;
     top: 0;
-    right: -0.75em;
+    pointer-events: none;
+    color: $mdc-theme-primary;
     display: flex;
     height: 48px;
-    font-size:1.5em;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 1;
     align-items: center;
+
+    &.jdev-right-arrow {
+      right: 0;
+      background: linear-gradient(90deg, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.3) 30%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    &.jdev-left-arrow {
+      left: 0;
+      background: linear-gradient(270deg, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.3) 30%, rgba(255, 255, 255, 1) 100%);
+    }
   }
 
-  .jdev-left-arrow {
-    position: absolute;
-    top: 0;
-    left: -0.75em;
-    display: flex;
-    height: 48px;
-    font-size:1.5em;
-    align-items: center;
-  }
-
-  div.jdev-skills-logo {
+  .jdev-skills-logo {
     width: 100%;
     height: 32px;
     background-size: contain;

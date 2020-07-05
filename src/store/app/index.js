@@ -40,6 +40,13 @@ const store = {
     isRouting: storeTypeWritable(false), // ongoing route change
     routeName: storeTypeWritable(null), // current route name because spa router only offers path
   },
+  data: {
+    screenWidth: storeTypeWritable(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth),
+  }
 };
+
+window.addEventListener('resize', () => {
+  store.data.screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+});
 
 export default store;

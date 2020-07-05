@@ -53,7 +53,7 @@ function mailMe() {
     <Row>
         {#if $isMobile}
         <Section>
-            <IconButton class="material-icons jdev-drawer-toggle" on:click="{mobileState.set(!$mobileState)}">{$mobileState ? 'menu_open' : 'menu'}</IconButton>
+            <IconButton class="material-icons jdev-drawer-toggle" on:click="{mobileState.set(!$mobileState)}">{$mobileState ? 'clear' : 'menu'}</IconButton>
         </Section>
         {/if}
         <Section>

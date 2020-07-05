@@ -42,6 +42,10 @@
                 "headline": "Creativity",
                 "text": "Nobody would compare coding to classic art. But why? Devs are able to create software out of thin air just using their imagination and creativity."
             },
+            "helloworld": {
+                "headline": "Hello World",
+                "text": "Publishing, blogging, or generally expressing myself in showing the world my work is an integral part of who I am. Especially direct interaction with users keeps me engaged."
+            },
             "progressive": {
                 "headline": "Progressive",
                 "text": "Coding is a field of constant change. It leads to innovation, cutting edge technology, and with the proper ideas even helps making the world a better place for everyone."
@@ -76,6 +80,21 @@
         "software": "Software",
         "frameworks": "Frameworks / CMS",
         "jspackages": "Javascript Packages",
-        "lang": "Languages"
+        "lang": "Languages",
+        "js": "JavaScript",
+        "php": "PHP",
+        "wp": "Wordpress",
+        "sql": "SQL",
+        "jquery": "jQuery"
+    },
+    "projects": {
+        "learnmore": "Learn more",
+        "skillsep": ", ",
+        "mmb": {
+            "desc": "MavsMoneyball was mainly a blogging project. It was great to cover a sport that I love and a team that I root for. But I did also develop a statistical app to complement my blog work."
+        },
+        "nwoun": {
+            "desc": "NWO:UN has been my biggest personal project to date. We served the game's community for nearly five years and delivered content and tools to over 100,000 players per month."
+        }
     }
 }

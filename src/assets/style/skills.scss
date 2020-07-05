@@ -5,6 +5,30 @@
     transition: transform 1s 0s ease-in-out;
   }
 
+  .mdc-layout-grid__cell {
+    position: relative;
+  }
+
+  .jdev-right-arrow {
+    position: absolute;
+    top: 0;
+    right: -0.75em;
+    display: flex;
+    height: 48px;
+    font-size:1.5em;
+    align-items: center;
+  }
+
+  .jdev-left-arrow {
+    position: absolute;
+    top: 0;
+    left: -0.75em;
+    display: flex;
+    height: 48px;
+    font-size:1.5em;
+    align-items: center;
+  }
+
   div.jdev-skills-logo {
     width: 100%;
     height: 32px;

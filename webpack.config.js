@@ -25,8 +25,8 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/public`,
-    filename: '[name].[contenthash:8].js',
-    chunkFilename: '[name].[id].[contenthash:8].js',
+    filename: '[name].js',
+    chunkFilename: '[name].[id].js',
   },
   module: {
     rules: [
@@ -87,7 +87,7 @@ module.exports = {
   mode,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash:8].css',
+      filename: '[name].css',
     }),
     new Visualizer({
       filename: './statistics.html',

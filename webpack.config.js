@@ -25,8 +25,8 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/public`,
-    filename: '[name].js',
-    chunkFilename: '[name].[id].js',
+    filename: '[name].[contenthash:8].js',
+    chunkFilename: '[name].[id].[contenthash:8].js',
   },
   module: {
     rules: [
@@ -93,6 +93,6 @@ module.exports = {
       filename: './statistics.html',
     }),
   ],
-  devtool: prod ? false : 'source-map',
+  devtool: prod ? 'source-map' : 'source-map',
   target: 'web',
 };

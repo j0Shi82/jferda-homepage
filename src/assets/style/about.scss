@@ -19,6 +19,8 @@ div[data-tippy-root] {
 }
 
 .jdev-route-about {
+  overflow-x: hidden;
+
   .jdev-headline-underline {
     height: 1px;
     width: 100%;
@@ -48,6 +50,7 @@ div[data-tippy-root] {
 
   .jdev-fab-buttons {
     flex-wrap: wrap;
+    min-height: 250px;
 
     .jdev-fab-wrapper {
       margin: 0 2px;

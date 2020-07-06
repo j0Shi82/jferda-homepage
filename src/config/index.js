@@ -21,6 +21,8 @@ export default {
     },
     animations: {
       headerTransitionDuration: 1250,
+      atomTransitionDuration: 500,
+      atomTransitionDurationShort: 100,
     },
     locale: {
       supportedLanguages: ['en', 'de'],

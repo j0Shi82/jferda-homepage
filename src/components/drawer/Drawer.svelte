@@ -28,7 +28,7 @@ import {
 } from 'utils/imports/store';
 import {
   drawerMenuItems,
-  drawerMenuProjectIdents,
+  drawerMenuProjectItems,
 } from 'utils/imports/data';
 
 import 'assets/style/drawer.scss';
@@ -39,7 +39,7 @@ export let modal = false;
 const drawerVariant = modal ? 'modal' : 'dismissible';
 let drawer;
 
-// basic routing function
+// basic routing functions
 function go(key) {
   if ($isMobileBreakpoint) menuMobileState.set(false);
   routerPush(getLocalizedRoute(key));
@@ -64,7 +64,9 @@ $: {
 const localeUnsub = currentLocale.subscribe(() => {
   // to prevent re-routing to default routeName store value, check whether a route name has been set already
   // on page load routeName is still null
-  if ($currentRouteName !== null) routerPush(getLocalizedRoute($currentRouteName));
+  if ($currentRouteName !== null) {
+    routerPush(getLocalizedRoute($currentRouteName));
+  }
 });
 
 svelteLifecycleOnDestroy(() => {
@@ -101,10 +103,9 @@ svelteLifecycleOnDestroy(() => {
       <MaterialSeparator nav />
 
       <MaterialSubheader>{$localize('navigation.projects.headline')}</MaterialSubheader>
-
-      {#each drawerMenuProjectIdents as ident}
-        <MaterialItem href="javascript:void(0)" on:click={() => go(`projects-${ident}`)} activated={$currentRouteName === `projects-${ident}`}>
-          <MaterialListText>{$localize(`navigation.projects.${ident}`)}</MaterialListText>
+      {#each drawerMenuProjectItems as item}
+        <MaterialItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
+          <MaterialListText>{$localize(`navigation.projects.${item.localeIdent}`)}</MaterialListText>
         </MaterialItem>
       {/each}
 
@@ -112,7 +113,7 @@ svelteLifecycleOnDestroy(() => {
 
       <MaterialItem>
         <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}">
-          {#each                                                                                                                                     $locales as loc}
+          {#each $locales as loc}
             <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption>
           {/each}
         </MaterialSelect>

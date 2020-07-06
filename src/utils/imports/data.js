@@ -1,4 +1,4 @@
-import { generalMenuItems, projectMenuIdents } from 'config/data/drawer';
+import { generalMenuItems, projectMenuItems } from 'config/data/drawer';
 import { aboutPhilosophies } from 'config/data/about';
 import { cats, skills } from 'config/data/skills';
 import { education, experience } from 'config/data/resume';
@@ -8,7 +8,7 @@ import routeLocales from 'locale/dict/routes';
 
 export {
   generalMenuItems as drawerMenuItems,
-  projectMenuIdents as drawerMenuProjectIdents,
+  projectMenuItems as drawerMenuProjectItems,
   aboutPhilosophies,
   routeLocales as routeLocaleDict,
   cats as skillCategories,

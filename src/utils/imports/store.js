@@ -1,6 +1,7 @@
 // store stuff
 import store from 'store/index';
 import { setRouterIsRouting } from 'store/app/setter';
+import { location, querystring } from 'svelte-spa-router';
 
 import { locale, locales } from 'svelte-i18n';
 
@@ -14,6 +15,8 @@ export {
   mobileState as menuMobileState,
   screenWidth,
   routeName as currentRouteName,
+  location as currentRouteLocation,
+  querystring as currentRouteQuerystring,
   isRouting as isRoutingInProgress,
   isMobile as isMobileBreakpoint,
   isTablet as isTabletBreakpoint,

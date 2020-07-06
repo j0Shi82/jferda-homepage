@@ -34,7 +34,7 @@ Promise.all(promises).finally(() => {
   }, 250);
 });
 
-// observe elements on each side of the navigation 
+// observe elements on each side of the navigation
 // if not visible, show corresponding arrows
 let rightArrowOberserver;
 let leftArrowOberserver;

@@ -87,7 +87,7 @@ module.exports = {
   mode,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[contenthash:8].css',
     }),
     new Visualizer({
       filename: './statistics.html',

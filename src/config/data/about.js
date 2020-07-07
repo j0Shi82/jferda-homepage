@@ -1,10 +1,10 @@
-import satisfactionImage from 'assets/media/images/home/heros/satisfaction.jpg';
-import communityImage from 'assets/media/images/home/heros/community.jpg';
-import artImage from 'assets/media/images/home/heros/art.jpg';
-import helloworldImage from 'assets/media/images/home/heros/helloworld.jpg';
-import progressiveImage from 'assets/media/images/home/heros/progressive.jpg';
-import litImage from 'assets/media/images/home/heros/lit.jpg';
-import givingBackImage from 'assets/media/images/home/heros/handshake.jpg';
+import satisfactionImage from 'assets/media/images/home/heros/satisfaction-100.jpg';
+import communityImage from 'assets/media/images/home/heros/community-100.jpg';
+import artImage from 'assets/media/images/home/heros/art-100.jpg';
+import helloworldImage from 'assets/media/images/home/heros/helloworld-100.jpg';
+import progressiveImage from 'assets/media/images/home/heros/progressive-100.jpg';
+import litImage from 'assets/media/images/home/heros/lit-100.jpg';
+import givingBackImage from 'assets/media/images/home/heros/handshake-100.jpg';
 
 const aboutPhilosophies = [
   {

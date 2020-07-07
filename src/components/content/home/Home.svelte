@@ -18,13 +18,26 @@ $: {
   if ($isDesktopBreakpoint) typographyTextClass = 'mdc-typography--headline4';
 }
 
+const flipXSteps = [false, false];
+
 svelteLifecycleOnMount(() => {
   [currentLogoItem] = homeKnowledgeLogoItems;
   setInterval(() => {
+    flipXSteps[1] = false;
     const currentIndex = homeKnowledgeLogoItems.map((el) => el.ident).indexOf(currentLogoItem.ident);
     if (knowledgeLogoSet[currentIndex + 1]) currentLogoItem = homeKnowledgeLogoItems[currentIndex + 1];
     else [currentLogoItem] = homeKnowledgeLogoItems;
   }, 3000);
+
+  setTimeout(() => {
+    flipXSteps[0] = true;
+    setInterval(() => { flipXSteps[0] = true; }, 3000);
+  }, 300);
+
+  setTimeout(() => {
+    flipXSteps[0] = false; flipXSteps[1] = true;
+    setInterval(() => { flipXSteps[0] = false; flipXSteps[1] = true; }, 3000);
+  }, 2700);
 });
 
 import 'assets/style/home.scss';
@@ -34,7 +47,11 @@ import 'assets/style/home.scss';
     <div class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-knowledge-logo {currentLogoItem.ident}">
-            <div style="background-image: url({currentLogoItem.logo});"></div>
+            <div 
+              style="background-image: url({currentLogoItem.logo});" 
+              class:flipX-step1="{flipXSteps[0]}"
+              class:flipX-step2="{flipXSteps[1]}"
+            ></div>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 {typographyTextClass} jdev-intro-text {currentLogoItem.ident}">
             {@html $localize('home.maintext')}

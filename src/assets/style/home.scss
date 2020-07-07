@@ -20,6 +20,23 @@
       height: 100%;
       width: 80%;
       left: 10%;
+      opacity: 0;
+      -webkit-transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
+      transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
+
+      &.flipX-step1 {
+        opacity: 1;
+        transition: all 300ms linear;
+        -webkit-transform: perspective(400px) translateZ(0) rotateX(0) scale(1);
+        transform: perspective(400px) translateZ(0) rotateX(0) scale(1);
+      }
+
+      &.flipX-step2 {
+        opacity: 1;
+        transition: all 300ms linear;
+        -webkit-transform: perspective(400px) translateZ(0) rotateX(-90deg) scale(1);
+        transform: perspective(400px) translateZ(0) rotateX(-90deg) scale(1);
+      }
     }
 
     &.vue,
@@ -31,8 +48,8 @@
     &.git,
     &.php {
       > div {
-        animation: flipX 3s linear;
-        animation-iteration-count: infinite;
+        // animation: flipX 3s linear;
+        // animation-iteration-count: infinite;
       }
     }
 

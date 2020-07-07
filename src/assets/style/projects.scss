@@ -1,11 +1,13 @@
 @import "_smui-theme.scss";
 
 .jdev-route-projects {
+  overflow-x: hidden;
+
   .card-media-16x9 {
     background-size: cover;
 
     &.nwoun {
-      background-image: url('../media/images/projects/logo-un.png');
+      background-image: url('../media/images/projects/logo-un-500.jpg');
     }
   }
 

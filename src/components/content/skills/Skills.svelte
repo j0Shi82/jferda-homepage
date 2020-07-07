@@ -7,6 +7,7 @@ import { routingFadeDuration } from 'utils/imports/config';
 import {
   MaterialTab, MaterialTabBar, MaterialTabLabel, MaterialIcon,
 } from 'utils/imports/material';
+import { preloadImages } from 'utils/imports/helpers';
 
 import 'assets/style/skills.scss';
 
@@ -27,10 +28,7 @@ Promise.all(promises).finally(() => {
   currentCat = openCat;
 
   setTimeout(() => {
-    skillList.filter((skill) => skill.type !== openCat).forEach((skill) => {
-      const img = new Image();
-      img.src = skill.logo;
-    });
+    preloadImages(skillList.filter((skill) => skill.type !== openCat).map((skill) => skill.logo));
   }, 250);
 });
 

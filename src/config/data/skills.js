@@ -19,7 +19,7 @@ import babelLogo from 'assets/media/images/skills/jspackages/babel.svg';
 import eslintLogo from 'assets/media/images/skills/jspackages/eslint.svg';
 import npmLogo from 'assets/media/images/skills/jspackages/npm.svg';
 import webpackLogo from 'assets/media/images/skills/jspackages/webpack.svg';
-import expressLogo from 'assets/media/images/skills/jspackages/express.jpg';
+import expressLogo from 'assets/media/images/skills/jspackages/express.png';
 import jestLogo from 'assets/media/images/skills/jspackages/jest.png';
 
 import dockerLogo from 'assets/media/images/skills/software/docker.png';

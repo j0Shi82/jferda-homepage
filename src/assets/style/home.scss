@@ -20,8 +20,20 @@
       height: 100%;
       width: 80%;
       left: 10%;
-      animation: flipX 3s linear;
-      animation-iteration-count: infinite;
+    }
+
+    &.vue,
+    &.javascript,
+    &.svelte,
+    &.wordpress,
+    &.node,
+    &.docker,
+    &.git,
+    &.php {
+      > div {
+        animation: flipX 3s linear;
+        animation-iteration-count: infinite;
+      }
     }
 
     position: relative;
@@ -96,6 +108,7 @@
       width: 100%;
       padding: 0;
       background-color: $mdc-theme-primary;
+      transition: background-color 1s;
 
       .image {
         width: 44px;

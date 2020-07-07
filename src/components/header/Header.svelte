@@ -4,7 +4,7 @@ import IconButton from '@smui/icon-button';
 import Icon from 'fa-svelte';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
-import avatarImage from 'assets/media/images/profile/avatar.jpg';
+import avatarImage from 'assets/media/images/profile/avatar-100.jpg';
 
 import store from 'store/index';
 

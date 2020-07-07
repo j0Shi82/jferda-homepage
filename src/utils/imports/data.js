@@ -3,7 +3,7 @@ import { aboutPhilosophies } from 'config/data/about';
 import { cats, skills } from 'config/data/skills';
 import { education, experience } from 'config/data/resume';
 import projectList from 'config/data/projects';
-import homeRoutes from 'config/data/home';
+import { menuItems, knowledgeLogoItems } from 'config/data/home';
 import routeLocales from 'locale/dict/routes';
 
 export {
@@ -14,7 +14,8 @@ export {
   cats as skillCategories,
   skills as skillList,
   projectList,
-  homeRoutes,
+  menuItems as homeRoutes,
+  knowledgeLogoItems as homeKnowledgeLogoItems,
   education as resumeEducationList,
   experience as resumeExperienceList,
 };

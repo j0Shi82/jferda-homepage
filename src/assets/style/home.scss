@@ -21,38 +21,7 @@
       width: 80%;
       left: 10%;
       animation: flipX 3s linear;
-
-      &.vue {
-        background-image: url(../media/images/knowledge-logos/vuejs.png);
-      }
-
-      &.javascript {
-        background-image: url(../media/images/knowledge-logos/javascript.png);
-      }
-
-      &.svelte {
-        background-image: url(../media/images/knowledge-logos/svelte.png);
-      }
-
-      &.wordpress {
-        background-image: url(../media/images/knowledge-logos/wp.png);
-      }
-
-      &.php {
-        background-image: url(../media/images/knowledge-logos/php.png);
-      }
-
-      &.docker {
-        background-image: url(../media/images/knowledge-logos/docker.png);
-      }
-
-      &.node {
-        background-image: url(../media/images/knowledge-logos/node.png);
-      }
-
-      &.git {
-        background-image: url(../media/images/knowledge-logos/git.png);
-      }
+      animation-iteration-count: infinite;
     }
 
     position: relative;

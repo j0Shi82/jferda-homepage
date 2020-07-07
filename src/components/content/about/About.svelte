@@ -4,14 +4,12 @@ import { AboutPhilosophyButton, AboutBio, FlyingHeadline } from 'utils/imports/c
 import { isDesktopBreakpoint } from 'utils/imports/store';
 import { routingFadeDuration, headerTransitionDuration, atomTransitionDuration } from 'utils/imports/config';
 import { aboutPhilosophies } from 'utils/imports/data';
+import { preloadImages } from 'utils/imports/helpers';
 
 import 'assets/style/about.scss';
 
 // preload images to smoothen transitions
-aboutPhilosophies.forEach((philo) => {
-  const img = new Image();
-  img.src = philo.image;
-});
+preloadImages(aboutPhilosophies.map((el) => el.image));
 
 // skip intro transition of philosophy buttons if not in view
 let philosophyVisible = false;

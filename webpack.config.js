@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Visualizer = require('webpack-visualizer-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
 
@@ -14,6 +15,7 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
+    contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'public')],
   },
   resolve: {
     alias: {
@@ -24,9 +26,9 @@ module.exports = {
     modules: ['src', 'node_modules'],
   },
   output: {
-    path: `${__dirname}/public`,
-    filename: '[name].js',
-    chunkFilename: '[name].[id].js',
+    path: `${__dirname}/dist`,
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[chunkhash].[contenthash].js',
   },
   module: {
     rules: [
@@ -87,12 +89,16 @@ module.exports = {
   mode,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[contenthash].css',
     }),
     new Visualizer({
       filename: './statistics.html',
     }),
+    new HtmlWebpackPlugin({
+      title: '>_ j0Shi.dev --help',
+      template: './src/index.template.html',
+    }),
   ],
-  devtool: prod ? 'source-map' : 'source-map',
+  devtool: prod ? false : 'source-map',
   target: 'web',
 };

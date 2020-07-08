@@ -7,7 +7,7 @@ import { routingFadeDuration } from 'utils/imports/config';
 import { isMobileBreakpoint, isDesktopBreakpoint, isTabletBreakpoint } from 'utils/imports/store';
 import { preloadImages } from 'utils/imports/helpers';
 
-preloadImages(homeKnowledgeLogoItems.map((el) => el.logo));
+import 'assets/style/home.scss';
 
 const knowledgeLogoSet = homeKnowledgeLogoItems.map((item) => item.ident);
 let currentLogoItem = { ident: '', logo: '' };
@@ -17,40 +17,43 @@ $: {
   if ($isTabletBreakpoint) typographyTextClass = 'mdc-typography--headline5';
   if ($isDesktopBreakpoint) typographyTextClass = 'mdc-typography--headline4';
 }
+// logo animation logic
+// css animates, but javascript has to change background image
+let showLogoAnimation = false;
+let logoGrid;
 
-const flipXSteps = [false, false];
+function changeLogo() {
+  const currentIndex = homeKnowledgeLogoItems.map((el) => el.ident).indexOf(currentLogoItem.ident);
+  if (knowledgeLogoSet[currentIndex + 1]) currentLogoItem = homeKnowledgeLogoItems[currentIndex + 1];
+  else [currentLogoItem] = homeKnowledgeLogoItems;
+}
 
 svelteLifecycleOnMount(() => {
-  [currentLogoItem] = homeKnowledgeLogoItems;
-  setInterval(() => {
-    flipXSteps[1] = false;
-    const currentIndex = homeKnowledgeLogoItems.map((el) => el.ident).indexOf(currentLogoItem.ident);
-    if (knowledgeLogoSet[currentIndex + 1]) currentLogoItem = homeKnowledgeLogoItems[currentIndex + 1];
-    else [currentLogoItem] = homeKnowledgeLogoItems;
-  }, 3000);
+  logoGrid.addEventListener('animationiteration', () => {
+    changeLogo();
+  });
 
-  setTimeout(() => {
-    flipXSteps[0] = true;
-    setInterval(() => { flipXSteps[0] = true; }, 3000);
-  }, 300);
+  logoGrid.addEventListener('animationstart', () => {
+    [currentLogoItem] = homeKnowledgeLogoItems;
+  });
 
-  setTimeout(() => {
-    flipXSteps[0] = false; flipXSteps[1] = true;
-    setInterval(() => { flipXSteps[0] = false; flipXSteps[1] = true; }, 3000);
-  }, 2700);
+  preloadImages([homeKnowledgeLogoItems[0].logo]).finally(() => {
+    showLogoAnimation = true;
+  });
 });
 
-import 'assets/style/home.scss';
+preloadImages(homeKnowledgeLogoItems.map((el) => el.logo));
 </script>
 
 <div class="jdev-route-home" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
     <div class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
-          <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-knowledge-logo {currentLogoItem.ident}">
+          <div 
+            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-knowledge-logo {currentLogoItem.ident}" 
+            bind:this="{logoGrid}"
+          >
             <div 
-              style="background-image: url({currentLogoItem.logo});" 
-              class:flipX-step1="{flipXSteps[0]}"
-              class:flipX-step2="{flipXSteps[1]}"
+              class:animation-active="{showLogoAnimation}"
             ></div>
           </div>
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 {typographyTextClass} jdev-intro-text {currentLogoItem.ident}">

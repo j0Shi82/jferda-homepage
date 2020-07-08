@@ -15,16 +15,7 @@ const openCat = 'lang';
 let currentCat;
 
 // preload images to smoothen transitions
-const promises = [];
-skillList.filter((skill) => skill.type === openCat).forEach((skill) => {
-  promises.push(new Promise(((resolve) => {
-    const img = new Image();
-    img.onload = resolve;
-    img.src = skill.logo;
-  })));
-});
-
-Promise.all(promises).finally(() => {
+preloadImages(skillList.filter((skill) => skill.type === openCat).map((skill) => skill.logo)).finally(() => {
   currentCat = openCat;
 
   setTimeout(() => {

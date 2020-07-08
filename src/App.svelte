@@ -9,10 +9,6 @@ import 'assets/style/global.scss';
 setupLocalization();
 </script>
 
-<svelte:head>
-	<title>&gt;_ j0Shi.dev --help</title>
-</svelte:head>
-
 {#if !$isLocalizationLoading}
 <MainHeader />
 <MainDrawer modal="{$isMobileBreakpoint}" />

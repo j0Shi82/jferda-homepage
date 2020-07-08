@@ -4,6 +4,8 @@ import { SkillsProgressRow } from 'utils/imports/components';
 import { skillList } from 'utils/imports/data';
 import { atomTransitionDuration, atomTransitionDurationShort } from 'utils/imports/config';
 
+import 'assets/style/skillsprogress.scss';
+
 function getSortedSkillList(type = 'lang') {
   return skillList.filter((el) => el.type === type).sort((a, b) => {
     if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
@@ -14,13 +16,14 @@ function getSortedSkillList(type = 'lang') {
 
 export let catIdent;
 export let catOpen = false;
+export let slideDelay = 0;
 </script>
 
 {#if catOpen}
-<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-  <div class="mdc-layout-grid__inner" in:svelteTransitionSlide="{{ duration: atomTransitionDuration }}">
+<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-skills-progress-cat">
+  <div class="mdc-layout-grid__inner" in:svelteTransitionSlide="{{ duration: atomTransitionDuration, delay: slideDelay }}">
       {#each getSortedSkillList(catIdent) as skill, i}
-      <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} delay="{atomTransitionDurationShort * i}" />
+      <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} delay="{slideDelay + (atomTransitionDurationShort * i)}" />
       {/each}
   </div>
 </div>

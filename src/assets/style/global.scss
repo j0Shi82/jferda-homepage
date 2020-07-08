@@ -1,6 +1,7 @@
 @import "@material/typography/mdc-typography";
 @import "@material/layout-grid/mdc-layout-grid.scss";
 @import "_smui-theme.scss";
+@import "@material/top-app-bar/variables";
 @import "@smui/snackbar";
 
 body {
@@ -26,6 +27,7 @@ body {
 
 .main-content {
   height: 100%;
+
   > div {
     // overflow: auto;
     height: 100%;

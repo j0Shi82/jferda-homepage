@@ -31,7 +31,7 @@
     "serve": "^11.3.2",
     "style-loader": "^1.2.1",
     "svelte-loader": "2.13.6",
-    "svelte-preprocess": "^4.0.5",
+    "svelte-preprocess": "^4.0.6",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
@@ -64,13 +64,14 @@
     "@smui/tab": "^1.0.0-beta.21",
     "@smui/tab-bar": "^1.0.0-beta.21",
     "@smui/top-app-bar": "^1.0.0-beta.21",
+    "animate.css": "^4.1.0",
     "fa-svelte": "^3.1.0",
     "intersection-observer": "^0.11.0",
     "svelte": "^3.24.0",
     "svelte-i18n": "^3.0.4",
     "svelte-spa-chunk": "^2.0.0",
     "svelte-spa-router": "^2.2.0",
-    "tippy.js": "^6.2.4",
+    "tippy.js": "^6.2.5",
     "typed.js": "^2.0.11"
   }
 }

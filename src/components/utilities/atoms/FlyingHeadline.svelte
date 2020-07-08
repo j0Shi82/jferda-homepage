@@ -25,7 +25,6 @@ h2 {
   text-align: center;
   margin-top: $h2-margin;
   margin-bottom: 0;
-  transition: all 1s ease-in-out;
 }
 </style>
 

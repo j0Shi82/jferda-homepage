@@ -12,8 +12,15 @@ import Fab, { Label } from '@smui/fab';
 import LinearProgress from '@smui/linear-progress';
 import Tab, { Icon as TabIcon, Label as TabLabel } from '@smui/tab';
 import TabBar from '@smui/tab-bar';
+import ImageList, {
+  Item as ImageListItem, ImageAspectContainer, Image as ImageListImage,
+} from '@smui/image-list';
 
 export {
+  ImageList as MaterialImageList,
+  ImageListItem as MaterialImageListItem,
+  ImageAspectContainer as MaterialImageListAspectContainer,
+  ImageListImage as MaterialImageListImage,
   Tab as MaterialTab,
   TabIcon as MaterialTabIcon,
   TabLabel as MaterialTabLabel,
@@ -28,8 +35,8 @@ export {
   Scrim as MaterialDrawerScrim,
   Content as MaterialContent,
   List as MaterialList,
-  Graphic as MaterialGraphic,
-  Item as MaterialItem,
+  Graphic as MaterialListGraphic,
+  Item as MaterialListItem,
   Text as MaterialListText,
   Separator as MaterialSeparator,
   Subheader as MaterialSubheader,

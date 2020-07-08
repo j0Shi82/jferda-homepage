@@ -5,8 +5,8 @@ import {
   MaterialDrawer,
   MaterialContent,
   MaterialList,
-  MaterialGraphic,
-  MaterialItem,
+  MaterialListGraphic,
+  MaterialListItem,
   MaterialListText,
   MaterialSeparator,
   MaterialSubheader,
@@ -94,30 +94,30 @@ svelteLifecycleOnDestroy(() => {
   <MaterialContent>
     <MaterialList>
       {#each drawerMenuItems as item}
-        <MaterialItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
-          <MaterialGraphic class="material-icons" aria-hidden="true">{item.icon}</MaterialGraphic>
+        <MaterialListItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
+          <MaterialListGraphic class="material-icons" aria-hidden="true">{item.icon}</MaterialListGraphic>
           <MaterialListText>{$localize(`navigation.${item.routeName}`)}</MaterialListText>
-        </MaterialItem>
+        </MaterialListItem>
       {/each}
 
       <MaterialSeparator nav />
 
       <MaterialSubheader>{$localize('navigation.projects.headline')}</MaterialSubheader>
       {#each drawerMenuProjectItems as item}
-        <MaterialItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
+        <MaterialListItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
           <MaterialListText>{$localize(`navigation.projects.${item.localeIdent}`)}</MaterialListText>
-        </MaterialItem>
+        </MaterialListItem>
       {/each}
 
       <MaterialSeparator nav />
 
-      <MaterialItem>
+      <MaterialListItem>
         <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}">
           {#each $locales as loc}
             <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption>
           {/each}
         </MaterialSelect>
-      </MaterialItem>
+      </MaterialListItem>
     </MaterialList>
   </MaterialContent>
 </MaterialDrawer>

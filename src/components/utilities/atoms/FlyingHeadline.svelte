@@ -6,6 +6,7 @@ import { screenWidth } from 'utils/imports/store';
 
 export let localeKey;
 export let transitionDirection = ['left', 'right'];
+export let transitionDuration = headerTransitionDuration;
 
 const transitionX = transitionDirection.map((direction) => $screenWidth * (direction === 'left' ? -2 : 2));
 </script>
@@ -28,5 +29,5 @@ h2 {
 }
 </style>
 
-<h2 class="mdc-typography--headline6" in:svelteTransitionFly="{{ x: transitionX[0], duration: headerTransitionDuration }}">{$localize(localeKey)}</h2>
-<div class="jdev-headline-underline" in:svelteTransitionFly="{{ x: transitionX[1], duration: headerTransitionDuration }}"></div>
+<h2 class="mdc-typography--headline6" in:svelteTransitionFly="{{ x: transitionX[0], duration: transitionDuration }}">{$localize(localeKey)}</h2>
+<div class="jdev-headline-underline" in:svelteTransitionFly="{{ x: transitionX[1], duration: transitionDuration }}"></div>

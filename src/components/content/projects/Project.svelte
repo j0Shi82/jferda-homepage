@@ -19,18 +19,41 @@ import 'assets/style/project.scss';
 let scaleY = null;
 let initialized = false;
 let routeContainer;
-const animationParams = {
-  baseDuration: 2000,
-  headlineBaseDuration: 1000,
-  contentAnimationBaseDuration: 500,
-  headlineCount: 4,
-  highlightCount: 4,
-};
-animationParams.headlineDuration = animationParams.headlineBaseDuration / (animationParams.headlineCount - 1);
-animationParams.highlightTotalDelay = animationParams.baseDuration;
-animationParams.highlightTotalDelay -= animationParams.headlineDuration * 3;
-animationParams.highlightTotalDelay -= animationParams.contentAnimationBaseDuration;
-animationParams.highlightDelay = animationParams.highlightTotalDelay / (animationParams.highlightCount - 1);
+const animationTotalDuration = 2000;
+
+function getAnimationParams(totalDuration = animationTotalDuration, sectionItems = [7, 1, 4, 8]) {
+  const animationParams = [];
+  const headlineTotalDuration = totalDuration / 2;
+  const headlineSingleDuration = headlineTotalDuration / sectionItems.length;
+
+  sectionItems.forEach((itemCount, i) => {
+    let contentIterationDelay;
+    let contentSingleDuration;
+    if (itemCount === 1) {
+      contentSingleDuration = (totalDuration - headlineSingleDuration * (i + 1));
+      contentIterationDelay = ((totalDuration - contentSingleDuration) - (headlineSingleDuration * (i + 1)));
+    } else {
+      contentSingleDuration = (totalDuration - headlineSingleDuration * (i + 1)) / (itemCount * 0.5);
+      contentIterationDelay = ((totalDuration - contentSingleDuration) - (headlineSingleDuration * (i + 1))) / (itemCount - 1);
+    }
+
+    animationParams.push({
+      headline: {
+        duration: headlineSingleDuration,
+        delay: headlineSingleDuration * i,
+      },
+      content: {
+        duration: contentSingleDuration,
+        delay: headlineSingleDuration * (i + 1),
+        iterationDelay: contentIterationDelay,
+      },
+    });
+  });
+
+  return animationParams;
+}
+
+const [skillsAnimationParams, descAnimationParams, highlightsAnimationParams, galleryAnimationParams] = getAnimationParams();
 
 preloadImages([logoUn]);
 
@@ -56,7 +79,9 @@ $: {
     transform: scaleY({scaleY});
     transform-origin: top center;
 
-    --jdev-content-animation-duration: 500ms;
+    --jdev-highlights-animation-duration: {highlightsAnimationParams.content.duration}ms;
+    --jdev-gallery-animation-duration: {galleryAnimationParams.content.duration}ms;
+    --jdev-skills-progress-duration: 1000ms;
   " 
   in:svelteTransitionFade="{{ duration: routingFadeDuration }}"
   class:initialized="{initialized}"
@@ -65,19 +90,19 @@ $: {
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <div class="jdev-project-banner" style="background-image: url({logoUn});" in:svelteTransitionFade="{{ duration: animationParams.baseTime }}" />
+        <div class="jdev-project-banner" style="background-image: url({logoUn});" in:svelteTransitionFade="{{ duration: animationTotalDuration }}" />
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
         <FlyingHeadline 
           localeKey="navigation.projects.nwoun" 
           transitionDirection="{$isDesktopBreakpoint ? ['left', 'left'] : ['left', 'right']}" 
-          transitionDuration="{animationParams.headlineDuration}" 
-          transitionDelay="{(animationParams.headlineDuration) * 1}"
+          transitionDuration="{descAnimationParams.headline.duration}" 
+          transitionDelay="{descAnimationParams.headline.delay}"
         />
         <p in:svelteTransitionFly="{{
           x: $screenWidth / (-2),
-          duration: animationParams.baseDuration - ((animationParams.headlineDuration) * 2),
-          delay: (animationParams.headlineDuration) * 2,
+          duration: descAnimationParams.content.duration,
+          delay: descAnimationParams.content.delay + descAnimationParams.content.iterationDelay * 0,
       }}">
           lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
         </p>
@@ -86,23 +111,23 @@ $: {
         <FlyingHeadline 
           localeKey="navigation.projects.nwoun" 
           transitionDirection="{$isDesktopBreakpoint ? ['right', 'right'] : ['left', 'right']}" 
-          transitionDuration="{animationParams.headlineDuration}" 
-          transitionDelay="{(animationParams.headlineDuration) * 2}"
+          transitionDuration="{highlightsAnimationParams.headline.duration}" 
+          transitionDelay="{highlightsAnimationParams.headline.delay}"
         />
         <MaterialList class="jdev-project-highlights" nonInteractive>
-          <MaterialListItem style="animation-delay: {(animationParams.highlightDelay * 0) + ((animationParams.headlineDuration) * 3)}ms;">
+          <MaterialListItem style="animation-delay: {highlightsAnimationParams.content.delay + highlightsAnimationParams.content.iterationDelay * 0}ms;">
             <MaterialListGraphic class="material-icons">star</MaterialListGraphic>
             <MaterialListText>Edit</MaterialListText>
           </MaterialListItem>
-          <MaterialListItem style="animation-delay: {(animationParams.highlightDelay * 1) + ((animationParams.headlineDuration) * 3)}ms;">
+          <MaterialListItem style="animation-delay: {highlightsAnimationParams.content.delay + highlightsAnimationParams.content.iterationDelay * 1}ms;">
             <MaterialListGraphic class="material-icons">star</MaterialListGraphic>
             <MaterialListText>Send</MaterialListText>
           </MaterialListItem>
-          <MaterialListItem style="animation-delay: {(animationParams.highlightDelay * 2) + ((animationParams.headlineDuration) * 3)}ms;">
+          <MaterialListItem style="animation-delay: {highlightsAnimationParams.content.delay + highlightsAnimationParams.content.iterationDelay * 2}ms;">
             <MaterialListGraphic class="material-icons">star</MaterialListGraphic>
             <MaterialListText>Archive</MaterialListText>
           </MaterialListItem>
-          <MaterialListItem style="animation-delay: {(animationParams.highlightDelay * 3) + ((animationParams.headlineDuration) * 3)}ms;">
+          <MaterialListItem style="animation-delay: {highlightsAnimationParams.content.delay + highlightsAnimationParams.content.iterationDelay * 3}ms;">
             <MaterialListGraphic class="material-icons">star</MaterialListGraphic>
             <MaterialListText>Delete</MaterialListText>
           </MaterialListItem>
@@ -111,56 +136,56 @@ $: {
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <FlyingHeadline 
           localeKey="navigation.projects.nwoun" 
-          transitionDuration="{animationParams.headlineDuration}" 
-          transitionDelay="{(animationParams.headlineDuration) * 0}"
+          transitionDuration="{skillsAnimationParams.headline.duration}" 
+          transitionDelay="{skillsAnimationParams.headline.delay}"
         />
-        <SkillsProgressCat catIdent="lang" catOpen="{true}" slideDelay="{1000}" />
+        <SkillsProgressCat catIdent="lang" catOpen="{true}" slideDelay="{skillsAnimationParams.content.delay}" />
       </div>
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <FlyingHeadline 
           localeKey="navigation.projects.nwoun" 
-          transitionDuration="{animationParams.headlineDuration}" 
-          transitionDelay="{(animationParams.headlineDuration) * 3}"
+          transitionDuration="{galleryAnimationParams.headline.duration}" 
+          transitionDelay="{galleryAnimationParams.headline.delay}"
         />
         <MaterialImageList class="jdev-project-image-list">
             <MaterialImageListItem>
               <MaterialImageListAspectContainer>
-                <MaterialImageListImage component={Div} style="animation-delay: 1500ms; background-size: contain; background-image: url({logoUn});" />
+                <MaterialImageListImage component={Div} style="animation-delay: {galleryAnimationParams.content.delay + galleryAnimationParams.content.iterationDelay * 0}ms; background-size: contain; background-image: url({logoUn});" />
               </MaterialImageListAspectContainer>
             </MaterialImageListItem>
             <MaterialImageListItem>
               <MaterialImageListAspectContainer>
-                <MaterialImageListImage component={Div} style="animation-delay: 1550ms; background-size: contain; background-image: url({logoUn});" />
+                <MaterialImageListImage component={Div} style="animation-delay: {galleryAnimationParams.content.delay + galleryAnimationParams.content.iterationDelay * 1}ms; background-size: contain; background-image: url({logoUn});" />
               </MaterialImageListAspectContainer>
             </MaterialImageListItem>
             <MaterialImageListItem>
               <MaterialImageListAspectContainer>
-                <MaterialImageListImage component={Div} style="animation-delay: 1600ms; background-size: contain; background-image: url({logoUn});" />
+                <MaterialImageListImage component={Div} style="animation-delay: {galleryAnimationParams.content.delay + galleryAnimationParams.content.iterationDelay * 2}ms; background-size: contain; background-image: url({logoUn});" />
               </MaterialImageListAspectContainer>
             </MaterialImageListItem>
             <MaterialImageListItem>
               <MaterialImageListAspectContainer>
-                <MaterialImageListImage component={Div} style="animation-delay: 1650ms; background-size: contain; background-image: url({logoUn});" />
+                <MaterialImageListImage component={Div} style="animation-delay: {galleryAnimationParams.content.delay + galleryAnimationParams.content.iterationDelay * 3}ms; background-size: contain; background-image: url({logoUn});" />
               </MaterialImageListAspectContainer>
             </MaterialImageListItem>
             <MaterialImageListItem>
               <MaterialImageListAspectContainer>
-                <MaterialImageListImage component={Div} style="animation-delay: 1700ms; background-size: contain; background-image: url({logoUn});" />
+                <MaterialImageListImage component={Div} style="animation-delay: {galleryAnimationParams.content.delay + galleryAnimationParams.content.iterationDelay * 4}ms; background-size: contain; background-image: url({logoUn});" />
               </MaterialImageListAspectContainer>
             </MaterialImageListItem>
             <MaterialImageListItem>
               <MaterialImageListAspectContainer>
-                <MaterialImageListImage component={Div} style="animation-delay: 1750ms; background-size: contain; background-image: url({logoUn});" />
+                <MaterialImageListImage component={Div} style="animation-delay: {galleryAnimationParams.content.delay + galleryAnimationParams.content.iterationDelay * 5}ms; background-size: contain; background-image: url({logoUn});" />
               </MaterialImageListAspectContainer>
             </MaterialImageListItem>
             <MaterialImageListItem>
               <MaterialImageListAspectContainer>
-                <MaterialImageListImage component={Div} style="animation-delay: 1800ms; background-size: contain; background-image: url({logoUn});" />
+                <MaterialImageListImage component={Div} style="animation-delay: {galleryAnimationParams.content.delay + galleryAnimationParams.content.iterationDelay * 6}ms; background-size: contain; background-image: url({logoUn});" />
               </MaterialImageListAspectContainer>
             </MaterialImageListItem>
             <MaterialImageListItem>
               <MaterialImageListAspectContainer>
-                <MaterialImageListImage component={Div} style="animation-delay: 1850ms; background-size: contain; background-image: url({logoUn});" />
+                <MaterialImageListImage component={Div} style="animation-delay: {galleryAnimationParams.content.delay + galleryAnimationParams.content.iterationDelay * 7}ms; background-size: contain; background-image: url({logoUn});" />
               </MaterialImageListAspectContainer>
             </MaterialImageListItem>
         </MaterialImageList>

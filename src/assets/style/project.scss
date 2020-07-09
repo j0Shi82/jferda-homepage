@@ -17,7 +17,7 @@
 
   .mdc-list-item {
     animation-fill-mode: both;
-    animation-duration: var(--jdev-content-animation-duration, 500ms);
+    animation-duration: var(--jdev-highlights-animation-duration, 500ms);
     animation-name: bounceInRight;
     animation-timing-function: ease-out;
   }
@@ -26,7 +26,7 @@
     animation-name: zoomIn;
     animation-fill-mode: both;
     animation-timing-function: ease-out;
-    animation-duration: var(--jdev-content-animation-duration, 500ms);
+    animation-duration: var(--jdev-gallery-animation-duration, 500ms);
   }
 
   .jdev-project-banner {

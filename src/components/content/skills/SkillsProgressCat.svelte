@@ -17,13 +17,15 @@ function getSortedSkillList(type = 'lang') {
 export let catIdent;
 export let catOpen = false;
 export let slideDelay = 0;
+export let slideDuration = atomTransitionDuration;
+export let rowIterationDelay = atomTransitionDuration;
 </script>
 
 {#if catOpen}
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-skills-progress-cat">
-  <div class="mdc-layout-grid__inner" in:svelteTransitionSlide="{{ duration: atomTransitionDuration, delay: slideDelay }}">
+  <div class="mdc-layout-grid__inner" in:svelteTransitionSlide="{{ duration: slideDuration, delay: slideDelay }}">
       {#each getSortedSkillList(catIdent) as skill, i}
-      <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} delay="{slideDelay + (atomTransitionDurationShort * i)}" />
+      <SkillsProgressRow themeClass="{skill.class}" logoSrc={skill.logo} logoAlt="{skill.name}" progress={skill.progress} delay="{slideDelay + (rowIterationDelay * i)}" />
       {/each}
   </div>
 </div>

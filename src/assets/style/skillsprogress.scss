@@ -3,7 +3,10 @@
 
 .jdev-skills-progress-cat {
   .mdc-linear-progress__bar.mdc-linear-progress__primary-bar {
-    transition: transform 1s 0s ease-in-out;
+    transition-property: transform;
+    transition-delay: 0s;
+    transition-duration: var(--jdev-skills-progress-duration ,1s);
+    transition-timing-function: ease-in-out;
   }
 
   .jdev-skills-logo {

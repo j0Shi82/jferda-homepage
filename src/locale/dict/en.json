@@ -96,5 +96,75 @@
         "nwoun": {
             "desc": "NWO:UN has been my biggest personal project to date. We served the game's community for nearly five years and delivered content and tools to over 100,000 players per month."
         }
+    },
+    "project": {
+        "desc": "Description",
+        "highlights": "Key Features / Achievements",
+        "skills": "Used Skills",
+        "gallery": "Gallery",
+        "links": {
+            "web": "Website",
+            "github": "Repository"
+        },
+        "nwoun": {
+            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+            "highlights": {
+                "1": {
+                    "1": "Customized Wordpress Blog",
+                    "2": "Integrated dozens of plugins",
+                    "3": "Theme tweaks and plenty UI enhancements"
+                },
+                "2": {
+                    "1": "Game-Specific Apps",
+                    "2": "Data fetching without official API",
+                    "3": "Unique PHP/Javascript based online tools"
+                },
+                "3": {
+                    "1": "Monthly Traffic",
+                    "2": "100,000+ Users",
+                    "3": "350,000+ Page Views"
+                },
+                "4": {
+                    "1": "Social Management",
+                    "2": "Communities on Twitter, Discord, Facebook",
+                    "3": "Integrated many social APIs"
+                },
+                "5": {
+                    "1": "Full Branding",
+                    "2": "Logos, Banners & Color Scheme",
+                    "3": "Hundreds of self-made images"
+                }
+            }
+        },
+        "mmb": {
+            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+            "highlights": {
+                "1": {
+                    "1": "Customized Wordpress Blog",
+                    "2": "Integrated dozens of plugins",
+                    "3": "Theme tweaks and plenty UI enhancements"
+                },
+                "2": {
+                    "1": "Game-Specific Apps",
+                    "2": "Data fetching without official API",
+                    "3": "Unique PHP/Javascript based online tools"
+                },
+                "3": {
+                    "1": "Monthly Traffic",
+                    "2": "100,000+ Users",
+                    "3": "350,000+ Page Views"
+                },
+                "4": {
+                    "1": "Social Management",
+                    "2": "Communities on Twitter, Discord, Facebook",
+                    "3": "Integrated many social APIs"
+                },
+                "5": {
+                    "1": "Full Branding",
+                    "2": "Logos, Banners & Color Scheme",
+                    "3": "Hundreds of self-made images"
+                }
+            }
+        }
     }
 }

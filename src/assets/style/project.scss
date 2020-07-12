@@ -1,19 +1,32 @@
 @import '_smui-theme.scss';
 @import "@material/image-list/mixins";
+@import 'src/assets/style/variables.scss';
+@import "@material/layout-grid/variables";
+@import "glightbox/dist/css/glightbox";
 
 .jdev-route-project {
-  .jdev-skills-progress-cat {
-    height: 368px;
-  }
-
   .jdev-project-image-list {
     @include mdc-image-list-standard-columns(5);
+    @include mdc-image-list-aspect(4/3);
+
+    @media #{$breakpoint-tablet} {
+      @include mdc-image-list-standard-columns(3);
+    }
+
+    @media #{$breakpoint-mobile} {
+      @include mdc-image-list-standard-columns(2);
+    }
+
+    .mdc-image-list__image {
+      background-size: cover;
+    }
   }
 
   overflow-x: hidden;
 
   --mdc-theme-text-icon-on-background: #{$mdc-theme-text-primary-on-background};
   --mdc-theme-text-primary-on-background: #{$mdc-theme-text-primary-on-background};
+  --mdc-theme-text-secondary-on-background: #{$mdc-theme-text-secondary-on-background};
 
   .mdc-list-item {
     animation-fill-mode: both;
@@ -27,14 +40,19 @@
     animation-fill-mode: both;
     animation-timing-function: ease-out;
     animation-duration: var(--jdev-gallery-animation-duration, 500ms);
+    cursor: pointer;
   }
 
   .jdev-project-banner {
-    height: 20vh;
+    height: 10vh;
     width: 100%;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+
+    @media #{$breakpoint-desktop} {
+      height: 20vh;
+    }
   }
 
   pointer-events: none;
@@ -87,4 +105,3 @@
     opacity: 1;
   }
 }
-

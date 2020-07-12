@@ -3,7 +3,7 @@ import Card, {
   Content as CardContent, Media as CardMedia, MediaContent as CardMediaContent, PrimaryAction,
 } from '@smui/card';
 import List, {
-  Graphic, Item, Text, Separator, Subheader,
+  Graphic, Item, Text, Separator, Subheader, PrimaryText, SecondaryText,
 } from '@smui/list';
 import Select, { Option } from '@smui/select';
 import Chip, { Icon, Text as ChipText } from '@smui/chips';
@@ -38,14 +38,16 @@ export {
   Graphic as MaterialListGraphic,
   Item as MaterialListItem,
   Text as MaterialListText,
-  Separator as MaterialSeparator,
+  PrimaryText as MaterialListPrimaryText,
+  SecondaryText as MaterialListSecondaryText,
+  Separator as MaterialListSeparator,
   Subheader as MaterialSubheader,
   Select as MaterialSelect,
   Option as MaterialOption,
   Chip as MaterialChip,
   IconButton as MaterialIconButton,
   Fab as MaterialFab,
-  Label as MaterialLabel,
+  Label as MaterialFabLabel,
   LinearProgress as MaterialLinearProgress,
   Icon as MaterialIcon,
   ChipText as MaterialChipText,

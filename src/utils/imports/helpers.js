@@ -1,3 +1,7 @@
 import preloadImages from 'utils/helpers/preloadImages';
+import getAnimationParams from 'utils/helpers/project/getanimationParams';
 
-export { preloadImages };
+export {
+  preloadImages,
+  getAnimationParams as getProjectAnimationParams,
+};

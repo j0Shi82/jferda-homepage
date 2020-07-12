@@ -8,7 +8,7 @@ import {
   MaterialListGraphic,
   MaterialListItem,
   MaterialListText,
-  MaterialSeparator,
+  MaterialListSeparator,
   MaterialSubheader,
   MaterialSelect,
   MaterialOption,
@@ -100,7 +100,7 @@ svelteLifecycleOnDestroy(() => {
         </MaterialListItem>
       {/each}
 
-      <MaterialSeparator nav />
+      <MaterialListSeparator nav />
 
       <MaterialSubheader>{$localize('navigation.projects.headline')}</MaterialSubheader>
       {#each drawerMenuProjectItems as item}
@@ -109,7 +109,7 @@ svelteLifecycleOnDestroy(() => {
         </MaterialListItem>
       {/each}
 
-      <MaterialSeparator nav />
+      <MaterialListSeparator nav />
 
       <MaterialListItem>
         <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}">

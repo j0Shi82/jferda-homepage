@@ -121,6 +121,36 @@ const skills = [
   {
     type: 'jspackages', name: 'Jest', class: 'jest', logo: jestLogo, progress: 0.4,
   },
+  {
+    type: 'nwoun', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.3,
+  },
+  {
+    type: 'nwoun', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.6,
+  },
+  {
+    type: 'nwoun', name: 'JavaScript', class: 'javascript', logo: javascriptLogo, progress: 0.9,
+  },
+  {
+    type: 'nwoun', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.9,
+  },
+  {
+    type: 'nwoun', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 0.8,
+  },
+  {
+    type: 'nwoun', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.4,
+  },
+  {
+    type: 'nwoun', name: 'Photoshop CS6', class: 'css', logo: photoshopLogo, progress: 0.6,
+  },
+  {
+    type: 'mmb', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.3,
+  },
+  {
+    type: 'mmb', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.6,
+  },
+  {
+    type: 'mmb', name: 'JavaScript', class: 'javascript', logo: javascriptLogo, progress: 0.9,
+  },
 ];
 
 export { cats, skills };

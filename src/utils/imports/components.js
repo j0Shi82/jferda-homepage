@@ -13,8 +13,15 @@ import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelt
 import SkillsProgressRow from 'components/content/skills/SkillsProgressRow.svelte';
 
 import ProjectsCard from 'components/content/projects/ProjectsCard';
+import ProjectDescription from 'components/content/projects/ProjectDescription';
+import ProjectKeys from 'components/content/projects/ProjectKeys';
+import ProjectSkills from 'components/content/projects/ProjectSkills';
+import ProjectGallery from 'components/content/projects/ProjectGallery';
+import ProjectLinks from 'components/content/projects/ProjectLinks';
 
 import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
+
+import Icon from 'fa-svelte';
 
 export {
   Header as MainHeader,
@@ -22,6 +29,7 @@ export {
   AppContent,
   HomeRoutes,
   AboutPhilosophyButton, AboutBio, SkillsProgressCat, SkillsProgressRow, ResumeItem,
-  ProjectsCard,
+  ProjectsCard, ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks,
   FlyingHeadline,
+  Icon as FontAwesomeIcon,
 };

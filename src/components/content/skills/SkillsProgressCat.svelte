@@ -18,7 +18,7 @@ export let catIdent;
 export let catOpen = false;
 export let slideDelay = 0;
 export let slideDuration = atomTransitionDuration;
-export let rowIterationDelay = atomTransitionDuration;
+export let rowIterationDelay = atomTransitionDurationShort;
 </script>
 
 {#if catOpen}

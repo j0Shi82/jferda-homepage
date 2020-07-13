@@ -1,6 +1,7 @@
 <script>
 import { formatDate, localize } from 'utils/imports/core';
 import { svelteTransitionFly, svelteEasingBackOut } from 'utils/imports/svelte';
+import { animationsActive, screenWidth } from 'utils/imports/store';
 
 export let item = {
   startDate: new Date(),
@@ -11,7 +12,10 @@ export let item = {
 export let delay = 0;
 export let transitionDuration = 500;
 
-const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+$: {
+  transitionDuration = $animationsActive ? transitionDuration : 0;
+  delay = $animationsActive ? delay : 0;
+}
 
 let visible = false;
 setTimeout(() => {
@@ -34,7 +38,7 @@ setTimeout(() => {
     class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone jdev-resume-date" 
     class:visible="{visible}"
     in:svelteTransitionFly="{{
-        x: screenWidth / -2, duration: transitionDuration, delay,
+        x: $screenWidth / -2, duration: transitionDuration, delay,
     }}"
 >
     {

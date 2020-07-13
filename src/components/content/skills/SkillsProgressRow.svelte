@@ -1,5 +1,6 @@
 <script>
 import { MaterialLinearProgress } from 'utils/imports/material';
+import { animationsActive } from 'utils/imports/store';
 
 export let logoSrc;
 export let progress;
@@ -7,7 +8,7 @@ export let logoAlt;
 export let themeClass;
 export let delay = 0;
 
-let currentProgress = 0;
+let currentProgress = $animationsActive ? 0 : progress;
 setTimeout(() => {
   currentProgress = progress;
 }, delay);

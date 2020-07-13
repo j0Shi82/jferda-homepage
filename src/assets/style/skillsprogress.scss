@@ -5,8 +5,14 @@
   .mdc-linear-progress__bar.mdc-linear-progress__primary-bar {
     transition-property: transform;
     transition-delay: 0s;
-    transition-duration: var(--jdev-skills-progress-duration ,1s);
+    transition-duration: var(--jdev-skills-progress-duration, 1s);
     transition-timing-function: ease-in-out;
+  }
+
+  &.no-animation {
+    .mdc-linear-progress__bar.mdc-linear-progress__primary-bar {
+      transition-duration: 0s;
+    }
   }
 
   .jdev-skills-logo {

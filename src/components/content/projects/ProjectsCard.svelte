@@ -5,6 +5,7 @@ import { headerTransitionDuration, atomTransitionDurationShort, atomTransitionDu
 import {
   MaterialCard, MaterialCardMedia, MaterialCardContent, MaterialIcon,
 } from 'utils/imports/material';
+import { animationsActive } from 'utils/imports/store';
 
 let hover = false;
 export let i;
@@ -14,7 +15,10 @@ export let project;
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
     <div 
         class="card-container" 
-        in:svelteTransitionScale="{{ delay: headerTransitionDuration + i * atomTransitionDurationShort, duration: atomTransitionDuration }}"
+        in:svelteTransitionScale="{{
+            delay: $animationsActive ? headerTransitionDuration + i * atomTransitionDurationShort : 0,
+            duration: $animationsActive ? atomTransitionDuration : 0,
+        }}"
     >
         <MaterialCard variant="outlined" on:mouseenter={() => { hover = true; }} on:mouseleave={() => { hover = false; }}>
             {#if hover}

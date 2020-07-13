@@ -1,9 +1,15 @@
 <script>
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFly } from 'utils/imports/svelte';
+import { animationsActive } from 'utils/imports/store';
 
 export let transitionDuration;
 export let delay;
+
+$: {
+  transitionDuration = $animationsActive ? transitionDuration : 0;
+  delay = $animationsActive ? delay : 0;
+}
 
 const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 </script>

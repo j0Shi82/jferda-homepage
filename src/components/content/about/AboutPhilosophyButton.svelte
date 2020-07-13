@@ -3,6 +3,7 @@ import { svelteLifecycleOnMount, svelteTransitionFly } from 'utils/imports/svelt
 import { MaterialFabLabel, MaterialFab } from 'utils/imports/material';
 import { Tooltip } from 'utils/imports/plugins';
 import { localize } from 'utils/imports/core';
+import { animationsActive, screenWidth } from 'utils/imports/store';
 
 let el;
 export let headlineLocaleIdent;
@@ -11,7 +12,10 @@ export let image;
 export let delay;
 export let transitionDuration;
 
-const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+$: {
+  transitionDuration = $animationsActive ? transitionDuration : 0;
+  delay = $animationsActive ? delay : 0;
+}
 
 svelteLifecycleOnMount(() => {
   Tooltip(el, {
@@ -27,7 +31,7 @@ svelteLifecycleOnMount(() => {
   class="jdev-fab-wrapper" 
   bind:this="{el}"
   in:svelteTransitionFly="{{
-    x: screenWidth / 2, duration: transitionDuration, delay,
+    x: $screenWidth / 2, duration: transitionDuration, delay,
   }}"
 >
     <MaterialFab extended ripple="false" color="primary"><span class="background" style="background-image: url({image});"></span><MaterialFabLabel>{$localize(headlineLocaleIdent)}</MaterialFabLabel></MaterialFab>

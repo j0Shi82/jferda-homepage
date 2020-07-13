@@ -12,6 +12,8 @@ import {
   MaterialSubheader,
   MaterialSelect,
   MaterialOption,
+  MaterialFormField,
+  MaterialSwitch,
 } from 'utils/imports/material';
 
 import {
@@ -25,6 +27,7 @@ import {
   currentLocale,
   locales,
   menuMobileState,
+  animationsActive,
 } from 'utils/imports/store';
 import {
   drawerMenuItems,
@@ -117,6 +120,13 @@ svelteLifecycleOnDestroy(() => {
             <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption>
           {/each}
         </MaterialSelect>
+      </MaterialListItem>
+
+      <MaterialListItem>
+        <MaterialFormField class="jdev-animation-toggle">
+          <MaterialSwitch bind:checked={$animationsActive} />
+          <span slot="label">{$localize('navigation.animationSwitchLabel')}</span>
+        </MaterialFormField>
       </MaterialListItem>
     </MaterialList>
   </MaterialContent>

@@ -15,6 +15,8 @@ import TabBar from '@smui/tab-bar';
 import ImageList, {
   Item as ImageListItem, ImageAspectContainer, Image as ImageListImage,
 } from '@smui/image-list';
+import Switch from '@smui/switch';
+import FormField from '@smui/form-field';
 
 export {
   ImageList as MaterialImageList,
@@ -51,4 +53,6 @@ export {
   LinearProgress as MaterialLinearProgress,
   Icon as MaterialIcon,
   ChipText as MaterialChipText,
+  Switch as MaterialSwitch,
+  FormField as MaterialFormField,
 };

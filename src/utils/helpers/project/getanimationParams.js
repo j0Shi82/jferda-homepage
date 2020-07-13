@@ -1,4 +1,4 @@
-export default (totalDuration, sectionItems = [6, 1, 4, 8]) => {
+export default (totalDuration, animationsActive, sectionItems = [6, 1, 4, 8]) => {
   const animationParams = [];
   const headlineTotalDuration = totalDuration / 2;
   const headlineSingleDuration = headlineTotalDuration / sectionItems.length;
@@ -16,13 +16,13 @@ export default (totalDuration, sectionItems = [6, 1, 4, 8]) => {
 
     animationParams.push({
       headline: {
-        duration: headlineSingleDuration,
-        delay: headlineSingleDuration * i,
+        duration: animationsActive ? headlineSingleDuration : 0,
+        delay: animationsActive ? headlineSingleDuration * i : 0,
       },
       content: {
-        duration: contentSingleDuration,
-        delay: headlineSingleDuration * (i + 1),
-        iterationDelay: contentIterationDelay,
+        duration: animationsActive ? contentSingleDuration : 0,
+        delay: animationsActive ? headlineSingleDuration * (i + 1) : 0,
+        iterationDelay: animationsActive ? contentIterationDelay : 0,
       },
     });
   });

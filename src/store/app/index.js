@@ -42,7 +42,10 @@ const store = {
   },
   data: {
     screenWidth: storeTypeWritable(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth),
-  }
+  },
+  animations: {
+    active: storeTypeWritable(true),
+  },
 };
 
 window.addEventListener('resize', () => {

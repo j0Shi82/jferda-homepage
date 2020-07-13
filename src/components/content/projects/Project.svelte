@@ -1,18 +1,19 @@
 <script>
 import {
-  svelteTransitionFade, svelteLifecycleOnMount, svelteTick,
+  svelteTransitionFade, svelteLifecycleOnMount,
 } from 'utils/imports/svelte';
 import {
   ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks,
 } from 'utils/imports/components';
-import { currentProject } from 'utils/imports/store';
+import { currentProject, animationsActive } from 'utils/imports/store';
 import { routingFadeDuration } from 'utils/imports/config';
 import { preloadImages, getProjectAnimationParams } from 'utils/imports/helpers';
 import { projectList, skillList } from 'utils/imports/data';
 
 import 'assets/style/project.scss';
 
-const animationTotalDuration = 2500;
+let animationTotalDuration = $animationsActive ? 2500 : 0;
+$: animationTotalDuration = $animationsActive ? 2500 : 0;
 let currentTimeout = null;
 
 // animation logic
@@ -27,7 +28,7 @@ function getSectionAnimationParams(projectData) {
   const galleryCount = projectData.projectPage.gallery.length;
   [
     skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams,
-  ] = getProjectAnimationParams(animationTotalDuration, [skillCount, 1, keysCount, galleryCount]);
+  ] = getProjectAnimationParams(animationTotalDuration, $animationsActive, [skillCount, 1, keysCount, galleryCount]);
   return [
     skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams,
   ];
@@ -41,15 +42,17 @@ let routeContainer;
 let projectContainer;
 
 function scale() {
-  initialized = false;
-  // scale window to device height and unfold when animations finished
-  scaleY = (window.innerHeight - 48) / projectContainer.clientHeight;
+  if ($animationsActive) {
+    initialized = false;
+    // scale window to device height and unfold when animations finished
+    scaleY = (window.innerHeight - 48) / projectContainer.clientHeight;
 
-  if (currentTimeout) clearTimeout(currentTimeout);
-  currentTimeout = setTimeout(() => {
-    scaleY = 1;
-    initialized = true;
-  }, animationTotalDuration + 250);
+    if (currentTimeout) clearTimeout(currentTimeout);
+    currentTimeout = setTimeout(() => {
+      scaleY = 1;
+      initialized = true;
+    }, animationTotalDuration + 250);
+  }
 }
 
 $: {

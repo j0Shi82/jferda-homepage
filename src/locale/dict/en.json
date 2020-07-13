@@ -11,7 +11,8 @@
             "jferda": "j0shi.dev",
             "lwm": "Last War Manager",
             "edom": "e-domizil.de"
-        }
+        },
+        "animationSwitchLabel": "Toggle animations"
     },
     "locale": {
         "headline": "Language",

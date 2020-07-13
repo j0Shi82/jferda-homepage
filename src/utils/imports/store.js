@@ -9,6 +9,7 @@ const { mobileState } = store.app.menu;
 const { screenWidth } = store.app.data;
 const { routeName, isRouting } = store.app.router;
 const { isMobile, isTablet, isDesktop } = store.app.breakpoints;
+const { active } = store.app.animations;
 
 const { currentProject } = store.projects;
 
@@ -26,4 +27,5 @@ export {
   locale as currentLocale,
   locales,
   currentProject,
+  active as animationsActive,
 };

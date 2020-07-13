@@ -21,6 +21,10 @@ body {
   position: relative;
 }
 
+.mdc-drawer {
+  height: 100vh;
+}
+
 .mdc-drawer .mdc-list-divider {
   border-bottom-color: $material-color-grey-300;
 }

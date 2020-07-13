@@ -10,6 +10,8 @@ const { screenWidth } = store.app.data;
 const { routeName, isRouting } = store.app.router;
 const { isMobile, isTablet, isDesktop } = store.app.breakpoints;
 
+const { currentProject } = store.projects;
+
 export {
   setRouterIsRouting as storeSetRouterIsRouting,
   mobileState as menuMobileState,
@@ -23,4 +25,5 @@ export {
   isDesktop as isDesktopBreakpoint,
   locale as currentLocale,
   locales,
+  currentProject,
 };

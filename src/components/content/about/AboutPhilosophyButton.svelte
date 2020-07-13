@@ -1,6 +1,6 @@
 <script>
 import { svelteLifecycleOnMount, svelteTransitionFly } from 'utils/imports/svelte';
-import { MaterialLabel, MaterialFab } from 'utils/imports/material';
+import { MaterialFabLabel, MaterialFab } from 'utils/imports/material';
 import { Tooltip } from 'utils/imports/plugins';
 import { localize } from 'utils/imports/core';
 
@@ -30,5 +30,5 @@ svelteLifecycleOnMount(() => {
     x: screenWidth / 2, duration: transitionDuration, delay,
   }}"
 >
-    <MaterialFab extended ripple="false" color="primary"><span class="background" style="background-image: url({image});"></span><MaterialLabel>{$localize(headlineLocaleIdent)}</MaterialLabel></MaterialFab>
+    <MaterialFab extended ripple="false" color="primary"><span class="background" style="background-image: url({image});"></span><MaterialFabLabel>{$localize(headlineLocaleIdent)}</MaterialFabLabel></MaterialFab>
 </div>

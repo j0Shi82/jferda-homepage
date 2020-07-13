@@ -4,6 +4,7 @@ import {
   menuResumeIcon,
   menuSkillsIcon,
 } from 'utils/imports/config';
+import projectList from 'config/data/projects';
 
 const generalMenuItems = [
   { routeName: 'home', icon: menuHomeIcon },
@@ -12,23 +13,9 @@ const generalMenuItems = [
   { routeName: 'skills', icon: menuSkillsIcon },
 ];
 
-const projectMenuItems = [
-  {
-    routeName: 'projects_mmb',
-    localeIdent: 'mmb',
-  },
-  {
-    routeName: 'projects_nwoun',
-    localeIdent: 'nwoun',
-  },
-  {
-    routeName: 'projects_lwm',
-    localeIdent: 'lwm',
-  },
-  {
-    routeName: 'projects_edom',
-    localeIdent: 'edom',
-  },
-];
+const projectMenuItems = projectList.map((project) => ({
+  routeName: project.routeName,
+  localeIdent: project.ident,
+}));
 
 export { generalMenuItems, projectMenuItems };

@@ -10,8 +10,8 @@ const baseRoutes = [
   { name: 'resume', component: ResumeRoute, data: {} },
   { name: 'skills', component: SkillsRoute, data: {} },
   { name: 'projects', component: ProjectsRoute, data: {} },
-  { name: 'projects_nwoun', component: ProjectRoute, data: { name: 'nwoun' } },
-  { name: 'projects_mmb', component: ProjectRoute, data: { name: 'mmb' } },
+  { name: 'projects_nwoun', component: ProjectRoute, data: { projectIdent: 'nwoun' } },
+  { name: 'projects_mmb', component: ProjectRoute, data: { projectIdent: 'mmb' } },
   { name: '404', component: HomeRoute, data: {} },
 ];
 

@@ -143,13 +143,13 @@ const skills = [
     type: 'nwoun', name: 'Photoshop CS6', class: 'css', logo: photoshopLogo, progress: 0.6,
   },
   {
-    type: 'mmb', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.3,
+    type: 'mmb', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.8,
   },
   {
-    type: 'mmb', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.6,
+    type: 'mmb', name: 'Express', class: 'express', logo: expressLogo, progress: 0.55,
   },
   {
-    type: 'mmb', name: 'JavaScript', class: 'javascript', logo: javascriptLogo, progress: 0.9,
+    type: 'mmb', name: 'Jest', class: 'jest', logo: jestLogo, progress: 0.4,
   },
 ];
 

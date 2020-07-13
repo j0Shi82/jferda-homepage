@@ -11,8 +11,11 @@
   align-items: center;
 
   .jdev-knowledge-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    > div {
+    > div.logo {
       position: absolute;
       background-size: contain;
       background-position: center center;
@@ -20,21 +23,24 @@
       height: 100%;
       width: 80%;
       left: 10%;
+      animation: flipX 4s linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      animation-play-state: paused;
 
       &.animation-active {
-        animation: flipX 4s linear;
-        animation-iteration-count: infinite;
+        animation-play-state: running;
       }
     }
 
-    &.vue > div { background-image: url('../media/images/knowledge-logos/vuejs.png') ;}
-    &.docker > div { background-image: url('../media/images/knowledge-logos/docker.png') ;}
-    &.javascript > div { background-image: url('../media/images/knowledge-logos/javascript.png') ;}
-    &.node > div { background-image: url('../media/images/knowledge-logos/node.png') ;}
-    &.php > div { background-image: url('../media/images/knowledge-logos/php.png') ;}
-    &.svelte > div { background-image: url('../media/images/knowledge-logos/svelte.png') ;}
-    &.wordpress > div { background-image: url('../media/images/knowledge-logos/wp.png') ;}
-    &.git > div { background-image: url('../media/images/knowledge-logos/git.png') ;}
+    &.vue > div.logo { background-image: url('../media/images/knowledge-logos/vuejs.png'); }
+    &.docker > div.logo { background-image: url('../media/images/knowledge-logos/docker.png'); }
+    &.javascript > div.logo { background-image: url('../media/images/knowledge-logos/javascript.png'); }
+    &.node > div.logo { background-image: url('../media/images/knowledge-logos/node.png'); }
+    &.php > div.logo { background-image: url('../media/images/knowledge-logos/php.png'); }
+    &.svelte > div.logo { background-image: url('../media/images/knowledge-logos/svelte.png'); }
+    &.wordpress > div.logo { background-image: url('../media/images/knowledge-logos/wp.png'); }
+    &.git > div.logo { background-image: url('../media/images/knowledge-logos/git.png'); }
 
     position: relative;
     height: 30vh;
@@ -52,11 +58,11 @@
       transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
     }
 
-    10% {
-      opacity: 0;
-      -webkit-transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
-      transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
-    }
+    // 10% {
+    //   opacity: 0;
+    //   -webkit-transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
+    //   transform: perspective(400px) translateZ(0) rotateX(90deg) scale(1);
+    // }
 
     20% {
       opacity: 1;
@@ -70,11 +76,11 @@
       transform: perspective(400px) translateZ(0) rotateX(0) scale(1);
     }
 
-    90% {
-      opacity: 0;
-      -webkit-transform: perspective(400px) translateZ(0) rotateX(-90deg) scale(1);
-      transform: perspective(400px) translateZ(0) rotateX(-90deg) scale(1);
-    }
+    // 90% {
+    //   opacity: 0;
+    //   -webkit-transform: perspective(400px) translateZ(0) rotateX(-90deg) scale(1);
+    //   transform: perspective(400px) translateZ(0) rotateX(-90deg) scale(1);
+    // }
 
     100% {
       opacity: 0;

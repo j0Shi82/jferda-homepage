@@ -20,6 +20,7 @@ import ProjectGallery from 'components/content/projects/ProjectGallery';
 import ProjectLinks from 'components/content/projects/ProjectLinks';
 
 import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
+import Loader from 'components/utilities/atoms/Loader.svelte';
 
 import Icon from 'fa-svelte';
 
@@ -31,5 +32,6 @@ export {
   AboutPhilosophyButton, AboutBio, SkillsProgressCat, SkillsProgressRow, ResumeItem,
   ProjectsCard, ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks,
   FlyingHeadline,
+  Loader,
   Icon as FontAwesomeIcon,
 };

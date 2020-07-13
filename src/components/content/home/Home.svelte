@@ -1,7 +1,7 @@
 <script>
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFade, svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { HomeRoutes } from 'utils/imports/components';
+import { HomeRoutes, Loader } from 'utils/imports/components';
 import { homeKnowledgeLogoItems } from 'utils/imports/data';
 import { routingFadeDuration } from 'utils/imports/config';
 import { isMobileBreakpoint, isDesktopBreakpoint, isTabletBreakpoint } from 'utils/imports/store';
@@ -10,8 +10,9 @@ import { preloadImages } from 'utils/imports/helpers';
 import 'assets/style/home.scss';
 
 const knowledgeLogoSet = homeKnowledgeLogoItems.map((item) => item.ident);
-let currentLogoItem = { ident: '', logo: '' };
+let [currentLogoItem] = homeKnowledgeLogoItems;
 let typographyTextClass;
+let interval;
 $: {
   if ($isMobileBreakpoint) typographyTextClass = 'mdc-typography--headline6';
   if ($isTabletBreakpoint) typographyTextClass = 'mdc-typography--headline5';
@@ -20,8 +21,7 @@ $: {
 // logo animation logic
 // css animates, but javascript has to change background image
 let showLogoAnimation = false;
-let logoGrid;
-
+// let logoGrid;
 function changeLogo() {
   const currentIndex = homeKnowledgeLogoItems.map((el) => el.ident).indexOf(currentLogoItem.ident);
   if (knowledgeLogoSet[currentIndex + 1]) currentLogoItem = homeKnowledgeLogoItems[currentIndex + 1];
@@ -29,33 +29,38 @@ function changeLogo() {
 }
 
 svelteLifecycleOnMount(() => {
-  logoGrid.addEventListener('animationiteration', () => {
-    changeLogo();
-  });
-
-  logoGrid.addEventListener('animationstart', () => {
-    [currentLogoItem] = homeKnowledgeLogoItems;
-  });
-
-  preloadImages([homeKnowledgeLogoItems[0].logo]).finally(() => {
+  preloadImages(homeKnowledgeLogoItems.map((el) => el.logo)).finally(() => {
     showLogoAnimation = true;
+    interval = setInterval(() => {
+      changeLogo();
+    }, 4000);
   });
-});
 
-preloadImages(homeKnowledgeLogoItems.map((el) => el.logo));
+  return () => {
+    clearInterval(interval);
+  };
+});
 </script>
 
 <div class="jdev-route-home" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
     <div class="mdc-layout-grid">
         <div class="mdc-layout-grid__inner">
-          <div 
-            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-knowledge-logo {currentLogoItem.ident}" 
-            bind:this="{logoGrid}"
-          >
+          {#each homeKnowledgeLogoItems as logoItem}
+            {#if logoItem.ident === currentLogoItem.ident}
             <div 
-              class:animation-active="{showLogoAnimation}"
-            ></div>
-          </div>
+              class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 jdev-knowledge-logo {logoItem.ident}" 
+            >
+              {#if showLogoAnimation}
+              <div
+                class="logo" 
+                class:animation-active="{showLogoAnimation}"
+              ></div>
+              {:else}
+              <Loader />
+              {/if}
+            </div>
+            {/if}
+          {/each}
           <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 {typographyTextClass} jdev-intro-text {currentLogoItem.ident}">
             {@html $localize('home.maintext')}
           </div>

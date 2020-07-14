@@ -3,7 +3,7 @@ import {
   svelteTransitionFade, svelteLifecycleOnMount,
 } from 'utils/imports/svelte';
 import {
-  ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks,
+  ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks, Loader,
 } from 'utils/imports/components';
 import { currentProject, animationsActive } from 'utils/imports/store';
 import { routingFadeDuration } from 'utils/imports/config';
@@ -36,10 +36,25 @@ function getSectionAnimationParams(projectData) {
 
 // scaling and animations
 let projectData;
-let scaleY = null;
+let scaleY = 1;
 let initialized = false;
+let loading = true;
 let routeContainer;
 let projectContainer;
+
+function load() {
+  loading = true;
+  initialized = false;
+  const images = [];
+  const [data] = projectList.filter((project) => project.ident === $currentProject);
+  const projectSkills = skillList.filter((el) => el.type === $currentProject);
+  images.push(data.projectPage.titleImage);
+  images.push(...data.projectPage.gallery.map((image) => image.thumb));
+  images.push(...projectSkills.map((skill) => skill.logo));
+  preloadImages(images).finally(() => {
+    loading = false;
+  });
+}
 
 function scale() {
   if ($animationsActive) {
@@ -60,26 +75,31 @@ $: {
   [
     skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams,
   ] = getSectionAnimationParams(projectData);
-  preloadImages([projectData.projectPage.titleImage]);
+  load();
 }
 
 $: {
   // using bing:this as onUpdateOnMount service
   // route change => new content gets rendered => projectContainer gets updated => scale gets triggered
-  if (projectContainer) {
+  if (routeContainer) {
     scale();
   }
 }
 
 // first scaling on page load
 svelteLifecycleOnMount(() => {
-  scale();
+  load();
 });
 </script>
 
+{#if loading}
+<div class="jdev-route-project-loader" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
+  <Loader />
+</div>
+{:else}
 <div 
   class="jdev-route-project mdc-typography--body1" 
-  style="transform: scaleY({scaleY}); transform-origin: top center;" 
+  style="transform: scaleY({scaleY});" 
   in:svelteTransitionFade="{{ duration: routingFadeDuration }}"
   class:initialized="{initialized}"
   bind:this="{routeContainer}"
@@ -102,3 +122,4 @@ svelteLifecycleOnMount(() => {
     {/if}
   {/each}
 </div>
+{/if}

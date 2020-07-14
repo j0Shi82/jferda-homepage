@@ -4,6 +4,15 @@
 @import "@material/layout-grid/variables";
 @import "glightbox/dist/css/glightbox";
 
+.jdev-route-project-loader {
+  position: absolute;
+  height: calc(100% - 48px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .jdev-route-project {
   .jdev-project-image-list {
     @include mdc-image-list-standard-columns(5);
@@ -56,6 +65,7 @@
   }
 
   pointer-events: none;
+  transform-origin: top center;
 
   &.initialized {
     transition: transform 1s ease-in-out;

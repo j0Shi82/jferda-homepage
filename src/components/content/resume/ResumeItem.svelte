@@ -51,7 +51,7 @@ setTimeout(() => {
     class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone jdev-resume-content" 
     class:visible="{visible}"
     in:svelteTransitionFly="{{
-        x: screenWidth / 2, duration: transitionDuration, delay, easing: svelteEasingBackOut,
+        x: $screenWidth / 2, duration: transitionDuration, delay, easing: svelteEasingBackOut,
     }}"
 >
     {@html $localize(item.textLocaleIdent)}

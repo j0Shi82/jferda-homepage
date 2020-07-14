@@ -20,7 +20,7 @@ export let animationTotalDuration;
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly="{{ y: -400, duration: animationTotalDuration }}">
     {#each projectData.projectPage.links as link, i}
         {#if link.type === 'web'}
-            <MaterialFab on:click="{() => { window.open(link.url); }}" mini extended><FontAwesomeIcon class="mdc-fab__icon" icon={faGlobe}></FontAwesomeIcon><MaterialFabLabel>{ $localize('project.links.web')}</MaterialFabLabel></MaterialFab>
+            <MaterialFab on:click="{() => { window.open(link.url); }}" mini extended><FontAwesomeIcon class="mdc-fab__icon" icon={faGlobe}></FontAwesomeIcon><MaterialFabLabel>{ $localize(link.labelLocaleIdent)}</MaterialFabLabel></MaterialFab>
         {/if}
     {/each}
     </div>

@@ -33,10 +33,12 @@ export default [
         {
           type: 'web',
           url: 'https://blog.nwo-uncensored.com',
+          labelLocaleIdent: 'project.nwoun.links.blog',
         },
         {
           type: 'web',
           url: 'https://forum.nwo-undensored.com',
+          labelLocaleIdent: 'project.nwoun.links.forum',
         },
       ],
       descLocaleKey: 'project.nwoun.desc',

@@ -86,13 +86,21 @@
         "php": "PHP",
         "wp": "Wordpress",
         "sql": "SQL",
-        "jquery": "jQuery"
+        "jquery": "jQuery",
+        "vue": "Vue",
+        "laravel": "Laravel",
+        "docker": "Docker",
+        "bootstrap": "Bootstrap",
+        "node": "Node"
     },
     "projects": {
         "learnmore": "Learn more",
         "skillsep": ", ",
         "mmb": {
             "desc": "MavsMoneyball was mainly a blogging project. It was great to cover a sport that I love and a team that I root for. But I did also develop a statistical app to complement my blog work."
+        },
+        "edom": {
+            "desc": "This was the first commercial project I worked on. I was fortunate enough that I could be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
         },
         "nwoun": {
             "desc": "NWO:UN has been my biggest personal project to date. We served the game's community for nearly five years and delivered content and tools to over 100,000 players per month."

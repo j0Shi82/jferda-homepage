@@ -1,19 +1,6 @@
 import { routeWrapper, getLocalizedRoute, getRouteGuards } from 'utils/imports/core';
 import { localeStandardLanguage, localeSupportedLanguages } from 'utils/imports/config';
-import {
-  HomeRoute, AboutRoute, ResumeRoute, SkillsRoute, ProjectsRoute, ProjectRoute,
-} from 'utils/imports/routes';
-
-const baseRoutes = [
-  { name: 'home', component: HomeRoute, data: {} },
-  { name: 'about', component: AboutRoute, data: {} },
-  { name: 'resume', component: ResumeRoute, data: {} },
-  { name: 'skills', component: SkillsRoute, data: {} },
-  { name: 'projects', component: ProjectsRoute, data: {} },
-  { name: 'projects_nwoun', component: ProjectRoute, data: { projectIdent: 'nwoun' } },
-  { name: 'projects_mmb', component: ProjectRoute, data: { projectIdent: 'mmb' } },
-  { name: '404', component: HomeRoute, data: {} },
-];
+import baseRoutes from 'router/baseRoutes';
 
 const routes = {};
 

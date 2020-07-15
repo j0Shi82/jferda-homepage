@@ -1,7 +1,7 @@
 <script>
 import { localize } from 'utils/imports/core';
-import { svelteTransitionFade, svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { SkillsProgressCat } from 'utils/imports/components';
+import { svelteTransitionFade, svelteLifecycleOnMount, svelteTick } from 'utils/imports/svelte';
+import { SkillsProgressCat, Loader } from 'utils/imports/components';
 import { skillCategories, skillList } from 'utils/imports/data';
 import { routingFadeDuration } from 'utils/imports/config';
 import {
@@ -14,15 +14,6 @@ import 'assets/style/skills.scss';
 const openCat = 'lang';
 let currentCat;
 
-// preload images to smoothen transitions
-preloadImages(skillList.filter((skill) => skill.type === openCat).map((skill) => skill.logo)).finally(() => {
-  currentCat = openCat;
-
-  setTimeout(() => {
-    preloadImages(skillList.filter((skill) => skill.type !== openCat).map((skill) => skill.logo));
-  }, 250);
-});
-
 // observe elements on each side of the navigation
 // if not visible, show corresponding arrows
 let rightArrowOberserver;
@@ -31,16 +22,30 @@ let showRightArrow = false;
 let showLeftArrow = false;
 
 svelteLifecycleOnMount(() => {
-  const observerLeft = new IntersectionObserver((entries) => {
-    showLeftArrow = !entries[0].isIntersecting;
+  let observerLeft;
+  let observerRight;
+  // preload images to smoothen transitions
+  preloadImages(skillList.filter((skill) => skill.type === openCat).map((skill) => skill.logo)).finally(() => {
+    currentCat = openCat;
+
+    svelteTick().then(() => {
+      observerLeft = new IntersectionObserver((entries) => {
+        showLeftArrow = !entries[0].isIntersecting;
+      });
+
+      observerRight = new IntersectionObserver((entries) => {
+        showRightArrow = !entries[0].isIntersecting;
+      });
+
+      observerLeft.observe(leftArrowOberserver);
+      observerRight.observe(rightArrowOberserver);
+    });
+
+    setTimeout(() => {
+      preloadImages(skillList.filter((skill) => skill.type !== openCat).map((skill) => skill.logo));
+    }, 250);
   });
 
-  const observerRight = new IntersectionObserver((entries) => {
-    showRightArrow = !entries[0].isIntersecting;
-  });
-
-  observerLeft.observe(leftArrowOberserver);
-  observerRight.observe(rightArrowOberserver);
   return () => {
     observerLeft.unobserve(leftArrowOberserver);
     observerRight.unobserve(rightArrowOberserver);
@@ -48,6 +53,11 @@ svelteLifecycleOnMount(() => {
 });
 </script>
 
+{#if !currentCat}
+<div class="jdev-route-skills-loader" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
+  <Loader />
+</div>
+{:else}
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -66,3 +76,4 @@ svelteLifecycleOnMount(() => {
     {/each}
   </div>
 </div>
+{/if}

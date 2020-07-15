@@ -1,6 +1,15 @@
 @import "@material/linear-progress/mixins";
 @import "_smui-theme.scss";
 
+.jdev-route-skills-loader {
+  position: absolute;
+  height: calc(100% - 48px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .jdev-route-skills {
   .mdc-tab-bar {
     background-color: $mdc-theme-surface;

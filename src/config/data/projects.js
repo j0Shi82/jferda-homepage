@@ -19,6 +19,20 @@ import logoToolbase from 'assets/media/images/projects/nwoun/uncensored-toolbase
 import logoToolbase250 from 'assets/media/images/projects/nwoun/uncensored-toolbase-250.png';
 import bannerToolbase from 'assets/media/images/projects/nwoun/uncensored-Toolbase-Currency-Converter.jpg';
 import bannerToolbase250 from 'assets/media/images/projects/nwoun/uncensored-Toolbase-Currency-Converter-250.jpg';
+import toolbaseAuctionScreenshot from 'assets/media/images/projects/nwoun/toolbase-auctionchart.jpg';
+import toolbaseAuctionScreenshot250 from 'assets/media/images/projects/nwoun/toolbase-auctionchart-250.jpg';
+import toolbaseCharsimScreenshot from 'assets/media/images/projects/nwoun/toolbase-charsim.jpg';
+import toolbaseCharsimScreenshot250 from 'assets/media/images/projects/nwoun/toolbase-charsim-250.jpg';
+import toolbaseCharsimGearScreenshot from 'assets/media/images/projects/nwoun/toolbase-charsim-choosegear.jpg';
+import toolbaseCharsimGearScreenshot250 from 'assets/media/images/projects/nwoun/toolbase-charsim-choosegear-250.jpg';
+import toolbaseCharsimHeaderScreenshot from 'assets/media/images/projects/nwoun/toolbase-charsim-header.jpg';
+import toolbaseCharsimHeaderScreenshot250 from 'assets/media/images/projects/nwoun/toolbase-charsim-header-250.jpg';
+import toolbaseItemdbScreenshot from 'assets/media/images/projects/nwoun/toolbase-itemdb.jpg';
+import toolbaseItemdbScreenshot250 from 'assets/media/images/projects/nwoun/toolbase-itemdb-250.jpg';
+import analyticsScreenshot from 'assets/media/images/projects/nwoun/analytics.jpg';
+import analyticsScreenshot250 from 'assets/media/images/projects/nwoun/analytics-250.jpg';
+import commentsScreenshot from 'assets/media/images/projects/nwoun/comments.jpg';
+import commentsScreenshot250 from 'assets/media/images/projects/nwoun/comments-250.jpg';
 
 import logoEdom from 'assets/media/images/projects/edom/logo.svg';
 import gallery1Edom from 'assets/media/images/projects/edom/gallery1.jpg';
@@ -91,6 +105,48 @@ export default [
         {
           thumb: blogScreenshot250,
           full: blogScreenshot,
+          title: false,
+          description: false,
+        },
+        {
+          thumb: analyticsScreenshot250,
+          full: analyticsScreenshot,
+          title: false,
+          description: false,
+        },
+        {
+          thumb: commentsScreenshot250,
+          full: commentsScreenshot,
+          title: false,
+          description: false,
+        },
+        {
+          thumb: toolbaseAuctionScreenshot250,
+          full: toolbaseAuctionScreenshot,
+          title: false,
+          description: false,
+        },
+        {
+          thumb: toolbaseCharsimHeaderScreenshot250,
+          full: toolbaseCharsimHeaderScreenshot,
+          title: false,
+          description: false,
+        },
+        {
+          thumb: toolbaseCharsimScreenshot250,
+          full: toolbaseCharsimScreenshot,
+          title: false,
+          description: false,
+        },
+        {
+          thumb: toolbaseCharsimGearScreenshot250,
+          full: toolbaseCharsimGearScreenshot,
+          title: false,
+          description: false,
+        },
+        {
+          thumb: toolbaseItemdbScreenshot250,
+          full: toolbaseItemdbScreenshot,
           title: false,
           description: false,
         },

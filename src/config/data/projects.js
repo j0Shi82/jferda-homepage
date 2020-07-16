@@ -20,6 +20,18 @@ import logoToolbase250 from 'assets/media/images/projects/uncensored-toolbase-25
 import bannerToolbase from 'assets/media/images/projects/uncensored-Toolbase-Currency-Converter.jpg';
 import bannerToolbase250 from 'assets/media/images/projects/uncensored-Toolbase-Currency-Converter-250.jpg';
 
+import logoEdom from 'assets/media/images/projects/edom/logo.svg';
+import gallery1Edom from 'assets/media/images/projects/edom/gallery1.jpg';
+import gallery1Edom250 from 'assets/media/images/projects/edom/gallery1-250.jpg';
+import gallery2Edom from 'assets/media/images/projects/edom/gallery2.jpg';
+import gallery2Edom250 from 'assets/media/images/projects/edom/gallery2-250.jpg';
+import gallery3Edom from 'assets/media/images/projects/edom/gallery3.jpg';
+import gallery3Edom250 from 'assets/media/images/projects/edom/gallery3-250.jpg';
+import gallery4Edom from 'assets/media/images/projects/edom/gallery4.jpg';
+import gallery4Edom250 from 'assets/media/images/projects/edom/gallery4-250.jpg';
+import gallery5Edom from 'assets/media/images/projects/edom/gallery5.jpg';
+import gallery5Edom250 from 'assets/media/images/projects/edom/gallery5-250.jpg';
+
 export default [
   {
     ident: 'nwoun',
@@ -140,105 +152,75 @@ export default [
     descLocaleKey: 'projects.edom.desc',
     routeName: 'projects_edom',
     projectPage: {
-      titleImage: logoUn1000,
+      titleImage: logoEdom,
       links: [
         {
           type: 'web',
-          url: 'https://blog.nwo-uncensored.com',
-          labelLocaleIdent: 'project.nwoun.links.blog',
+          url: 'https://www.e-domizil.de',
+          labelLocaleIdent: 'project.edom.links.edom',
         },
         {
           type: 'web',
-          url: 'https://forum.nwo-undensored.com',
-          labelLocaleIdent: 'project.nwoun.links.forum',
+          url: 'https://www.tourist-online.de',
+          labelLocaleIdent: 'project.edom.links.to',
         },
       ],
-      descLocaleKey: 'project.nwoun.desc',
+      descLocaleKey: 'project.edom.desc',
       keys: [
         {
-          primaryTextLocaleKey: 'project.nwoun.highlights.1.1',
-          secondaryTextLocaleKey: 'project.nwoun.highlights.1.2',
-          secondSecondaryTextLocaleKey: 'project.nwoun.highlights.1.3',
+          primaryTextLocaleKey: 'project.edom.highlights.1.1',
+          secondaryTextLocaleKey: 'project.edom.highlights.1.2',
+          secondSecondaryTextLocaleKey: 'project.edom.highlights.1.3',
         },
         {
-          primaryTextLocaleKey: 'project.nwoun.highlights.2.1',
-          secondaryTextLocaleKey: 'project.nwoun.highlights.2.2',
-          secondSecondaryTextLocaleKey: 'project.nwoun.highlights.2.3',
+          primaryTextLocaleKey: 'project.edom.highlights.2.1',
+          secondaryTextLocaleKey: 'project.edom.highlights.2.2',
+          secondSecondaryTextLocaleKey: 'project.edom.highlights.2.3',
         },
         {
-          primaryTextLocaleKey: 'project.nwoun.highlights.3.1',
-          secondaryTextLocaleKey: 'project.nwoun.highlights.3.2',
-          secondSecondaryTextLocaleKey: 'project.nwoun.highlights.3.3',
+          primaryTextLocaleKey: 'project.edom.highlights.3.1',
+          secondaryTextLocaleKey: 'project.edom.highlights.3.2',
+          secondSecondaryTextLocaleKey: 'project.edom.highlights.3.3',
         },
         {
-          primaryTextLocaleKey: 'project.nwoun.highlights.4.1',
-          secondaryTextLocaleKey: 'project.nwoun.highlights.4.2',
-          secondSecondaryTextLocaleKey: 'project.nwoun.highlights.4.3',
+          primaryTextLocaleKey: 'project.edom.highlights.4.1',
+          secondaryTextLocaleKey: 'project.edom.highlights.4.2',
+          secondSecondaryTextLocaleKey: 'project.edom.highlights.4.3',
         },
         {
-          primaryTextLocaleKey: 'project.nwoun.highlights.5.1',
-          secondaryTextLocaleKey: 'project.nwoun.highlights.5.2',
-          secondSecondaryTextLocaleKey: 'project.nwoun.highlights.5.3',
+          primaryTextLocaleKey: 'project.edom.highlights.5.1',
+          secondaryTextLocaleKey: 'project.edom.highlights.5.2',
+          secondSecondaryTextLocaleKey: 'project.edom.highlights.5.3',
         },
       ],
       gallery: [
         {
-          thumb: logoUn250,
-          full: logoUn,
+          thumb: gallery1Edom250,
+          full: gallery1Edom,
           title: false,
           description: false,
         },
         {
-          thumb: blogScreenshot250,
-          full: blogScreenshot,
+          thumb: gallery2Edom250,
+          full: gallery2Edom,
           title: false,
           description: false,
         },
         {
-          thumb: logoRavenloft250,
-          full: logoRavenloft,
+          thumb: gallery3Edom250,
+          full: gallery3Edom,
           title: false,
           description: false,
         },
         {
-          thumb: logoKnow250,
-          full: logoKnow,
+          thumb: gallery4Edom250,
+          full: gallery4Edom,
           title: false,
           description: false,
         },
         {
-          thumb: bannerM13250,
-          full: bannerM13,
-          title: false,
-          description: false,
-        },
-        {
-          thumb: bannerM14250,
-          full: bannerM14,
-          title: false,
-          description: false,
-        },
-        {
-          thumb: bannerM15250,
-          full: bannerM15,
-          title: false,
-          description: false,
-        },
-        {
-          thumb: bannerLaunch250,
-          full: bannerLaunch,
-          title: false,
-          description: false,
-        },
-        {
-          thumb: logoToolbase250,
-          full: logoToolbase,
-          title: false,
-          description: false,
-        },
-        {
-          thumb: bannerToolbase250,
-          full: bannerToolbase,
+          thumb: gallery5Edom250,
+          full: gallery5Edom,
           title: false,
           description: false,
         },

@@ -16,4 +16,4 @@ const getLocalizedRoute = (routeName, lang = localeStoreValue) => {
   return routePath;
 };
 
-export { getLocalizedRoute };
+export default getLocalizedRoute;

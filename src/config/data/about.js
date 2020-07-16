@@ -44,4 +44,4 @@ const aboutPhilosophies = [
   },
 ];
 
-export { aboutPhilosophies };
+export default aboutPhilosophies;

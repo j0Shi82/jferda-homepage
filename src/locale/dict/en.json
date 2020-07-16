@@ -149,34 +149,38 @@
                 "forum": "Uncensored"
             }
         },
-        "mmb": {
-            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+        "edom": {
+            "desc": "E-Domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, internalization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
             "highlights": {
                 "1": {
-                    "1": "Customized Wordpress Blog",
-                    "2": "Integrated dozens of plugins",
-                    "3": "Theme tweaks and plenty UI enhancements"
+                    "1": "Full-Stack Development",
+                    "2": "Vue.js, Express, Docker",
+                    "3": "Lumen, API design, Elastic Search"
                 },
                 "2": {
-                    "1": "Game-Specific Apps",
-                    "2": "Data fetching without official API",
-                    "3": "Unique PHP/Javascript based online tools"
+                    "1": "SEO & Performance",
+                    "2": "Monitoring Core Web Vitals and other metrics",
+                    "3": "Using cache techniques where applicable"
                 },
                 "3": {
-                    "1": "Monthly Traffic",
-                    "2": "100,000+ Users",
-                    "3": "350,000+ Page Views"
+                    "1": "A/B testing",
+                    "2": "Made A/B testing possible on the SSR/SPA",
+                    "3": "Custom solution using own db and Google"
                 },
                 "4": {
-                    "1": "Social Management",
-                    "2": "Communities on Twitter, Discord, Facebook",
-                    "3": "Integrated many social APIs"
+                    "1": "Datepicker Integration",
+                    "2": "Customized Flatpickr to fit our needs",
+                    "3": "Multiple pickers on single page sync"
                 },
                 "5": {
-                    "1": "Full Branding",
-                    "2": "Logos, Banners & Color Scheme",
-                    "3": "Hundreds of self-made images"
+                    "1": "Legacy Browser Support",
+                    "2": "Support all browsers down to IE 11",
+                    "3": "Separate bundles for modern and legacy clients"
                 }
+            },
+            "links": {
+                "edom": "e-domizil.de",
+                "to": "tourist-online.de"
             }
         }
     }

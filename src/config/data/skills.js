@@ -143,13 +143,22 @@ const skills = [
     type: 'nwoun', name: 'Photoshop CS6', class: 'css', logo: photoshopLogo, progress: 0.6,
   },
   {
-    type: 'mmb', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.8,
+    type: 'edom', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.8,
   },
   {
-    type: 'mmb', name: 'Express', class: 'express', logo: expressLogo, progress: 0.55,
+    type: 'edom', name: 'Bootstrap', class: 'bootstrap', logo: bootstrapLogo, progress: 0.6,
   },
   {
-    type: 'mmb', name: 'Jest', class: 'jest', logo: jestLogo, progress: 0.4,
+    type: 'edom', name: 'VUE.js', class: 'vue', logo: vueLogo, progress: 0.9,
+  },
+  {
+    type: 'edom', name: 'Laravel', class: 'laravel', logo: laravelLogo, progress: 0.4,
+  },
+  {
+    type: 'edom', name: 'Docker', class: 'docker', logo: dockerLogo, progress: 0.5,
+  },
+  {
+    type: 'edom', name: 'node', class: 'node', logo: nodeLogo, progress: 0.75,
   },
 ];
 

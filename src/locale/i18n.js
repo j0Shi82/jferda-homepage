@@ -3,11 +3,12 @@ import { localeSupportedLanguages, localeStandardLanguage } from 'utils/imports/
 
 export default () => {
   localeSupportedLanguages.forEach((lang) => {
-    registerLocaleDict(lang, () => import(`locale/dict/${lang}.json`))
-  })
+    const file = `locale/dict/${lang}.json`;
+    registerLocaleDict(lang, () => import(file));
+  });
 
   initLocalization({
     fallbackLocale: 'en',
     initialLocale: localeStandardLanguage,
-  })
-}
+  });
+};

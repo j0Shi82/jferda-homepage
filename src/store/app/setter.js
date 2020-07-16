@@ -4,4 +4,4 @@ const setRouterIsRouting = (state) => {
   appStore.router.isRouting.set(state);
 };
 
-export { setRouterIsRouting };
+export default setRouterIsRouting;

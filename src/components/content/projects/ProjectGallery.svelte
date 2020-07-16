@@ -22,10 +22,12 @@ export let animationParams = {
 
 // init lightbox
 let lightbox;
+let scrollTop = 0;
 svelteLifecycleOnMount(() => {
   lightbox = Lightbox({
     onClose: () => {
-      document.querySelector('.jdev-project-image-list').scrollIntoView();
+      document.querySelector('#main-content').scrollTo(0, scrollTop);
+      // document.querySelector('.jdev-project-image-list').scrollIntoView();
     },
     openEffect: 'none',
     closeEffect: 'none',
@@ -37,6 +39,11 @@ svelteLifecycleOnMount(() => {
     })),
   });
 });
+
+function openGallery(i) {
+  scrollTop = document.querySelector('#main-content').scrollTop;
+  lightbox.openAt(i);
+}
 
 // --jdev-gallery-animation-duration is required to pass the animation time to the material component
 // see project.scss for corresponding style
@@ -56,7 +63,7 @@ svelteLifecycleOnMount(() => {
         {#each projectData.projectPage.gallery as item, i}
         <MaterialImageListItem>
             <MaterialImageListAspectContainer>
-            <MaterialImageListImage component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { lightbox.openAt(i); }}" />
+            <MaterialImageListImage component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
             </MaterialImageListAspectContainer>
         </MaterialImageListItem>
         {/each}

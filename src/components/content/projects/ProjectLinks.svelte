@@ -1,7 +1,7 @@
 <script>
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFly } from 'utils/imports/svelte';
-import { MaterialFab, MaterialIcon, MaterialFabLabel } from 'utils/imports/material';
+import { MaterialFab, MaterialFabLabel } from 'utils/imports/material';
 import { FontAwesomeIcon } from 'utils/imports/components';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
 

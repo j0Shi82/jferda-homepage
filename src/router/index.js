@@ -7,22 +7,24 @@ const routes = {};
 // add routes with lang param
 localeSupportedLanguages.filter((lang) => lang !== localeStandardLanguage).forEach((lang) => {
   Object.assign(routes, baseRoutes.reduce((prev, cur) => {
-    prev[getLocalizedRoute(cur.name, lang)] = routeWrapper(
+    const p = prev;
+    p[getLocalizedRoute(cur.name, lang)] = routeWrapper(
       cur.component,
       { lang, routeName: cur.name, ...cur.data },
       ...getRouteGuards(cur.name),
     );
-    return prev;
+    return p;
   }, {}));
 });
 
 Object.assign(routes, baseRoutes.reduce((prev, cur) => {
-  prev[getLocalizedRoute(cur.name, localeStandardLanguage)] = routeWrapper(
+  const p = prev;
+  p[getLocalizedRoute(cur.name, localeStandardLanguage)] = routeWrapper(
     cur.component,
     { lang: localeStandardLanguage, routeName: cur.name, ...cur.data },
     ...getRouteGuards(cur.name),
   );
-  return prev;
+  return p;
 }, {}));
 
 export default routes;

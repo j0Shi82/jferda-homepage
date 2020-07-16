@@ -4,20 +4,20 @@ import AppContent from 'components/content/AppContent.svelte';
 
 import HomeRoutes from 'components/content/home/HomeRoutes.svelte';
 
-import AboutPhilosophyButton from 'components/content/about/AboutPhilosophyButton';
-import AboutBio from 'components/content/about/AboutBio';
+import AboutPhilosophyButton from 'components/content/about/AboutPhilosophyButton.svelte';
+import AboutBio from 'components/content/about/AboutBio.svelte';
 
-import ResumeItem from 'components/content/resume/ResumeItem';
+import ResumeItem from 'components/content/resume/ResumeItem.svelte';
 
 import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
 import SkillsProgressRow from 'components/content/skills/SkillsProgressRow.svelte';
 
-import ProjectsCard from 'components/content/projects/ProjectsCard';
-import ProjectDescription from 'components/content/projects/ProjectDescription';
-import ProjectKeys from 'components/content/projects/ProjectKeys';
-import ProjectSkills from 'components/content/projects/ProjectSkills';
-import ProjectGallery from 'components/content/projects/ProjectGallery';
-import ProjectLinks from 'components/content/projects/ProjectLinks';
+import ProjectsCard from 'components/content/projects/ProjectsCard.svelte';
+import ProjectDescription from 'components/content/projects/ProjectDescription.svelte';
+import ProjectKeys from 'components/content/projects/ProjectKeys.svelte';
+import ProjectSkills from 'components/content/projects/ProjectSkills.svelte';
+import ProjectGallery from 'components/content/projects/ProjectGallery.svelte';
+import ProjectLinks from 'components/content/projects/ProjectLinks.svelte';
 
 import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 import Loader from 'components/utilities/atoms/Loader.svelte';

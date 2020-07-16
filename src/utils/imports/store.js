@@ -1,6 +1,6 @@
 // store stuff
 import store from 'store/index';
-import { setRouterIsRouting } from 'store/app/setter';
+import setRouterIsRouting from 'store/app/setter';
 import { location, querystring } from 'svelte-spa-router';
 
 import { locale, locales } from 'svelte-i18n';

@@ -28,6 +28,7 @@ import {
   locales,
   menuMobileState,
   animationsActive,
+  projectInitializing,
 } from 'utils/imports/store';
 import {
   drawerMenuItems,
@@ -44,6 +45,7 @@ let drawer;
 
 // basic routing functions
 function go(key) {
+  projectInitializing.set(true);
   if ($isMobileBreakpoint) menuMobileState.set(false);
   routerPush(getLocalizedRoute(key));
 }

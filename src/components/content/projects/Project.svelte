@@ -1,11 +1,11 @@
 <script>
 import {
-  svelteTransitionFade, svelteLifecycleOnMount,
+  svelteTransitionFade, svelteLifecycleOnMount, svelteLifecycleOnDestroy,
 } from 'utils/imports/svelte';
 import {
   ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks, Loader,
 } from 'utils/imports/components';
-import { currentProject, animationsActive } from 'utils/imports/store';
+import { currentProject, animationsActive, projectInitializing } from 'utils/imports/store';
 import { routingFadeDuration } from 'utils/imports/config';
 import { preloadImages, getProjectAnimationParams } from 'utils/imports/helpers';
 import { projectList, skillList } from 'utils/imports/data';
@@ -66,6 +66,7 @@ function scale() {
     currentTimeout = setTimeout(() => {
       scaleY = 1;
       initialized = true;
+      projectInitializing.set(false);
     }, animationTotalDuration + 250);
   }
 }
@@ -89,6 +90,11 @@ $: {
 // first scaling on page load
 svelteLifecycleOnMount(() => {
   load();
+});
+
+// destroy timer so that different project routes do not overlap
+svelteLifecycleOnDestroy(() => {
+  if (currentTimeout) clearTimeout(currentTimeout);
 });
 </script>
 

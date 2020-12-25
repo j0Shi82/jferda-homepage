@@ -140,7 +140,7 @@ const skills = [
     type: 'nwoun', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.4,
   },
   {
-    type: 'nwoun', name: 'Photoshop CS6', class: 'css', logo: photoshopLogo, progress: 0.6,
+    type: 'nwoun', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.6,
   },
   {
     type: 'edom', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.8,
@@ -159,6 +159,18 @@ const skills = [
   },
   {
     type: 'edom', name: 'node', class: 'node', logo: nodeLogo, progress: 0.75,
+  },
+  {
+    type: 'neighboring', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 1.0,
+  },
+  {
+    type: 'neighboring', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.2,
+  },
+  {
+    type: 'neighboring', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.3,
+  },
+  {
+    type: 'neighboring', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.6,
   },
 ];
 

@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Visualizer = require('webpack-visualizer-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -45,7 +44,7 @@ module.exports = {
         use: {
           loader: 'svelte-loader',
           options: {
-            emitCss: true,
+            emitCss: false,
             hotReload: true,
             preprocess: sveltePreprocess({
               postcss: true,
@@ -74,6 +73,7 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               webpackImporter: false,
+              // eslint-disable-next-line global-require
               implementation: require('sass'),
               sassOptions: {
                 includePaths: [
@@ -91,9 +91,6 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
-    }),
-    new Visualizer({
-      filename: './statistics.html',
     }),
     new HtmlWebpackPlugin({
       title: '>_ j0Shi.dev --help',

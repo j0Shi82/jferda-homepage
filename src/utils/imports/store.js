@@ -11,7 +11,7 @@ const { routeName, isRouting } = store.app.router;
 const { isMobile, isTablet, isDesktop } = store.app.breakpoints;
 const { active } = store.app.animations;
 
-const { currentProject } = store.projects;
+const { currentProject, projectInitializing } = store.projects;
 
 export {
   setRouterIsRouting as storeSetRouterIsRouting,
@@ -27,5 +27,6 @@ export {
   locale as currentLocale,
   locales,
   currentProject,
+  projectInitializing,
   active as animationsActive,
 };

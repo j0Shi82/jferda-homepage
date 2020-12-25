@@ -10,7 +10,8 @@
             "nwoun": "Neverwinter Uncensored",
             "jferda": "j0shi.dev",
             "lwm": "Last War Manager",
-            "edom": "e-domizil.de"
+            "edom": "e-domizil.de",
+            "neighboring": "Neighboring Satellites"
         },
         "animationSwitchLabel": "Toggle animations"
     },
@@ -91,7 +92,8 @@
         "laravel": "Laravel",
         "docker": "Docker",
         "bootstrap": "Bootstrap",
-        "node": "Node"
+        "node": "Node",
+        "css": "CSS"
     },
     "projects": {
         "learnmore": "Learn more",
@@ -104,6 +106,9 @@
         },
         "nwoun": {
             "desc": "NWO:UN has been my biggest personal project to date. We served the game's community for nearly five years and delivered content and tools to over 100,000 players per month."
+        },
+        "neighboring": {
+            "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
         }
     },
     "project": {
@@ -181,6 +186,39 @@
             "links": {
                 "edom": "e-domizil.de",
                 "to": "tourist-online.de"
+            }
+        },
+        "neighboring": {
+            "desc": "Neighboring Satellites is an incredible project that tries to support the local art scene in a burgeoning environment. The most difficult task when working on the project's website was to fit the client's expecations in terms of design and layout. The most time was used to find a fitting theme and then customize it for our needs. Moderating between the realities of web and classic design was extremely fun as well as countless 'live' sessions in which we discussed and adjusted the layout.<br /><br />The rest was fairly standard with setting up a Wordpress blog on a simple webhost. We however tried to set up a system that's easy to maintain later so the authors will be able to do most of the editing and admin work themselves. That's why training folks that were new to publishing on the web, and with Wordpress, was also a key part of the process.",
+            "highlights": {
+                "1": {
+                    "1": "Customized Wordpress Blog",
+                    "2": "Taking care of base setup",
+                    "3": "Integrated dozens of plugins"
+                },
+                "2": {
+                    "1": "Train The Authors",
+                    "2": "Teach inexperienced users WP basics",
+                    "3": "Make sure setup is easy to maintain"
+                },
+                "3": {
+                    "1": "Implement a Given Layout",
+                    "2": "Search For a Fitting Theme",
+                    "3": "Plenty Styling Adjustements"
+                },
+                "4": {
+                    "1": "Legal Management",
+                    "2": "Handle privacy logic",
+                    "3": "Research necessary legal info"
+                },
+                "5": {
+                    "1": "Elementor",
+                    "2": "Getting used to the Elementor plugin",
+                    "3": "Design pages using a given layout"
+                }
+            },
+            "links": {
+                "site": "Website"
             }
         }
     }

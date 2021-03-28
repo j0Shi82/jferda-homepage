@@ -116,6 +116,7 @@ svelteLifecycleOnDestroy(() => {
 
       <MaterialListSeparator nav />
 
+      {#if $locales.length > 1}
       <MaterialListItem>
         <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}">
           {#each $locales as loc}
@@ -123,6 +124,7 @@ svelteLifecycleOnDestroy(() => {
           {/each}
         </MaterialSelect>
       </MaterialListItem>
+      {/if}
 
       <MaterialListItem>
         <MaterialFormField class="jdev-animation-toggle">

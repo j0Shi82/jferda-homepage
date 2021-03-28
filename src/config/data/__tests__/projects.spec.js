@@ -2,12 +2,6 @@ import projectList from 'config/data/projects';
 import routeLocales from 'locale/dict/routes';
 import baseRoutes from 'router/baseRoutes';
 
-jest.mock('utils/imports/routes', () => ({
-  __esModule: true,
-  default: jest.fn(),
-  namedExport: jest.fn(),
-}));
-
 const projectRoutes = projectList.map((project) => project.routeName);
 
 describe('config/data/projects', () => {

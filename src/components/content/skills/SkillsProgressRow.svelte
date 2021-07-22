@@ -14,6 +14,12 @@ setTimeout(() => {
 }, delay);
 </script>
 
+<style lang="scss">
+  :global(.jdev-skills-progress .mdc-linear-progress__bar-inner) {
+    border-top: 10px solid;
+  } 
+</style>
+
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-1-phone">
     <div class="jdev-skills-logo" title="{logoAlt}" style="background-image: url({logoSrc});" />
 </div>

@@ -10,9 +10,9 @@ import { projectInitializing } from 'utils/imports/store';
   overflow-x: hidden;
 }
 
-.blockOverflowY {
-  overflow-y: hidden;
-}
+// .blockOverflowY {
+//   overflow-y: hidden;
+// }
 </style>
 
 {#if $isMobileBreakpoint}<MaterialDrawerScrim />{/if}

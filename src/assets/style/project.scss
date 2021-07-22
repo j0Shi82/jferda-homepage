@@ -1,5 +1,6 @@
 @use "smui-theme";
 @use 'src/assets/style/variables.scss';
+@use '@material/image-list/index' as image-list;
 @import "glightbox/dist/css/glightbox";
 
 .jdev-route-project-loader {
@@ -13,16 +14,16 @@
 
 .jdev-route-project {
   .jdev-project-image-list {
-    // @include image-list-mixins.mdc-image-list-standard-columns(5);
-    // @include image-list-mixins.mdc-image-list-aspect(4/3);
+    @include image-list.standard-columns(5);
+    @include image-list.aspect(4/3);
 
-    // @media #{variables.$breakpoint-tablet} {
-    //   @include image-list-mixins.mdc-image-list-standard-columns(3);
-    // }
+    @media #{variables.$breakpoint-tablet} {
+      @include image-list.standard-columns(3);
+    }
 
-    // @media #{variables.$breakpoint-mobile} {
-    //   @include image-list-mixins.mdc-image-list-standard-columns(2);
-    // }
+    @media #{variables.$breakpoint-mobile} {
+      @include image-list.standard-columns(2);
+    }
 
     .mdc-image-list__image {
       background-size: cover;

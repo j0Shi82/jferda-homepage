@@ -1,13 +1,13 @@
-@use "@material/theme/color-palette" as colors;
+@use "@material/theme/color-palette";
 
 @use "@material/theme/index" as theme with (
-    $primary : colors.$light-green-700,
-    $secondary : colors.$grey-700,
-    $background : colors.$grey-900,
-    $surface : colors.$grey-100,
-    $error : colors.$red-900,
-    $on-primary : colors.$grey-100,
-    $on-secondary : colors.$grey-200,
+    $primary : color-palette.$light-green-700,
+    $secondary : color-palette.$grey-700,
+    $background : color-palette.$grey-900,
+    $surface : color-palette.$grey-100,
+    $error : color-palette.$red-900,
+    $on-primary : color-palette.$grey-100,
+    $on-secondary : color-palette.$grey-200,
     // $on-surface : $grey-800,
     // $on-error : black,
 );
@@ -29,3 +29,9 @@
 //     // $text-icon-on-dark : hsla(0, 0%, 100%, 0.5),
 
 @forward "@material/theme/index";
+
+:root {
+    --mdc-theme-text-primary-on-background: rgb(0, 0, 0);
+    --mdc-theme-text-secondary-on-background: hsla(0, 0%, 0%, 0.7);
+    --mdc-theme-text-icon-on-background: hsla(0, 0%, 0%, 0.5);
+}

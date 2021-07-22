@@ -63,7 +63,7 @@ function openGallery(i) {
         {#each projectData.projectPage.gallery as item, i}
         <MaterialImageListItem>
             <MaterialImageListAspectContainer>
-            <MaterialImageListImage component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
+            <MaterialImageListImage src="{item.thumb}" component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
             </MaterialImageListAspectContainer>
         </MaterialImageListItem>
         {/each}

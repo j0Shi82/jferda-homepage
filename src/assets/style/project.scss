@@ -36,7 +36,7 @@
   // --mdc-theme-text-primary-on-background: #{smui-theme.$text-primary-on-background};
   // --mdc-theme-text-secondary-on-background: #{smui-theme.$text-secondary-on-background};
 
-  .mdc-list-item {
+  .mdc-list-item, .mdc-deprecated-list-item {
     animation-fill-mode: both;
     animation-duration: var(--jdev-highlights-animation-duration, 500ms);
     animation-name: bounceInRight;

@@ -1,5 +1,5 @@
 // store values we need
-import { menuAboutIcon, menuSkillsIcon } from 'utils/imports/config';
+import { menuAboutIcon, menuSkillsIcon, atomTransitionDuration } from 'utils/imports/config';
 import vuejsKnowledgeLogo from 'assets/media/images/knowledge-logos/vuejs.png';
 import dockerKnowledgeLogo from 'assets/media/images/knowledge-logos/docker.png';
 import javascriptKnowledgeLogo from 'assets/media/images/knowledge-logos/javascript.png';
@@ -14,13 +14,19 @@ const menuItems = [
     icon: menuAboutIcon,
     textLocaleIdent: 'navigation.about',
     route: 'about',
+    transitionDelay: atomTransitionDuration * 0,
   },
   {
     icon: menuSkillsIcon,
     textLocaleIdent: 'navigation.projects.headline',
     route: 'projects',
+    transitionDelay: atomTransitionDuration * 1,
   },
 ];
+
+menuItems.forEach((item, i) => {
+  menuItems[i].transitionDelay = atomTransitionDuration * i;
+});
 
 const knowledgeLogoItems = [
   {

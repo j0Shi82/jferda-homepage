@@ -17,6 +17,7 @@ i = 0;
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop jdev-d-mobile-none jdev-d-tablet-none"></div>
     <MaterialChipSet chips={homeRoutes} let:chip class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
         <div class="home-routes {colorClass}" in:svelteTransitionFly="{{
+            // eslint-disable-next-line no-plusplus
             x: $screenWidth / -2, duration: atomTransitionDuration, delay: atomTransitionDuration * i++, easing: svelteEasingBackOut,
         }}">
             <MaterialChip {chip} on:click={() => routerPush(getLocalizedRoute(chip.route))}>

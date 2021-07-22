@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { storeSetRouterIsRouting, isRoutingInProgress } from 'utils/imports/store';
 
 // set routing to false initially

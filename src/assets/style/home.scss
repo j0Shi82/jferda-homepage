@@ -1,8 +1,8 @@
+@use "smui-theme";
 @import "@material/drawer/_variables.scss";
 @import "@material/shape/_variables.scss";
 @import "@material/top-app-bar/_variables.scss";
 @import 'src/assets/style/variables.scss';
-@import "_smui-theme.scss";
 @import "@material/typography/mdc-typography";
 
 .jdev-route-home {
@@ -120,12 +120,16 @@
     &.node .mdc-chip { background-color: $node-secondary-color; }
     &.git .mdc-chip { background-color: $git-secondary-color; }
 
+    width: 46%;
+    margin-left: 1%;
+    margin-right: 1%;
+
     .mdc-chip {
       height: 48px;
       border-radius: 24px;
       width: 100%;
       padding: 0;
-      background-color: $mdc-theme-primary;
+      background-color: smui-theme.$primary;
       transition: background-color 2s;
 
       .image {
@@ -143,7 +147,7 @@
         width: 52px;
         height: 52px;
         margin-left: -2px;
-        color: $mdc-theme-on-primary;
+        color: smui-theme.$on-primary;
       }
 
       .mdc-chip__text {
@@ -153,7 +157,7 @@
 
         @include mdc-typography(subtitle2);
 
-        color: $mdc-theme-on-primary;
+        color: smui-theme.$on-primary;
       }
     }
   }

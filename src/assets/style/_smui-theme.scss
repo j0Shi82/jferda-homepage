@@ -1,26 +1,31 @@
-@import "@material/theme/color-palette";
+@use "@material/theme/color-palette" as colors;
 
-$mdc-theme-primary : $material-color-light-green-700;
-$mdc-theme-secondary : $material-color-grey-700;
-$mdc-theme-background : $material-color-grey-900;
-$mdc-theme-surface : $material-color-grey-100;
-$mdc-theme-error : $material-color-red-900;
-$mdc-theme-on-primary : $material-color-grey-100;
-$mdc-theme-on-secondary :$material-color-grey-200;
-// $mdc-theme-on-surface : $material-color-grey-800;
-// $mdc-theme-on-error : black;
-$mdc-theme-text-primary-on-background : rgb(0, 0, 0);
-$mdc-theme-text-secondary-on-background : hsla(0, 0%, 0%, 0.7);
-// $mdc-theme-text-hint-on-background : hsla(0, 0%, 100%, 0.5);
-// $mdc-theme-text-disabled-on-background : hsla(0, 0%, 100%, 0.5);
-$mdc-theme-text-icon-on-background: hsla(0, 0%, 0%, 0.5);
-// $mdc-theme-text-primary-on-light : rgba(0, 0, 0, 0.87);
-// $mdc-theme-text-secondary-on-light : rgba(0, 0, 0, 0.54);
-// $mdc-theme-text-hint-on-light : rgba(0, 0, 0, 0.38);
-// $mdc-theme-text-disabled-on-light : rgba(0, 0, 0, 0.38);
-// $mdc-theme-text-icon-on-light : rgba(0, 0, 0, 0.38);
-// $mdc-theme-text-primary-on-dark : white;
-// $mdc-theme-text-secondary-on-dark : hsla(0, 0%, 100%, 0.7);
-// $mdc-theme-text-hint-on-dark : hsla(0, 0%, 100%, 0.5);
-// $mdc-theme-text-disabled-on-dark : hsla(0, 0%, 100%, 0.5);
-// $mdc-theme-text-icon-on-dark : hsla(0, 0%, 100%, 0.5);
+@use "@material/theme/index" as theme with (
+    $primary : colors.$light-green-700,
+    $secondary : colors.$grey-700,
+    $background : colors.$grey-900,
+    $surface : colors.$grey-100,
+    $error : colors.$red-900,
+    $on-primary : colors.$grey-100,
+    $on-secondary : colors.$grey-200,
+    // $on-surface : $grey-800,
+    // $on-error : black,
+);
+
+// $text-primary-on-background : rgb(0, 0, 0),
+//     $text-secondary-on-background : hsla(0, 0%, 0%, 0.7),
+//     // $text-hint-on-background : hsla(0, 0%, 100%, 0.5),
+//     // $text-disabled-on-background : hsla(0, 0%, 100%, 0.5);
+//     $text-icon-on-background: hsla(0, 0%, 0%, 0.5),
+//     // $text-primary-on-light : rgba(0, 0, 0, 0.87),
+//     // $text-secondary-on-light : rgba(0, 0, 0, 0.54),
+//     // $text-hint-on-light : rgba(0, 0, 0, 0.38),
+//     // $text-disabled-on-light : rgba(0, 0, 0, 0.38),
+//     // $text-icon-on-light : rgba(0, 0, 0, 0.38),
+//     // $text-primary-on-dark : white,
+//     // $text-secondary-on-dark : hsla(0, 0%, 100%, 0.7),
+//     // $text-hint-on-dark : hsla(0, 0%, 100%, 0.5),
+//     // $text-disabled-on-dark : hsla(0, 0%, 100%, 0.5),
+//     // $text-icon-on-dark : hsla(0, 0%, 100%, 0.5),
+
+@forward "@material/theme/index";

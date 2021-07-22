@@ -1,12 +1,12 @@
-@import 'src/assets/style/variables.scss';
-@import "_smui-theme.scss";
+@use "smui-theme";
+@use 'src/assets/style/variables.scss';
 
 .jdev-route-resume {
   overflow-x: hidden;
 
   a {
     font-weight: bold;
-    color: $mdc-theme-primary;
+    color: smui-theme.$primary;
     text-decoration: none;
 
     &:hover {
@@ -18,32 +18,32 @@
     height: 1px;
     width: 100%;
     border-top: 1px solid #000;
-    margin-bottom: $h2-margin;
+    margin-bottom: variables.$h2-margin;
   }
 
   h2 {
     text-align: center;
-    margin-top: $h2-margin;
+    margin-top: variables.$h2-margin;
     margin-bottom: 0;
     transition: all 1s ease-in-out;
   }
 
   .jdev-resume-date {
-    @media #{$breakpoint-mobile} {
-      background-color: $mdc-theme-surface;
+    @media #{variables.$breakpoint-mobile} {
+      background-color: smui-theme.$surface;
     }
 
-    @media #{$breakpoint-tablet} {
-      background-color: $mdc-theme-surface;
+    @media #{variables.$breakpoint-tablet} {
+      background-color: smui-theme.$surface;
     }
   }
 
   .jdev-resume-content {
-    @media #{$breakpoint-mobile} {
+    @media #{variables.$breakpoint-mobile} {
       margin-left: 10vw;
     }
 
-    @media #{$breakpoint-tablet} {
+    @media #{variables.$breakpoint-tablet} {
       margin-left: 10vw;
     }
   }

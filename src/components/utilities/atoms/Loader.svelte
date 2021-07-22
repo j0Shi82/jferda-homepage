@@ -1,6 +1,5 @@
 <style lang="scss">
-@import 'src/assets/style/_smui-theme.scss';
-
+@use 'src/assets/style/_smui-theme.scss';
 .lds-ring {
   display: inline-block;
   position: relative;
@@ -15,10 +14,10 @@
   width: 48px;
   height: 48px;
   margin: 4px;
-  border: 4px solid $mdc-theme-primary;
+  border: 4px solid smui-theme.$primary;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: $mdc-theme-primary transparent transparent transparent;
+  border-color: smui-theme.$primary transparent transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {

@@ -1,4 +1,4 @@
-@import "_smui-theme.scss";
+@use "smui-theme";
 @import "@material/typography/_mixins";
 @import 'src/assets/style/variables.scss';
 @import "@material/shape/_variables.scss";
@@ -11,8 +11,8 @@ div[data-tippy-root] {
   .tippy-box {
     @include mdc-typography(body2);
 
-    background-color: $mdc-theme-secondary;
-    color: $mdc-theme-on-secondary;
+    background-color: smui-theme.$secondary;
+    color: smui-theme.$on-secondary;
     padding: 10px;
     border-radius: $mdc-shape-small-component-radius;
   }

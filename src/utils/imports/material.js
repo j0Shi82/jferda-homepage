@@ -1,24 +1,29 @@
-import Drawer, { Content, AppContent, Scrim } from '@smui/drawer';
+import Drawer, { Content, AppContent, Scrim } from '@smui/drawer/styled';
+import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar/styled';
 import Card, {
   Content as CardContent, Media as CardMedia, MediaContent as CardMediaContent, PrimaryAction,
-} from '@smui/card';
+} from '@smui/card/styled';
 import List, {
   Graphic, Item, Text, Separator, Subheader, PrimaryText, SecondaryText,
-} from '@smui/list';
-import Select, { Option } from '@smui/select';
-import Chip, { Icon, Text as ChipText } from '@smui/chips';
-import IconButton from '@smui/icon-button';
-import Fab, { Label } from '@smui/fab';
-import LinearProgress from '@smui/linear-progress';
-import Tab, { Icon as TabIcon, Label as TabLabel } from '@smui/tab';
-import TabBar from '@smui/tab-bar';
+} from '@smui/list/styled';
+import Select, { Option } from '@smui/select/styled';
+import Chip, { LeadingIcon, Text as ChipText, Set as ChipSet } from '@smui/chips/styled';
+import IconButton from '@smui/icon-button/styled';
+import Fab, { Label } from '@smui/fab/styled';
+import LinearProgress from '@smui/linear-progress/styled';
+import Tab, { Icon as TabIcon, Label as TabLabel } from '@smui/tab/styled';
+import TabBar from '@smui/tab-bar/styled';
 import ImageList, {
   Item as ImageListItem, ImageAspectContainer, Image as ImageListImage,
-} from '@smui/image-list';
-import Switch from '@smui/switch';
-import FormField from '@smui/form-field';
+} from '@smui/image-list/styled';
+import Switch from '@smui/switch/styled';
+import FormField from '@smui/form-field/styled';
 
 export {
+  TopAppBar as MaterialTopAppBar,
+  Row as MaterialTopAppBarRow,
+  Section as MaterialTopAppBarSection,
+  Title as MaterialTopAppBarTitle,
   ImageList as MaterialImageList,
   ImageListItem as MaterialImageListItem,
   ImageAspectContainer as MaterialImageListAspectContainer,
@@ -51,8 +56,9 @@ export {
   Fab as MaterialFab,
   Label as MaterialFabLabel,
   LinearProgress as MaterialLinearProgress,
-  Icon as MaterialIcon,
+  LeadingIcon as MaterialIcon,
   ChipText as MaterialChipText,
+  ChipSet as MaterialChipSet,
   Switch as MaterialSwitch,
   FormField as MaterialFormField,
 };

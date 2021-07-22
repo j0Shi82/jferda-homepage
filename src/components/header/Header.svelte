@@ -1,6 +1,11 @@
 <script>
-import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
-import IconButton from '@smui/icon-button';
+import {
+  MaterialTopAppBar,
+  MaterialTopAppBarRow,
+  MaterialTopAppBarSection,
+  MaterialTopAppBarTitle,
+  MaterialIconButton,
+} from 'utils/imports/material';
 import Icon from 'fa-svelte';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
@@ -49,28 +54,28 @@ function mailMe() {
 
 </style>
 
-<TopAppBar variant="static" dense color='primary' class="app-bar">
-    <Row>
+<MaterialTopAppBar variant="static" dense color='primary' class="app-bar">
+    <MaterialTopAppBarRow>
         {#if $isMobile}
-        <Section>
-            <IconButton class="material-icons jdev-drawer-toggle" on:click="{mobileState.set(!$mobileState)}">{$mobileState ? 'clear' : 'menu'}</IconButton>
-        </Section>
+        <MaterialTopAppBarSection>
+            <MaterialIconButton class="material-icons jdev-drawer-toggle" on:click="{mobileState.set(!$mobileState)}">{$mobileState ? 'clear' : 'menu'}</MaterialIconButton>
+        </MaterialTopAppBarSection>
         {/if}
-        <Section>
+        <MaterialTopAppBarSection>
           <div class="jdev-avatar">
             <div style="background-image: url({avatarImage});"></div>
           </div>
-        </Section>
+        </MaterialTopAppBarSection>
         {#if !$isMobile}
-        <Section>
-            <Title class="jdev-title">&gt;_ j0Shi.dev --help</Title>
-        </Section>
+        <MaterialTopAppBarSection>
+            <MaterialTopAppBarTitle class="jdev-title">&gt;_ j0Shi.dev --help</MaterialTopAppBarTitle>
+        </MaterialTopAppBarSection>
         {/if}
-        <Section align="end" toolbar>
+        <MaterialTopAppBarSection align="end" toolbar>
             <a href="https://github.com/j0Shi82" target="_blank">
-              <IconButton class="material-icons"><Icon icon={faGithub}></Icon></IconButton>
+              <MaterialIconButton class="material-icons"><Icon icon={faGithub}></Icon></MaterialIconButton>
             </a>
-            <IconButton on:click={mailMe} class="material-icons"><Icon icon={faEnvelope}></Icon></IconButton>
-        </Section>
-    </Row>
-</TopAppBar>
+            <MaterialIconButton on:click={mailMe} class="material-icons"><Icon icon={faEnvelope}></Icon></MaterialIconButton>
+        </MaterialTopAppBarSection>
+    </MaterialTopAppBarRow>
+</MaterialTopAppBar>

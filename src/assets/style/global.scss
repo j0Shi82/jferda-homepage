@@ -1,8 +1,8 @@
+@use "smui-theme";
 @import "@material/typography/mdc-typography";
 @import "@material/layout-grid/mdc-layout-grid.scss";
-@import "_smui-theme.scss";
 @import "@material/top-app-bar/variables";
-@import "@smui/snackbar";
+// @import "@smui/snackbar";
 
 body {
   display: flex;
@@ -26,7 +26,7 @@ body {
 }
 
 .mdc-drawer .mdc-list-divider {
-  border-bottom-color: $material-color-grey-300;
+  border-bottom-color: smui-theme.$grey-300;
 }
 
 .main-content {
@@ -74,14 +74,14 @@ body {
 
   width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
   height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
-  border: 2px solid #{$mdc-theme-primary};
+  border: 2px solid #{smui-theme.$primary};
   border-radius: 50%;
 
   > div {
     width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height} - 4px);
     height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height} - 4px);
     border-radius: 50%;
-    border: 2px solid #{$mdc-theme-on-primary};
+    border: 2px solid #{smui-theme.$on-primary};
     background-size: contain;
   }
 }

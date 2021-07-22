@@ -1,5 +1,4 @@
-@import "@material/linear-progress/mixins";
-@import "_smui-theme.scss";
+@use "smui-theme";
 
 .jdev-route-skills-loader {
   position: absolute;
@@ -12,7 +11,7 @@
 
 .jdev-route-skills {
   .mdc-tab-bar {
-    background-color: $mdc-theme-surface;
+    background-color: smui-theme.$surface;
   }
 
   .mdc-layout-grid__cell {
@@ -23,7 +22,7 @@
     position: absolute;
     top: 0;
     pointer-events: none;
-    color: $mdc-theme-primary;
+    color: smui-theme.$primary;
     display: flex;
     height: 48px;
     font-size: 1.5em;

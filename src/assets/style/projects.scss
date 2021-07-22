@@ -1,4 +1,4 @@
-@import "_smui-theme.scss";
+@use "smui-theme";
 
 .jdev-route-projects {
   overflow-x: hidden;
@@ -29,7 +29,7 @@
 
   .jdev-card-subtitle {
     margin: 0;
-    color: $mdc-theme-primary;
+    color: smui-theme.$primary;
     text-align: center;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -59,7 +59,7 @@
 
     a {
       font-weight: bold;
-      color: $mdc-theme-primary;
+      color: smui-theme.$primary;
       text-decoration: none;
 
       &:hover {

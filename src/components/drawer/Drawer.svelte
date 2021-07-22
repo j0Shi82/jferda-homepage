@@ -89,7 +89,12 @@ svelteLifecycleOnDestroy(() => {
   }
 }
 
-:global(.mdc-drawer--modal, .mdc-drawer-scrim) {
+:global(.mdc-drawer--modal) {
+  /* This is not needed for a page-wide modal. */
+  position: absolute;
+}
+
+:global(.mdc-drawer-scrim) {
   /* This is not needed for a page-wide modal. */
   position: absolute;
 }

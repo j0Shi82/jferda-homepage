@@ -55,9 +55,13 @@
 
     span {
       text-align: center;
+
+      &.link {
+        cursor: pointer;
+      }
     }
 
-    a {
+    a, span.link {
       font-weight: bold;
       color: smui-theme.$primary;
       text-decoration: none;

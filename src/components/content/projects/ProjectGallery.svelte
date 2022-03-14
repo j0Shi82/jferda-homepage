@@ -4,7 +4,7 @@ import { FlyingHeadline } from 'utils/imports/components';
 import {
   MaterialImageList, MaterialImageListItem, MaterialImageListAspectContainer, MaterialImageListImage,
 } from 'utils/imports/material';
-import Div from '@smui/common/Div.svelte';
+import Div from '@smui/common/elements/Div.svelte';
 import { Lightbox } from 'utils/imports/plugins';
 
 export let projectData = {};

@@ -25,7 +25,7 @@ export let project;
             <MaterialCardContent class="jdev-project-hover-content">
                 <span>{$localize(project.descLocaleKey)}</span>
                 <MaterialIcon class="material-icons" style="margin: 5px 0;">star</MaterialIcon>
-                <a href="javascript:void(0)" on:click="{() => routerPush(getLocalizedRoute(project.routeName))}">{$localize('projects.learnmore')}</a>
+                <span class="link" on:click="{() => routerPush(getLocalizedRoute(project.routeName))}">{$localize('projects.learnmore')}</span>
             </MaterialCardContent>
             {/if}
             <MaterialCardMedia class="card-media-16x9 {project.ident}" aspectRatio="16x9">

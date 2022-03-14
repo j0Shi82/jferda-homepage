@@ -10,7 +10,6 @@ import { getLocalizedRoute } from 'utils/imports/core';
 import { homeRoutes } from 'utils/imports/data';
 
 export let colorClass;
-console.log(homeRoutes);
 </script>
 
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop jdev-d-mobile-none jdev-d-tablet-none"></div>

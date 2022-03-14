@@ -30,12 +30,10 @@ svelteLifecycleOnMount(() => {
 
     svelteTick().then(() => {
       observerLeft = new IntersectionObserver((entries) => {
-        console.log('observerLeft', entries);
         showLeftArrow = !entries[0].isIntersecting;
       });
 
       observerRight = new IntersectionObserver((entries) => {
-        console.log('observerRight', entries);
         showRightArrow = !entries[0].isIntersecting;
       });
 

@@ -1,13 +1,15 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const WebpackModuleNomodulePlugin = require('webpack-module-nomodule-plugin');
 
 const path = require('path');
 
 const sveltePreprocess = require('svelte-preprocess');
 
 const mode = process.env.NODE_ENV || 'development';
-const prod = mode === 'production';
+const target = process.env.TARGET || 'modern';
+const isProd = mode === 'production';
 
 module.exports = {
   entry: {
@@ -27,8 +29,8 @@ module.exports = {
   },
   output: {
     path: `${__dirname}/dist`,
-    filename: '[name].[contenthash].js',
-    chunkFilename: '[name].[chunkhash].[contenthash].js',
+    filename: `[name].[contenthash].${target}.js`,
+    chunkFilename: `[name].[chunkhash].[contenthash].${target}.js`,
   },
   module: {
     rules: [
@@ -63,7 +65,7 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          prod ? MiniCssExtractPlugin.loader : 'style-loader',
+          isProd ? MiniCssExtractPlugin.loader : 'style-loader',
           {
             loader: 'css-loader',
             options: { sourceMap: true },
@@ -95,13 +97,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: '>_ j0Shi.dev --help',
       template: './src/index.template.html',
+      inject: 'body',
     }),
+    isProd ? new WebpackModuleNomodulePlugin(target, 'minimal') : () => {},
     new CopyPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') },
       ],
     }),
   ],
-  devtool: prod ? false : 'source-map',
+  devtool: isProd ? false : 'source-map',
   target: 'web',
 };

@@ -55,12 +55,12 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif|mp4|svg|ttf|webp)$/,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
+        test: /\.(png|jpe?g|gif|mp4|ttf|webp)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(svg)$/,
+        type: 'asset/inline',
       },
       {
         test: /\.(sa|sc|c)ss$/,

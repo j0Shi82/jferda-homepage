@@ -1,15 +1,15 @@
 export default {
-  // de: {
-  //   home: '/',
-  //   about: '/ueber-mich',
-  //   resume: '/lebenslauf',
-  //   skills: '/kompetenzen',
-  //   projects: '/projekte',
-  //   projects_nwoun: '/projekte/neverwinter-uncensored',
-  //   projects_edom: '/projekte/e-domizil-de',
-  //   projects_neighboring: '/projekte/neighboring-satellites',
-  //   404: '/*',
-  // },
+  de: {
+    home: '/',
+    about: '/ueber-mich',
+    resume: '/lebenslauf',
+    skills: '/kompetenzen',
+    projects: '/projekte',
+    projects_nwoun: '/projekte/neverwinter-uncensored',
+    projects_edom: '/projekte/e-domizil-de',
+    projects_neighboring: '/projekte/neighboring-satellites',
+    404: '/*',
+  },
   en: {
     home: '/',
     about: '/about',

@@ -1,18 +1,54 @@
-.jdev-language-select {
-  padding-left: 30px;
-  background-size: 25px;
-  background-repeat: no-repeat;
-  background-position: 0 27px;
+@use "@material/drawer/_variables.scss";
+@use "@material/drawer/_mixins.scss";
 
-  &.en {
-    background-image: url('../media/images/flags/en.svg');
+.jdev-cursor-pointer {
+  cursor: pointer;
+}
+
+.jdev-list-item {
+  margin: (variables.$list-item-spacing * 2) 8px;
+  padding: 0 variables.$surface-padding / 2;
+  display: flex;
+}
+
+.jdev-language-select {
+  width: 30px;
+  height: 22px;
+  user-select: none;
+
+  &.active {
+    opacity: 0.5;
+    filter: grayscale(1);
   }
 
-  &.de {
-    background-image: url('../media/images/flags/de.svg');
+  &:not(.active) {
+    cursor: pointer;
+  }
+
+  .jdev-flag {
+    background-size: 30px;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+    &.en {
+      background-image: url('../media/images/flags/en.svg');
+    }
+  
+    &.de {
+      background-image: url('../media/images/flags/de.svg');
+    }
+  }
+
+  +.jdev-language-select {
+    margin-left: 2px;
   }
 }
 
 .jdev-animation-toggle {
   color: inherit;
+}
+
+.mdc-deprecated-list-divider {
+  @include mixins.border-color(variables.$divider-color);
 }

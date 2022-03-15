@@ -10,8 +10,6 @@ import {
   MaterialListText,
   MaterialListSeparator,
   MaterialSubheader,
-  MaterialSelect,
-  MaterialOption,
   MaterialFormField,
   MaterialSwitch,
 } from 'utils/imports/material';
@@ -121,22 +119,26 @@ svelteLifecycleOnDestroy(() => {
 
       <MaterialListSeparator nav />
 
-      {#if $locales.length > 1}
-      <MaterialListItem>
-        <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}">
-          {#each $locales as loc}
-            <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption>
-          {/each}
-        </MaterialSelect>
-      </MaterialListItem>
-      {/if}
-
-      <MaterialListItem>
+      <MaterialListItem on:click={() => animationsActive.set(!$animationsActive)}>
         <MaterialFormField class="jdev-animation-toggle">
           <MaterialSwitch bind:checked={$animationsActive} />
-          <span slot="label">{$localize('navigation.animationSwitchLabel')}</span>
+          <span slot="label" class="jdev-cursor-pointer" on:click={() => animationsActive.set(!$animationsActive)}>{$localize('navigation.animationSwitchLabel')}</span>
         </MaterialFormField>
       </MaterialListItem>
+
+      {#if $locales.length > 1}
+      <div class="jdev-list-item">
+        <!-- <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}"> -->
+          {#each $locales as loc}
+          <div class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)}>
+            <div class="jdev-flag {loc}" />
+          </div>
+            <!-- <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption> -->
+          {/each}
+        <!-- </MaterialSelect> -->
+      </div>
+      {/if}
+      
     </MaterialList>
   </MaterialContent>
 </MaterialDrawer>

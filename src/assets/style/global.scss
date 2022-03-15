@@ -67,6 +67,11 @@ body {
 .jdev-avatar {
   margin: 0 auto;
 
+  @media #{$breakpoint-tablet} {
+    margin: 0;
+    margin-left: 12px;
+  }
+
   @media #{$breakpoint-desktop} {
     margin: 0;
     margin-left: 12px;

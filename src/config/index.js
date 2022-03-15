@@ -25,8 +25,8 @@ export default {
       atomTransitionDurationShort: 100,
     },
     locale: {
-      // supportedLanguages: ['en', 'de'],
-      supportedLanguages: ['en'],
+      supportedLanguages: ['en', 'de'],
+      // supportedLanguages: ['en'],
       standardLanguage: 'en',
     },
   },

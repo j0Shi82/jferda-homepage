@@ -3,6 +3,223 @@
         "home": "Startseite",
         "about": "Über Mich",
         "resume": "Lebenslauf",
-        "skills": "Kompetenzen"
+        "skills": "Kompetenzen",
+        "projects": {
+            "headline": "Projekte",
+            "mmb": "MavsMoneyball",
+            "nwoun": "Neverwinter Uncensored",
+            "jferda": "j0shi.dev",
+            "lwm": "Last War Manager",
+            "edom": "e-domizil.de",
+            "neighboring": "Neighboring Satellites"
+        },
+        "animationSwitchLabel": "Animationen"
+    },
+    "locale": {
+        "headline": "Sprace",
+        "en": "English",
+        "de": "Deutsch"
+    },
+    "home": {
+        "maintext": "Hallo! Mein Name ist <b>Janosch</b>. Ich bin <b>Full-Stack Web-Entwickler</b> aus Deutschland und habe Spaß an Erstellen von schnellen, optimierten und modernen <b>Javascript</b> Applikationen. Ich lade dich auf meiner Webseite ein, mehr über meine <b>Philosophie</b> und <b>Arbeit</b> zu erfahren."
+    },
+    "about": {
+        "bio": {
+            "headline": "Biography",
+            "bio1": "Driven by things that I needed and couldn't find elsewhere, I have been coding since 1997. For most of my life I was labeling coding a hobby. But in reality that 'hobby' often consumed more time than all other activities combined. That's why, when I got stuck in life and needed to make a decision about my future, I decided to finally turn my passion into a profession.",
+            "bio2": "Although I surely had to get used to doing in a professional environment what I have been doing for much of my life, it was a smooth transition. It just felt natural and I'm glad I made that choice. I got into web development because most of my work had been web apps anyway. But more than that I had always been fascinated by the amount of possibilities the web offers. It has never been easier to connect with people and show your work to the world.",
+            "bio3": "Over the years I naturally touched many areas of development. The first code I've ever written was in Visual Basic before trying (and failing at) C. Then my focus for years were web apps based on PHP/SQL (back end) and plain HTML/CSS (front end). The infamous jQuery library then got me into JavaScript and currently it's most of what I'm doing. This surely isn't the end of the road however and I'm eager to learn what's next and evolve as developer and person."
+        },
+        "philosophy": {
+            "headline": "Coding is...",
+            "satisfaction": {
+                "headline": "Satisfaction",
+                "text": "Within an app or project, there's not much you won't be able to do. That's why coding is a constant reward system that just keeps on giving, because you're    operating in a world in which pretty much all problems are solvable."
+            },
+            "community": {
+                "headline": "Community",
+                "text": "Participating in different coding communities is a great way to drive change, stay open-minded, and yield great results thanks to collective intelligence."
+            },
+            "creativity": {
+                "headline": "Creativity",
+                "text": "Nobody would compare coding to classic art. But why? Devs are able to create software out of thin air just using their imagination and creativity."
+            },
+            "helloworld": {
+                "headline": "Hello World",
+                "text": "Publishing, blogging, or generally expressing myself in showing the world my work is an integral part of who I am. Especially direct interaction with users keeps me engaged."
+            },
+            "progressive": {
+                "headline": "Progressive",
+                "text": "Coding is a field of constant change. It leads to innovation, cutting edge technology, and with the proper ideas even helps making the world a better place for everyone."
+            },
+            "lit": {
+                "headline": "Rocking",
+                "text": "The term 'nerdy' is no longer a contemporary label for developers. The new generation is a modern, open-minded, and social bunch. We do still consume energy drinks though."
+            },
+            "givingback": {
+                "headline": "Giving Back",
+                "text": "I'm eager to learn and evolve, but also always want to share or publish my personal experience to help others grow as well."
+            }
+        }
+    },
+    "resume": {
+        "stillgoing": "since",
+        "education": {
+            "headline": "Education",
+            "gym": "German university entrance qualification at different schools in Gelsenkirchen.",
+            "uni": "Student of Bsc Psychology at Westfälische-Wilhelm-University in Münster.",
+            "edom": "Apprentice as software developer at e-domizil.de in Münster."
+        },
+        "experience": {
+            "headline": "Experience",
+            "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Developed complementary and assisting web apps and scripts for personal use.",
+            "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps and scripts for personal use.",
+            "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Perfect World Entertainment.",
+            "edom": "Software development team member at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes."
+        }
+    },
+    "skills": {
+        "software": "Software",
+        "frameworks": "Frameworks / CMS",
+        "jspackages": "Javascript Packages",
+        "lang": "Languages",
+        "js": "JavaScript",
+        "php": "PHP",
+        "wp": "Wordpress",
+        "sql": "SQL",
+        "jquery": "jQuery",
+        "vue": "Vue",
+        "laravel": "Laravel",
+        "docker": "Docker",
+        "bootstrap": "Bootstrap",
+        "node": "Node",
+        "css": "CSS"
+    },
+    "projects": {
+        "learnmore": "Learn more",
+        "skillsep": ", ",
+        "mmb": {
+            "desc": "MavsMoneyball was mainly a blogging project. It was great to cover a sport that I love and a team that I root for. But I did also develop a statistical app to complement my blog work."
+        },
+        "edom": {
+            "desc": "This was the first commercial project I worked on. I was fortunate enough that I could be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
+        },
+        "nwoun": {
+            "desc": "NWO:UN has been my biggest personal project to date. We served the game's community for nearly five years and delivered content and tools to over 100,000 players per month."
+        },
+        "neighboring": {
+            "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
+        }
+    },
+    "project": {
+        "desc": "Description",
+        "highlights": "Key Features / Achievements",
+        "skills": "Used Skills",
+        "gallery": "Gallery",
+        "links": {
+            "web": "Website",
+            "github": "Repository"
+        },
+        "nwoun": {
+            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain the site or create content.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+            "highlights": {
+                "1": {
+                    "1": "Customized Wordpress Blog",
+                    "2": "Integrated dozens of plugins",
+                    "3": "Theme tweaks and plenty UI enhancements"
+                },
+                "2": {
+                    "1": "Game-Specific Apps",
+                    "2": "Data fetching without official API",
+                    "3": "Unique PHP/Javascript based online tools"
+                },
+                "3": {
+                    "1": "Monthly Traffic",
+                    "2": "100,000+ Users",
+                    "3": "350,000+ Page Views"
+                },
+                "4": {
+                    "1": "Social Management",
+                    "2": "Communities on Twitter, Discord, Facebook",
+                    "3": "Integrated many social APIs"
+                },
+                "5": {
+                    "1": "Full Branding",
+                    "2": "Logos, Banners & Color Scheme",
+                    "3": "Hundreds of self-made images"
+                }
+            },
+            "links": {
+                "blog": "Unblogged",
+                "forum": "Uncensored"
+            }
+        },
+        "edom": {
+            "desc": "E-Domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, internalization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
+            "highlights": {
+                "1": {
+                    "1": "Full-Stack Development",
+                    "2": "Vue.js, Express, Docker",
+                    "3": "Lumen, API design, Elastic Search"
+                },
+                "2": {
+                    "1": "SEO & Performance",
+                    "2": "Monitoring Core Web Vitals and other metrics",
+                    "3": "Using cache techniques where applicable"
+                },
+                "3": {
+                    "1": "A/B testing",
+                    "2": "Made A/B testing possible on the SSR/SPA",
+                    "3": "Custom solution using own db and Google"
+                },
+                "4": {
+                    "1": "Datepicker Integration",
+                    "2": "Customized Flatpickr to fit our needs",
+                    "3": "Multiple pickers on single page sync"
+                },
+                "5": {
+                    "1": "Legacy Browser Support",
+                    "2": "Support all browsers down to IE 11",
+                    "3": "Separate bundles for modern and legacy clients"
+                }
+            },
+            "links": {
+                "edom": "e-domizil.de",
+                "to": "tourist-online.de"
+            }
+        },
+        "neighboring": {
+            "desc": "Neighboring Satellites is an incredible project that tries to support the local art scene in a burgeoning environment. The most difficult task when working on the project's website was to fit the client's expecations in terms of design and layout. The most time was used to find a fitting theme and then customize it for our needs. Moderating between the realities of web and classic design was extremely fun as well as countless 'live' sessions in which we discussed and adjusted the layout.<br /><br />The rest was fairly standard with setting up a Wordpress blog on a simple webhost. We however tried to set up a system that's easy to maintain later so the authors will be able to do most of the editing and admin work themselves. That's why training folks that were new to publishing on the web, and with Wordpress, was also a key part of the process.",
+            "highlights": {
+                "1": {
+                    "1": "Customized Wordpress Blog",
+                    "2": "Taking care of base setup",
+                    "3": "Integrated dozens of plugins"
+                },
+                "2": {
+                    "1": "Train The Authors",
+                    "2": "Teach inexperienced users WP basics",
+                    "3": "Make sure setup is easy to maintain"
+                },
+                "3": {
+                    "1": "Implement a Given Layout",
+                    "2": "Search For a Fitting Theme",
+                    "3": "Plenty Styling Adjustements"
+                },
+                "4": {
+                    "1": "Legal Management",
+                    "2": "Handle privacy logic",
+                    "3": "Research necessary legal info"
+                },
+                "5": {
+                    "1": "Elementor",
+                    "2": "Getting used to the Elementor plugin",
+                    "3": "Design pages using a given layout"
+                }
+            },
+            "links": {
+                "site": "Website"
+            }
+        }
     }
 }

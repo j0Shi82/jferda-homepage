@@ -21,6 +21,7 @@ import npmLogo from 'assets/media/images/skills/jspackages/npm.svg';
 import webpackLogo from 'assets/media/images/skills/jspackages/webpack.svg';
 import expressLogo from 'assets/media/images/skills/jspackages/express.png';
 import jestLogo from 'assets/media/images/skills/jspackages/jest.png';
+import i18nextLogo from 'assets/media/images/skills/jspackages/i18next.png';
 
 import dockerLogo from 'assets/media/images/skills/software/docker.png';
 import gitLogo from 'assets/media/images/skills/software/git.svg';
@@ -120,6 +121,9 @@ const skills = [
   },
   {
     type: 'jspackages', name: 'Jest', class: 'jest', logo: jestLogo, progress: 0.4,
+  },
+  {
+    type: 'jspackages', name: 'i18next', class: 'i18next', logo: i18nextLogo, progress: 0.6,
   },
   {
     type: 'nwoun', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.3,

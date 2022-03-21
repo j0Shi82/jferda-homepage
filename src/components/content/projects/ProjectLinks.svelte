@@ -14,13 +14,17 @@ export let animationTotalDuration;
     display: flex;
     justify-content: space-evenly;
   }
+
+  :global(button > svg.dark.fa-svelte > path) {
+    fill: #000;
+}
 </style>
 
 {#if projectData.projectPage.links.length}
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly="{{ y: -400, duration: animationTotalDuration }}">
     {#each projectData.projectPage.links as link, i}
         {#if link.type === 'web'}
-            <MaterialFab on:click="{() => { window.open(link.url); }}" extended><FontAwesomeIcon class="mdc-fab__icon" icon={faGlobe}></FontAwesomeIcon><MaterialFabLabel>{ $localize(link.labelLocaleIdent)}</MaterialFabLabel></MaterialFab>
+            <MaterialFab style="background-color: {link.bgColor};" on:click="{() => { window.open(link.url); }}" extended><FontAwesomeIcon class="{link.colorClass} mdc-fab__icon" icon={faGlobe}></FontAwesomeIcon><MaterialFabLabel style="color: {link.color}">{ $localize(link.labelLocaleIdent)}</MaterialFabLabel></MaterialFab>
         {/if}
     {/each}
     </div>

@@ -110,6 +110,10 @@
       @include mdc-linear-progress-bar-color(#a04e5b);
     }
 
+    &.i18next {
+      @include mdc-linear-progress-bar-color(#26a69a);
+    }
+
     &.npm {
       @include mdc-linear-progress-bar-color(#cb3837);
     }

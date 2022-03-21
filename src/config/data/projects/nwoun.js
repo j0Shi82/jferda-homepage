@@ -45,13 +45,9 @@ export default {
     links: [
       {
         type: 'web',
-        url: 'https://blog.nwo-uncensored.com',
-        labelLocaleIdent: 'project.nwoun.links.blog',
-      },
-      {
-        type: 'web',
         url: 'https://www.nwo-uncensored.com',
         labelLocaleIdent: 'project.nwoun.links.forum',
+        bgColor: '#b51208',
       },
     ],
     descLocaleKey: 'project.nwoun.desc',

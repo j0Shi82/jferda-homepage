@@ -25,40 +25,40 @@
     },
     "about": {
         "bio": {
-            "headline": "Biography",
-            "bio1": "Driven by things that I needed and couldn't find elsewhere, I have been coding since 1997. For most of my life I was labeling coding a hobby. But in reality that 'hobby' often consumed more time than all other activities combined. That's why, when I got stuck in life and needed to make a decision about my future, I decided to finally turn my passion into a profession.",
-            "bio2": "Although I surely had to get used to doing in a professional environment what I have been doing for much of my life, it was a smooth transition. It just felt natural and I'm glad I made that choice. I got into web development because most of my work had been web apps anyway. But more than that I had always been fascinated by the amount of possibilities the web offers. It has never been easier to connect with people and show your work to the world.",
-            "bio3": "Over the years I naturally touched many areas of development. The first code I've ever written was in Visual Basic before trying (and failing at) C. Then my focus for years were web apps based on PHP/SQL (back end) and plain HTML/CSS (front end). The infamous jQuery library then got me into JavaScript and currently it's most of what I'm doing. This surely isn't the end of the road however and I'm eager to learn what's next and evolve as developer and person."
+            "headline": "Biographie",
+            "bio1": "Angetrieben von Dingen, die ich brauchte aber nirgends finden konnte, programmiere ich schon seit 1997. Lange Zeit war es \"nur\" ein Hobby, welches aber oft mehr Zeit in Anspruch nahm als andere Tätigkeiten. Deshalb habe ich konsequenterweise an einem Scheidepunkt in meinem Leben beschlossen, meine Berufung auch zu meinem Beruf zu machen.",
+            "bio2": "Obwohl ich wenig Erfahrung in der professionellen IT-Arbeitswelt vorzuweisen hatte, war der Übergang einfach. Ich habe mich seinerzeit für Web-Entwicklung entschieden, weil ohnehin viele meiner Hobby-Projekte darauf basierten. Zudem war ich schon immer beeindruckt von den Möglichkeiten des Webs und empfand es als extrem zufrieden stellend, wie einfach man dort seine Arbeit der Welt präsentieren konnte.",
+            "bio3": "Über die Jahre bin ich mit vielen Programmiersprachen und Umgebungen in Berührung gekommen. Meinen ersten Code überhaupt verfasste ich in Visual Basic, bevor ich über ein kleines Intermezzo in C zu Web-Applikationen in PHP/SQL und HTML/CSS kam. Die berüchtigte jQuery-Bibliothek war dann mein Einstieg in JavasScript und über die Zeit ist dies und diverse verwandte Frameworks zu meiner Kernkompetenz herangewachsen."
         },
         "philosophy": {
-            "headline": "Coding is...",
+            "headline": "Coding heißt für mich...",
             "satisfaction": {
-                "headline": "Satisfaction",
-                "text": "Within an app or project, there's not much you won't be able to do. That's why coding is a constant reward system that just keeps on giving, because you're    operating in a world in which pretty much all problems are solvable."
+                "headline": "Befriedigung",
+                "text": "Innerhalb einer Applikation gibt es so gut wie keine Probleme, die man nicht lösen könnte. Das macht Entwicklung zu einem befriedigenden Belohnungssystem, welches immer wieder Erfolge generiert."
             },
             "community": {
-                "headline": "Community",
-                "text": "Participating in different coding communities is a great way to drive change, stay open-minded, and yield great results thanks to collective intelligence."
+                "headline": "Gemeinschaft",
+                "text": "Die Teilnahme an verschiedenen Gemeinschaften und der Open-Source-Bewegung ist ein exzellenter Weg, um sich fortwährend auszutauschen, ohne viel Aufwand neue Wege zu beschreiten und die Qualität der eigenen Arbeit zu verbessern."
             },
             "creativity": {
-                "headline": "Creativity",
-                "text": "Nobody would compare coding to classic art. But why? Devs are able to create software out of thin air just using their imagination and creativity."
+                "headline": "Kreativität",
+                "text": "Niemand würde Programmieren mit Kunst vergleichen. Aber warum eigentlich nicht? Entwickler sind in der Lage aus Nichts etwas entstehen zu lassen und die einzigen Hilfsmittel sind Kreativität, Logik, und Vorstellungskraft."
             },
             "helloworld": {
-                "headline": "Hello World",
-                "text": "Publishing, blogging, or generally expressing myself in showing the world my work is an integral part of who I am. Especially direct interaction with users keeps me engaged."
+                "headline": "Hallo Welt",
+                "text": "Sein Schaffen der Welt zu präsentieren ist ein integraler Bestandteil meiner Motivation. Auch und gerade der Austausch mit Benutzern einer Software schätze ich wert und hilft mir, niemals stehen zu bleiben."
             },
             "progressive": {
-                "headline": "Progressive",
-                "text": "Coding is a field of constant change. It leads to innovation, cutting edge technology, and with the proper ideas even helps making the world a better place for everyone."
+                "headline": "Fortschritt",
+                "text": "Entwicklung ist ein Bereich des konstanten Wandels. Dank Innovation und moderne Technologien hilft es sogar im besten Fall, die Welt zu einem besseren Ort für alle zu machen."
             },
             "lit": {
-                "headline": "Rocking",
-                "text": "The term 'nerdy' is no longer a contemporary label for developers. The new generation is a modern, open-minded, and social bunch. We do still consume energy drinks though."
+                "headline": "Trendy",
+                "text": "Das Label \"nerdy\" ist für mich längst kein Vorurteil mehr, sondern Verpflichtung und Lebensart. Meine Generation ist lebensoffen, modern, und sozial."
             },
             "givingback": {
-                "headline": "Giving Back",
-                "text": "I'm eager to learn and evolve, but also always want to share or publish my personal experience to help others grow as well."
+                "headline": "Zurückgeben",
+                "text": "Ich bin immer interessiert daran, zu lernen und mich weiterzuentwickeln. Aber ich lebe auch vom Austausch und Weitergeben meiner persönlichen Erfahrung, um den Horizont anderer in gleicher Weise zu erweitern."
             }
         }
     },

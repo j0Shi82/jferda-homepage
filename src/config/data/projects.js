@@ -28,11 +28,7 @@ export default [
           type: 'web',
           url: 'https://www.e-domizil.de',
           labelLocaleIdent: 'project.edom.links.edom',
-        },
-        {
-          type: 'web',
-          url: 'https://www.tourist-online.de',
-          labelLocaleIdent: 'project.edom.links.to',
+          bgColor: '#f97c1e',
         },
       ],
       descLocaleKey: 'project.edom.desc',

@@ -83,6 +83,9 @@
     "tippy.js": "^6.3.7",
     "typed.js": "^2.0.12"
   },
+  "resolutions": {
+    "deasync": "^0.1.24"
+  },
   "lint-staged": {
     "*.{js,svelte}": [
       "yarn lint"

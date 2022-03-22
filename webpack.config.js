@@ -17,6 +17,7 @@ module.exports = {
   },
   devServer: {
     host: '0.0.0.0',
+    hot: true,
     static: [path.join(__dirname, 'dist'), path.join(__dirname, 'public')],
   },
   resolve: {
@@ -46,11 +47,14 @@ module.exports = {
         use: {
           loader: 'svelte-loader',
           options: {
-            emitCss: false,
-            hotReload: true,
+            emitCss: isProd,
+            hotReload: !isProd,
             preprocess: sveltePreprocess({
               postcss: true,
             }),
+            compilerOptions: {
+              dev: !isProd,
+            },
           },
         },
       },

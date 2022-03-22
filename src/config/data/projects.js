@@ -18,6 +18,7 @@ const projects = [
   {
     ident: 'edom',
     titleLocaleKey: 'navigation.projects.edom',
+    skillsLocaleKeys: ['skills.vue', 'skills.laravel', 'skills.docker', 'skills.bootstrap', 'skills.node'],
     descLocaleKey: 'projects.edom.desc',
     routeName: 'projects_edom',
     projectPage: {

@@ -3,6 +3,7 @@ import nodeLogo from 'assets/media/images/knowledge-logos/node.png';
 export default {
   ident: 'jferda',
   titleLocaleKey: 'navigation.projects.jferda',
+  skillsLocaleKeys: ['skills.svelte', 'skills.tailwind'],
   descLocaleKey: 'projects.jferda.desc',
   routeName: 'projects_jferda',
   projectPage: {

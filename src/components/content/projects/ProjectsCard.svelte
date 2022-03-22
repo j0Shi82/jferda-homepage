@@ -33,7 +33,12 @@ export let project;
             <MaterialCardContent>
                 <h2 class="jdev-card-headline mdc-typography--headline6">{$localize(project.titleLocaleKey)}</h2>
                 <h3 class="jdev-card-subtitle mdc-typography--subtitle2">
-                    {project.skillsLocaleKeys.map((skillLocaleKey) => $localize(skillLocaleKey)).join($localize('projects.skillsep'))}
+                    {project.skillsLocaleKeys.map((skillLocaleKey) => $localize(skillLocaleKey)).sort((a, b) => {
+                        const x = a.toLowerCase();
+                        const y = b.toLowerCase();
+                        // eslint-disable-next-line no-nested-ternary
+                        return x < y ? -1 : x > y ? 1 : 0;
+                    }).join($localize('projects.skillsep'))}
                 </h3>
             </MaterialCardContent>
         </MaterialCard>

@@ -8,6 +8,7 @@ export default {
     projects_nwoun: '/projekte/neverwinter-uncensored',
     projects_edom: '/projekte/e-domizil-de',
     projects_neighboring: '/projekte/neighboring-satellites',
+    projects_jferda: '/projekte/jferda',
     404: '/*',
   },
   en: {
@@ -19,6 +20,7 @@ export default {
     projects_nwoun: '/projects/neverwinter-uncensored',
     projects_edom: '/projects/e-domizil-de',
     projects_neighboring: '/projects/neighboring-satellites',
+    projects_jferda: '/projects/jferda',
     404: '/*',
   },
 };

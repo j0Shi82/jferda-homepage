@@ -12,18 +12,18 @@ if ('matchMedia' in window) {
   const mqlMobile = window.matchMedia(mobileBreakpointQueryString);
   // when switching to mobile state the menu should reappear based on user interaction
   const mqlMobileListener = (v) => { isMobile.set(v.matches); };
-  mqlMobile.addListener(mqlMobileListener);
+  mqlMobile.addEventListener('change', mqlMobileListener);
   isMobile = storeTypeWritable(mqlMobile.matches);
 
   // isMenuOpen.set(true) because menu is alwys visible on table and desktop
   const mqlTablet = window.matchMedia(tabletBreakpointQueryString);
   const mqlTabletListener = (v) => { isTablet.set(v.matches); };
-  mqlTablet.addListener(mqlTabletListener);
+  mqlTablet.addEventListener('change', mqlTabletListener);
   isTablet = storeTypeWritable(mqlTablet.matches);
 
   const mqlDesktop = window.matchMedia(desktopBreakpointQueryString);
   const mqlDesktopListener = (v) => { isDesktop.set(v.matches); };
-  mqlDesktop.addListener(mqlDesktopListener);
+  mqlDesktop.addEventListener('change', mqlDesktopListener);
   isDesktop = storeTypeWritable(mqlDesktop.matches);
 }
 

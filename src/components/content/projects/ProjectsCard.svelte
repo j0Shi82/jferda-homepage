@@ -6,6 +6,7 @@ import {
   MaterialCard, MaterialCardMedia, MaterialCardContent, MaterialIcon,
 } from 'utils/imports/material';
 import { animationsActive } from 'utils/imports/store';
+import { TechLogo } from 'utils/imports/components';
 
 let hover = false;
 export let i;
@@ -31,14 +32,26 @@ export let project;
             <MaterialCardMedia class="card-media-16x9 {project.ident}" aspectRatio="16x9">
             </MaterialCardMedia>
             <MaterialCardContent>
-                <h2 class="jdev-card-headline mdc-typography--headline6">{$localize(project.titleLocaleKey)}</h2>
+                <h2 class="jdev-card-headline mdc-typography--headline6">
+                   {$localize(project.titleLocaleKey)}
+                </h2>
                 <h3 class="jdev-card-subtitle mdc-typography--subtitle2">
-                    {project.skillsLocaleKeys.map((skillLocaleKey) => $localize(skillLocaleKey)).sort((a, b) => {
+                    <div>
+                        {#each project.skillsLocaleKeys.map((skillLocaleKey) => skillLocaleKey.replace('skills.', '')).sort((a, b) => {
+                            const x = a.toLowerCase();
+                            const y = b.toLowerCase();
+                            // eslint-disable-next-line no-nested-ternary
+                            return x < y ? -1 : x > y ? 1 : 0;
+                        }) as skill}
+                        <TechLogo ident="{skill}" height="16" />
+                        {/each}
+                    </div>
+                    <!-- {project.skillsLocaleKeys.map((skillLocaleKey) => $localize(skillLocaleKey)).sort((a, b) => {
                         const x = a.toLowerCase();
                         const y = b.toLowerCase();
                         // eslint-disable-next-line no-nested-ternary
                         return x < y ? -1 : x > y ? 1 : 0;
-                    }).join($localize('projects.skillsep'))}
+                    }).join($localize('projects.skillsep'))} -->
                 </h3>
             </MaterialCardContent>
         </MaterialCard>

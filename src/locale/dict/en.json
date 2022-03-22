@@ -103,7 +103,7 @@
         "learnmore": "Learn more",
         "skillsep": ", ",
         "edom": {
-            "desc": "This was the first commercial project I worked on. I was fortunate enough that I could be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
+            "desc": "e-domizil.de was the first commercial project I worked on. I was fortunate enough that I could be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
         },
         "nwoun": {
             "desc": "NWO:UN has been my biggest personal project to date. We served the game's community for nearly five years and delivered content and tools to over 100,000 players per month."
@@ -112,7 +112,7 @@
             "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
         },
         "jferda": {
-            "desc": "j0shi.dev is my personal portfolio site that I mainly developed to get into technologies I hadn't tried before (Svelte, Tailwind CSS, Material Design). It however also includes all information about me as person and professional."
+            "desc": "The idea of j0shi.dev was born when I was searching for a reason to get into new technologies I hadn't tried before (Svelte, Material Design). Plus the site obviosuly comes with the benefit of showing the world what I'm all about."
         }
     },
     "project": {
@@ -225,7 +225,7 @@
             }
         },
         "jferda": {
-            "desc": "j0shi.dev is my personal portfolio site that I primarily made just for fun and to get started with Svelte (and using Webpack alongside it). It also uses Tailwind CSS and the Material Design for the same reasons. I did experiment with a full localization (including a custom router setup with localized urls), all sorts of CSS animations, timings, as well as a distinct import structure to make modules management less chaotic.<br /><br />The most fun though was rebranding popular tech logos using my own nickname ('j0Shi') that I'm using since my teenage days. I know the notation looks a bit silly nowadays, but I roll with it because why the heck not! Never growing up is part of my identity.",
+            "desc": "j0shi.dev is my personal portfolio site that I primarily made just for fun and to get started with Svelte (and using Webpack alongside it). It also uses Tailwind CSS and the Material Design for the same reasons. I did experiment with a full localization (including a custom router setup with localized urls), all sorts of CSS animations, timings, as well as a distinct import structure to make modules management less chaotic.<br /><br />The most fun though was rebranding popular tech logos using my own nickname ('j0Shi') that I'm using since my teenage days. I know the notation looks a bit silly nowadays, but I roll with it because why the heck not! Never growing up is part of my identity.<br /><br />j0shi.dev obviously also showcases everything you would expect from a portfolio site, like projects and skills. Have fun getting to know me!",
             "highlights": {
                 "1": {
                     "1": "Webpack and Svelte",

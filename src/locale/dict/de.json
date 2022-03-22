@@ -107,6 +107,9 @@
         },
         "neighboring": {
             "desc": "Neighboring Satellites ist ein öffentliche gefördertes Projekt, welches die Kunstszene in Gelsenkirchen-Ückendorf fördern soll. Ich wurde mit der tecnischen Realisierung der Webseite beauftragt."
+        },
+        "jferda": {
+            "desc": "Als ich nach einem halbwegs sinnvollen Projekt suchte, um neue Technologien (Svelte, Tailwind CSS) auszuprobieren, wurde j0shi.dev geboren! "
         }
     },
     "project": {
@@ -219,7 +222,7 @@
             }
         },
         "jferda": {
-            "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte, Tailwind CSS, Material Design). Ich habe zudem eine vollständigen Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde.",
+            "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte, Tailwind CSS, Material Design). Ich habe zudem eine vollständigen Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde. Viel Spaß beim Kennenlernen!",
             "highlights": {
                 "1": {
                     "1": "Webpack und Svelte",

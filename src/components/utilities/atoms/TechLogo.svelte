@@ -1,0 +1,53 @@
+<script>
+    const logos = {
+      php: () => import('assets/media/images/skills/language/php.png'),
+      csharp: () => import('assets/media/images/skills/language/csharp.svg'),
+      sql: () => import('assets/media/images/skills/language/sql.png'),
+      java: () => import('assets/media/images/skills/language/java.png'),
+      html: () => import('assets/media/images/skills/language/html.svg'),
+      js: () => import('assets/media/images/skills/language/javascript.svg'),
+      css: () => import('assets/media/images/skills/language/css.svg'),
+
+      bootstrap: () => import('assets/media/images/skills/frameworks/bootstrap.png'),
+      tailwind: () => import('assets/media/images/skills/frameworks/tailwind.png'),
+      laravel: () => import('assets/media/images/skills/frameworks/laravel.png'),
+      phpbb: () => import('assets/media/images/skills/frameworks/phpbb.png'),
+      vue: () => import('assets/media/images/skills/frameworks/vue.svg'),
+      svelte: () => import('assets/media/images/skills/frameworks/svelte.png'),
+      wp: () => import('assets/media/images/skills/frameworks/wordpress.svg'),
+      jquery: () => import('assets/media/images/skills/frameworks/jquery.svg'),
+      material: () => import('assets/media/images/skills/frameworks/material.svg'),
+
+      babel: () => import('assets/media/images/skills/jspackages/babel.svg'),
+      eslint: () => import('assets/media/images/skills/jspackages/eslint.svg'),
+      npm: () => import('assets/media/images/skills/jspackages/npm.svg'),
+      webpack: () => import('assets/media/images/skills/jspackages/webpack.svg'),
+      express: () => import('assets/media/images/skills/jspackages/express.png'),
+      jest: () => import('assets/media/images/skills/jspackages/jest.png'),
+      i18next: () => import('assets/media/images/skills/jspackages/i18next.png'),
+
+      docker: () => import('assets/media/images/skills/software/docker.png'),
+      git: () => import('assets/media/images/skills/software/git.svg'),
+      jira: () => import('assets/media/images/skills/software/jira.png'),
+      mysql: () => import('assets/media/images/skills/software/mysql.png'),
+      photoshop: () => import('assets/media/images/skills/software/photoshop.svg'),
+      sentry: () => import('assets/media/images/skills/software/sentry.svg'),
+      vscode: () => import('assets/media/images/skills/software/vscode.png'),
+      node: () => import('assets/media/images/skills/software/node.svg'),
+    };
+    
+    export let ident = 'bootstrap';
+    export let height = 24;
+
+    let logoURL = null;
+
+    if (logos[ident]) {
+      logos[ident]().then((module) => { logoURL = module.default; });
+    } else {
+      logoURL = 'notfound.gif';
+    }
+</script>
+
+{#if logoURL !== null}
+<img class="jdev-techlogo" src="{logoURL}" alt ="{ident} logo" height="{height}" style="height: {height}" />
+{/if}

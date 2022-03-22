@@ -21,6 +21,7 @@ import ProjectLinks from 'components/content/projects/ProjectLinks.svelte';
 
 import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 import Loader from 'components/utilities/atoms/Loader.svelte';
+import TechLogo from 'components/utilities/atoms/TechLogo.svelte';
 
 import Icon from 'fa-svelte';
 
@@ -33,5 +34,6 @@ export {
   ProjectsCard, ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks,
   FlyingHeadline,
   Loader,
+  TechLogo,
   Icon as FontAwesomeIcon,
 };

@@ -12,6 +12,14 @@
     // $on-error : black,
 );
 
+@use "@material/layout-grid/index" as layout-grid with (
+    $breakpoints: (
+        desktop: 1024px,
+        tablet: 768px,
+        phone: 0px,
+    )
+);
+
 // $text-primary-on-background : rgb(0, 0, 0),
 //     $text-secondary-on-background : hsla(0, 0%, 0%, 0.7),
 //     // $text-hint-on-background : hsla(0, 0%, 100%, 0.5),

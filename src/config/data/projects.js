@@ -12,13 +12,12 @@ import gallery5Edom250 from 'assets/media/images/projects/edom/gallery5-250.jpg'
 
 import nwoun from 'config/data/projects/nwoun';
 import neighboring from 'config/data/projects/neighboring';
+import jferda from 'config/data/projects/jferda';
 
-export default [
-  nwoun,
+const projects = [
   {
     ident: 'edom',
     titleLocaleKey: 'navigation.projects.edom',
-    skillsLocaleKeys: ['skills.vue', 'skills.laravel', 'skills.docker', 'skills.bootstrap', 'skills.node'],
     descLocaleKey: 'projects.edom.desc',
     routeName: 'projects_edom',
     projectPage: {
@@ -93,5 +92,14 @@ export default [
       ],
     },
   },
+  nwoun,
+  jferda,
   neighboring,
 ];
+
+export default projects.sort((a, b) => {
+  const x = a.ident.toLowerCase();
+  const y = b.ident.toLowerCase();
+  // eslint-disable-next-line no-nested-ternary
+  return x < y ? -1 : x > y ? 1 : 0;
+});

@@ -130,7 +130,7 @@ const skills = [
     type: 'jspackages', name: 'i18next', class: 'i18next', logo: i18nextLogo, progress: 0.6,
   },
   {
-    type: 'nwoun', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.3,
+    type: 'nwoun', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.4,
   },
   {
     type: 'nwoun', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.6,
@@ -139,16 +139,25 @@ const skills = [
     type: 'nwoun', name: 'JavaScript', class: 'javascript', logo: javascriptLogo, progress: 0.9,
   },
   {
-    type: 'nwoun', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.9,
+    type: 'nwoun', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.8,
   },
   {
     type: 'nwoun', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 0.8,
   },
   {
-    type: 'nwoun', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.4,
+    type: 'nwoun', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.2,
   },
   {
-    type: 'nwoun', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.6,
+    type: 'nwoun', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.4,
+  },
+  {
+    type: 'nwoun', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 0.7,
+  },
+  {
+    type: 'nwoun', name: 'Tailwind CSS', class: 'tailwind', logo: tailwindLogo, progress: 0.5,
+  },
+  {
+    type: 'nwoun', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.2,
   },
   {
     type: 'edom', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.8,
@@ -157,16 +166,16 @@ const skills = [
     type: 'edom', name: 'Bootstrap', class: 'bootstrap', logo: bootstrapLogo, progress: 0.6,
   },
   {
-    type: 'edom', name: 'VUE.js', class: 'vue', logo: vueLogo, progress: 0.9,
+    type: 'edom', name: 'VUE.js', class: 'vue', logo: vueLogo, progress: 1,
   },
   {
-    type: 'edom', name: 'Laravel', class: 'laravel', logo: laravelLogo, progress: 0.4,
+    type: 'edom', name: 'Laravel', class: 'laravel', logo: laravelLogo, progress: 0.3,
   },
   {
     type: 'edom', name: 'Docker', class: 'docker', logo: dockerLogo, progress: 0.5,
   },
   {
-    type: 'edom', name: 'node', class: 'node', logo: nodeLogo, progress: 0.75,
+    type: 'edom', name: 'node', class: 'node', logo: nodeLogo, progress: 0.7,
   },
   {
     type: 'neighboring', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 1.0,
@@ -175,10 +184,19 @@ const skills = [
     type: 'neighboring', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.2,
   },
   {
-    type: 'neighboring', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.3,
+    type: 'neighboring', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.4,
   },
   {
     type: 'neighboring', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.6,
+  },
+  {
+    type: 'jferda', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 1.0,
+  },
+  {
+    type: 'jferda', name: 'Material Design', class: 'material', logo: materialLogo, progress: 0.6,
+  },
+  {
+    type: 'jferda', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.2,
   },
 ];
 

@@ -74,7 +74,8 @@
             "headline": "Experience",
             "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Developed complementary and assisting web apps and scripts for personal use.",
             "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps and scripts for personal use.",
-            "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Perfect World Entertainment.",
+            "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Gearbox Software.",
+            "neighboring": "Plan and develop the Wordpress based web project <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
             "edom": "Software development team member at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes."
         }
     },
@@ -93,14 +94,14 @@
         "docker": "Docker",
         "bootstrap": "Bootstrap",
         "node": "Node",
-        "css": "CSS"
+        "css": "CSS",
+        "tailwind": "Tailwind CSS",
+        "svelte": "Svelte",
+        "material": "Material Design"
     },
     "projects": {
         "learnmore": "Learn more",
         "skillsep": ", ",
-        "mmb": {
-            "desc": "MavsMoneyball was mainly a blogging project. It was great to cover a sport that I love and a team that I root for. But I did also develop a statistical app to complement my blog work."
-        },
         "edom": {
             "desc": "This was the first commercial project I worked on. I was fortunate enough that I could be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
         },
@@ -109,6 +110,9 @@
         },
         "neighboring": {
             "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
+        },
+        "jferda": {
+            "desc": "j0shi.dev is my personal portfolio site that I mainly developed to get into technologies I hadn't tried before (Svelte, Tailwind CSS, Material Design). It however also includes all information about me as person and professional."
         }
     },
     "project": {
@@ -121,12 +125,12 @@
             "github": "Repository"
         },
         "nwoun": {
-            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain all features on the site or create content. I however still host a game-related news hub.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain all features on the site or create content. I however still host a small game-related news hub, which I coded after the project had already shut down.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
             "highlights": {
                 "1": {
                     "1": "Customized Wordpress Blog",
                     "2": "Integrated dozens of plugins",
-                    "3": "Theme tweaks and plenty UI enhancements"
+                    "3": "Optimization, Tweaks, and Enhancements"
                 },
                 "2": {
                     "1": "Game-Specific Apps",
@@ -150,11 +154,12 @@
                 }
             },
             "links": {
-                "forum": "Project Site"
+                "forum": "Project Site",
+                "repo": "Repository"
             }
         },
         "edom": {
-            "desc": "E-Domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, internalization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
+            "desc": "e-domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, internalization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
             "highlights": {
                 "1": {
                     "1": "Full-Stack Development",
@@ -217,6 +222,39 @@
             },
             "links": {
                 "site": "Website"
+            }
+        },
+        "jferda": {
+            "desc": "j0shi.dev is my personal portfolio site that I primarily made just for fun and to get started with Svelte (and using Webpack alongside it). It also uses Tailwind CSS and the Material Design for the same reasons. I did experiment with a full localization (including a custom router setup with localized urls), all sorts of CSS animations, timings, as well as a distinct import structure to make modules management less chaotic.<br /><br />The most fun though was rebranding popular tech logos using my own nickname ('j0Shi') that I'm using since my teenage days. I know the notation looks a bit silly nowadays, but I roll with it because why the heck not! Never growing up is part of my identity.",
+            "highlights": {
+                "1": {
+                    "1": "Webpack and Svelte",
+                    "2": "Getting used to Svelte and associated packages",
+                    "3": "Integrate and customize Webpack"
+                },
+                "2": {
+                    "1": "CSS Animations",
+                    "2": "Experiment with different CSS animations",
+                    "3": "Trying to time and chain them in a fun way"
+                },
+                "3": {
+                    "1": "Tailwind and Material",
+                    "2": "Learning and using Tailwind CSS",
+                    "3": "Material Design principles and SMUI"
+                },
+                "4": {
+                    "1": "Branding",
+                    "2": "Rebrand logos using my nickname",
+                    "3": "Fun times (and they don't look bad)"
+                },
+                "5": {
+                    "1": "Portfolio",
+                    "2": "Present info in a short but meaningful way",
+                    "3": "Properly reflect about skills and projects"
+                }
+            },
+            "links": {
+                "repo": "Repository"
             }
         }
     }

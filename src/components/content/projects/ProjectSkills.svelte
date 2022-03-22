@@ -30,6 +30,7 @@ svelteLifecycleOnMount(() => {
 // there might be a smarter way to dynamically set a css value on a third-party component, but it'll do for now
 </script>
 
+{#if projectSkills.length}
 <div 
     class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12"
     style="--jdev-skills-progress-duration: {animationParams.content.duration}ms;"
@@ -55,3 +56,4 @@ svelteLifecycleOnMount(() => {
         slideDuration="{animationParams.content.duration}"
         rowIterationDelay="{animationParams.content.iterationDelay}" />
 </div>
+{/if}

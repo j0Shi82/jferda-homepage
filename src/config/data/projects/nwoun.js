@@ -37,7 +37,6 @@ import commentsScreenshot250 from 'assets/media/images/projects/nwoun/comments-2
 export default {
   ident: 'nwoun',
   titleLocaleKey: 'navigation.projects.nwoun',
-  skillsLocaleKeys: ['skills.js', 'skills.php', 'skills.wp', 'skills.sql'],
   descLocaleKey: 'projects.nwoun.desc',
   routeName: 'projects_nwoun',
   projectPage: {
@@ -47,6 +46,12 @@ export default {
         type: 'web',
         url: 'https://www.nwo-uncensored.com',
         labelLocaleIdent: 'project.nwoun.links.forum',
+        bgColor: '#b51208',
+      },
+      {
+        type: 'github',
+        url: 'https://github.com/j0Shi82/nwoun-homepage-index',
+        labelLocaleIdent: 'project.nwoun.links.repo',
         bgColor: '#b51208',
       },
     ],

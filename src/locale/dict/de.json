@@ -63,26 +63,27 @@
         }
     },
     "resume": {
-        "stillgoing": "since",
+        "stillgoing": "seit",
         "education": {
-            "headline": "Education",
-            "gym": "German university entrance qualification at different schools in Gelsenkirchen.",
-            "uni": "Student of Bsc Psychology at Westfälische-Wilhelm-University in Münster.",
-            "edom": "Apprentice as software developer at e-domizil.de in Münster."
+            "headline": "Ausbildung",
+            "gym": "Allgemeine Hochschulreife am Ricarda-Huch-Gymnasium und Berufskolleg Königstraße in Gelsenkirchen",
+            "uni": "Studierender an der Westfälischen Wilhelms-Universität in Münster im Fach Psychologie Bsc",
+            "edom": "Ausbildung zum Fachinformatiker der Anwendungsentwicklung bei der e-domizil GmbH in Münster"
         },
         "experience": {
-            "headline": "Experience",
-            "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Developed complementary and assisting web apps and scripts for personal use.",
-            "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps and scripts for personal use.",
-            "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Perfect World Entertainment.",
-            "edom": "Software development team member at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes."
+            "headline": "Erfahrung",
+            "hs": "Freier redaktioneller und technischer Mitarbeiter bei der <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
+            "mmb": "Autor und Editor bei <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, einem Online-Basketball-Blog. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
+            "nwoun": "Admin von <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, einer Online-Community und Software-Projekt für das MMORPG Neverwinter von Cryptic Studios und Gearbox Software.",
+            "neighboring": "Planung und technische ausführung der Webpräsenz für das Projekt <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
+            "edom": "Full-Stack Web-Developer bei <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, einem Online-Reisebüro für Ferienhäuser."
         }
     },
     "skills": {
         "software": "Software",
         "frameworks": "Frameworks / CMS",
-        "jspackages": "Javascript Packages",
-        "lang": "Languages",
+        "jspackages": "Javascript-Pakete",
+        "lang": "Programmiersprachen",
         "js": "JavaScript",
         "php": "PHP",
         "wp": "Wordpress",
@@ -96,129 +97,158 @@
         "css": "CSS"
     },
     "projects": {
-        "learnmore": "Learn more",
+        "learnmore": "Mehr erfahren",
         "skillsep": ", ",
-        "mmb": {
-            "desc": "MavsMoneyball was mainly a blogging project. It was great to cover a sport that I love and a team that I root for. But I did also develop a statistical app to complement my blog work."
-        },
         "edom": {
-            "desc": "This was the first commercial project I worked on. I was fortunate enough that I could be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
+            "desc": "e-domizil.de ist das erste kommerzielle Projekt, an dem ich mitarbeiten durfte. Dank der technische Realisierung eines kompletten Relaunches wurden Lernprozesse und Kompetenzen in allen Bereichen der Full-Stack-Entiwklung abgerufen und gefördert."
         },
         "nwoun": {
-            "desc": "NWO:UN has been my biggest personal project to date. We served the game's community for nearly five years and delivered content and tools to over 100,000 players per month."
+            "desc": "Neverwinter:Uncensored ist bis heute mein größtes privates Projekt und eine echte Herzensangelegenheit. Während fünf spannender Jahre durfte ich Content und Web-Applikationen über 100.000 monatlichen Benutzern präsentieren."
         },
         "neighboring": {
-            "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
+            "desc": "Neighboring Satellites ist ein öffentliche gefördertes Projekt, welches die Kunstszene in Gelsenkirchen-Ückendorf fördern soll. Ich wurde mit der tecnischen Realisierung der Webseite beauftragt."
         }
     },
     "project": {
-        "desc": "Description",
-        "highlights": "Key Features / Achievements",
-        "skills": "Used Skills",
-        "gallery": "Gallery",
+        "desc": "Beschreibung",
+        "highlights": "Features",
+        "skills": "Benutzte Kompetenzen",
+        "gallery": "Galerie",
         "links": {
             "web": "Website",
             "github": "Repository"
         },
         "nwoun": {
-            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain the site or create content.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+            "desc": "Neverwinter Uncensored entstand aus dem Mangel einer unabhängigen News-Plattform und Community für ein MMORPG, welches ich seit 2013 aktiv spiele. Als reines Fanprojekt gestartet entwickelte es sich über die Zeit zur #1 Fanseite des Spieles! Wir konnten über 100.000 Benutzer mit Content und Web-Applikationen versorgen und es war eine schwere Entscheidung, das Projekt 2019 aus Zeitgründen nicht länger fortzusetzen. Unter der alten URL ist aber bis heute noch ein kleiner News-Aggregator zu finden, den ich komplett neu aufgesetzt habe.<br /><br />Es war eine unglaubliche Erfahrung, eine Community und Webseite dieser Dimension allein zu betreuen. Die technische Umsetzung bestand aus einem selbst angepassten Wordpress-Blog, die Online-Tools wurden mit dem Plugin-System einer Foren-Software auf Basis von Symfony realisiert. Darüberhinaus konnte ich viel Erfahrung mit sozialen Medien und Branding, sowie SEO und SEA sammeln.",
             "highlights": {
                 "1": {
-                    "1": "Customized Wordpress Blog",
-                    "2": "Integrated dozens of plugins",
-                    "3": "Theme tweaks and plenty UI enhancements"
+                    "1": "Angespasster Wordpress Blog",
+                    "2": "Einbindung unzähliger Plugins",
+                    "3": "Optimierungen in vielen Bereichen"
                 },
                 "2": {
-                    "1": "Game-Specific Apps",
-                    "2": "Data fetching without official API",
-                    "3": "Unique PHP/Javascript based online tools"
+                    "1": "Spiel-bezogene Apps",
+                    "2": "\"Data Crawling\" ohne offizielle API",
+                    "3": "Einzigartige PHP / JS Applikationen"
                 },
                 "3": {
-                    "1": "Monthly Traffic",
-                    "2": "100,000+ Users",
-                    "3": "350,000+ Page Views"
+                    "1": "Monatliche Zahlen",
+                    "2": "100,000+ Benutzer",
+                    "3": "350,000+ Seitenaufrufe"
                 },
                 "4": {
                     "1": "Social Management",
-                    "2": "Communities on Twitter, Discord, Facebook",
-                    "3": "Integrated many social APIs"
+                    "2": "Communities auf Twitter, Discord, Facebook",
+                    "3": "Integrierung vieler APIs"
                 },
                 "5": {
-                    "1": "Full Branding",
-                    "2": "Logos, Banners & Color Scheme",
-                    "3": "Hundreds of self-made images"
+                    "1": "Branding",
+                    "2": "Logos, Banners & Farbschema",
+                    "3": "Hunderte von Bildern und Logos"
                 }
             },
             "links": {
-                "blog": "Unblogged",
-                "forum": "Uncensored"
+                "forum": "Webseite",
+                "repo": "Repository"
             }
         },
         "edom": {
-            "desc": "E-Domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, internalization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
+            "desc": "e-domizil.de ist ein Online-Reisebüro für Ferienhäuser. Die Web-Präsenz wurde 2019 mit einem Fokus auf mobile Unterstützung, Geschwindigkeit, SEO und White-Label-Fähigkeit komplett neugestaltet und relaunched. Das Projekt benutzt das VUE-Framework und Node.js / Express für Server-Rendering. Die Microservies werden mit Hilfe von Lumen (Laravel) realisiert.<br /><br />Als volles Mitglied des Entwicklungsteams habe ich mitgeholfen, die Applikation in allen Bereichen der Full-Stack-Enwticklung von Grund auf zu gestalten und habe mich im Prozess speziell mit der Renderung-Logik, PWA-Funktionalität, API, Routing, Lokalisation, Bundling und Performance-Analyse befasst. Zudem oblag mir die Anpassung und Konfiguration essentieller Pakete wie Babel, ESLint oder Jest.<br /><br />Über die Zeit habe ich wichtige Erfahrungen mit Javascript-Frameworks und im speziellen mit Vue.js gesammelt und gelernt, wie man verschiedenste Bereiche der Applikation optimiert.",
             "highlights": {
                 "1": {
-                    "1": "Full-Stack Development",
+                    "1": "Full-Stack Entwicklung",
                     "2": "Vue.js, Express, Docker",
                     "3": "Lumen, API design, Elastic Search"
                 },
                 "2": {
-                    "1": "SEO & Performance",
-                    "2": "Monitoring Core Web Vitals and other metrics",
-                    "3": "Using cache techniques where applicable"
+                    "1": "SEO & Geschwindigkeit",
+                    "2": "Core Web Vitals und andere Kennzahlen",
+                    "3": "Cache-Logik entwicklen"
                 },
                 "3": {
-                    "1": "A/B testing",
-                    "2": "Made A/B testing possible on the SSR/SPA",
-                    "3": "Custom solution using own db and Google"
+                    "1": "A/B-Tests",
+                    "2": "A/B-Test-Funktionalität bei SSR/SPA bereitstellen",
+                    "3": "Angepasste Lösung mittels eigener DB und Google"
                 },
                 "4": {
-                    "1": "Datepicker Integration",
-                    "2": "Customized Flatpickr to fit our needs",
-                    "3": "Multiple pickers on single page sync"
+                    "1": "Kalender-Funktionalität",
+                    "2": "Auf die Seite angepasste Software",
+                    "3": "Basierend auf Flatpickr"
                 },
                 "5": {
-                    "1": "Legacy Browser Support",
-                    "2": "Support all browsers down to IE 11",
-                    "3": "Separate bundles for modern and legacy clients"
+                    "1": "Unterstützung alter Browser",
+                    "2": "Unterstützung bis IE 11",
+                    "3": "Unterschiedliches Bundle für moderne Browser"
                 }
             },
             "links": {
-                "edom": "e-domizil.de",
-                "to": "tourist-online.de"
+                "edom": "e-domizil.de"
             }
         },
         "neighboring": {
-            "desc": "Neighboring Satellites is an incredible project that tries to support the local art scene in a burgeoning environment. The most difficult task when working on the project's website was to fit the client's expecations in terms of design and layout. The most time was used to find a fitting theme and then customize it for our needs. Moderating between the realities of web and classic design was extremely fun as well as countless 'live' sessions in which we discussed and adjusted the layout.<br /><br />The rest was fairly standard with setting up a Wordpress blog on a simple webhost. We however tried to set up a system that's easy to maintain later so the authors will be able to do most of the editing and admin work themselves. That's why training folks that were new to publishing on the web, and with Wordpress, was also a key part of the process.",
+            "desc": "Neighboring Satellites ist ein interessantes Projekt, welches die Kunstszene in einem aufkeimenden Stadtteil in Gelsenkirchen zu unterstützen versucht. Die größte Herausforderung war es, die Webseite auf die Bedürfnisse des Kunden im Bezug auf Aussehen anzupassen. Die meiste Zeit brauchte es, ein passendes Theme zu finden und anzupassen. Die Schnittstelle und Erwartungshaltung zwischen Print- und Webdesign war dabei äußerst spannend und die Schulung des Kunden genauso zeitintensiv wie essentiell.<br /><br />Die folgende Unsmetzung war dann mit der Installation einer einfachen Wordpress-Anwendung relativ einfach, wobei wir einen besonderes Fokus auf die einfache Bedienbarkeit und Administration legten, damit der Kunde die Seite in zukunft größtenteils selbst verwalten kann.",
             "highlights": {
                 "1": {
-                    "1": "Customized Wordpress Blog",
-                    "2": "Taking care of base setup",
-                    "3": "Integrated dozens of plugins"
+                    "1": "Angepasste Wordpress-Applikation",
+                    "2": "Umsetzung des Setups mit vorgegebenem Host",
+                    "3": "Einbinden unzähliger Plugins"
                 },
                 "2": {
-                    "1": "Train The Authors",
-                    "2": "Teach inexperienced users WP basics",
-                    "3": "Make sure setup is easy to maintain"
+                    "1": "Autoren-Schulung",
+                    "2": "Wordpress-Grundlagen vermitteln",
+                    "3": "Die Anwendung ist leicht zu pflegen"
                 },
                 "3": {
-                    "1": "Implement a Given Layout",
-                    "2": "Search For a Fitting Theme",
-                    "3": "Plenty Styling Adjustements"
+                    "1": "Umsetzung eines vorgegebenen Layouts",
+                    "2": "Suche eines passenden Themes",
+                    "3": "Entsprechende kundenorientierte Anpassung"
                 },
                 "4": {
-                    "1": "Legal Management",
-                    "2": "Handle privacy logic",
-                    "3": "Research necessary legal info"
+                    "1": "Privatsphäre",
+                    "2": "Umsetzung von GDPR-Vorgaben",
+                    "3": "Recherche zur rechtlichen Sachlage"
                 },
                 "5": {
                     "1": "Elementor",
-                    "2": "Getting used to the Elementor plugin",
-                    "3": "Design pages using a given layout"
+                    "2": "Arbeit und Einführung in das Elementor-Plugin",
+                    "3": "Seitenerstellung anhand einer Vorlage"
                 }
             },
             "links": {
-                "site": "Website"
+                "site": "Webseite"
+            }
+        },
+        "jferda": {
+            "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte, Tailwind CSS, Material Design). Ich habe zudem eine vollständigen Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde.",
+            "highlights": {
+                "1": {
+                    "1": "Webpack und Svelte",
+                    "2": "Einführung in Svelte und verwandte Pakete",
+                    "3": "Integration von Webpack"
+                },
+                "2": {
+                    "1": "CSS-Animationen",
+                    "2": "Experimentieren mit verschiedenen CSS-Animationen",
+                    "3": "Intelligentes und stimmiges Timing"
+                },
+                "3": {
+                    "1": "Tailwind und Material",
+                    "2": "Erste Gehversuche mit Tailwind CSS",
+                    "3": "Prinzipien von Material Design und SMUI"
+                },
+                "4": {
+                    "1": "Branding",
+                    "2": "Redesign von bekannten Tech-Logos",
+                    "3": "Hauptsache Spaß!"
+                },
+                "5": {
+                    "1": "Portfolio",
+                    "2": "Das wichtigste in Kürze aufbereiten",
+                    "3": "Kompetenzen und Projekte richtig einschätzen"
+                }
+            },
+            "links": {
+                "repo": "Repository"
             }
         }
     }

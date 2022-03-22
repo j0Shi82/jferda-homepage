@@ -122,7 +122,9 @@ svelteLifecycleOnDestroy(() => {
         <ProjectDescription projectData="{projectData}" animationParams="{descAnimationParams}" />
         <ProjectKeys projectData="{projectData}" animationParams="{keysAnimationParams}" />
         <ProjectSkills projectData="{projectData}" animationParams="{skillsAnimationParams}" />
+        {#if projectData.projectPage.gallery.length > 0}
         <ProjectGallery projectData="{projectData}" animationParams="{galleryAnimationParams}" />
+        {/if}
       </div>
     </div>
     {/if}

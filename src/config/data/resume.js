@@ -39,6 +39,12 @@ const experience = [
     textLocaleIdent: 'resume.experience.nwoun',
   },
   {
+    startDate: new Date(2020, 10, 1),
+    endDate: new Date(2021, 3, 1),
+    ended: true,
+    textLocaleIdent: 'resume.experience.neighboring',
+  },
+  {
     startDate: new Date(2018, 7, 1),
     endDate: new Date(),
     ended: false,

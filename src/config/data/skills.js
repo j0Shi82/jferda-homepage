@@ -7,6 +7,7 @@ import javascriptLogo from 'assets/media/images/skills/language/javascript.svg';
 import cssLogo from 'assets/media/images/skills/language/css.svg';
 
 import bootstrapLogo from 'assets/media/images/skills/frameworks/bootstrap.png';
+import tailwindLogo from 'assets/media/images/skills/frameworks/tailwind.png';
 import laravelLogo from 'assets/media/images/skills/frameworks/laravel.png';
 import phpbbLogo from 'assets/media/images/skills/frameworks/phpbb.png';
 import vueLogo from 'assets/media/images/skills/frameworks/vue.svg';
@@ -87,10 +88,10 @@ const skills = [
     type: 'frameworks', name: 'Laravel', class: 'laravel', logo: laravelLogo, progress: 0.6,
   },
   {
-    type: 'frameworks', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 0.3,
+    type: 'frameworks', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 0.5,
   },
   {
-    type: 'frameworks', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 0.5,
+    type: 'frameworks', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 0.7,
   },
   {
     type: 'frameworks', name: 'phpBB', class: 'phpbb', logo: phpbbLogo, progress: 0.4,
@@ -103,6 +104,9 @@ const skills = [
   },
   {
     type: 'frameworks', name: 'Material Design', class: 'material', logo: materialLogo, progress: 0.5,
+  },
+  {
+    type: 'frameworks', name: 'Tailwind CSS', class: 'tailwind', logo: tailwindLogo, progress: 0.4,
   },
   {
     type: 'jspackages', name: 'npm', class: 'npm', logo: npmLogo, progress: 0.6,

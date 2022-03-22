@@ -149,5 +149,9 @@
     &.vscode {
       @include mdc-linear-progress-bar-color(#0a85d1);
     }
+
+    &.tailwind {
+      @include mdc-linear-progress-bar-color(#35bef8);
+    }
   }
 }

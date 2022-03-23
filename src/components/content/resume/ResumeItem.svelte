@@ -2,12 +2,16 @@
 import { formatDate, localize } from 'utils/imports/core';
 import { svelteTransitionFly, svelteEasingBackOut } from 'utils/imports/svelte';
 import { animationsActive, screenWidth } from 'utils/imports/store';
+// import { FontAwesomeIcon } from 'utils/imports/components';
+// import { faFilePdf } from '@fortawesome/free-solid-svg-icons/faFilePdf';
 
 export let item = {
   startDate: new Date(),
   endDate: new Date(),
   ended: true,
+  range: true,
   textLocaleIdent: '',
+  // doc: false,
 };
 export let delay = 0;
 export let transitionDuration = 500;
@@ -31,6 +35,10 @@ setTimeout(() => {
     &.visible {
       visibility: visible;
     }
+
+    :global(.jdev-resume-file-attachment) {
+      font-size: 14px;
+    }
   }
 </style>
 
@@ -44,7 +52,7 @@ setTimeout(() => {
     {
         !item.ended
         ? `${$localize('resume.stillgoing')} ${$formatDate(item.startDate, { format: 'medium' })}`
-        : `${$formatDate(item.startDate, { format: 'medium' })} - ${$formatDate(item.endDate, { format: 'medium' })}`
+        : `${item.range ? `${$formatDate(item.startDate, { format: 'medium' })} -` : ''}${$formatDate(item.endDate, { format: 'medium' })}`
     }
 </div>
 <div 
@@ -54,5 +62,8 @@ setTimeout(() => {
         x: $screenWidth / 2, duration: transitionDuration, delay, easing: svelteEasingBackOut,
     }}"
 >
+    <!-- {#if item.doc}
+      <a href="{item.doc}" target="_blank"><FontAwesomeIcon class="jdev-resume-file-attachment" icon={faFilePdf}></FontAwesomeIcon></a>
+    {/if} -->
     {@html $localize(item.textLocaleIdent)}
 </div>

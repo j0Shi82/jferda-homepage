@@ -66,6 +66,10 @@ module.exports = {
         test: /\.(svg)$/,
         type: 'asset/inline',
       },
+      // {
+      //   test: /\.(pdf)$/,
+      //   loader: 'file-loader',
+      // },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [

@@ -52,7 +52,7 @@ setTimeout(() => {
     {
         !item.ended
         ? `${$localize('resume.stillgoing')} ${$formatDate(item.startDate, { format: 'medium' })}`
-        : `${item.range ? `${$formatDate(item.startDate, { format: 'medium' })} -` : ''}${$formatDate(item.endDate, { format: 'medium' })}`
+        : `${item.range ? `${$formatDate(item.startDate, { format: 'medium' })} - ` : ''}${$formatDate(item.endDate, { format: 'medium' })}`
     }
 </div>
 <div 

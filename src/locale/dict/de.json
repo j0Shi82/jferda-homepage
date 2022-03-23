@@ -21,13 +21,13 @@
         "de": "Deutsch"
     },
     "home": {
-        "maintext": "Hallo! Mein Name ist <b>Janosch</b>. Ich bin <b>Full-Stack Web-Entwickler</b> aus Deutschland und habe Spaß an Erstellen von schnellen, optimierten und modernen <b>Javascript</b> Applikationen. Ich lade dich auf meiner Webseite ein, mehr über meine <b>Philosophie</b> und <b>Arbeit</b> zu erfahren."
+        "maintext": "Hallo! Mein Name ist <b>Janosch</b>. Ich bin <b>Full-Stack Web-Entwickler</b> aus Deutschland und habe Spaß am Erstellen von schnellen, optimierten und modernen <b>Javascript</b> Applikationen. Ich lade dich auf meiner Webseite ein, mehr über meine <b>Philosophie</b> und <b>Arbeit</b> zu erfahren."
     },
     "about": {
         "bio": {
             "headline": "Biographie",
-            "bio1": "Angetrieben von Dingen, die ich brauchte aber nirgends finden konnte, programmiere ich schon seit 1997. Lange Zeit war es \"nur\" ein Hobby, welches aber oft mehr Zeit in Anspruch nahm als andere Tätigkeiten. Deshalb habe ich konsequenterweise an einem Scheidepunkt in meinem Leben beschlossen, meine Berufung auch zu meinem Beruf zu machen.",
-            "bio2": "Obwohl ich wenig Erfahrung in der professionellen IT-Arbeitswelt vorzuweisen hatte, war der Übergang einfach. Ich habe mich seinerzeit für Web-Entwicklung entschieden, weil ohnehin viele meiner Hobby-Projekte darauf basierten. Zudem war ich schon immer beeindruckt von den Möglichkeiten des Webs und empfand es als extrem zufrieden stellend, wie einfach man dort seine Arbeit der Welt präsentieren konnte.",
+            "bio1": "Angetrieben von Dingen, die ich brauchte aber nirgends finden konnte, programmiere ich schon seit 1997. Lange Zeit war es \"nur\" ein Hobby, welches aber oft mehr Zeit in Anspruch nahm als andere Tätigkeiten. Deshalb habe ich konsequenterweise an einem Wendepunkt in meinem Leben beschlossen, meine Berufung auch zu meinem Beruf zu machen.",
+            "bio2": "Obwohl ich wenig Erfahrung in der professionellen IT-Arbeitswelt vorzuweisen hatte, war der Übergang einfach. Ich habe mich seinerzeit für Web-Entwicklung entschieden, weil ohnehin viele meiner Hobby-Projekte darauf basierten. Zudem war ich schon immer beeindruckt von den Möglichkeiten des Webs und empfand es als extrem zufriedenstellend, wie einfach man dort seine Arbeit der Welt präsentieren konnte.",
             "bio3": "Über die Jahre bin ich mit vielen Programmiersprachen und Umgebungen in Berührung gekommen. Meinen ersten Code überhaupt verfasste ich in Visual Basic, bevor ich über ein kleines Intermezzo in C zu Web-Applikationen in PHP/SQL und HTML/CSS kam. Die berüchtigte jQuery-Bibliothek war dann mein Einstieg in JavasScript und über die Zeit ist dies und diverse verwandte Frameworks zu meiner Kernkompetenz herangewachsen."
         },
         "philosophy": {
@@ -42,7 +42,7 @@
             },
             "creativity": {
                 "headline": "Kreativität",
-                "text": "Niemand würde Programmieren mit Kunst vergleichen. Aber warum eigentlich nicht? Entwickler sind in der Lage aus Nichts etwas entstehen zu lassen und die einzigen Hilfsmittel sind Kreativität, Logik, und Vorstellungskraft."
+                "text": "Niemand würde Programmieren mit Kunst vergleichen. Aber warum eigentlich nicht? Entwickler sind in der Lage aus Nichts etwas entstehen zu lassen und die einzigen Hilfsmittel sind Kreativität, Logik und Vorstellungskraft."
             },
             "helloworld": {
                 "headline": "Hallo Welt",
@@ -50,11 +50,11 @@
             },
             "progressive": {
                 "headline": "Fortschritt",
-                "text": "Entwicklung ist ein Bereich des konstanten Wandels. Dank Innovation und moderne Technologien hilft es sogar im besten Fall, die Welt zu einem besseren Ort für alle zu machen."
+                "text": "Entwicklung ist ein Bereich des konstanten Wandels. Dank Innovation und moderner Technologien hilft es sogar im besten Fall, die Welt zu einem besseren Ort für alle zu machen."
             },
             "lit": {
                 "headline": "Trendy",
-                "text": "Das Label \"nerdy\" ist für mich längst kein Vorurteil mehr, sondern Verpflichtung und Lebensart. Meine Generation ist lebensoffen, modern, und sozial."
+                "text": "Das Label \"nerdy\" ist für mich längst kein Vorurteil mehr, sondern Verpflichtung und Lebensart. Meine Generation ist lebensoffen, modern, und sozial. Gerüchten zufolge werden aber weiterhin Energy-Drinks konsumiert."
             },
             "givingback": {
                 "headline": "Zurückgeben",
@@ -75,8 +75,13 @@
             "hs": "Freier redaktioneller und technischer Mitarbeiter bei der <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
             "mmb": "Autor und Editor bei <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, einem Online-Basketball-Blog. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
             "nwoun": "Admin von <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, einer Online-Community und Software-Projekt für das MMORPG Neverwinter von Cryptic Studios und Gearbox Software.",
-            "neighboring": "Planung und technische ausführung der Webpräsenz für das Projekt <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
+            "neighboring": "Planung und technische Umsetzung der Webpräsenz für das Projekt <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
             "edom": "Full-Stack Web-Developer bei <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, einem Online-Reisebüro für Ferienhäuser."
+        },
+        "skills": {
+            "headline": "Sonstige Fähigkeiten und Zertifikate",
+            "kmk": "KMK-Fremdsprachenzertifikat Englisch für IT-Berufe, Niveau C1",
+            "sql": "Weiterbildungslehrgang SQL der Fernuniversität Hagen"
         }
     },
     "skills": {
@@ -156,7 +161,7 @@
             }
         },
         "edom": {
-            "desc": "e-domizil.de ist ein Online-Reisebüro für Ferienhäuser. Die Web-Präsenz wurde 2019 mit einem Fokus auf mobile Unterstützung, Geschwindigkeit, SEO und White-Label-Fähigkeit komplett neugestaltet und relaunched. Das Projekt benutzt das VUE-Framework und Node.js / Express für Server-Rendering. Die Microservies werden mit Hilfe von Lumen (Laravel) realisiert.<br /><br />Als volles Mitglied des Entwicklungsteams habe ich mitgeholfen, die Applikation in allen Bereichen der Full-Stack-Enwticklung von Grund auf zu gestalten und habe mich im Prozess speziell mit der Renderung-Logik, PWA-Funktionalität, API, Routing, Lokalisation, Bundling und Performance-Analyse befasst. Zudem oblag mir die Anpassung und Konfiguration essentieller Pakete wie Babel, ESLint oder Jest.<br /><br />Über die Zeit habe ich wichtige Erfahrungen mit Javascript-Frameworks und im speziellen mit Vue.js gesammelt und gelernt, wie man verschiedenste Bereiche der Applikation optimiert.",
+            "desc": "e-domizil.de ist ein Online-Reisebüro für Ferienhäuser. Die Web-Präsenz wurde 2019 mit einem Fokus auf mobile Unterstützung, Geschwindigkeit, SEO und White-Label-Fähigkeit komplett neugestaltet und relaunched. Das Projekt benutzt das VUE.js-Framework und Node.js / Express für Server-Rendering. Die Microservies werden mit Hilfe von Lumen (Laravel) realisiert.<br /><br />Als volles Mitglied des Entwicklungsteams habe ich mitgeholfen, die Applikation in allen Bereichen der Full-Stack-Entwicklung von Grund auf zu gestalten und habe mich im Prozess speziell mit der Rendering-Logik, PWA-Funktionalität, API, Routing, Lokalisation, Bundling und Performance-Analyse befasst. Zudem oblag mir die Anpassung und Konfiguration essentieller Pakete wie Babel, ESLint oder Jest.<br /><br />Über die Zeit habe ich wichtige Erfahrungen mit Javascript-Frameworks und im speziellen mit Vue.js gesammelt und gelernt, wie man verschiedenste Bereiche der Applikation optimiert.",
             "highlights": {
                 "1": {
                     "1": "Full-Stack Entwicklung",
@@ -189,7 +194,7 @@
             }
         },
         "neighboring": {
-            "desc": "Neighboring Satellites ist ein interessantes Projekt, welches die Kunstszene in einem aufkeimenden Stadtteil in Gelsenkirchen zu unterstützen versucht. Die größte Herausforderung war es, die Webseite auf die Bedürfnisse des Kunden im Bezug auf Aussehen anzupassen. Die meiste Zeit brauchte es, ein passendes Theme zu finden und anzupassen. Die Schnittstelle und Erwartungshaltung zwischen Print- und Webdesign war dabei äußerst spannend und die Schulung des Kunden genauso zeitintensiv wie essentiell.<br /><br />Die folgende Unsmetzung war dann mit der Installation einer einfachen Wordpress-Anwendung relativ einfach, wobei wir einen besonderes Fokus auf die einfache Bedienbarkeit und Administration legten, damit der Kunde die Seite in zukunft größtenteils selbst verwalten kann.",
+            "desc": "Neighboring Satellites ist ein interessantes Projekt, welches die Kunstszene in einem aufkeimenden Stadtteil in Gelsenkirchen zu unterstützen versucht. Die größte Herausforderung war es, die Webseite auf die Bedürfnisse des Kunden im Bezug auf Aussehen anzupassen. Die meiste Zeit brauchte es, ein passendes Theme zu finden und anzupassen. Die Schnittstelle und Erwartungshaltung zwischen Print- und Webdesign war dabei äußerst spannend und die Schulung des Kunden genauso zeitintensiv wie essentiell.<br /><br />Die folgende Umsetzung war dann mit der Installation einer einfachen Wordpress-Anwendung relativ einfach, wobei wir einen besonderes Fokus auf die einfache Bedienbarkeit und Administration legten, damit der Kunde die Seite in Zukunft größtenteils selbst verwalten kann.",
             "highlights": {
                 "1": {
                     "1": "Angepasste Wordpress-Applikation",
@@ -222,7 +227,7 @@
             }
         },
         "jferda": {
-            "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte, Tailwind CSS, Material Design). Ich habe zudem eine vollständigen Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde. Viel Spaß beim Kennenlernen!",
+            "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte & Tailwind CSS). Ich habe zudem eine vollständige Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise heutzutage ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde. Viel Spaß beim Kennenlernen!",
             "highlights": {
                 "1": {
                     "1": "Webpack und Svelte",
@@ -235,9 +240,9 @@
                     "3": "Intelligentes und stimmiges Timing"
                 },
                 "3": {
-                    "1": "Tailwind und Material",
-                    "2": "Erste Gehversuche mit Tailwind CSS",
-                    "3": "Prinzipien von Material Design und SMUI"
+                    "1": "Material Design",
+                    "2": "Erste Gehversuche mit Material Design",
+                    "3": "Umsetzung mittels SMUI"
                 },
                 "4": {
                     "1": "Branding",

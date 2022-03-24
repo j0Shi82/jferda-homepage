@@ -7,7 +7,7 @@ let isDesktop = storeTypeWritable(false);
 
 let animationsActive;
 if ('localStorage' in window) {
-  animationsActive = storeTypeWritable(window.localStorage.getItem('jdev-animations') === 'true');
+  animationsActive = storeTypeWritable(window.localStorage.getItem('jdev-animations') !== 'false');
   animationsActive.subscribe((value) => {
     window.localStorage.setItem('jdev-animations', value);
   });

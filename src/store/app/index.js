@@ -5,6 +5,16 @@ let isMobile = storeTypeWritable(false);
 let isTablet = storeTypeWritable(false);
 let isDesktop = storeTypeWritable(false);
 
+let animationsActive;
+if ('localStorage' in window) {
+  animationsActive = storeTypeWritable(window.localStorage.getItem('jdev-animations') === 'true');
+  animationsActive.subscribe((value) => {
+    window.localStorage.setItem('jdev-animations', value);
+  });
+} else {
+  animationsActive = storeTypeWritable(true);
+}
+
 /**
  * set up media queries that update store values
  */
@@ -44,7 +54,7 @@ const store = {
     screenWidth: storeTypeWritable(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth),
   },
   animations: {
-    active: storeTypeWritable(true),
+    active: animationsActive,
   },
 };
 

@@ -1,17 +1,18 @@
 {
     "navigation": {
-        "home": "Startseite",
-        "about": "Über Mich",
-        "resume": "Lebenslauf",
-        "skills": "Kompetenzen",
-        "projects": {
-            "headline": "Projekte",
-            "mmb": "MavsMoneyball",
-            "nwoun": "Neverwinter Uncensored",
-            "jferda": "j0shi.dev",
-            "lwm": "Last War Manager",
-            "edom": "e-domizil.de",
-            "neighboring": "Neighboring Satellites"
+        "routes": {
+            "home": "Startseite",
+            "about": "Über Mich",
+            "resume": "Lebenslauf",
+            "skills": "Kompetenzen",
+            "projects": "Projekte",
+            "projects_mmb": "MavsMoneyball",
+            "projects_nwoun": "Neverwinter Uncensored",
+            "projects_jferda": "j0shi.dev",
+            "projects_lwm": "Last War Manager",
+            "projects_edom": "e-domizil.de",
+            "projects_neighboring": "Neighboring Satellites",
+            "404": "404 - Nicht gefunden"
         },
         "animationSwitchLabel": "Animationen"
     },

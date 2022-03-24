@@ -17,7 +17,7 @@ import jferda from 'config/data/projects/jferda';
 const projects = [
   {
     ident: 'edom',
-    titleLocaleKey: 'navigation.projects.edom',
+    titleLocaleKey: 'navigation.routes.projects_edom',
     skillsLocaleKeys: ['skills.vue', 'skills.laravel', 'skills.docker', 'skills.bootstrap', 'skills.node'],
     descLocaleKey: 'projects.edom.desc',
     routeName: 'projects_edom',

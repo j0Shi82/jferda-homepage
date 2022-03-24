@@ -6,6 +6,8 @@ import {
   MaterialTopAppBarTitle,
   MaterialIconButton,
 } from 'utils/imports/material';
+import { getLocalizedRoute, routerPush } from 'utils/imports/core';
+import { localize } from 'utils/imports/core';
 import { FontAwesomeIcon } from 'utils/imports/components';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
@@ -19,7 +21,8 @@ function mailMe() {
   window.location.href = 'mailto:janosch.ferda@e-domizil.de';
 }
 
-let isHomeRoute;
+let isHomeRoute = false;
+$: pageTitle = $currentRouteName === 'home' ? '>_ j0Shi.dev --help' : `>_ j0Shi.dev --help --${$localize(`navigation.routes.${$currentRouteName}`).toLowerCase()}`;
 
 currentRouteName.subscribe((value) => {
   isHomeRoute = value === 'home';
@@ -63,6 +66,10 @@ currentRouteName.subscribe((value) => {
 }
 </style>
 
+<svelte:head>
+  <title>{pageTitle}</title>
+</svelte:head>
+
 <MaterialTopAppBar variant="static" dense color='primary' class="app-bar">
     <MaterialTopAppBarRow>
         {#if $isMobileBreakpoint}
@@ -75,7 +82,7 @@ currentRouteName.subscribe((value) => {
         {/if}
         <MaterialTopAppBarSection>
           <div class="jdev-avatar">
-            <div style="background-image: url({avatarImage});"></div>
+            <div style="background-image: url({avatarImage});" on:click="{() => { routerPush(getLocalizedRoute('home')); }}"></div>
           </div>
         </MaterialTopAppBarSection>
         {#if !$isMobileBreakpoint}

@@ -104,16 +104,16 @@ svelteLifecycleOnDestroy(() => {
       {#each drawerMenuItems as item}
         <MaterialListItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
           <MaterialListGraphic class="material-icons" aria-hidden="true">{item.icon}</MaterialListGraphic>
-          <MaterialListText>{$localize(`navigation.${item.routeName}`)}</MaterialListText>
+          <MaterialListText>{$localize(`navigation.routes.${item.routeName}`)}</MaterialListText>
         </MaterialListItem>
       {/each}
 
       <MaterialListSeparator nav />
 
-      <MaterialSubheader>{$localize('navigation.projects.headline')}</MaterialSubheader>
+      <MaterialSubheader>{$localize('navigation.routes.projects')}</MaterialSubheader>
       {#each drawerMenuProjectItems as item}
         <MaterialListItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
-          <MaterialListText>{$localize(`navigation.projects.${item.localeIdent}`)}</MaterialListText>
+          <MaterialListText>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</MaterialListText>
         </MaterialListItem>
       {/each}
 

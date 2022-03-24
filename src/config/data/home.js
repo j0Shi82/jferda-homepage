@@ -12,13 +12,13 @@ import gitKnowledgeLogo from 'assets/media/images/knowledge-logos/git.png';
 const menuItems = [
   {
     icon: menuAboutIcon,
-    textLocaleIdent: 'navigation.about',
+    textLocaleIdent: 'navigation.routes.about',
     route: 'about',
     transitionDelay: atomTransitionDuration * 0,
   },
   {
     icon: menuSkillsIcon,
-    textLocaleIdent: 'navigation.projects.headline',
+    textLocaleIdent: 'navigation.routes.projects',
     route: 'projects',
     transitionDelay: atomTransitionDuration * 1,
   },

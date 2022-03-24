@@ -1,17 +1,17 @@
-import phpLogo from 'assets/media/images/skills/language/php.png';
+import phpLogo from 'assets/media/images/skills/language/php.svg';
 import cLogo from 'assets/media/images/skills/language/csharp.svg';
 import sqlLogo from 'assets/media/images/skills/language/sql.png';
-import javaLogo from 'assets/media/images/skills/language/java.png';
+import javaLogo from 'assets/media/images/skills/language/java.svg';
 import htmlLogo from 'assets/media/images/skills/language/html.svg';
 import javascriptLogo from 'assets/media/images/skills/language/javascript.svg';
 import cssLogo from 'assets/media/images/skills/language/css.svg';
 
-import bootstrapLogo from 'assets/media/images/skills/frameworks/bootstrap.png';
-import tailwindLogo from 'assets/media/images/skills/frameworks/tailwind.png';
-import laravelLogo from 'assets/media/images/skills/frameworks/laravel.png';
-import phpbbLogo from 'assets/media/images/skills/frameworks/phpbb.png';
+import bootstrapLogo from 'assets/media/images/skills/frameworks/bootstrap.svg';
+import tailwindLogo from 'assets/media/images/skills/frameworks/tailwind.svg';
+import laravelLogo from 'assets/media/images/skills/frameworks/laravel.svg';
+import phpbbLogo from 'assets/media/images/skills/frameworks/phpbb.svg';
 import vueLogo from 'assets/media/images/skills/frameworks/vue.svg';
-import svelteLogo from 'assets/media/images/skills/frameworks/svelte.png';
+import svelteLogo from 'assets/media/images/skills/frameworks/svelte.svg';
 import wordpressLogo from 'assets/media/images/skills/frameworks/wordpress.svg';
 import jqueryLogo from 'assets/media/images/skills/frameworks/jquery.svg';
 import materialLogo from 'assets/media/images/skills/frameworks/material.svg';
@@ -24,10 +24,10 @@ import expressLogo from 'assets/media/images/skills/jspackages/express.png';
 import jestLogo from 'assets/media/images/skills/jspackages/jest.png';
 import i18nextLogo from 'assets/media/images/skills/jspackages/i18next.png';
 
-import dockerLogo from 'assets/media/images/skills/software/docker.png';
+import dockerLogo from 'assets/media/images/skills/software/docker.svg';
 import gitLogo from 'assets/media/images/skills/software/git.svg';
 import jiraLogo from 'assets/media/images/skills/software/jira.png';
-import mysqlLogo from 'assets/media/images/skills/software/mysql.png';
+import mysqlLogo from 'assets/media/images/skills/software/mysql.svg';
 import photoshopLogo from 'assets/media/images/skills/software/photoshop.svg';
 import sentryLogo from 'assets/media/images/skills/software/sentry.svg';
 import vscodeLogo from 'assets/media/images/skills/software/vscode.png';

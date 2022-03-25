@@ -8,6 +8,7 @@ import { locale, locales } from 'svelte-i18n';
 const { mobileState } = store.app.menu;
 const { screenWidth, isTouchDevice } = store.app.data;
 const { routeName, isRouting } = store.app.router;
+const { isLoading, hasError } = store.app.i18n;
 const { isMobile, isTablet, isDesktop } = store.app.breakpoints;
 const { active } = store.app.animations;
 
@@ -30,4 +31,6 @@ export {
   currentProject,
   projectInitializing,
   active as animationsActive,
+  isLoading as isLocalizationLoading,
+  hasError as hasLocalizationError,
 };

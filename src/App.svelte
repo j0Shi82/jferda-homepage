@@ -1,7 +1,9 @@
 <script>
-import { isLocalizationLoading, setupLocalization } from 'utils/imports/core';
-import { isMobileBreakpoint } from 'utils/imports/store';
+import { setupLocalization } from 'utils/imports/core';
+import { isMobileBreakpoint, isLocalizationLoading } from 'utils/imports/store';
 import { MainHeader, MainDrawer, AppContent } from 'utils/imports/components';
+
+isLocalizationLoading.subscribe(console.log);
 
 // global SCSS
 import 'assets/style/global.scss';

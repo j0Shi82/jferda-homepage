@@ -50,6 +50,10 @@ const store = {
     isRouting: storeTypeWritable(false), // ongoing route change
     routeName: storeTypeWritable(null), // current route name because spa router only offers path
   },
+  i18n: {
+    isLoading: storeTypeWritable(true),
+    hasError: storeTypeWritable(false),
+  },
   data: {
     screenWidth: storeTypeWritable(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth),
     isTouchDevice: storeTypeWritable('ontouchstart' in document.documentElement),

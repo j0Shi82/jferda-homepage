@@ -2,11 +2,6 @@
 import { svelteLifecycleOnDestroy } from 'utils/imports/svelte';
 
 import {
-  MaterialFormField,
-  MaterialSwitch,
-} from 'utils/imports/material';
-
-import {
   getLocalizedRoute,
   routerPush,
   localize,
@@ -29,6 +24,8 @@ import Drawer, { Content } from '@smui/drawer/styled';
 import List, {
   Graphic, Item, Text, Separator, Subheader,
 } from '@smui/list/styled';
+import Switch from '@smui/switch/styled';
+import FormField from '@smui/form-field/styled';
 
 import 'assets/style/drawer.scss';
 
@@ -117,10 +114,10 @@ svelteLifecycleOnDestroy(() => {
       <Separator nav />
 
       <Item on:click={() => animationsActive.set(!$animationsActive)}>
-        <MaterialFormField class="jdev-animation-toggle">
-          <MaterialSwitch bind:checked={$animationsActive} />
+        <FormField class="jdev-animation-toggle">
+          <Switch bind:checked={$animationsActive} />
           <span slot="label" class="jdev-cursor-pointer" on:click={() => animationsActive.set(!$animationsActive)}>{$localize('navigation.animationSwitchLabel')}</span>
-        </MaterialFormField>
+        </FormField>
       </Item>
 
       {#if $locales.length > 1}

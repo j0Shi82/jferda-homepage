@@ -1,10 +1,11 @@
 <script>
 import { svelteLifecycleOnMount, svelteTransitionFly } from 'utils/imports/svelte';
-import { MaterialFabLabel, MaterialFab } from 'utils/imports/material';
 import { localize } from 'utils/imports/core';
 import { animationsActive, screenWidth } from 'utils/imports/store';
 // plugins
 import tippy from 'tippy.js';
+// material
+import Fab, { Label } from '@smui/fab/styled';
 
 let el;
 export let headlineLocaleIdent;
@@ -35,5 +36,5 @@ svelteLifecycleOnMount(() => {
     x: $screenWidth / 2, duration: transitionDuration, delay,
   }}"
 >
-    <MaterialFab extended ripple="false" color="primary"><span class="background" style="background-image: url({image});"></span><MaterialFabLabel>{$localize(headlineLocaleIdent)}</MaterialFabLabel></MaterialFab>
+    <Fab extended ripple="false" color="primary"><span class="background" style="background-image: url({image});"></span><Label>{$localize(headlineLocaleIdent)}</Label></Fab>
 </div>

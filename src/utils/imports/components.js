@@ -5,6 +5,7 @@ import AppContent from 'components/content/AppContent.svelte';
 import HomeRoutes from 'components/content/home/HomeRoutes.svelte';
 
 import AboutPhilosophyButton from 'components/content/about/AboutPhilosophyButton.svelte';
+import AboutPhilosophyHint from 'components/content/about/AboutPhilosophyHint.svelte';
 import AboutBio from 'components/content/about/AboutBio.svelte';
 
 import ResumeItem from 'components/content/resume/ResumeItem.svelte';
@@ -30,7 +31,7 @@ export {
   Drawer as MainDrawer,
   AppContent,
   HomeRoutes,
-  AboutPhilosophyButton, AboutBio, SkillsProgressCat, SkillsProgressRow, ResumeItem,
+  AboutPhilosophyButton, AboutPhilosophyHint, AboutBio, SkillsProgressCat, SkillsProgressRow, ResumeItem,
   ProjectsCard, ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks,
   FlyingHeadline,
   Loader,

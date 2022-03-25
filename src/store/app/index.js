@@ -52,6 +52,7 @@ const store = {
   },
   data: {
     screenWidth: storeTypeWritable(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth),
+    isTouchDevice: storeTypeWritable('ontouchstart' in document.documentElement),
   },
   animations: {
     active: animationsActive,

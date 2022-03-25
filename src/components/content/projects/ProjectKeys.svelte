@@ -3,10 +3,12 @@ import { localize } from 'utils/imports/core';
 import { isDesktopBreakpoint } from 'utils/imports/store';
 // material
 import List, {
-  Graphic, Item, Text, PrimaryText, SecondaryText,
+  Item, Text, PrimaryText, SecondaryText,
 } from '@smui/list/styled';
 // components
 import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
+// icons
+import starIcon from 'assets/media/material-icons/star.svg';
 
 export let projectData = {};
 export let animationParams = {
@@ -39,7 +41,7 @@ export let animationParams = {
     <List class="jdev-project-highlights" threeLine nonInteractive>
         {#each projectData.projectPage.keys as key, i}
         <Item style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms;">
-            <Graphic class="material-icons">star</Graphic>
+          <span class="material-icons mdc-deprecated-list-item__graphic" style="-webkit-mask-image: url({starIcon});mask-image: url({starIcon});"></span>
             <Text>
                 <PrimaryText>{$localize(key.primaryTextLocaleKey)}</PrimaryText>
                 <SecondaryText>{$localize(key.secondaryTextLocaleKey)}</SecondaryText>

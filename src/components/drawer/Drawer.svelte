@@ -22,7 +22,7 @@ import {
 // material
 import Drawer, { Content } from '@smui/drawer/styled';
 import List, {
-  Graphic, Item, Text, Separator, Subheader,
+  Item, Text, Separator, Subheader,
 } from '@smui/list/styled';
 import Switch from '@smui/switch/styled';
 import FormField from '@smui/form-field/styled';
@@ -97,7 +97,7 @@ svelteLifecycleOnDestroy(() => {
     <List>
       {#each drawerMenuItems as item}
         <Item href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
-          <Graphic class="material-icons" aria-hidden="true">{item.icon}</Graphic>
+          <span class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true" style="-webkit-mask-image: url({item.icon});mask-image: url({item.icon});"></span>
           <Text>{$localize(`navigation.routes.${item.routeName}`)}</Text>
         </Item>
       {/each}

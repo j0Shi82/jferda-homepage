@@ -6,7 +6,7 @@ import { screenWidth } from 'utils/imports/store';
 import { getLocalizedRoute } from 'utils/imports/core';
 import { homeRoutes } from 'utils/imports/data';
 // material
-import Chip, { LeadingIcon, Text as ChipText, Set as ChipSet } from '@smui/chips/styled';
+import Chip, { Text as ChipText, Set as ChipSet } from '@smui/chips/styled';
 
 export let colorClass;
 </script>
@@ -18,7 +18,7 @@ export let colorClass;
             x: $screenWidth / -2, duration: atomTransitionDuration, delay: chip.transitionDelay, easing: svelteEasingBackOut,
         }}">
             <Chip {chip} on:click={() => routerPush(getLocalizedRoute(chip.route))}>
-                <LeadingIcon class="material-icons" tabindex="0">{chip.icon}</LeadingIcon>
+                <i class="material-icons mdc-chip__icon mdc-chip__icon--leading" tabindex="0" style="-webkit-mask-size: contain; mask-size: contain; -webkit-mask-image: url({chip.icon});mask-image: url({chip.icon});"></i>
                 <ChipText>{$localize(chip.textLocaleIdent)}</ChipText>
             </Chip>
         </div>

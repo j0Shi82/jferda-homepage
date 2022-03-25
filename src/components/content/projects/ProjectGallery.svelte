@@ -23,8 +23,9 @@ export let animationParams = {
 // init lightbox
 let lightbox;
 let scrollTop = 0;
-svelteLifecycleOnMount(() => {
-  lightbox = Lightbox({
+
+const initLightbox = ({ default: LightboxContructor }) => {
+  lightbox = LightboxContructor({
     onClose: () => {
       document.querySelector('#main-content').scrollTo(0, scrollTop);
       // document.querySelector('.jdev-project-image-list').scrollIntoView();
@@ -38,11 +39,19 @@ svelteLifecycleOnMount(() => {
       description: el.description,
     })),
   });
+};
+
+svelteLifecycleOnMount(() => {
+  Lightbox().then(initLightbox).catch(console.log);
 });
 
 function openGallery(i) {
   scrollTop = document.querySelector('#main-content').scrollTop;
-  lightbox.openAt(i);
+  if (!lightbox) {
+    Lightbox().then(initLightbox).then(() => { lightbox.openAt(i); }).catch(console.log);
+  } else {
+    lightbox.openAt(i);
+  }
 }
 
 // --jdev-gallery-animation-duration is required to pass the animation time to the material component

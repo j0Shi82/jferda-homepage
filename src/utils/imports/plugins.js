@@ -1,5 +1,5 @@
-import tippy from 'tippy.js';
-import GLightbox from 'glightbox';
+const tippy = () => import('tippy.js');
+const GLightbox = () => import('glightbox');
 
 export {
   tippy as Tooltip,

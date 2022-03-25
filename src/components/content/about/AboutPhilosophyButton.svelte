@@ -18,12 +18,14 @@ $: {
 }
 
 svelteLifecycleOnMount(() => {
-  Tooltip(el, {
-    content: $localize(textLocaleIdent),
-    animation: 'shift-away',
-    placement: 'bottom',
-    offset: [0, 0],
-  });
+  Tooltip().then(({ default: TooltipConstructor }) => {
+    TooltipConstructor(el, {
+      content: $localize(textLocaleIdent),
+      animation: 'shift-away',
+      placement: 'bottom',
+      offset: [0, 0],
+    });
+  }).catch(console.log);
 });
 </script>
 

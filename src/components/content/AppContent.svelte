@@ -1,8 +1,12 @@
 <script>
 import { MaterialAppContent, MaterialDrawerScrim } from 'utils/imports/material';
-import { isMobileBreakpoint, screenWidth } from 'utils/imports/store';
+import { isMobileBreakpoint, screenWidth, isRoutingInProgress } from 'utils/imports/store';
 import { RouterComponent, routes, routerOnRouteLoaded } from 'utils/imports/core';
 import { projectInitializing } from 'utils/imports/store';
+
+isRoutingInProgress.subscribe((value) => {
+  console.log(value);
+});
 </script>
 
 <style lang="scss">

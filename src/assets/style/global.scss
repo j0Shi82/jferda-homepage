@@ -32,7 +32,7 @@ body {
 .main-content {
   height: 100%;
 
-  > div {
+  > div:not(.lds-fullscreen-wrapper) {
     // overflow: auto;
     // height: 100%;
     max-width: calc(1240px - 255px);

@@ -1,5 +1,6 @@
 import { routeWrapper, getLocalizedRoute, getRouteGuards } from 'utils/imports/core';
 import { localeStandardLanguage, localeSupportedLanguages } from 'utils/imports/config';
+import { LoaderFullscreen } from 'utils/imports/components';
 import baseRoutes from 'router/baseRoutes';
 
 const routes = {};
@@ -10,6 +11,7 @@ localeSupportedLanguages.filter((lang) => lang !== localeStandardLanguage).forEa
     const p = prev;
     p[getLocalizedRoute(cur.name, lang)] = routeWrapper({
       asyncComponent: cur.component,
+      loadingComponent: LoaderFullscreen,
       userData: { lang, routeName: cur.name, ...cur.data },
       conditions: [...getRouteGuards(cur.name)],
     });
@@ -21,6 +23,7 @@ Object.assign(routes, baseRoutes.reduce((prev, cur) => {
   const p = prev;
   p[getLocalizedRoute(cur.name, localeStandardLanguage)] = routeWrapper({
     asyncComponent: cur.component,
+    loadingComponent: LoaderFullscreen,
     userData: { lang: localeStandardLanguage, routeName: cur.name, ...cur.data },
     conditions: [...getRouteGuards(cur.name)],
   });

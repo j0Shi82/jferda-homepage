@@ -41,6 +41,7 @@ function getSectionAnimationParams(projectData) {
 // scaling and animations
 let projectData;
 let scaleY = 1;
+let padding = 1;
 let initialized = false;
 let loading = true;
 let routeContainer;
@@ -65,6 +66,14 @@ function scale() {
     initialized = false;
     // scale window to device height and unfold when animations finished
     scaleY = (window.innerHeight - 96) / projectContainer.clientHeight;
+
+    // changing padding will force browsers to redraw the page, it's an ugly way to get rid of blurry text after scale in chrome
+    const el = document.querySelector('.jdev-route-project');
+    el.addEventListener('transitionend', (e) => {
+      if (e.target === el) {
+        padding = 0;
+      }
+    });
 
     if (currentTimeout) clearTimeout(currentTimeout);
     currentTimeout = setTimeout(() => {
@@ -109,7 +118,7 @@ svelteLifecycleOnDestroy(() => {
 {:else}
 <div 
   class="jdev-route-project mdc-typography--body1" 
-  style="transform: scaleY({scaleY});" 
+  style="transform: scaleY({scaleY}); padding-right: {padding}px;" 
   in:svelteTransitionFade="{{ duration: routingFadeDuration }}"
   class:initialized="{initialized}"
   bind:this="{routeContainer}"

@@ -1,6 +1,8 @@
 <script>
 import { svelteTransitionFade, svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { AboutPhilosophyButton, AboutBio, FlyingHeadline } from 'utils/imports/components';
+import {
+  AboutPhilosophyButton, AboutPhilosophyHint, AboutBio, FlyingHeadline,
+} from 'utils/imports/components';
 import { isDesktopBreakpoint } from 'utils/imports/store';
 import { routingFadeDuration, headerTransitionDuration, atomTransitionDuration } from 'utils/imports/config';
 import { aboutPhilosophies } from 'utils/imports/data';
@@ -37,6 +39,7 @@ svelteLifecycleOnMount(() => {
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop jdev-fab-buttons" bind:this="{philosophyWrapper}">
       {#if philosophyVisible}
         <FlyingHeadline localeKey="about.philosophy.headline" transitionDirection="{$isDesktopBreakpoint ? ['right', 'right'] : ['left', 'right']}" />
+        <AboutPhilosophyHint />
         <div class="jdev-philosophy-wrapper">
           {#each aboutPhilosophies as philosophy, i}
             <AboutPhilosophyButton 

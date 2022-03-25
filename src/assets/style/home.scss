@@ -120,6 +120,12 @@
     &.node .mdc-chip { background-color: $node-secondary-color; }
     &.git .mdc-chip { background-color: $git-secondary-color; }
 
+    a {
+      color: inherit;
+      text-decoration-color: inherit;
+      text-decoration-line: none;
+    }
+
     width: 46%;
     margin-left: 1%;
     margin-right: 1%;

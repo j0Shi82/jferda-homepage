@@ -11,6 +11,8 @@ import { LeadingIcon } from '@smui/chips/styled';
 // components
 import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
 import Loader from 'components/utilities/atoms/Loader.svelte';
+// polyfill
+import 'intersection-observer';
 
 import 'assets/style/skills.scss';
 

@@ -118,7 +118,7 @@ svelteLifecycleOnDestroy(() => {
 {:else}
 <div 
   class="jdev-route-project mdc-typography--body1" 
-  style="transform: scaleY({scaleY}); padding-right: {padding}px;" 
+  style="transform: scaleY({scaleY});" 
   in:svelteTransitionFade="{{ duration: routingFadeDuration }}"
   class:initialized="{initialized}"
   bind:this="{routeContainer}"
@@ -127,7 +127,7 @@ svelteLifecycleOnDestroy(() => {
   {#each projectList as project}
     {#if project.ident === $currentProject}
     <div class="mdc-layout-grid" bind:this="{projectContainer}">
-      <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__inner" style="padding-right: {padding}px;">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="jdev-project-banner" style="background-image: url({projectData.projectPage.titleImage});" in:svelteTransitionFade="{{ duration: animationTotalDuration }}" />
         </div>

@@ -19,6 +19,8 @@ body {
   flex: auto;
   overflow: auto;
   position: relative;
+  z-index: 1;
+  background-color: #fff;
 }
 
 .mdc-drawer {

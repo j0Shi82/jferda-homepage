@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="preload" href="critical.css" as="style">
 	<meta charset='utf8'>
     <meta name='viewport' content='width=device-width'>
     <title><%= htmlWebpackPlugin.options.title %></title>
@@ -10,8 +11,14 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
 
 	<link rel='icon' type='image/png' href='favicon.png'>
+	<link rel="stylesheet" href="critical.css">
+	
 </head>
-
+	<div class="jdev-skeleton-top-bar"></div>
+	<div class="jdev-skeleton-loader-wrapper">
+		<div class="jdev-skeleton-loader"><div class="jdev-skeleton-avatar"></div><div></div><div></div><div></div><div></div></div>
+	</div>	
 <body>
+	
 </body>
 </html>

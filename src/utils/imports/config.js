@@ -3,8 +3,10 @@ import config from 'config/index';
 const {
   home: menuHomeIcon,
   about: menuAboutIcon,
+  about48: menuAbout48Icon,
   resume: menuResumeIcon,
   skills: menuSkillsIcon,
+  projects: menuProjectsIcon,
 } = config.app.menu.icons;
 
 const { routingFadeDuration } = config.app.router;
@@ -13,7 +15,7 @@ const { standardLanguage, supportedLanguages } = config.app.locale;
 const { mobile, tablet, desktop } = config.app.breakpoints;
 
 export {
-  menuHomeIcon, menuAboutIcon, menuResumeIcon, menuSkillsIcon,
+  menuHomeIcon, menuAboutIcon, menuResumeIcon, menuSkillsIcon, menuAbout48Icon, menuProjectsIcon,
   routingFadeDuration,
   headerTransitionDuration,
   atomTransitionDuration,

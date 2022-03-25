@@ -18,7 +18,9 @@ export let colorClass;
             x: $screenWidth / -2, duration: atomTransitionDuration, delay: chip.transitionDelay, easing: svelteEasingBackOut,
         }}">
             <Chip {chip} on:click={() => routerPush(getLocalizedRoute(chip.route))}>
-                <i class="material-icons mdc-chip__icon mdc-chip__icon--leading" tabindex="0" style="-webkit-mask-size: contain; mask-size: contain; -webkit-mask-image: url({chip.icon});mask-image: url({chip.icon});"></i>
+                <i class="material-icons mdc-chip__icon mdc-chip__icon--leading" tabindex="0">
+                    {@html chip.icon}
+                </i>
                 <ChipText>{$localize(chip.textLocaleIdent)}</ChipText>
             </Chip>
         </div>

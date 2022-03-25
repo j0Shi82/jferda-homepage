@@ -63,8 +63,8 @@
     }
   }
 
-  .material-icons {
-    background-color: var(--mdc-theme-text-icon-on-background);
+  .material-icons > svg {
+    fill: var(--mdc-theme-text-icon-on-background);
   }
 
   pointer-events: none;

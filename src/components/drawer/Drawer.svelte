@@ -97,7 +97,9 @@ svelteLifecycleOnDestroy(() => {
     <List>
       {#each drawerMenuItems as item}
         <Item href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
-          <span class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true" style="-webkit-mask-image: url({item.icon});mask-image: url({item.icon});"></span>
+          <span class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">
+            {@html item.icon}
+          </span>
           <Text>{$localize(`navigation.routes.${item.routeName}`)}</Text>
         </Item>
       {/each}

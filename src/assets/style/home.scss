@@ -146,8 +146,12 @@
         font-size: 52px;
         width: 52px;
         height: 52px;
-        margin-left: -2px;
-        background-color: smui-theme.$on-primary;
+
+        > svg {
+          fill: smui-theme.$on-primary;
+          margin: 2px;
+          margin-left: 4px;
+        }
       }
 
       .mdc-chip__text {

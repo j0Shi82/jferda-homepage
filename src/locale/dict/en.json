@@ -33,6 +33,10 @@
         },
         "philosophy": {
             "headline": "Coding is...",
+            "hint": {
+                "touch": "click elements for more info",
+                "notouch": "hover over elements for more info"
+            },
             "satisfaction": {
                 "headline": "Satisfaction",
                 "text": "Within an app or project, there's not much you won't be able to do. That's why coding is a constant reward system that just keeps on giving, because you're    operating in a world in which pretty much all problems are solvable."

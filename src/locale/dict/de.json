@@ -33,6 +33,10 @@
         },
         "philosophy": {
             "headline": "Coding heißt für mich...",
+            "hint": {
+                "touch": "für mehr Info Buttons klicken",
+                "notouch": "für mehr Info über Buttons hovern"
+            },
             "satisfaction": {
                 "headline": "Befriedigung",
                 "text": "Innerhalb einer Applikation gibt es so gut wie keine Probleme, die man nicht lösen könnte. Das macht Entwicklung zu einem befriedigenden Belohnungssystem, welches immer wieder Erfolge generiert."

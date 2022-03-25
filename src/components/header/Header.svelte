@@ -1,14 +1,6 @@
 <script>
-import {
-  MaterialTopAppBar,
-  MaterialTopAppBarRow,
-  MaterialTopAppBarSection,
-  MaterialTopAppBarTitle,
-  MaterialIconButton,
-} from 'utils/imports/material';
 import { getLocalizedRoute, routerPush } from 'utils/imports/core';
 import { localize } from 'utils/imports/core';
-import { FontAwesomeIcon } from 'utils/imports/components';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import ukraineHeartIcon from 'assets/media/images/flags/ukraine-heart.svg';
@@ -16,6 +8,11 @@ import ukraineHeartIcon from 'assets/media/images/flags/ukraine-heart.svg';
 import avatarImage from 'assets/media/images/profile/avatar-100.jpg';
 
 import { menuMobileState, isMobileBreakpoint, currentRouteName } from 'utils/imports/store';
+// material
+import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar/styled';
+import IconButton from '@smui/icon-button/styled';
+// components
+import Icon from 'fa-svelte';
 
 function mailMe() {
   window.location.href = 'mailto:janosch.ferda@e-domizil.de';
@@ -70,32 +67,32 @@ currentRouteName.subscribe((value) => {
   <title>{pageTitle}</title>
 </svelte:head>
 
-<MaterialTopAppBar variant="static" dense color='primary' class="app-bar">
-    <MaterialTopAppBarRow>
+<TopAppBar variant="static" dense color='primary' class="app-bar">
+    <Row>
         {#if $isMobileBreakpoint}
-        <MaterialTopAppBarSection>
+        <Section>
             {#if !isHomeRoute}
-              <MaterialIconButton class="material-icons jdev-drawer-toggle" on:click="{menuMobileState.set(!$menuMobileState)}">{$menuMobileState ? 'clear' : 'menu'}</MaterialIconButton>
+              <IconButton class="material-icons jdev-drawer-toggle" on:click="{menuMobileState.set(!$menuMobileState)}">{$menuMobileState ? 'clear' : 'menu'}</IconButton>
             {/if}
             <div class="jdev-ukraine-heart-icon" style="background-image: url({ukraineHeartIcon});"></div>
-        </MaterialTopAppBarSection>
+        </Section>
         {/if}
-        <MaterialTopAppBarSection>
+        <Section>
           <div class="jdev-avatar">
             <div style="background-image: url({avatarImage});" on:click="{() => { routerPush(getLocalizedRoute('home')); }}"></div>
           </div>
-        </MaterialTopAppBarSection>
+        </Section>
         {#if !$isMobileBreakpoint}
-        <MaterialTopAppBarSection>
-            <MaterialTopAppBarTitle class="jdev-title">&gt;_ j0Shi.dev --help</MaterialTopAppBarTitle>
-        </MaterialTopAppBarSection>
+        <Section>
+            <Title class="jdev-title">&gt;_ j0Shi.dev --help</Title>
+        </Section>
         {/if}
-        <MaterialTopAppBarSection align="end" toolbar>
+        <Section align="end" toolbar>
           <a href="https://github.com/j0Shi82" target="_blank">
-            <MaterialIconButton class="material-icons"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon></MaterialIconButton>
+            <IconButton class="material-icons"><Icon icon={faGithub}></Icon></IconButton>
           </a>
-          <MaterialIconButton on:click={mailMe} class="material-icons"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></MaterialIconButton>
+          <IconButton on:click={mailMe} class="material-icons"><Icon icon={faEnvelope}></Icon></IconButton>
           {#if !$isMobileBreakpoint}<div class="jdev-ukraine-heart-icon" style="background-image: url({ukraineHeartIcon});"></div>{/if}
-        </MaterialTopAppBarSection>
-    </MaterialTopAppBarRow>
-</MaterialTopAppBar>
+        </Section>
+    </Row>
+</TopAppBar>

@@ -1,11 +1,14 @@
 <script>
 import { svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { FlyingHeadline } from 'utils/imports/components';
-import {
-  MaterialImageList, MaterialImageListItem, MaterialImageListAspectContainer, MaterialImageListImage,
-} from 'utils/imports/material';
 import Div from '@smui/common/elements/Div.svelte';
-import { Lightbox } from 'utils/imports/plugins';
+// plugins
+import GLightbox from 'glightbox';
+// material
+import ImageList, {
+  Item as ImageListItem, ImageAspectContainer, Image as ImageListImage,
+} from '@smui/image-list/styled';
+// components
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 
 export let projectData = {};
 export let animationParams = {
@@ -24,11 +27,11 @@ export let animationParams = {
 let lightbox;
 let scrollTop = 0;
 
-const initLightbox = ({ default: LightboxContructor }) => {
-  lightbox = LightboxContructor({
+svelteLifecycleOnMount(() => {
+  lightbox = GLightbox({
     onClose: () => {
       document.querySelector('#main-content').scrollTo(0, scrollTop);
-      // document.querySelector('.jdev-project-image-list').scrollIntoView();
+    // document.querySelector('.jdev-project-image-list').scrollIntoView();
     },
     openEffect: 'none',
     closeEffect: 'none',
@@ -39,19 +42,11 @@ const initLightbox = ({ default: LightboxContructor }) => {
       description: el.description,
     })),
   });
-};
-
-svelteLifecycleOnMount(() => {
-  Lightbox().then(initLightbox).catch(console.log);
 });
 
 function openGallery(i) {
   scrollTop = document.querySelector('#main-content').scrollTop;
-  if (!lightbox) {
-    Lightbox().then(initLightbox).then(() => { lightbox.openAt(i); }).catch(console.log);
-  } else {
-    lightbox.openAt(i);
-  }
+  lightbox.openAt(i);
 }
 
 // --jdev-gallery-animation-duration is required to pass the animation time to the material component
@@ -68,13 +63,13 @@ function openGallery(i) {
         transitionDuration="{animationParams.headline.duration}" 
         transitionDelay="{animationParams.headline.delay}"
     />
-    <MaterialImageList class="jdev-project-image-list">
+    <ImageList class="jdev-project-image-list">
         {#each projectData.projectPage.gallery as item, i}
-        <MaterialImageListItem>
-            <MaterialImageListAspectContainer>
-            <MaterialImageListImage src="{item.thumb}" component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
-            </MaterialImageListAspectContainer>
-        </MaterialImageListItem>
+        <ImageListItem>
+            <ImageAspectContainer>
+            <ImageListImage src="{item.thumb}" component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
+            </ImageAspectContainer>
+        </ImageListItem>
         {/each}
-    </MaterialImageList>
+    </ImageList>
 </div>

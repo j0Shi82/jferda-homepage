@@ -2,14 +2,6 @@
 import { svelteLifecycleOnDestroy } from 'utils/imports/svelte';
 
 import {
-  MaterialDrawer,
-  MaterialContent,
-  MaterialList,
-  MaterialListGraphic,
-  MaterialListItem,
-  MaterialListText,
-  MaterialListSeparator,
-  MaterialSubheader,
   MaterialFormField,
   MaterialSwitch,
 } from 'utils/imports/material';
@@ -32,6 +24,11 @@ import {
   drawerMenuItems,
   drawerMenuProjectItems,
 } from 'utils/imports/data';
+// material
+import Drawer, { Content } from '@smui/drawer/styled';
+import List, {
+  Graphic, Item, Text, Separator, Subheader,
+} from '@smui/list/styled';
 
 import 'assets/style/drawer.scss';
 
@@ -98,33 +95,33 @@ svelteLifecycleOnDestroy(() => {
 }
 </style>
 
-<MaterialDrawer variant="{drawerVariant}" bind:this="{drawer}" class="mdc-top-app-bar--fixed-adjust">
-  <MaterialContent>
-    <MaterialList>
+<Drawer variant="{drawerVariant}" bind:this="{drawer}" class="mdc-top-app-bar--fixed-adjust">
+  <Content>
+    <List>
       {#each drawerMenuItems as item}
-        <MaterialListItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
-          <MaterialListGraphic class="material-icons" aria-hidden="true">{item.icon}</MaterialListGraphic>
-          <MaterialListText>{$localize(`navigation.routes.${item.routeName}`)}</MaterialListText>
-        </MaterialListItem>
+        <Item href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
+          <Graphic class="material-icons" aria-hidden="true">{item.icon}</Graphic>
+          <Text>{$localize(`navigation.routes.${item.routeName}`)}</Text>
+        </Item>
       {/each}
 
-      <MaterialListSeparator nav />
+      <Separator nav />
 
-      <MaterialSubheader>{$localize('navigation.routes.projects')}</MaterialSubheader>
+      <Subheader>{$localize('navigation.routes.projects')}</Subheader>
       {#each drawerMenuProjectItems as item}
-        <MaterialListItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
-          <MaterialListText>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</MaterialListText>
-        </MaterialListItem>
+        <Item href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
+          <Text>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</Text>
+        </Item>
       {/each}
 
-      <MaterialListSeparator nav />
+      <Separator nav />
 
-      <MaterialListItem on:click={() => animationsActive.set(!$animationsActive)}>
+      <Item on:click={() => animationsActive.set(!$animationsActive)}>
         <MaterialFormField class="jdev-animation-toggle">
           <MaterialSwitch bind:checked={$animationsActive} />
           <span slot="label" class="jdev-cursor-pointer" on:click={() => animationsActive.set(!$animationsActive)}>{$localize('navigation.animationSwitchLabel')}</span>
         </MaterialFormField>
-      </MaterialListItem>
+      </Item>
 
       {#if $locales.length > 1}
       <div class="jdev-list-item">
@@ -139,6 +136,6 @@ svelteLifecycleOnDestroy(() => {
       </div>
       {/if}
       
-    </MaterialList>
-  </MaterialContent>
-</MaterialDrawer>
+    </List>
+  </Content>
+</Drawer>

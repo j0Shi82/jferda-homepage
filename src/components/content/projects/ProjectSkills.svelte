@@ -1,7 +1,9 @@
 <script>
 import { svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { FlyingHeadline, SkillsProgressCat } from 'utils/imports/components';
 import { skillList } from 'utils/imports/data';
+// components
+import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 
 export let projectData = {};
 export let animationParams = {

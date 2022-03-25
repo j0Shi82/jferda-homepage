@@ -1,10 +1,12 @@
 <script>
 import { localize } from 'utils/imports/core';
-import { FlyingHeadline } from 'utils/imports/components';
-import {
-  MaterialList, MaterialListItem, MaterialListGraphic, MaterialListText, MaterialListPrimaryText, MaterialListSecondaryText,
-} from 'utils/imports/material';
 import { isDesktopBreakpoint } from 'utils/imports/store';
+// material
+import List, {
+  Graphic, Item, Text, PrimaryText, SecondaryText,
+} from '@smui/list/styled';
+// components
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 
 export let projectData = {};
 export let animationParams = {
@@ -34,16 +36,16 @@ export let animationParams = {
         transitionDuration="{animationParams.headline.duration}" 
         transitionDelay="{animationParams.headline.delay}"
     />
-    <MaterialList class="jdev-project-highlights" threeLine nonInteractive>
+    <List class="jdev-project-highlights" threeLine nonInteractive>
         {#each projectData.projectPage.keys as key, i}
-        <MaterialListItem style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms;">
-            <MaterialListGraphic class="material-icons">star</MaterialListGraphic>
-            <MaterialListText>
-                <MaterialListPrimaryText>{$localize(key.primaryTextLocaleKey)}</MaterialListPrimaryText>
-                <MaterialListSecondaryText>{$localize(key.secondaryTextLocaleKey)}</MaterialListSecondaryText>
-                <MaterialListSecondaryText>{$localize(key.secondSecondaryTextLocaleKey)}</MaterialListSecondaryText>
-            </MaterialListText>
-        </MaterialListItem>
+        <Item style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms;">
+            <Graphic class="material-icons">star</Graphic>
+            <Text>
+                <PrimaryText>{$localize(key.primaryTextLocaleKey)}</PrimaryText>
+                <SecondaryText>{$localize(key.secondaryTextLocaleKey)}</SecondaryText>
+                <SecondaryText>{$localize(key.secondSecondaryTextLocaleKey)}</SecondaryText>
+            </Text>
+        </Item>
         {/each}
-    </MaterialList>
+    </List>
 </div>

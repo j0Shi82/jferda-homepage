@@ -1,13 +1,16 @@
 <script>
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFade, svelteLifecycleOnMount, svelteTick } from 'utils/imports/svelte';
-import { SkillsProgressCat, Loader } from 'utils/imports/components';
 import { skillCategories, skillList } from 'utils/imports/data';
 import { routingFadeDuration } from 'utils/imports/config';
-import {
-  MaterialTab, MaterialTabBar, MaterialTabLabel, MaterialIcon,
-} from 'utils/imports/material';
 import { preloadImages } from 'utils/imports/helpers';
+// material
+import Tab, { Label as TabLabel } from '@smui/tab/styled';
+import TabBar from '@smui/tab-bar/styled';
+import { LeadingIcon } from '@smui/chips/styled';
+// components
+import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
+import Loader from 'components/utilities/atoms/Loader.svelte';
 
 import 'assets/style/skills.scss';
 
@@ -61,15 +64,15 @@ svelteLifecycleOnMount(() => {
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      {#if showLeftArrow}<div class="jdev-arrow jdev-left-arrow"><MaterialIcon class="material-icons">arrow_back_ios</MaterialIcon></div>{/if}
-      <MaterialTabBar tabs={skillCategories} let:tab bind:active="{currentCat}">
+      {#if showLeftArrow}<div class="jdev-arrow jdev-left-arrow"><LeadingIcon class="material-icons">arrow_back_ios</LeadingIcon></div>{/if}
+      <TabBar tabs={skillCategories} let:tab bind:active="{currentCat}">
         {#if tab === skillCategories[0]}<div class="jdev-scroll-start" bind:this="{leftArrowOberserver}" />{/if}
-        <MaterialTab {tab}>
-          <MaterialTabLabel>{$localize(`skills.${tab}`)}</MaterialTabLabel>
-        </MaterialTab>
+        <Tab {tab}>
+          <TabLabel>{$localize(`skills.${tab}`)}</TabLabel>
+        </Tab>
         {#if tab === [...skillCategories].pop()}<div class="jdev-scroll-end" bind:this="{rightArrowOberserver}" />{/if}
-      </MaterialTabBar>
-      {#if showRightArrow}<div class="jdev-arrow jdev-right-arrow"><MaterialIcon class="material-icons">arrow_forward_ios</MaterialIcon></div>{/if}
+      </TabBar>
+      {#if showRightArrow}<div class="jdev-arrow jdev-right-arrow"><LeadingIcon class="material-icons">arrow_forward_ios</LeadingIcon></div>{/if}
     </div>
     {#each skillCategories as cat}
         <SkillsProgressCat catIdent="{cat}" catOpen={cat === currentCat} />

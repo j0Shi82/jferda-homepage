@@ -1,9 +1,10 @@
 <script>
 import { svelteLifecycleOnMount, svelteTransitionFly } from 'utils/imports/svelte';
 import { MaterialFabLabel, MaterialFab } from 'utils/imports/material';
-import { Tooltip } from 'utils/imports/plugins';
 import { localize } from 'utils/imports/core';
 import { animationsActive, screenWidth } from 'utils/imports/store';
+// plugins
+import tippy from 'tippy.js';
 
 let el;
 export let headlineLocaleIdent;
@@ -18,14 +19,12 @@ $: {
 }
 
 svelteLifecycleOnMount(() => {
-  Tooltip().then(({ default: TooltipConstructor }) => {
-    TooltipConstructor(el, {
-      content: $localize(textLocaleIdent),
-      animation: 'shift-away',
-      placement: 'bottom',
-      offset: [0, 0],
-    });
-  }).catch(console.log);
+  tippy(el, {
+    content: $localize(textLocaleIdent),
+    animation: 'shift-away',
+    placement: 'bottom',
+    offset: [0, 0],
+  });
 });
 </script>
 

@@ -1,8 +1,10 @@
 <script>
 import { svelteTransitionFade } from 'utils/imports/svelte';
-import { ProjectsCard, FlyingHeadline } from 'utils/imports/components';
 import { routingFadeDuration } from 'utils/imports/config';
 import { projectList } from 'utils/imports/data';
+// components
+import ProjectsCard from 'components/content/projects/ProjectsCard.svelte';
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 
 import 'assets/style/projects.scss';
 </script>

@@ -2,11 +2,14 @@
 import { localize, getLocalizedRoute, routerPush } from 'utils/imports/core';
 import { svelteTransitionScale } from 'utils/imports/svelte';
 import { headerTransitionDuration, atomTransitionDurationShort, atomTransitionDuration } from 'utils/imports/config';
-import {
-  MaterialCard, MaterialCardMedia, MaterialCardContent, MaterialIcon,
-} from 'utils/imports/material';
 import { animationsActive } from 'utils/imports/store';
-import { TechLogo } from 'utils/imports/components';
+// material
+import Card, {
+  Content as CardContent, Media as CardMedia,
+} from '@smui/card/styled';
+import { LeadingIcon } from '@smui/chips/styled';
+// components
+import TechLogo from 'components/utilities/atoms/TechLogo.svelte';
 
 let hover = false;
 export let i;
@@ -21,17 +24,17 @@ export let project;
             duration: $animationsActive ? atomTransitionDuration : 0,
         }}"
     >
-        <MaterialCard variant="outlined" on:mouseenter={() => { hover = true; }} on:mouseleave={() => { hover = false; }}>
+        <Card variant="outlined" on:mouseenter={() => { hover = true; }} on:mouseleave={() => { hover = false; }}>
             {#if hover}
-            <MaterialCardContent class="jdev-project-hover-content">
+            <CardContent class="jdev-project-hover-content">
                 <span>{$localize(project.descLocaleKey)}</span>
-                <MaterialIcon class="material-icons" style="margin: 5px 0;">star</MaterialIcon>
+                <LeadingIcon class="material-icons" style="margin: 5px 0;">star</LeadingIcon>
                 <span class="link" on:click="{() => routerPush(getLocalizedRoute(project.routeName))}">{$localize('projects.learnmore')}</span>
-            </MaterialCardContent>
+            </CardContent>
             {/if}
-            <MaterialCardMedia class="card-media-16x9 {project.ident}" aspectRatio="16x9">
-            </MaterialCardMedia>
-            <MaterialCardContent>
+            <CardMedia class="card-media-16x9 {project.ident}" aspectRatio="16x9">
+            </CardMedia>
+            <CardContent>
                 <h2 class="jdev-card-headline mdc-typography--headline6">
                    {$localize(project.titleLocaleKey)}
                 </h2>
@@ -53,7 +56,7 @@ export let project;
                         return x < y ? -1 : x > y ? 1 : 0;
                     }).join($localize('projects.skillsep'))} -->
                 </h3>
-            </MaterialCardContent>
-        </MaterialCard>
+            </CardContent>
+        </Card>
     </div>
 </div>

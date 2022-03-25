@@ -2,7 +2,9 @@
 import { svelteTransitionFade } from 'utils/imports/svelte';
 import { routingFadeDuration, atomTransitionDuration, headerTransitionDuration } from 'utils/imports/config';
 import { resumeEducationList, resumeExperienceList, resumeSkillList } from 'utils/imports/data';
-import { ResumeItem, FlyingHeadline } from 'utils/imports/components';
+// components
+import ResumeItem from 'components/content/resume/ResumeItem.svelte';
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 
 import 'assets/style/resume.scss';
 </script>

@@ -1,7 +1,8 @@
 import { routeWrapper, getLocalizedRoute, getRouteGuards } from 'utils/imports/core';
 import { localeStandardLanguage, localeSupportedLanguages } from 'utils/imports/config';
-import { LoaderFullscreen } from 'utils/imports/components';
 import baseRoutes from 'router/baseRoutes';
+// components
+import LoaderFullscreen from 'components/utilities/atoms/LoaderFullscreen.svelte';
 
 const routes = {};
 

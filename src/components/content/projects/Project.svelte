@@ -2,13 +2,17 @@
 import {
   svelteTransitionFade, svelteLifecycleOnMount, svelteLifecycleOnDestroy,
 } from 'utils/imports/svelte';
-import {
-  ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks, Loader,
-} from 'utils/imports/components';
 import { currentProject, animationsActive, projectInitializing } from 'utils/imports/store';
 import { routingFadeDuration } from 'utils/imports/config';
 import { preloadImages, getProjectAnimationParams } from 'utils/imports/helpers';
 import { projectList, skillList } from 'utils/imports/data';
+// components
+import ProjectDescription from 'components/content/projects/ProjectDescription.svelte';
+import ProjectKeys from 'components/content/projects/ProjectKeys.svelte';
+import ProjectSkills from 'components/content/projects/ProjectSkills.svelte';
+import ProjectGallery from 'components/content/projects/ProjectGallery.svelte';
+import ProjectLinks from 'components/content/projects/ProjectLinks.svelte';
+import Loader from 'components/utilities/atoms/Loader.svelte';
 
 import 'assets/style/project.scss';
 

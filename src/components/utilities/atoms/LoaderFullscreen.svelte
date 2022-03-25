@@ -1,5 +1,5 @@
 <script>
-  import { Loader } from 'utils/imports/components';
+  import Loader from 'components/utilities/atoms/Loader.svelte';
 </script>
 
 <style lang="scss">

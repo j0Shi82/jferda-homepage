@@ -2,7 +2,7 @@
 import { formatDate, localize } from 'utils/imports/core';
 import { svelteTransitionFly, svelteEasingBackOut } from 'utils/imports/svelte';
 import { animationsActive, screenWidth } from 'utils/imports/store';
-// import { FontAwesomeIcon } from 'utils/imports/components';
+// import * as FontAwesomeIcon from 'fa-svelte';
 // import { faFilePdf } from '@fortawesome/free-solid-svg-icons/faFilePdf';
 
 export let item = {

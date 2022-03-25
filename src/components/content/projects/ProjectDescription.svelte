@@ -1,8 +1,9 @@
 <script>
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFly } from 'utils/imports/svelte';
-import { FlyingHeadline } from 'utils/imports/components';
 import { isDesktopBreakpoint, screenWidth } from 'utils/imports/store';
+// components
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 
 export let projectData = {};
 export let animationParams = {

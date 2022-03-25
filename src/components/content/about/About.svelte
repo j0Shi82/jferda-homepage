@@ -1,12 +1,14 @@
 <script>
 import { svelteTransitionFade, svelteLifecycleOnMount } from 'utils/imports/svelte';
-import {
-  AboutPhilosophyButton, AboutPhilosophyHint, AboutBio, FlyingHeadline,
-} from 'utils/imports/components';
 import { isDesktopBreakpoint } from 'utils/imports/store';
 import { routingFadeDuration, headerTransitionDuration, atomTransitionDuration } from 'utils/imports/config';
 import { aboutPhilosophies } from 'utils/imports/data';
 import { preloadImages } from 'utils/imports/helpers';
+// components
+import AboutPhilosophyButton from 'components/content/about/AboutPhilosophyButton.svelte';
+import AboutPhilosophyHint from 'components/content/about/AboutPhilosophyHint.svelte';
+import AboutBio from 'components/content/about/AboutBio.svelte';
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 
 import 'assets/style/about.scss';
 

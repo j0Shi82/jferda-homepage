@@ -20,8 +20,8 @@ export default {
       routingFadeDuration: 250,
     },
     animations: {
-      headerTransitionDuration: 1250,
-      atomTransitionDuration: 500,
+      headerTransitionDuration: 500,
+      atomTransitionDuration: 350,
       atomTransitionDurationShort: 100,
     },
     locale: {

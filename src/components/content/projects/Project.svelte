@@ -12,8 +12,8 @@ import { projectList, skillList } from 'utils/imports/data';
 
 import 'assets/style/project.scss';
 
-let animationTotalDuration = $animationsActive ? 2500 : 0;
-$: animationTotalDuration = $animationsActive ? 2500 : 0;
+let animationTotalDuration = $animationsActive ? 1500 : 0;
+$: animationTotalDuration = $animationsActive ? 1500 : 0;
 let currentTimeout = null;
 
 // animation logic
@@ -60,7 +60,7 @@ function scale() {
   if ($animationsActive) {
     initialized = false;
     // scale window to device height and unfold when animations finished
-    scaleY = (window.innerHeight - 48) / projectContainer.clientHeight;
+    scaleY = (window.innerHeight - 96) / projectContainer.clientHeight;
 
     if (currentTimeout) clearTimeout(currentTimeout);
     currentTimeout = setTimeout(() => {

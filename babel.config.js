@@ -29,7 +29,13 @@ const configModern = {
 
 const configLegacy = {
   presets: [
-    '@babel/preset-env',
+    [
+      '@babel/preset-env',
+      {
+        useBuiltIns: 'entry',
+        corejs: 3,
+      },
+    ],
   ],
 };
 

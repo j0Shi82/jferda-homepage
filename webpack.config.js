@@ -13,7 +13,7 @@ const isProd = mode === 'production';
 
 module.exports = {
   entry: {
-    bundle: ['./src/main.js'],
+    bundle: [`./src/main_${target}.js`],
   },
   devServer: {
     host: '0.0.0.0',
@@ -100,7 +100,7 @@ module.exports = {
   mode,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: `[name].[contenthash].${target}.css`,
     }),
     new HtmlWebpackPlugin({
       title: '>_ j0Shi.dev --help',

@@ -34,6 +34,7 @@ const configLegacy = {
       {
         useBuiltIns: 'entry',
         corejs: 3,
+        targets: ['defaults', 'not IE 11'],
       },
     ],
   ],

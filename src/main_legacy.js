@@ -1,7 +1,6 @@
 // polyfills
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import 'isomorphic-fetch';
 import 'intersection-observer';
 
 import App from './App.svelte';

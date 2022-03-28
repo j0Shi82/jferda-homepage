@@ -37,7 +37,7 @@ import commentsScreenshot250 from 'assets/media/images/projects/nwoun/comments-2
 export default {
   ident: 'nwoun',
   titleLocaleKey: 'navigation.routes.projects_nwoun',
-  skillsLocaleKeys: ['skills.js', 'skills.php', 'skills.wp', 'skills.sql'],
+  skillsLocaleKeys: ['skills.js', 'skills.php', 'skills.wp', 'skills.sql', 'skills.svelte', 'skills.tailwind'],
   descLocaleKey: 'projects.nwoun.desc',
   routeName: 'projects_nwoun',
   projectPage: {

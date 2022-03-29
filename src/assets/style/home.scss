@@ -34,6 +34,7 @@
       animation-iteration-count: 1;
       animation-fill-mode: both;
       animation-play-state: paused;
+      will-change: transform, opacity;
 
       &.animation-active {
         animation-play-state: running;

@@ -52,8 +52,8 @@ svelteLifecycleOnMount(() => {
   });
 
   return () => {
-    observerLeft.unobserve(leftArrowOberserver);
-    observerRight.unobserve(rightArrowOberserver);
+    if (observerLeft) observerLeft.unobserve(leftArrowOberserver);
+    if (observerRight) observerRight.unobserve(rightArrowOberserver);
   };
 });
 </script>

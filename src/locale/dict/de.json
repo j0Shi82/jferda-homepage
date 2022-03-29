@@ -21,6 +21,14 @@
         "en": "English",
         "de": "Deutsch"
     },
+    "header": {
+        "label": {
+            "menu_open": "Menü Öffnen",
+            "menu_close": "Menü Schließen",
+            "github": "Github Profil Aufrufen",
+            "mail": "Per Mail Kontaktieren"
+        }
+    },
     "home": {
         "maintext": "Hallo! Mein Name ist <b>Janosch</b>. Ich bin <b>Full-Stack Web-Entwickler</b> aus Deutschland und habe Spaß am Erstellen von schnellen, optimierten und modernen <b>Javascript</b> Applikationen. Ich lade dich auf meiner Webseite ein, mehr über meine <b>Philosophie</b> und <b>Arbeit</b> zu erfahren."
     },

@@ -72,7 +72,7 @@ currentRouteName.subscribe((value) => {
         {#if $isMobileBreakpoint}
         <Section>
             {#if !isHomeRoute}
-              <IconButton class="material-icons jdev-drawer-toggle" on:click="{menuMobileState.set(!$menuMobileState)}">
+              <IconButton class="material-icons jdev-drawer-toggle" aria-label="{$localize(!$menuMobileState ? 'header.label.menu_open' : 'header.label.menu_close')}" on:click="{menuMobileState.set(!$menuMobileState)}">
               {#if !$menuMobileState}
                 <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#FFFFFF"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
               {:else}
@@ -95,9 +95,9 @@ currentRouteName.subscribe((value) => {
         {/if}
         <Section align="end" toolbar>
           <a href="https://github.com/j0Shi82" target="_blank">
-            <IconButton class="material-icons"><Icon icon={faGithub}></Icon></IconButton>
+            <IconButton class="material-icons" aria-label="{$localize('header.label.github')}"><Icon icon={faGithub}></Icon></IconButton>
           </a>
-          <IconButton on:click={mailMe} class="material-icons"><Icon icon={faEnvelope}></Icon></IconButton>
+          <IconButton on:click={mailMe} class="material-icons" aria-label="{$localize('header.label.mail')}"><Icon icon={faEnvelope}></Icon></IconButton>
           {#if !$isMobileBreakpoint}<div class="jdev-ukraine-heart-icon" style="background-image: url({ukraineHeartIcon});"></div>{/if}
         </Section>
     </Row>

@@ -21,6 +21,14 @@
         "en": "English",
         "de": "Deutsch"
     },
+    "header": {
+        "label": {
+            "menu_open": "Open Menu",
+            "menu_close": "Close Menu",
+            "github": "Browse to Github Profile",
+            "mail": "Contact Through Mail"
+        }
+    },
     "home": {
         "maintext": "Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating lightweight, fast, and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>."
     },

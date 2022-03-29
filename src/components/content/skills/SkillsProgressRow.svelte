@@ -27,5 +27,5 @@ setTimeout(() => {
     <div class="jdev-skills-logo" title="{logoAlt}" style="background-image: url({logoSrc});" />
 </div>
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-3-phone jdev-skills-progress-align">
-    <LinearProgress class="jdev-skills-progress {themeClass}" progress="{currentProgress}" />
+    <LinearProgress class="jdev-skills-progress {themeClass}" aria-label="{ logoAlt }" progress="{currentProgress}" />
 </div>

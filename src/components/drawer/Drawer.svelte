@@ -96,7 +96,7 @@ svelteLifecycleOnDestroy(() => {
   <Content>
     <List>
       {#each drawerMenuItems as item}
-        <Item href="#{getLocalizedRoute(item.routeName)}" on:click={() => go()} activated={$currentRouteName === item.routeName}>
+        <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName}>
           <span class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">
             {@html item.icon}
           </span>
@@ -108,7 +108,7 @@ svelteLifecycleOnDestroy(() => {
 
       <Subheader>{$localize('navigation.routes.projects')}</Subheader>
       {#each drawerMenuProjectItems as item}
-        <Item href="#{getLocalizedRoute(item.routeName)}" on:click={() => go()} activated={$currentRouteName === item.routeName}>
+        <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName}>
           <Text>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</Text>
         </Item>
       {/each}

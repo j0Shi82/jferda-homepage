@@ -7,22 +7,35 @@ import ukraineHeartIcon from 'assets/media/images/flags/ukraine-heart.svg';
 
 import avatarImage from 'assets/media/images/profile/avatar-100.jpg';
 
-import { menuMobileState, isMobileBreakpoint, currentRouteName } from 'utils/imports/store';
+import {
+  menuMobileState, isMobileBreakpoint, currentRouteName, currentLocale,
+} from 'utils/imports/store';
 // material
 import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar/styled';
 import IconButton from '@smui/icon-button/styled';
 // components
 import Icon from 'fa-svelte';
 
+let pageTitle;
+let canonical;
+let isHomeRoute = false;
+
 function mailMe() {
   window.location.href = 'mailto:janosch.ferda@e-domizil.de';
 }
 
-let isHomeRoute = false;
-$: pageTitle = $currentRouteName === 'home' ? '>_ j0Shi.dev --help' : `>_ j0Shi.dev --help --${$localize(`navigation.routes.${$currentRouteName}`).toLowerCase()}`;
+function setMetaData() {
+  pageTitle = $currentRouteName === 'home' || $currentRouteName === null ? '>_ j0Shi.dev --help' : `>_ j0Shi.dev --help --${$localize(`navigation.routes.${$currentRouteName}`).toLowerCase()}`;
+  canonical = $currentRouteName === 'home' || $currentRouteName === null ? process.env.BASEURL : `${process.env.BASEURL}/#${getLocalizedRoute($currentRouteName)}`;
+}
+
+currentLocale.subscribe(() => {
+  setMetaData();
+});
 
 currentRouteName.subscribe((value) => {
   isHomeRoute = value === 'home';
+  setMetaData();
 });
 </script>
 
@@ -65,6 +78,9 @@ currentRouteName.subscribe((value) => {
 
 <svelte:head>
   <title>{pageTitle}</title>
+  {#if $currentRouteName !== null}
+    <link rel="canonical" href="{canonical}" />
+  {/if}
 </svelte:head>
 
 <TopAppBar variant="static" dense color='primary' class="app-bar">

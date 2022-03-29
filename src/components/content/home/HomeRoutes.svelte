@@ -2,7 +2,7 @@
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFly, svelteEasingBackOut } from 'utils/imports/svelte';
 import { atomTransitionDuration } from 'utils/imports/config';
-import { screenWidth } from 'utils/imports/store';
+import { screenWidth, currentLocale } from 'utils/imports/store';
 import { getLocalizedRoute } from 'utils/imports/core';
 import { homeRoutes } from 'utils/imports/data';
 // material
@@ -19,7 +19,7 @@ export let colorClass;
             x: $screenWidth / -2, duration: atomTransitionDuration, delay: route.transitionDelay, easing: svelteEasingBackOut,
         }}">
 
-            <a href="#{getLocalizedRoute(route.route)}">
+            <a href="#{getLocalizedRoute(route.route, $currentLocale)}">
                 <Fab variant="unelevated" class="jdev-button-round" extended>
                     <Icon class="material-icons">
                         {@html route.icon}

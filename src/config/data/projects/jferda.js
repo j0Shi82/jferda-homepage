@@ -1,4 +1,6 @@
 import nodeLogo from 'assets/media/images/knowledge-logos/node.png';
+import pageSpeedInsights from 'assets/media/images/projects/jferda/page-speed-insights.png';
+import pageSpeedInsights250 from 'assets/media/images/projects/jferda/page-speed-insights-250.png';
 
 export default {
   ident: 'jferda',
@@ -44,6 +46,11 @@ export default {
         secondSecondaryTextLocaleKey: 'project.jferda.highlights.5.3',
       },
     ],
-    gallery: [],
+    gallery: [{
+      thumb: pageSpeedInsights250,
+      full: pageSpeedInsights,
+      title: false,
+      description: false,
+    }],
   },
 };

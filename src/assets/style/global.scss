@@ -7,7 +7,7 @@
 body {
   display: flex;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
 }
 
@@ -19,6 +19,8 @@ body {
   flex: auto;
   overflow: auto;
   position: relative;
+  margin-bottom: calc(1rem + env(safe-area-inset-bottom));
+  
 }
 
 .mdc-drawer {

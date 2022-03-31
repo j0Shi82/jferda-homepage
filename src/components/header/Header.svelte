@@ -35,13 +35,15 @@ currentLocale.subscribe(() => {
 
 currentRouteName.subscribe((value) => {
   isHomeRoute = value === 'home';
-  const skeletonLoaderWrapper = document.querySelector('.jdev-skeleton-loader-wrapper');
-  if (isHomeRoute) {
-    skeletonLoaderWrapper.classList.add('jdev-skeleton-loader-wrapper-home');
-    skeletonLoaderWrapper.classList.remove('jdev-skeleton-loader-wrapper-nothome');
-  } else {
-    skeletonLoaderWrapper.classList.add('jdev-skeleton-loader-wrapper-nothome');
-    skeletonLoaderWrapper.classList.remove('jdev-skeleton-loader-wrapper-home');
+  if (value !== null) {
+    const skeletonLoaderWrapper = document.querySelector('.jdev-skeleton-loader-wrapper');
+    if (isHomeRoute) {
+      skeletonLoaderWrapper.classList.add('jdev-skeleton-loader-wrapper-home');
+      skeletonLoaderWrapper.classList.remove('jdev-skeleton-loader-wrapper-nothome');
+    } else {
+      skeletonLoaderWrapper.classList.add('jdev-skeleton-loader-wrapper-nothome');
+      skeletonLoaderWrapper.classList.remove('jdev-skeleton-loader-wrapper-home');
+    }
   }
   setMetaData();
 });

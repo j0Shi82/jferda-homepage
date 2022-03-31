@@ -3,15 +3,6 @@
 @use '@material/image-list/index' as image-list;
 @import "glightbox/dist/css/glightbox";
 
-.jdev-route-project-loader {
-  position: absolute;
-  height: calc(100%);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .jdev-route-project {
   .jdev-project-image-list {
     @include image-list.standard-columns(5);
@@ -29,8 +20,6 @@
       background-size: cover;
     }
   }
-
-  overflow-x: hidden;
 
   // --mdc-theme-text-icon-on-background: #{smui-theme.$text-primary-on-background};
   // --mdc-theme-text-primary-on-background: #{smui-theme.$text-primary-on-background};

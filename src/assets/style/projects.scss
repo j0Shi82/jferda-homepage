@@ -1,9 +1,8 @@
 @use "smui-theme";
 @use 'src/assets/style/variables.scss';
+@use '@material/card/variables' as card-variables;
 
 .jdev-route-projects {
-  overflow-x: hidden;
-
   .mdc-layout-grid__inner {
     @media #{variables.$breakpoint-tablet} {
       max-width: 500px;
@@ -72,6 +71,22 @@
     position: relative;
   }
 
+  .jdev-project-hover-toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width:48px;
+    height: 48px;
+    z-index: 3;
+    cursor: pointer;
+    background-color: card-variables.$outline-color;
+    border-radius: 100% 100% 0% 100%;
+
+    svg {
+      fill: smui-theme.$primary
+    }
+  }
+
   .jdev-project-hover-content {
     position: absolute;
     box-sizing: border-box;
@@ -80,6 +95,7 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 1;
+    user-select: none;
     height: 100%;
     width: 100%;
     background: rgba(230, 230, 230, 0.95);

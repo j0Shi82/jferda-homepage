@@ -1,18 +1,5 @@
-<script>
-export let fullScreen = false;
-</script>
-
 <style lang="scss">
 @use 'src/assets/style/_smui-theme.scss';
-
-.lds-fullscreen-wrapper {
-  position: absolute;
-  height: calc(100% - 48px);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .lds-ring {
   display: inline-block;
@@ -57,10 +44,4 @@ export let fullScreen = false;
 }
 </style>
 
-{#if fullScreen}
-<div class="lds-fullscreen-wrapper">
-  <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-</div>
-{:else}
 <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-{/if}

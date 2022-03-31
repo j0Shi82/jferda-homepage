@@ -4,23 +4,16 @@
 @import "@material/top-app-bar/variables";
 // @import "@smui/snackbar";
 
-body {
-  display: flex;
-  height: 100vh;
-  overflow-x: hidden;
-  margin: 0;
-}
-
 .mdc-top-app-bar__section {
   flex: 1 1 0;
 }
 
 .mdc-drawer-app-content {
   flex: auto;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
-  z-index: 1;
-  background-color: #fff;
+  height: calc(100% - $mdc-top-app-bar-dense-row-height);
 }
 
 .mdc-drawer {
@@ -32,11 +25,10 @@ body {
 }
 
 .main-content {
-  height: 100%;
-
-  > div:not(.lds-fullscreen-wrapper) {
+  > div {
     // overflow: auto;
     // height: 100%;
+    background-color: #fff;
     max-width: calc(1240px - 255px);
     margin: 0 auto;
     position: relative;

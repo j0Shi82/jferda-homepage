@@ -24,7 +24,7 @@ export let project;
             duration: $animationsActive ? atomTransitionDuration : 0,
         }}"
     >
-        <Card variant="outlined" on:mouseenter={() => { hover = true; }} on:mouseleave={() => { hover = false; }}>
+        <Card variant="outlined">
             {#if hover}
             <CardContent class="jdev-project-hover-content">
                 <span>{$localize(project.descLocaleKey)}</span>
@@ -37,6 +37,13 @@ export let project;
             <CardMedia class="card-media-16x9 {project.ident}" aspectRatio="16x9">
             </CardMedia>
             <CardContent>
+                <div class="jdev-project-hover-toggle" on:click={() => { hover = !hover; }}>
+                    {#if hover}
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/></svg>
+                    {:else}
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    {/if}
+                </div>
                 <h2 class="jdev-card-headline mdc-typography--headline6">
                    {$localize(project.titleLocaleKey)}
                 </h2>

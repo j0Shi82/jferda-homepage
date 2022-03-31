@@ -1,16 +1,17 @@
-import phpLogo from 'assets/media/images/skills/language/php.png';
+import phpLogo from 'assets/media/images/skills/language/php.svg';
 import cLogo from 'assets/media/images/skills/language/csharp.svg';
 import sqlLogo from 'assets/media/images/skills/language/sql.png';
-import javaLogo from 'assets/media/images/skills/language/java.png';
+import javaLogo from 'assets/media/images/skills/language/java.svg';
 import htmlLogo from 'assets/media/images/skills/language/html.svg';
 import javascriptLogo from 'assets/media/images/skills/language/javascript.svg';
 import cssLogo from 'assets/media/images/skills/language/css.svg';
 
-import bootstrapLogo from 'assets/media/images/skills/frameworks/bootstrap.png';
-import laravelLogo from 'assets/media/images/skills/frameworks/laravel.png';
-import phpbbLogo from 'assets/media/images/skills/frameworks/phpbb.png';
+import bootstrapLogo from 'assets/media/images/skills/frameworks/bootstrap.svg';
+import tailwindLogo from 'assets/media/images/skills/frameworks/tailwind.svg';
+import laravelLogo from 'assets/media/images/skills/frameworks/laravel.svg';
+import phpbbLogo from 'assets/media/images/skills/frameworks/phpbb.svg';
 import vueLogo from 'assets/media/images/skills/frameworks/vue.svg';
-import svelteLogo from 'assets/media/images/skills/frameworks/svelte.png';
+import svelteLogo from 'assets/media/images/skills/frameworks/svelte.svg';
 import wordpressLogo from 'assets/media/images/skills/frameworks/wordpress.svg';
 import jqueryLogo from 'assets/media/images/skills/frameworks/jquery.svg';
 import materialLogo from 'assets/media/images/skills/frameworks/material.svg';
@@ -21,11 +22,12 @@ import npmLogo from 'assets/media/images/skills/jspackages/npm.svg';
 import webpackLogo from 'assets/media/images/skills/jspackages/webpack.svg';
 import expressLogo from 'assets/media/images/skills/jspackages/express.png';
 import jestLogo from 'assets/media/images/skills/jspackages/jest.png';
+import i18nextLogo from 'assets/media/images/skills/jspackages/i18next.png';
 
-import dockerLogo from 'assets/media/images/skills/software/docker.png';
+import dockerLogo from 'assets/media/images/skills/software/docker.svg';
 import gitLogo from 'assets/media/images/skills/software/git.svg';
 import jiraLogo from 'assets/media/images/skills/software/jira.png';
-import mysqlLogo from 'assets/media/images/skills/software/mysql.png';
+import mysqlLogo from 'assets/media/images/skills/software/mysql.svg';
 import photoshopLogo from 'assets/media/images/skills/software/photoshop.svg';
 import sentryLogo from 'assets/media/images/skills/software/sentry.svg';
 import vscodeLogo from 'assets/media/images/skills/software/vscode.png';
@@ -86,10 +88,10 @@ const skills = [
     type: 'frameworks', name: 'Laravel', class: 'laravel', logo: laravelLogo, progress: 0.6,
   },
   {
-    type: 'frameworks', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 0.3,
+    type: 'frameworks', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 0.5,
   },
   {
-    type: 'frameworks', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 0.5,
+    type: 'frameworks', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 0.7,
   },
   {
     type: 'frameworks', name: 'phpBB', class: 'phpbb', logo: phpbbLogo, progress: 0.4,
@@ -102,6 +104,9 @@ const skills = [
   },
   {
     type: 'frameworks', name: 'Material Design', class: 'material', logo: materialLogo, progress: 0.5,
+  },
+  {
+    type: 'frameworks', name: 'Tailwind CSS', class: 'tailwind', logo: tailwindLogo, progress: 0.4,
   },
   {
     type: 'jspackages', name: 'npm', class: 'npm', logo: npmLogo, progress: 0.6,
@@ -122,7 +127,10 @@ const skills = [
     type: 'jspackages', name: 'Jest', class: 'jest', logo: jestLogo, progress: 0.4,
   },
   {
-    type: 'nwoun', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.3,
+    type: 'jspackages', name: 'i18next', class: 'i18next', logo: i18nextLogo, progress: 0.6,
+  },
+  {
+    type: 'nwoun', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.4,
   },
   {
     type: 'nwoun', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.6,
@@ -131,16 +139,25 @@ const skills = [
     type: 'nwoun', name: 'JavaScript', class: 'javascript', logo: javascriptLogo, progress: 0.9,
   },
   {
-    type: 'nwoun', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.9,
+    type: 'nwoun', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.8,
   },
   {
     type: 'nwoun', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 0.8,
   },
   {
-    type: 'nwoun', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.4,
+    type: 'nwoun', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.2,
   },
   {
-    type: 'nwoun', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.6,
+    type: 'nwoun', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.4,
+  },
+  {
+    type: 'nwoun', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 0.7,
+  },
+  {
+    type: 'nwoun', name: 'Tailwind CSS', class: 'tailwind', logo: tailwindLogo, progress: 0.5,
+  },
+  {
+    type: 'nwoun', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.2,
   },
   {
     type: 'edom', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.8,
@@ -149,16 +166,16 @@ const skills = [
     type: 'edom', name: 'Bootstrap', class: 'bootstrap', logo: bootstrapLogo, progress: 0.6,
   },
   {
-    type: 'edom', name: 'VUE.js', class: 'vue', logo: vueLogo, progress: 0.9,
+    type: 'edom', name: 'VUE.js', class: 'vue', logo: vueLogo, progress: 1,
   },
   {
-    type: 'edom', name: 'Laravel', class: 'laravel', logo: laravelLogo, progress: 0.4,
+    type: 'edom', name: 'Laravel', class: 'laravel', logo: laravelLogo, progress: 0.3,
   },
   {
     type: 'edom', name: 'Docker', class: 'docker', logo: dockerLogo, progress: 0.5,
   },
   {
-    type: 'edom', name: 'node', class: 'node', logo: nodeLogo, progress: 0.75,
+    type: 'edom', name: 'node', class: 'node', logo: nodeLogo, progress: 0.7,
   },
   {
     type: 'neighboring', name: 'Wordpress', class: 'wp', logo: wordpressLogo, progress: 1.0,
@@ -167,10 +184,19 @@ const skills = [
     type: 'neighboring', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.2,
   },
   {
-    type: 'neighboring', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.3,
+    type: 'neighboring', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.4,
   },
   {
     type: 'neighboring', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.6,
+  },
+  {
+    type: 'jferda', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 1.0,
+  },
+  {
+    type: 'jferda', name: 'Material Design', class: 'material', logo: materialLogo, progress: 0.6,
+  },
+  {
+    type: 'jferda', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.2,
   },
 ];
 

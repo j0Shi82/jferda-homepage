@@ -1,7 +1,9 @@
 <script>
-import { isLocalizationLoading, setupLocalization } from 'utils/imports/core';
-import { isMobileBreakpoint } from 'utils/imports/store';
-import { MainHeader, MainDrawer, AppContent } from 'utils/imports/components';
+import { setupLocalization } from 'utils/imports/core';
+import { isMobileBreakpoint, isLocalizationLoading } from 'utils/imports/store';
+import Header from 'components/header/Header.svelte';
+import Drawer from 'components/drawer/Drawer.svelte';
+import AppContent from 'components/content/AppContent.svelte';
 
 // global SCSS
 import 'assets/style/global.scss';
@@ -10,7 +12,7 @@ setupLocalization();
 </script>
 
 {#if !$isLocalizationLoading}
-<MainHeader />
-<MainDrawer modal="{$isMobileBreakpoint}" />
-<AppContent />
+    <Header />
+    <Drawer modal="{$isMobileBreakpoint}" />
+    <AppContent />
 {/if}

@@ -8,7 +8,7 @@ import routeLoaded from 'router/routeLoaded';
 
 // locale
 import {
-  _, register, init, date, isLoading,
+  _, register, init, date, addMessages,
 } from 'svelte-i18n';
 import setupLocalization from 'locale/i18n';
 
@@ -24,6 +24,6 @@ export {
   date as formatDate,
   register as registerLocaleDict,
   init as initLocalization,
-  isLoading as isLocalizationLoading,
+  addMessages as addLocalizationFile,
   setupLocalization,
 };

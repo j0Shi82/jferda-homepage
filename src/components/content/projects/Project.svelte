@@ -2,18 +2,22 @@
 import {
   svelteTransitionFade, svelteLifecycleOnMount, svelteLifecycleOnDestroy,
 } from 'utils/imports/svelte';
-import {
-  ProjectDescription, ProjectKeys, ProjectSkills, ProjectGallery, ProjectLinks, Loader,
-} from 'utils/imports/components';
 import { currentProject, animationsActive, projectInitializing } from 'utils/imports/store';
 import { routingFadeDuration } from 'utils/imports/config';
 import { preloadImages, getProjectAnimationParams } from 'utils/imports/helpers';
 import { projectList, skillList } from 'utils/imports/data';
+// components
+import ProjectDescription from 'components/content/projects/ProjectDescription.svelte';
+import ProjectKeys from 'components/content/projects/ProjectKeys.svelte';
+import ProjectSkills from 'components/content/projects/ProjectSkills.svelte';
+import ProjectGallery from 'components/content/projects/ProjectGallery.svelte';
+import ProjectLinks from 'components/content/projects/ProjectLinks.svelte';
+import Loader from 'components/utilities/atoms/Loader.svelte';
 
 import 'assets/style/project.scss';
 
-let animationTotalDuration = $animationsActive ? 2500 : 0;
-$: animationTotalDuration = $animationsActive ? 2500 : 0;
+let animationTotalDuration = $animationsActive ? 1500 : 0;
+$: animationTotalDuration = $animationsActive ? 1500 : 0;
 let currentTimeout = null;
 
 // animation logic
@@ -37,6 +41,7 @@ function getSectionAnimationParams(projectData) {
 // scaling and animations
 let projectData;
 let scaleY = 1;
+let padding = 1;
 let initialized = false;
 let loading = true;
 let routeContainer;
@@ -60,7 +65,15 @@ function scale() {
   if ($animationsActive) {
     initialized = false;
     // scale window to device height and unfold when animations finished
-    scaleY = (window.innerHeight - 48) / projectContainer.clientHeight;
+    scaleY = (window.innerHeight - 96) / projectContainer.clientHeight;
+
+    // changing padding will force browsers to redraw the page, it's an ugly way to get rid of blurry text after scale in chrome
+    const el = document.querySelector('.jdev-route-project');
+    el.addEventListener('transitionend', (e) => {
+      if (e.target === el) {
+        padding = 0;
+      }
+    });
 
     if (currentTimeout) clearTimeout(currentTimeout);
     currentTimeout = setTimeout(() => {
@@ -114,7 +127,7 @@ svelteLifecycleOnDestroy(() => {
   {#each projectList as project}
     {#if project.ident === $currentProject}
     <div class="mdc-layout-grid" bind:this="{projectContainer}">
-      <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__inner" style="padding-right: {padding}px;">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="jdev-project-banner" style="background-image: url({projectData.projectPage.titleImage});" in:svelteTransitionFade="{{ duration: animationTotalDuration }}" />
         </div>
@@ -122,7 +135,9 @@ svelteLifecycleOnDestroy(() => {
         <ProjectDescription projectData="{projectData}" animationParams="{descAnimationParams}" />
         <ProjectKeys projectData="{projectData}" animationParams="{keysAnimationParams}" />
         <ProjectSkills projectData="{projectData}" animationParams="{skillsAnimationParams}" />
+        {#if projectData.projectPage.gallery.length > 0}
         <ProjectGallery projectData="{projectData}" animationParams="{galleryAnimationParams}" />
+        {/if}
       </div>
     </div>
     {/if}

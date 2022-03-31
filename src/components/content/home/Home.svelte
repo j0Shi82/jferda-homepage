@@ -1,11 +1,13 @@
 <script>
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFade, svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { HomeRoutes, Loader } from 'utils/imports/components';
 import { homeKnowledgeLogoItems } from 'utils/imports/data';
 import { routingFadeDuration } from 'utils/imports/config';
 import { isMobileBreakpoint, isDesktopBreakpoint, isTabletBreakpoint } from 'utils/imports/store';
 import { preloadImages } from 'utils/imports/helpers';
+// compopnents
+import HomeRoutes from 'components/content/home/HomeRoutes.svelte';
+import Loader from 'components/utilities/atoms/Loader.svelte';
 
 import 'assets/style/home.scss';
 

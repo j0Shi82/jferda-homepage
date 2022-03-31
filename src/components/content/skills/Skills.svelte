@@ -1,13 +1,18 @@
 <script>
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFade, svelteLifecycleOnMount, svelteTick } from 'utils/imports/svelte';
-import { SkillsProgressCat, Loader } from 'utils/imports/components';
 import { skillCategories, skillList } from 'utils/imports/data';
 import { routingFadeDuration } from 'utils/imports/config';
-import {
-  MaterialTab, MaterialTabBar, MaterialTabLabel, MaterialIcon,
-} from 'utils/imports/material';
 import { preloadImages } from 'utils/imports/helpers';
+// material
+import Tab, { Label as TabLabel } from '@smui/tab/styled';
+import TabBar from '@smui/tab-bar/styled';
+import { LeadingIcon } from '@smui/chips/styled';
+// components
+import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
+import Loader from 'components/utilities/atoms/Loader.svelte';
+// polyfill
+import 'intersection-observer';
 
 import 'assets/style/skills.scss';
 
@@ -30,12 +35,10 @@ svelteLifecycleOnMount(() => {
 
     svelteTick().then(() => {
       observerLeft = new IntersectionObserver((entries) => {
-        console.log('observerLeft', entries);
         showLeftArrow = !entries[0].isIntersecting;
       });
 
       observerRight = new IntersectionObserver((entries) => {
-        console.log('observerRight', entries);
         showRightArrow = !entries[0].isIntersecting;
       });
 
@@ -49,8 +52,8 @@ svelteLifecycleOnMount(() => {
   });
 
   return () => {
-    observerLeft.unobserve(leftArrowOberserver);
-    observerRight.unobserve(rightArrowOberserver);
+    if (observerLeft) observerLeft.unobserve(leftArrowOberserver);
+    if (observerRight) observerRight.unobserve(rightArrowOberserver);
   };
 });
 </script>
@@ -63,15 +66,19 @@ svelteLifecycleOnMount(() => {
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-      {#if showLeftArrow}<div class="jdev-arrow jdev-left-arrow"><MaterialIcon class="material-icons">arrow_back_ios</MaterialIcon></div>{/if}
-      <MaterialTabBar tabs={skillCategories} let:tab bind:active="{currentCat}">
+      {#if showLeftArrow}<div class="jdev-arrow jdev-left-arrow"><LeadingIcon class="material-icons">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"/></svg>
+      </LeadingIcon></div>{/if}
+      <TabBar tabs={skillCategories} let:tab bind:active="{currentCat}">
         {#if tab === skillCategories[0]}<div class="jdev-scroll-start" bind:this="{leftArrowOberserver}" />{/if}
-        <MaterialTab {tab}>
-          <MaterialTabLabel>{$localize(`skills.${tab}`)}</MaterialTabLabel>
-        </MaterialTab>
+        <Tab {tab}>
+          <TabLabel>{$localize(`skills.${tab}`)}</TabLabel>
+        </Tab>
         {#if tab === [...skillCategories].pop()}<div class="jdev-scroll-end" bind:this="{rightArrowOberserver}" />{/if}
-      </MaterialTabBar>
-      {#if showRightArrow}<div class="jdev-arrow jdev-right-arrow"><MaterialIcon class="material-icons">arrow_forward_ios</MaterialIcon></div>{/if}
+      </TabBar>
+      {#if showRightArrow}<div class="jdev-arrow jdev-right-arrow"><LeadingIcon class="material-icons">
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="20px" viewBox="0 0 24 24" width="20px" fill="currentColor"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+      </LeadingIcon></div>{/if}
     </div>
     {#each skillCategories as cat}
         <SkillsProgressCat catIdent="{cat}" catOpen={cat === currentCat} />

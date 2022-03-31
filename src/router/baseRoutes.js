@@ -7,6 +7,7 @@ const baseRoutes = [
   { name: 'projects_nwoun', component: () => import('components/content/projects/Project.svelte'), data: { projectIdent: 'nwoun' } },
   { name: 'projects_edom', component: () => import('components/content/projects/Project.svelte'), data: { projectIdent: 'edom' } },
   { name: 'projects_neighboring', component: () => import('components/content/projects/Project.svelte'), data: { projectIdent: 'neighboring' } },
+  { name: 'projects_jferda', component: () => import('components/content/projects/Project.svelte'), data: { projectIdent: 'jferda' } },
   { name: '404', component: () => import('components/content/home/Home.svelte'), data: {} },
 ];
 

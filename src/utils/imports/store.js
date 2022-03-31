@@ -6,8 +6,9 @@ import { location, querystring } from 'svelte-spa-router';
 import { locale, locales } from 'svelte-i18n';
 
 const { mobileState } = store.app.menu;
-const { screenWidth } = store.app.data;
+const { screenWidth, isTouchDevice } = store.app.data;
 const { routeName, isRouting } = store.app.router;
+const { isLoading, hasError } = store.app.i18n;
 const { isMobile, isTablet, isDesktop } = store.app.breakpoints;
 const { active } = store.app.animations;
 
@@ -17,6 +18,7 @@ export {
   setRouterIsRouting as storeSetRouterIsRouting,
   mobileState as menuMobileState,
   screenWidth,
+  isTouchDevice,
   routeName as currentRouteName,
   location as currentRouteLocation,
   querystring as currentRouteQuerystring,
@@ -29,4 +31,6 @@ export {
   currentProject,
   projectInitializing,
   active as animationsActive,
+  isLoading as isLocalizationLoading,
+  hasError as hasLocalizationError,
 };

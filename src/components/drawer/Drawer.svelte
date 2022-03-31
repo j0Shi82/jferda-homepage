@@ -2,21 +2,6 @@
 import { svelteLifecycleOnDestroy } from 'utils/imports/svelte';
 
 import {
-  MaterialDrawer,
-  MaterialContent,
-  MaterialList,
-  MaterialListGraphic,
-  MaterialListItem,
-  MaterialListText,
-  MaterialListSeparator,
-  MaterialSubheader,
-  MaterialSelect,
-  MaterialOption,
-  MaterialFormField,
-  MaterialSwitch,
-} from 'utils/imports/material';
-
-import {
   getLocalizedRoute,
   routerPush,
   localize,
@@ -34,6 +19,13 @@ import {
   drawerMenuItems,
   drawerMenuProjectItems,
 } from 'utils/imports/data';
+// material
+import Drawer, { Content } from '@smui/drawer/styled';
+import List, {
+  Item, Text, Separator, Subheader,
+} from '@smui/list/styled';
+import Switch from '@smui/switch/styled';
+import FormField from '@smui/form-field/styled';
 
 import 'assets/style/drawer.scss';
 
@@ -44,10 +36,10 @@ const drawerVariant = modal ? 'modal' : 'dismissible';
 let drawer;
 
 // basic routing functions
-function go(key) {
+function go() {
   projectInitializing.set(true);
   if ($isMobileBreakpoint) menuMobileState.set(false);
-  routerPush(getLocalizedRoute(key));
+  // routerPush(getLocalizedRoute(key));
 }
 
 // control drawer visibility on desktop, home never shows menu
@@ -100,43 +92,49 @@ svelteLifecycleOnDestroy(() => {
 }
 </style>
 
-<MaterialDrawer variant="{drawerVariant}" bind:this="{drawer}" class="mdc-top-app-bar--fixed-adjust">
-  <MaterialContent>
-    <MaterialList>
+<Drawer variant="{drawerVariant}" bind:this="{drawer}" class="mdc-top-app-bar--fixed-adjust">
+  <Content>
+    <List>
       {#each drawerMenuItems as item}
-        <MaterialListItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
-          <MaterialListGraphic class="material-icons" aria-hidden="true">{item.icon}</MaterialListGraphic>
-          <MaterialListText>{$localize(`navigation.${item.routeName}`)}</MaterialListText>
-        </MaterialListItem>
+        <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName}>
+          <span class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">
+            {@html item.icon}
+          </span>
+          <Text>{$localize(`navigation.routes.${item.routeName}`)}</Text>
+        </Item>
       {/each}
 
-      <MaterialListSeparator nav />
+      <Separator nav />
 
-      <MaterialSubheader>{$localize('navigation.projects.headline')}</MaterialSubheader>
+      <Subheader>{$localize('navigation.routes.projects')}</Subheader>
       {#each drawerMenuProjectItems as item}
-        <MaterialListItem href="javascript:void(0)" on:click={() => go(item.routeName)} activated={$currentRouteName === item.routeName}>
-          <MaterialListText>{$localize(`navigation.projects.${item.localeIdent}`)}</MaterialListText>
-        </MaterialListItem>
+        <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName}>
+          <Text>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</Text>
+        </Item>
       {/each}
 
-      <MaterialListSeparator nav />
+      <Separator nav />
+
+      <Item on:click={() => animationsActive.set(!$animationsActive)}>
+        <FormField class="jdev-animation-toggle">
+          <Switch bind:checked={$animationsActive} />
+          <span slot="label" class="jdev-cursor-pointer" on:click={() => animationsActive.set(!$animationsActive)}>{$localize('navigation.animationSwitchLabel')}</span>
+        </FormField>
+      </Item>
 
       {#if $locales.length > 1}
-      <MaterialListItem>
-        <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}">
+      <div class="jdev-list-item">
+        <!-- <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}"> -->
           {#each $locales as loc}
-            <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption>
+          <div class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)}>
+            <div class="jdev-flag {loc}" />
+          </div>
+            <!-- <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption> -->
           {/each}
-        </MaterialSelect>
-      </MaterialListItem>
+        <!-- </MaterialSelect> -->
+      </div>
       {/if}
-
-      <MaterialListItem>
-        <MaterialFormField class="jdev-animation-toggle">
-          <MaterialSwitch bind:checked={$animationsActive} />
-          <span slot="label">{$localize('navigation.animationSwitchLabel')}</span>
-        </MaterialFormField>
-      </MaterialListItem>
-    </MaterialList>
-  </MaterialContent>
-</MaterialDrawer>
+      
+    </List>
+  </Content>
+</Drawer>

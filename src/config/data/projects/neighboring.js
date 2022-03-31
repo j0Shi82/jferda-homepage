@@ -12,7 +12,7 @@ import screen5250 from 'assets/media/images/projects/neighboring/screenshot5-250
 
 export default {
   ident: 'neighboring',
-  titleLocaleKey: 'navigation.projects.neighboring',
+  titleLocaleKey: 'navigation.routes.projects_neighboring',
   skillsLocaleKeys: ['skills.wp', 'skills.php', 'skills.css'],
   descLocaleKey: 'projects.neighboring.desc',
   routeName: 'projects_neighboring',
@@ -23,6 +23,9 @@ export default {
         type: 'web',
         url: 'https://neighboringsatellites.ruhr/',
         labelLocaleIdent: 'project.neighboring.links.site',
+        bgColor: '#b1c903',
+        color: '#000',
+        colorClass: 'dark',
       },
     ],
     descLocaleKey: 'project.neighboring.desc',

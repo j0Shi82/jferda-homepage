@@ -1,11 +1,14 @@
 <script>
 import { svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { FlyingHeadline } from 'utils/imports/components';
-import {
-  MaterialImageList, MaterialImageListItem, MaterialImageListAspectContainer, MaterialImageListImage,
-} from 'utils/imports/material';
-import Div from '@smui/common/Div.svelte';
-import { Lightbox } from 'utils/imports/plugins';
+import Div from '@smui/common/elements/Div.svelte';
+// plugins
+import GLightbox from 'glightbox';
+// material
+import ImageList, {
+  Item as ImageListItem, ImageAspectContainer, Image as ImageListImage,
+} from '@smui/image-list/styled';
+// components
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 
 export let projectData = {};
 export let animationParams = {
@@ -23,11 +26,12 @@ export let animationParams = {
 // init lightbox
 let lightbox;
 let scrollTop = 0;
+
 svelteLifecycleOnMount(() => {
-  lightbox = Lightbox({
+  lightbox = GLightbox({
     onClose: () => {
       document.querySelector('#main-content').scrollTo(0, scrollTop);
-      // document.querySelector('.jdev-project-image-list').scrollIntoView();
+    // document.querySelector('.jdev-project-image-list').scrollIntoView();
     },
     openEffect: 'none',
     closeEffect: 'none',
@@ -59,13 +63,13 @@ function openGallery(i) {
         transitionDuration="{animationParams.headline.duration}" 
         transitionDelay="{animationParams.headline.delay}"
     />
-    <MaterialImageList class="jdev-project-image-list">
+    <ImageList class="jdev-project-image-list">
         {#each projectData.projectPage.gallery as item, i}
-        <MaterialImageListItem>
-            <MaterialImageListAspectContainer>
-            <MaterialImageListImage src="{item.thumb}" component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
-            </MaterialImageListAspectContainer>
-        </MaterialImageListItem>
+        <ImageListItem>
+            <ImageAspectContainer>
+            <ImageListImage src="{item.thumb}" component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
+            </ImageAspectContainer>
+        </ImageListItem>
         {/each}
-    </MaterialImageList>
+    </ImageList>
 </div>

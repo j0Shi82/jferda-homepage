@@ -1,17 +1,18 @@
 {
     "navigation": {
-        "home": "Home",
-        "about": "About",
-        "resume": "Resume",
-        "skills": "Skills",
-        "projects": {
-            "headline": "Projects",
-            "mmb": "MavsMoneyball",
-            "nwoun": "Neverwinter Uncensored",
-            "jferda": "j0shi.dev",
-            "lwm": "Last War Manager",
-            "edom": "e-domizil.de",
-            "neighboring": "Neighboring Satellites"
+        "routes": {
+            "home": "Home",
+            "about": "About",
+            "resume": "Resume",
+            "skills": "Skills",
+            "projects": "Projects",
+            "projects_mmb": "MavsMoneyball",
+            "projects_nwoun": "Neverwinter Uncensored",
+            "projects_jferda": "j0shi.dev",
+            "projects_lwm": "Last War Manager",
+            "projects_edom": "e-domizil.de",
+            "projects_neighboring": "Neighboring Satellites",
+            "404": "404 - Not Found"
         },
         "animationSwitchLabel": "Toggle animations"
     },
@@ -20,18 +21,30 @@
         "en": "English",
         "de": "Deutsch"
     },
+    "header": {
+        "label": {
+            "menu_open": "Open Menu",
+            "menu_close": "Close Menu",
+            "github": "Browse to Github Profile",
+            "mail": "Contact Through Mail"
+        }
+    },
     "home": {
         "maintext": "Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating lightweight, fast, and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>."
     },
     "about": {
         "bio": {
             "headline": "Biography",
-            "bio1": "Driven by things that I needed and couldn't find elsewhere, I have been coding since 1997. For most of my life I was labeling coding a hobby. But in reality that 'hobby' often consumed more time than all other activities combined. That's why, when I got stuck in life and needed to make a decision about my future, I decided to finally turn my passion into a profession.",
-            "bio2": "Although I surely had to get used to doing in a professional environment what I have been doing for much of my life, it was a smooth transition. It just felt natural and I'm glad I made that choice. I got into web development because most of my work had been web apps anyway. But more than that I had always been fascinated by the amount of possibilities the web offers. It has never been easier to connect with people and show your work to the world.",
+            "bio1": "Driven by things that I needed and couldn't find elsewhere, I have been coding since 1997. For most of my life I was labeling coding a hobby. But in reality that 'hobby' often consumed more time than all other activities combined. That's why I decided to finally turn my passion into a profession at a time when I got stuck in life and needed to make a decision about my future.",
+            "bio2": "Although I surely had to get used to doing in a professional environment what I had been doing for much of my life, it was a smooth transition. It just felt natural and I'm glad I made that choice. I got into web development because most of my work had been web apps anyway. But more than that I had always been fascinated by the amount of possibilities the web offers. It has never been easier to connect with people and show your work to the world.",
             "bio3": "Over the years I naturally touched many areas of development. The first code I've ever written was in Visual Basic before trying (and failing at) C. Then my focus for years were web apps based on PHP/SQL (back end) and plain HTML/CSS (front end). The infamous jQuery library then got me into JavaScript and currently it's most of what I'm doing. This surely isn't the end of the road however and I'm eager to learn what's next and evolve as developer and person."
         },
         "philosophy": {
             "headline": "Coding is...",
+            "hint": {
+                "touch": "click elements for more info",
+                "notouch": "hover over elements for more info"
+            },
             "satisfaction": {
                 "headline": "Satisfaction",
                 "text": "Within an app or project, there's not much you won't be able to do. That's why coding is a constant reward system that just keeps on giving, because you're    operating in a world in which pretty much all problems are solvable."
@@ -54,7 +67,7 @@
             },
             "lit": {
                 "headline": "Rocking",
-                "text": "The term 'nerdy' is no longer a contemporary label for developers. The new generation is a modern, open-minded, and social bunch. We do still consume energy drinks though."
+                "text": "The term 'nerdy' is no longer a stigma but an obligation. The new generation is a modern, open-minded, and social bunch. We do still consume energy drinks though."
             },
             "givingback": {
                 "headline": "Giving Back",
@@ -66,16 +79,22 @@
         "stillgoing": "since",
         "education": {
             "headline": "Education",
-            "gym": "German university entrance qualification at different schools in Gelsenkirchen.",
-            "uni": "Student of Bsc Psychology at Westfälische-Wilhelm-University in Münster.",
-            "edom": "Apprentice as software developer at e-domizil.de in Münster."
+            "gym": "German university entrance qualification at different schools in Gelsenkirchen, Germany.",
+            "uni": "Student of Bsc Psychology at Westfälische-Wilhelm-University in Münster, Germany.",
+            "edom": "Apprentice as software developer at e-domizil.de in Münster, Germany."
         },
         "experience": {
             "headline": "Experience",
-            "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Developed complementary and assisting web apps and scripts for personal use.",
-            "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps and scripts for personal use.",
-            "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Perfect World Entertainment.",
+            "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster, Germany. Developed complementary and assisting web apps for personal use.",
+            "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps for personal use.",
+            "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Gearbox Software.",
+            "neighboring": "Plan and develop the Wordpress based web presence <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
             "edom": "Software development team member at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes."
+        },
+        "skills": {
+            "headline": "Mixed Skills and Official Certificates",
+            "kmk": "KMK-Certificate 'English for IT Professionals', Level C1",
+            "sql": "SQL qualification at University Hagen, Germany"
         }
     },
     "skills": {
@@ -93,22 +112,25 @@
         "docker": "Docker",
         "bootstrap": "Bootstrap",
         "node": "Node",
-        "css": "CSS"
+        "css": "CSS",
+        "tailwind": "Tailwind CSS",
+        "svelte": "Svelte",
+        "material": "Material Design"
     },
     "projects": {
         "learnmore": "Learn more",
         "skillsep": ", ",
-        "mmb": {
-            "desc": "MavsMoneyball was mainly a blogging project. It was great to cover a sport that I love and a team that I root for. But I did also develop a statistical app to complement my blog work."
-        },
         "edom": {
-            "desc": "This was the first commercial project I worked on. I was fortunate enough that I could be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
+            "desc": "e-domizil.de was the first commercial project I worked on. I was very fortunate to be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
         },
         "nwoun": {
-            "desc": "NWO:UN has been my biggest personal project to date. We served the game's community for nearly five years and delivered content and tools to over 100,000 players per month."
+            "desc": "'NWO:UN' has been my biggest personal project to date. We served a MMORPG's community for nearly five years and delivered content and tools to over 100,000 players per month."
         },
         "neighboring": {
             "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
+        },
+        "jferda": {
+            "desc": "The idea of j0shi.dev was born when I was searching for a reason to get into new technologies I hadn't tried before (Svelte, Material Design). Plus the site obviously comes with the benefit of showing the world what I'm all about."
         }
     },
     "project": {
@@ -121,12 +143,12 @@
             "github": "Repository"
         },
         "nwoun": {
-            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain the site or create content.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain all features on the site or create content. I however still host a small game-related news hub, which I coded after the project had already shut down.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
             "highlights": {
                 "1": {
                     "1": "Customized Wordpress Blog",
                     "2": "Integrated dozens of plugins",
-                    "3": "Theme tweaks and plenty UI enhancements"
+                    "3": "Optimization, Tweaks, and Enhancements"
                 },
                 "2": {
                     "1": "Game-Specific Apps",
@@ -150,12 +172,12 @@
                 }
             },
             "links": {
-                "blog": "Unblogged",
-                "forum": "Uncensored"
+                "forum": "Project Site",
+                "repo": "Repository"
             }
         },
         "edom": {
-            "desc": "E-Domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, internalization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
+            "desc": "e-domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, localization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
             "highlights": {
                 "1": {
                     "1": "Full-Stack Development",
@@ -174,8 +196,8 @@
                 },
                 "4": {
                     "1": "Datepicker Integration",
-                    "2": "Customized Flatpickr to fit our needs",
-                    "3": "Multiple pickers on single page sync"
+                    "2": "Customized to fit our needs",
+                    "3": "Based on Flatpickr"
                 },
                 "5": {
                     "1": "Legacy Browser Support",
@@ -184,8 +206,7 @@
                 }
             },
             "links": {
-                "edom": "e-domizil.de",
-                "to": "tourist-online.de"
+                "edom": "e-domizil.de"
             }
         },
         "neighboring": {
@@ -219,6 +240,39 @@
             },
             "links": {
                 "site": "Website"
+            }
+        },
+        "jferda": {
+            "desc": "j0shi.dev is my personal portfolio site that I primarily made just for fun and to get started with Svelte (and using Webpack alongside it). It also uses Tailwind CSS for the same reasons. I did experiment with a full localization (including a custom router setup with localized urls), all sorts of CSS animations, timings, as well as a distinct import structure to make module management less chaotic.<br /><br />The most fun though was rebranding popular tech logos using my own nickname ('j0Shi') that I'm using since my teenage days. I know the notation looks a bit silly nowadays, but I roll with it because why the heck not! Never growing up is part of my identity.<br /><br />j0shi.dev obviously also showcases everything you would expect from a portfolio site, like projects and skills. Have fun getting to know me!",
+            "highlights": {
+                "1": {
+                    "1": "Webpack and Svelte",
+                    "2": "Getting used to Svelte and associated packages",
+                    "3": "Integrate and customize Webpack"
+                },
+                "2": {
+                    "1": "CSS Animations",
+                    "2": "Experiment with different CSS animations",
+                    "3": "Trying to time and chain them in a fun way"
+                },
+                "3": {
+                    "1": "Material Design",
+                    "2": "Learning and using the principles",
+                    "3": "Implementation with SMUI"
+                },
+                "4": {
+                    "1": "Branding",
+                    "2": "Rebrand logos using my nickname",
+                    "3": "Fun times (and they don't look too bad)"
+                },
+                "5": {
+                    "1": "Portfolio",
+                    "2": "Present info in a short but meaningful way",
+                    "3": "Properly reflect about skills and projects"
+                }
+            },
+            "links": {
+                "repo": "Repository"
             }
         }
     }

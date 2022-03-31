@@ -1,4 +1,6 @@
 const isTest = process.env.NODE_ENV === 'test';
+const target = process.env.TARGET || 'modern';
+const isLegacy = target === 'legacy';
 
 const configTest = {
   presets: [
@@ -13,10 +15,34 @@ const configTest = {
   ],
 };
 
-const config = {
+const configModern = {
   presets: [
-    '@babel/preset-modules',
+    [
+      '@babel/preset-env',
+      {
+        bugfixes: true,
+        targets: { esmodules: true },
+      },
+    ],
   ],
 };
 
-module.exports = isTest ? configTest : config;
+const configLegacy = {
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        useBuiltIns: 'entry',
+        corejs: 3,
+        targets: ['defaults', 'not IE 11'],
+      },
+    ],
+  ],
+};
+
+let config = {};
+if (isTest) config = configTest;
+else if (isLegacy) config = configLegacy;
+else config = configModern;
+
+module.exports = config;

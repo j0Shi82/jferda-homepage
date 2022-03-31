@@ -1,9 +1,10 @@
 <script>
 import { svelteTransitionSlide } from 'utils/imports/svelte';
-import { SkillsProgressRow } from 'utils/imports/components';
 import { skillList } from 'utils/imports/data';
 import { atomTransitionDuration, atomTransitionDurationShort } from 'utils/imports/config';
 import { animationsActive } from 'utils/imports/store';
+// components
+import SkillsProgressRow from 'components/content/skills/SkillsProgressRow.svelte';
 
 import 'assets/style/skillsprogress.scss';
 

@@ -1,8 +1,8 @@
 // make sure these match the values in config/index
 
-$breakpoint-mobile: "(max-width: 599px)";
-$breakpoint-tablet: "(min-width: 600px) and (max-width: 839px)";
-$breakpoint-desktop: "(min-width: 840px)";
+$breakpoint-mobile: "(max-width: 767px)";
+$breakpoint-tablet: "(min-width: 768px) and (max-width: 1023px)";
+$breakpoint-desktop: "(min-width: 1024px)";
 
 $php-primary-color: #787cb5;
 $php-secondary-color: #0b0b0b;
@@ -64,3 +64,5 @@ $vscode-primary-color: #0a85d1;
 $vscode-secondary-color: #38a9f2;
 
 $h2-margin: 0.83em;
+
+$skill-progress-height: 10px;

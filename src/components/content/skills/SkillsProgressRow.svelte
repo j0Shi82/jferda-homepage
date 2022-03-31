@@ -1,6 +1,7 @@
 <script>
-import { MaterialLinearProgress } from 'utils/imports/material';
 import { animationsActive } from 'utils/imports/store';
+// material
+import LinearProgress from '@smui/linear-progress/styled';
 
 export let logoSrc;
 export let progress;
@@ -15,8 +16,10 @@ setTimeout(() => {
 </script>
 
 <style lang="scss">
+  @import 'src/assets/style/variables.scss';
   :global(.jdev-skills-progress .mdc-linear-progress__bar-inner) {
-    border-top: 10px solid;
+    border-top-width: $skill-progress-height;
+    border-top-style: solid;
   } 
 </style>
 
@@ -24,5 +27,5 @@ setTimeout(() => {
     <div class="jdev-skills-logo" title="{logoAlt}" style="background-image: url({logoSrc});" />
 </div>
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-3-phone jdev-skills-progress-align">
-    <MaterialLinearProgress class="jdev-skills-progress {themeClass}" progress="{currentProgress}" />
+    <LinearProgress class="jdev-skills-progress {themeClass}" aria-label="{ logoAlt }" progress="{currentProgress}" />
 </div>

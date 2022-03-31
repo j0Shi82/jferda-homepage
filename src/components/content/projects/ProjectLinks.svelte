@@ -1,9 +1,12 @@
 <script>
 import { localize } from 'utils/imports/core';
 import { svelteTransitionFly } from 'utils/imports/svelte';
-import { MaterialFab, MaterialFabLabel } from 'utils/imports/material';
-import { FontAwesomeIcon } from 'utils/imports/components';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+// material
+import Fab, { Label } from '@smui/fab/styled';
+// components
+import Icon from 'fa-svelte';
 
 export let projectData;
 export let animationTotalDuration;
@@ -14,13 +17,20 @@ export let animationTotalDuration;
     display: flex;
     justify-content: space-evenly;
   }
+
+  :global(button > svg.dark.fa-svelte > path) {
+    fill: #000;
+}
 </style>
 
 {#if projectData.projectPage.links.length}
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly="{{ y: -400, duration: animationTotalDuration }}">
     {#each projectData.projectPage.links as link, i}
         {#if link.type === 'web'}
-            <MaterialFab on:click="{() => { window.open(link.url); }}" extended><FontAwesomeIcon class="mdc-fab__icon" icon={faGlobe}></FontAwesomeIcon><MaterialFabLabel>{ $localize(link.labelLocaleIdent)}</MaterialFabLabel></MaterialFab>
+            <Fab style="background-color: {link.bgColor};" on:click="{() => { window.open(link.url); }}" extended><Icon class="{link.colorClass} mdc-fab__icon" icon={faGlobe}></Icon><Label style="color: {link.color}">{ $localize(link.labelLocaleIdent)}</Label></Fab>
+        {/if}
+        {#if link.type === 'github'}
+            <Fab style="background-color: {link.bgColor};" on:click="{() => { window.open(link.url); }}" extended><Icon class="{link.colorClass} mdc-fab__icon" icon={faGithub}></Icon><Label style="color: {link.color}">{ $localize(link.labelLocaleIdent)}</Label></Fab>
         {/if}
     {/each}
     </div>

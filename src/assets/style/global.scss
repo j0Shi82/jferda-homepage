@@ -20,7 +20,8 @@ body {
   overflow: auto;
   position: relative;
   margin-bottom: calc(1rem + env(safe-area-inset-bottom));
-  
+  z-index: 1;
+  background-color: #fff;
 }
 
 .mdc-drawer {
@@ -34,7 +35,7 @@ body {
 .main-content {
   height: 100%;
 
-  > div {
+  > div:not(.lds-fullscreen-wrapper) {
     // overflow: auto;
     // height: 100%;
     max-width: calc(1240px - 255px);
@@ -69,6 +70,11 @@ body {
 .jdev-avatar {
   margin: 0 auto;
 
+  @media #{$breakpoint-tablet} {
+    margin: 0;
+    margin-left: 12px;
+  }
+
   @media #{$breakpoint-desktop} {
     margin: 0;
     margin-left: 12px;
@@ -85,5 +91,6 @@ body {
     border-radius: 50%;
     border: 2px solid #{smui-theme.$on-primary};
     background-size: contain;
+    cursor: pointer;
   }
 }

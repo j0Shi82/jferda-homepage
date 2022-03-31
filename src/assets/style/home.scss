@@ -10,6 +10,13 @@
   display: flex;
   align-items: center;
 
+  .jdev-home-links {
+    padding: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
   .jdev-knowledge-logo {
     display: flex;
     justify-content: center;
@@ -27,6 +34,7 @@
       animation-iteration-count: 1;
       animation-fill-mode: both;
       animation-play-state: paused;
+      will-change: transform, opacity;
 
       &.animation-active {
         animation-play-state: running;
@@ -111,48 +119,48 @@
   }
 
   .home-routes {
-    &.vue .mdc-chip { background-color: $vue-secondary-color; }
-    &.php .mdc-chip { background-color: $php-secondary-color; }
-    &.javascript .mdc-chip { background-color: $javascript-secondary-color; }
-    &.docker .mdc-chip { background-color: $docker-primary-color; }
-    &.svelte .mdc-chip { background-color: $svelte-secondary-color; }
-    &.wordpress .mdc-chip { background-color: $wp-primary-color; }
-    &.node .mdc-chip { background-color: $node-secondary-color; }
-    &.git .mdc-chip { background-color: $git-secondary-color; }
+    &.vue .mdc-fab { background-color: $vue-secondary-color; }
+    &.php .mdc-fab { background-color: $php-secondary-color; }
+    &.javascript .mdc-fab { background-color: $javascript-secondary-color; }
+    &.docker .mdc-fab { background-color: $docker-primary-color; }
+    &.svelte .mdc-fab { background-color: $svelte-secondary-color; }
+    &.wordpress .mdc-fab { background-color: $wp-primary-color; }
+    &.node .mdc-fab { background-color: $node-secondary-color; }
+    &.git .mdc-fab { background-color: $git-secondary-color; }
+
+    a {
+      color: inherit;
+      text-decoration-color: inherit;
+      text-decoration-line: none;
+    }
 
     width: 46%;
     margin-left: 1%;
     margin-right: 1%;
 
-    .mdc-chip {
+    .mdc-fab {
       height: 48px;
       border-radius: 24px;
       width: 100%;
       padding: 0;
       background-color: smui-theme.$primary;
       transition: background-color 2s;
-
-      .image {
-        width: 44px;
-        height: 44px;
-        background-size: cover;
-        border-radius: 44px;
-        margin-left: 2px;
-        margin-right: 2px;
-        flex: 0 0 44px;
-      }
+      justify-content: flex-start;
 
       .material-icons {
         font-size: 52px;
         width: 52px;
         height: 52px;
-        margin-left: -2px;
-        color: smui-theme.$on-primary;
+        margin-left: 0px;
+
+        > svg {
+          fill: smui-theme.$on-primary;
+        }
       }
 
-      .mdc-chip__text {
+      .mdc-fab__label {
         white-space: normal;
-        text-align: center;
+        text-align: start;
         width: 100%;
 
         @include mdc-typography(subtitle2);

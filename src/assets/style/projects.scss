@@ -2,8 +2,6 @@
 @use 'src/assets/style/variables.scss';
 
 .jdev-route-projects {
-  overflow-x: hidden;
-
   .mdc-layout-grid__inner {
     @media #{variables.$breakpoint-tablet} {
       max-width: 500px;

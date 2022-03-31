@@ -35,6 +35,14 @@ currentLocale.subscribe(() => {
 
 currentRouteName.subscribe((value) => {
   isHomeRoute = value === 'home';
+  const skeletonLoaderWrapper = document.querySelector('.jdev-skeleton-loader-wrapper');
+  if (isHomeRoute) {
+    skeletonLoaderWrapper.classList.add('jdev-skeleton-loader-wrapper-home');
+    skeletonLoaderWrapper.classList.remove('jdev-skeleton-loader-wrapper-nothome');
+  } else {
+    skeletonLoaderWrapper.classList.add('jdev-skeleton-loader-wrapper-nothome');
+    skeletonLoaderWrapper.classList.remove('jdev-skeleton-loader-wrapper-home');
+  }
   setMetaData();
 });
 </script>
@@ -49,10 +57,6 @@ currentRouteName.subscribe((value) => {
     width: 100%;
     text-align: center;
   }
-}
-
-:global(.app-bar) {
-  position: absolute;
 }
 
 @import 'src/assets/style/variables.scss';
@@ -83,7 +87,7 @@ currentRouteName.subscribe((value) => {
   {/if}
 </svelte:head>
 
-<TopAppBar variant="static" dense color='primary' class="app-bar">
+<TopAppBar variant="fixed" dense color='primary' class="app-bar">
     <Row>
         {#if $isMobileBreakpoint}
         <Section>

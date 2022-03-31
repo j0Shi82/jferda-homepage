@@ -2,8 +2,6 @@
 @use 'src/assets/style/variables.scss';
 
 .jdev-route-resume {
-  overflow-x: hidden;
-
   a {
     font-weight: bold;
     color: smui-theme.$primary;

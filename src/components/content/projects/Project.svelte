@@ -12,7 +12,6 @@ import ProjectKeys from 'components/content/projects/ProjectKeys.svelte';
 import ProjectSkills from 'components/content/projects/ProjectSkills.svelte';
 import ProjectGallery from 'components/content/projects/ProjectGallery.svelte';
 import ProjectLinks from 'components/content/projects/ProjectLinks.svelte';
-import Loader from 'components/utilities/atoms/Loader.svelte';
 
 import 'assets/style/project.scss';
 
@@ -111,11 +110,7 @@ svelteLifecycleOnDestroy(() => {
 });
 </script>
 
-{#if loading}
-<div class="jdev-route-project-loader" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
-  <Loader />
-</div>
-{:else}
+{#if !loading}
 <div 
   class="jdev-route-project mdc-typography--body1" 
   style="transform: scaleY({scaleY});" 

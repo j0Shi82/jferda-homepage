@@ -10,7 +10,6 @@ import TabBar from '@smui/tab-bar/styled';
 import { LeadingIcon } from '@smui/chips/styled';
 // components
 import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
-import Loader from 'components/utilities/atoms/Loader.svelte';
 // polyfill
 import 'intersection-observer';
 
@@ -18,6 +17,7 @@ import 'assets/style/skills.scss';
 
 const openCat = 'lang';
 let currentCat;
+let initialPreloadFinished = false;
 
 // observe elements on each side of the navigation
 // if not visible, show corresponding arrows
@@ -32,6 +32,7 @@ svelteLifecycleOnMount(() => {
   // preload images to smoothen transitions
   preloadImages(skillList.filter((skill) => skill.type === openCat).map((skill) => skill.logo)).finally(() => {
     currentCat = openCat;
+    initialPreloadFinished = true;
 
     svelteTick().then(() => {
       observerLeft = new IntersectionObserver((entries) => {
@@ -58,11 +59,7 @@ svelteLifecycleOnMount(() => {
 });
 </script>
 
-{#if !currentCat}
-<div class="jdev-route-skills-loader" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
-  <Loader />
-</div>
-{:else}
+{#if initialPreloadFinished}
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">

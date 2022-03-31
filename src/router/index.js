@@ -1,8 +1,6 @@
 import { routeWrapper, getLocalizedRoute, getRouteGuards } from 'utils/imports/core';
 import { localeStandardLanguage, localeSupportedLanguages } from 'utils/imports/config';
 import baseRoutes from 'router/baseRoutes';
-// components
-import LoaderFullscreen from 'components/utilities/atoms/LoaderFullscreen.svelte';
 
 const routes = {};
 
@@ -12,7 +10,6 @@ localeSupportedLanguages.filter((lang) => lang !== localeStandardLanguage).forEa
     const p = prev;
     p[getLocalizedRoute(cur.name, lang)] = routeWrapper({
       asyncComponent: cur.component,
-      loadingComponent: LoaderFullscreen,
       userData: { lang, routeName: cur.name, ...cur.data },
       conditions: [...getRouteGuards(cur.name)],
     });
@@ -24,7 +21,6 @@ Object.assign(routes, baseRoutes.reduce((prev, cur) => {
   const p = prev;
   p[getLocalizedRoute(cur.name, localeStandardLanguage)] = routeWrapper({
     asyncComponent: cur.component,
-    loadingComponent: LoaderFullscreen,
     userData: { lang: localeStandardLanguage, routeName: cur.name, ...cur.data },
     conditions: [...getRouteGuards(cur.name)],
   });

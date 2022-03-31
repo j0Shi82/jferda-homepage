@@ -18,7 +18,7 @@ export default {
     },
     router: {
       // transition between routes, 0 to disable
-      routingFadeDuration: 250,
+      routingFadeDuration: 0,
     },
     animations: {
       headerTransitionDuration: 500,

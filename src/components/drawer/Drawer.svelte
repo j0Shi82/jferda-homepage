@@ -42,17 +42,33 @@ function go() {
   // routerPush(getLocalizedRoute(key));
 }
 
+let timeout;
+const handleScrollLock = (state) => {
+  clearTimeout(timeout);
+  if (state) {
+    window.scrollTo(0, 0);
+    timeout = setTimeout(() => {
+      document.querySelector('body').classList.add('jdev-scroll-lock');
+    }, 250);
+  } else {
+    document.querySelector('body').classList.remove('jdev-scroll-lock');
+  }
+};
+
 // control drawer visibility on desktop, home never shows menu
 $: {
   if (drawer && $currentRouteName !== null) {
     if (!modal && $currentRouteName === 'home') {
       drawer.setOpen(false);
+      handleScrollLock(false);
     } else {
       drawer.setOpen(true);
+      handleScrollLock(true);
     }
 
     if (modal) {
       drawer.setOpen($menuMobileState);
+      handleScrollLock($menuMobileState);
     }
   }
 }

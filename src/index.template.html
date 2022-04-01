@@ -21,10 +21,22 @@
 			}
 		}
 
+		@media (min-width: 768px) {
+			body {
+				height: 100vh;
+				overflow: hidden;
+			}
+		}
+
 		body {
-			height: 100vh;
-			overflow: hidden;
 			margin: 0;
+		}
+
+		body.jdev-scroll-lock {
+			overflow: hidden;
+			height: 100vh;
+			position: fixed;
+			width: 100%;
 		}
 
 		.jdev-skeleton-top-bar {

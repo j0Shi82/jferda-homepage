@@ -30,7 +30,7 @@ if ('matchMedia' in window) {
   isMobile = storeTypeWritable(mqlMobile.matches);
 
   // isMenuOpen.set(true) because menu is alwys visible on table and desktop
-  const mqlTablet = window.machMedia(tabletBreakpointQueryString);
+  const mqlTablet = window.matchMedia(tabletBreakpointQueryString);
   const mqlTabletListener = (v) => { isTablet.set(v.matches); };
   if ('addEventListener' in mqlMobile) {
     mqlTablet.addEventListener('change', mqlTabletListener);

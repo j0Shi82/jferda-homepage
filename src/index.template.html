@@ -41,10 +41,12 @@
 
 		.jdev-skeleton-top-bar {
 			position: absolute;
-			height: 40px;
+			height: 36px;
 			margin-top: 8px;
-			margin-left: 8px;
+			margin-left: 6px;
+			padding: 2px;
 			width: calc(100% - 16px);
+			text-align: center;
 			/* box-shadow: 0 5px 20px 0 rgb(0 0 0 / 75%); */
 			background: linear-gradient(-90deg, #cccccc 0%, #fcfcfc 50%, #cccccc 100%);
 			background-size: 400% 400%;
@@ -247,9 +249,25 @@
 	</style>	
 </head>	
 <body>
-	<div class="jdev-skeleton-top-bar"></div>
+	<div class="jdev-skeleton-top-bar" id="jdev-skeleton-top-bar"></div>
 	<div class="jdev-skeleton-loader-wrapper jdev-skeleton-loader-wrapper-home">
-		<div class="jdev-skeleton-loader"><div class="jdev-skeleton-avatar"></div><div></div><div></div><div></div><div></div></div>
+		<div class="jdev-skeleton-loader"><div class="jdev-skeleton-avatar" id="jdev-skeleton-avatar"></div><div></div><div></div><div></div><div></div></div>
 	</div>	
+	<script src='https://js.sentry-cdn.com/31c8e57a40e34abb89bc5cf57ded1ce9.min.js' crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		function handleError() {
+			var avatarEl = document.getElementById('jdev-skeleton-avatar');
+			var topbarEl = document.getElementById('jdev-skeleton-top-bar');
+			avatarEl.style.backgroundImage = 'url(\'sad-face-in-rounded-square.png\')';
+			avatarEl.style.backgroundSize = '96px';
+			topbarEl.style.background = '#e4a575';
+			topbarEl.style.animation = 'none';
+			topbarEl.style.height = 'auto';
+			topbarEl.innerHTML = 'There was a critical problem loading the website. Please check if your <a href="https://browser-update.org/update-browser.html" target="_blank">browser is up-to-date</a>. This might also just be a temporary hiccup. So you might be able to enjoy j0shi.dev by checking back later.';
+		};
+
+		window.addEventListener('error', handleError);
+		window.addEventListener('onunhandledrejection', handleError);
+	</script>
 </body>
 </html>

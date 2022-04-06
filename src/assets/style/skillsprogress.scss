@@ -28,131 +28,153 @@
     align-items: center;
   }
 
+  .jdev-skills-upcoming {
+    opacity: 0.3;
+  }
+
+  .jdev-skills-upcoming-icon {
+    position: absolute;
+    height: 48px;
+    right: 0;
+  }
+
   .jdev-skills-progress {
     height: $skill-progress-height;
 
     &.php {
-      @include mdc-linear-progress-bar-color(#787CB5);
+      @include mdc-linear-progress-bar-color($php-primary-color);
     }
 
     &.java {
-      @include mdc-linear-progress-bar-color(#e27006);
+      @include mdc-linear-progress-bar-color($java-primary-color);
     }
 
     &.javascript {
-      @include mdc-linear-progress-bar-color(#f7df1e);
+      @include mdc-linear-progress-bar-color($javascript-primary-color);
     }
 
     &.sql {
-      @include mdc-linear-progress-bar-color(#349adc);
+      @include mdc-linear-progress-bar-color($sql-primary-color);
     }
 
     &.csharp {
-      @include mdc-linear-progress-bar-color(#813084);
+      @include mdc-linear-progress-bar-color($csharp-primary-color);
     }
 
     &.html {
-      @include mdc-linear-progress-bar-color(#f16529);
+      @include mdc-linear-progress-bar-color($html-primary-color);
     }
 
     &.css {
-      @include mdc-linear-progress-bar-color(#29a9df);
+      @include mdc-linear-progress-bar-color($css-primary-color);
     }
 
     &.bootstrap {
-      @include mdc-linear-progress-bar-color(#563d7c);
+      @include mdc-linear-progress-bar-color($bootstrap-primary-color);
     }
 
     &.jquery {
-      @include mdc-linear-progress-bar-color(#0769ad);
+      @include mdc-linear-progress-bar-color($jquery-primary-color);
     }
 
     &.node {
-      @include mdc-linear-progress-bar-color( #72aa62);
+      @include mdc-linear-progress-bar-color( $node-primary-color);
     }
 
     &.laravel {
-      @include mdc-linear-progress-bar-color(#fc5642);
+      @include mdc-linear-progress-bar-color($laravel-primary-color);
     }
 
     &.material {
-      @include mdc-linear-progress-bar-color(#757575);
+      @include mdc-linear-progress-bar-color($material-primary-color);
     }
 
     &.phpbb {
-      @include mdc-linear-progress-bar-color(#167db8);
+      @include mdc-linear-progress-bar-color($phpbb-primary-color);
     }
 
     &.svelte {
-      @include mdc-linear-progress-bar-color(#ff3e00);
+      @include mdc-linear-progress-bar-color($svelte-primary-color);
     }
 
     &.vue {
-      @include mdc-linear-progress-bar-color(#41b883);
+      @include mdc-linear-progress-bar-color($vue-primary-color);
     }
 
     &.wp {
-      @include mdc-linear-progress-bar-color(#464342);
+      @include mdc-linear-progress-bar-color($wp-primary-color);
     }
 
     &.babel {
-      @include mdc-linear-progress-bar-color(#f9dc3e);
+      @include mdc-linear-progress-bar-color($babel-primary-color);
     }
 
     &.eslint {
-      @include mdc-linear-progress-bar-color(#4b32c3);
+      @include mdc-linear-progress-bar-color($eslint-primary-color);
     }
 
     &.express {
-      @include mdc-linear-progress-bar-color(#99cb60);
+      @include mdc-linear-progress-bar-color($express-primary-color);
     }
 
     &.jest {
-      @include mdc-linear-progress-bar-color(#a04e5b);
+      @include mdc-linear-progress-bar-color($jest-primary-color);
     }
 
     &.i18next {
-      @include mdc-linear-progress-bar-color(#26a69a);
+      @include mdc-linear-progress-bar-color($i18next-primary-color);
     }
 
     &.npm {
-      @include mdc-linear-progress-bar-color(#cb3837);
+      @include mdc-linear-progress-bar-color($npm-primary-color);
     }
 
     &.webpack {
-      @include mdc-linear-progress-bar-color(#8ed6fb);
+      @include mdc-linear-progress-bar-color($webpack-primary-color);
     }
 
     &.docker {
-      @include mdc-linear-progress-bar-color(#2496ed);
+      @include mdc-linear-progress-bar-color($docker-primary-color);
     }
 
     &.git {
-      @include mdc-linear-progress-bar-color(#f05133);
+      @include mdc-linear-progress-bar-color($git-primary-color);
     }
 
     &.jira {
-      @include mdc-linear-progress-bar-color(#156fea);
+      @include mdc-linear-progress-bar-color($jira-primary-color);
     }
 
     &.mysql {
-      @include mdc-linear-progress-bar-color(#f39e24);
+      @include mdc-linear-progress-bar-color($mysql-primary-color);
     }
 
     &.photoshop {
-      @include mdc-linear-progress-bar-color(#070034);
+      @include mdc-linear-progress-bar-color($photoshop-primary-color);
     }
 
     &.sentry {
-      @include mdc-linear-progress-bar-color(#221f20);
+      @include mdc-linear-progress-bar-color($sentry-primary-color);
     }
 
     &.vscode {
-      @include mdc-linear-progress-bar-color(#0a85d1);
+      @include mdc-linear-progress-bar-color($vscode-primary-color);
     }
 
     &.tailwind {
-      @include mdc-linear-progress-bar-color(#35bef8);
+      @include mdc-linear-progress-bar-color($tailwind-primary-color);
+    }
+
+    &.qwik {
+      @include mdc-linear-progress-bar-color($qwik-primary-color);
+    }
+
+    &.bulma {
+      @include mdc-linear-progress-bar-color($bulma-primary-color);
+    }
+
+    &.vite {
+      @include mdc-linear-progress-bar-color($vite-primary-color);
     }
   }
 }

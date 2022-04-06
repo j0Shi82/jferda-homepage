@@ -15,6 +15,8 @@ import svelteLogo from 'assets/media/images/skills/frameworks/svelte.svg';
 import wordpressLogo from 'assets/media/images/skills/frameworks/wordpress.svg';
 import jqueryLogo from 'assets/media/images/skills/frameworks/jquery.svg';
 import materialLogo from 'assets/media/images/skills/frameworks/material.svg';
+import bulmaLogo from 'assets/media/images/skills/frameworks/bulma.png';
+import qwikLogo from 'assets/media/images/skills/frameworks/qwik.png';
 
 import babelLogo from 'assets/media/images/skills/jspackages/babel.svg';
 import eslintLogo from 'assets/media/images/skills/jspackages/eslint.svg';
@@ -23,6 +25,7 @@ import webpackLogo from 'assets/media/images/skills/jspackages/webpack.svg';
 import expressLogo from 'assets/media/images/skills/jspackages/express.png';
 import jestLogo from 'assets/media/images/skills/jspackages/jest.png';
 import i18nextLogo from 'assets/media/images/skills/jspackages/i18next.png';
+import viteLogo from 'assets/media/images/skills/jspackages/vite.svg';
 
 import dockerLogo from 'assets/media/images/skills/software/docker.svg';
 import gitLogo from 'assets/media/images/skills/software/git.svg';
@@ -109,6 +112,12 @@ const skills = [
     type: 'frameworks', name: 'Tailwind CSS', class: 'tailwind', logo: tailwindLogo, progress: 0.4,
   },
   {
+    type: 'frameworks', name: 'Bulma.io', class: 'bulma', logo: bulmaLogo, progress: 0,
+  },
+  {
+    type: 'frameworks', name: 'Qwik', class: 'qwik', logo: qwikLogo, progress: 0,
+  },
+  {
     type: 'jspackages', name: 'npm', class: 'npm', logo: npmLogo, progress: 0.6,
   },
   {
@@ -128,6 +137,9 @@ const skills = [
   },
   {
     type: 'jspackages', name: 'i18next', class: 'i18next', logo: i18nextLogo, progress: 0.6,
+  },
+  {
+    type: 'jspackages', name: 'Vite', class: 'vite', logo: viteLogo, progress: 0,
   },
   {
     type: 'nwoun', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.4,

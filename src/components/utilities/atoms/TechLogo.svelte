@@ -17,6 +17,8 @@
       wp: () => import('assets/media/images/skills/frameworks/wordpress.svg'),
       jquery: () => import('assets/media/images/skills/frameworks/jquery.svg'),
       material: () => import('assets/media/images/skills/frameworks/material.svg'),
+      bulma: () => import('assets/media/images/skills/frameworks/bulma.png'),
+      qwik: () => import('assets/media/images/skills/frameworks/qwik.png'),
 
       babel: () => import('assets/media/images/skills/jspackages/babel.svg'),
       eslint: () => import('assets/media/images/skills/jspackages/eslint.svg'),
@@ -25,6 +27,7 @@
       express: () => import('assets/media/images/skills/jspackages/express.png'),
       jest: () => import('assets/media/images/skills/jspackages/jest.png'),
       i18next: () => import('assets/media/images/skills/jspackages/i18next.png'),
+      vite: () => import('assets/media/images/skills/jspackages/vite.svg'),
 
       docker: () => import('assets/media/images/skills/software/docker.svg'),
       git: () => import('assets/media/images/skills/software/git.svg'),

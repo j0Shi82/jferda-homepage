@@ -12,6 +12,7 @@
             "projects_lwm": "Last War Manager",
             "projects_edom": "e-domizil.de",
             "projects_neighboring": "Neighboring Satellites",
+            "projects_easycourses": "easycourses.io",
             "404": "404 - Nicht gefunden"
         },
         "animationSwitchLabel": "Animationen"
@@ -128,6 +129,9 @@
         },
         "jferda": {
             "desc": "Als ich nach einem halbwegs sinnvollen Projekt suchte, um neue Technologien (Svelte, Tailwind CSS) auszuprobieren, wurde j0shi.dev geboren! "
+        },
+        "easycourses": {
+            "desc": "Hier entsteht eine Web-Applikation, die es in wenigen Schritten ermöglicht Teilnehmer zufällig auf eine Kursliste zu verteilen. Das Hauptaugenmerk liegt dabei auf einer einfachen Bedienbarkeit und der Einhaltung strikter Datenschutzrichtlinien."
         }
     },
     "project": {

@@ -13,7 +13,7 @@ const generalMenuItems = [
   { routeName: 'skills', icon: menuSkillsIcon },
 ];
 
-const projectMenuItems = projectList.map((project) => ({
+const projectMenuItems = projectList.filter((project) => project.live).map((project) => ({
   routeName: project.routeName,
   localeIdent: project.ident,
 }));

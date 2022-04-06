@@ -12,6 +12,7 @@ import screen5250 from 'assets/media/images/projects/neighboring/screenshot5-250
 
 export default {
   ident: 'neighboring',
+  live: true,
   titleLocaleKey: 'navigation.routes.projects_neighboring',
   skillsLocaleKeys: ['skills.wp', 'skills.php', 'skills.css'],
   descLocaleKey: 'projects.neighboring.desc',

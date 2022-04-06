@@ -12,6 +12,7 @@
             "projects_lwm": "Last War Manager",
             "projects_edom": "e-domizil.de",
             "projects_neighboring": "Neighboring Satellites",
+            "projects_easycourses": "easycourses.io",
             "404": "404 - Not Found"
         },
         "animationSwitchLabel": "Toggle animations"
@@ -131,6 +132,9 @@
         },
         "jferda": {
             "desc": "The idea of j0shi.dev was born when I was searching for a reason to get into new technologies I hadn't tried before (Svelte, Material Design). Plus the site obviously comes with the benefit of showing the world what I'm all about."
+        },
+        "easycourses": {
+            "desc": "I'm currently building a web application that enables users to randomly assign participants to a list of courses in very few steps. The main goals are usability and compliance with strict privacy standards."
         }
     },
     "project": {

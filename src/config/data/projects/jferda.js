@@ -6,6 +6,7 @@ import gtmetrixInsights250 from 'assets/media/images/projects/jferda/gtmetrix-in
 
 export default {
   ident: 'jferda',
+  live: true,
   titleLocaleKey: 'navigation.routes.projects_jferda',
   skillsLocaleKeys: ['skills.svelte', 'skills.material'],
   descLocaleKey: 'projects.jferda.desc',

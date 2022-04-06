@@ -17,3 +17,4 @@ import 'assets/style/projects.scss';
         {/each}
     </div>
 </div>
+  

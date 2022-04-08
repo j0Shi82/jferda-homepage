@@ -4,6 +4,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const WebpackModuleNomodulePlugin = require('webpack-module-nomodule-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 const RobotstxtPlugin = require('robotstxt-webpack-plugin');
+const Visualizer = require('webpack-visualizer-plugin2');
 const webpack = require('webpack');
 
 const path = require('path');
@@ -119,6 +120,7 @@ module.exports = {
       sitemap: `${baseURL}/sitemap.xml`,
       host: baseURL,
     }),
+    new Visualizer(),
     new webpack.DefinePlugin({
       'process.env.BASEURL': JSON.stringify(baseURL),
     }),

@@ -40,7 +40,7 @@ function getSectionAnimationParams(projectData) {
 // scaling and animations
 let projectData;
 let scaleY = 1;
-let padding = 1;
+let padding = 2;
 let initialized = false;
 let loading = true;
 let routeContainer;

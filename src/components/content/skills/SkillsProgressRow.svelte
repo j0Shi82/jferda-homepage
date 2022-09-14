@@ -1,8 +1,10 @@
 <script>
 import { animationsActive } from 'utils/imports/store';
 // material
-import LinearProgress from '@smui/linear-progress/styled';
-import { Icon } from '@smui/fab/styled';
+import LinearProgress from '@smui/linear-progress';
+import { Icon } from '@smui/fab';
+import '@smui/linear-progress/_index.scss';
+import '@smui/fab/_index.scss';
 
 export let logoSrc;
 export let progress;

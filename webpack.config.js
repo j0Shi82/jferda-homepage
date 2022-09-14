@@ -92,6 +92,10 @@ module.exports = {
               // eslint-disable-next-line global-require
               implementation: require('sass'),
               sassOptions: {
+                loadPaths: [
+                  './src/assets/style',
+                  './node_modules',
+                ],
                 includePaths: [
                   './src/assets/style',
                   './node_modules',

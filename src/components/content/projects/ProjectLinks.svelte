@@ -4,7 +4,7 @@ import { svelteTransitionFly } from 'utils/imports/svelte';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 // material
-import Fab, { Label } from '@smui/fab/styled';
+import Fab, { Label } from '@smui/fab';
 // components
 import Icon from 'fa-svelte';
 

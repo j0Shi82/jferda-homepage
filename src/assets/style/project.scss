@@ -6,7 +6,7 @@
 .jdev-route-project {
   .jdev-project-image-list {
     @include image-list.standard-columns(5);
-    @include image-list.aspect(4/3);
+    @include image-list.aspect(calc(4/3));
 
     @media #{variables.$breakpoint-tablet} {
       @include image-list.standard-columns(3);

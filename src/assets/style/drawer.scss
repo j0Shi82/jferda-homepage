@@ -16,7 +16,7 @@
 
 .jdev-list-item {
   margin: (variables.$list-item-spacing * 2) 8px;
-  padding: 0 variables.$surface-padding / 2;
+  padding: 0 calc(variables.$surface-padding / 2);
   display: flex;
 }
 

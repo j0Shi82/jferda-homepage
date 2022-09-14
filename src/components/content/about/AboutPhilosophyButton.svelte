@@ -5,7 +5,8 @@ import { animationsActive, screenWidth } from 'utils/imports/store';
 // plugins
 const tippy = () => import('tippy.js');
 // material
-import Fab, { Label } from '@smui/fab/styled';
+import Fab, { Label } from '@smui/fab';
+import '@smui/fab/_index.scss';
 
 let el;
 export let headlineLocaleIdent;

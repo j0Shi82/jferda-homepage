@@ -4,7 +4,8 @@ import { isDesktopBreakpoint } from 'utils/imports/store';
 // material
 import List, {
   Item, Text, PrimaryText, SecondaryText,
-} from '@smui/list/styled';
+} from '@smui/list';
+import '@smui/list/_index.scss';
 // components
 import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 

@@ -20,12 +20,16 @@ import {
   drawerMenuProjectItems,
 } from 'utils/imports/data';
 // material
-import Drawer, { Content } from '@smui/drawer/styled';
+import Drawer, { Content } from '@smui/drawer';
 import List, {
   Item, Text, Separator, Subheader,
-} from '@smui/list/styled';
-import Switch from '@smui/switch/styled';
-import FormField from '@smui/form-field/styled';
+} from '@smui/list';
+import Switch from '@smui/switch';
+import FormField from '@smui/form-field';
+import '@smui/drawer/_index.scss';
+import '@smui/list/_index.scss';
+import '@smui/switch/_index.scss';
+import '@smui/form-field/_index.scss';
 
 import 'assets/style/drawer.scss';
 

@@ -5,9 +5,12 @@ import { skillCategories, skillList } from 'utils/imports/data';
 import { routingFadeDuration } from 'utils/imports/config';
 import { preloadImages } from 'utils/imports/helpers';
 // material
-import Tab, { Label as TabLabel } from '@smui/tab/styled';
-import TabBar from '@smui/tab-bar/styled';
-import { LeadingIcon } from '@smui/chips/styled';
+import Tab, { Label as TabLabel } from '@smui/tab';
+import TabBar from '@smui/tab-bar';
+import { LeadingIcon } from '@smui/chips';
+import '@smui/tab/_index.scss';
+import '@smui/tab-bar/_index.scss';
+import '@smui/chips/_index.scss';
 // components
 import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
 // polyfill

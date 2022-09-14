@@ -6,8 +6,10 @@ import { animationsActive } from 'utils/imports/store';
 // material
 import Card, {
   Content as CardContent, Media as CardMedia,
-} from '@smui/card/styled';
-import { LeadingIcon } from '@smui/chips/styled';
+} from '@smui/card';
+import { LeadingIcon } from '@smui/chips';
+import '@smui/card/_index.scss';
+import '@smui/chips/_index.scss';
 // components
 import TechLogo from 'components/utilities/atoms/TechLogo.svelte';
 

@@ -6,7 +6,8 @@ import { screenWidth, currentLocale } from 'utils/imports/store';
 import { getLocalizedRoute } from 'utils/imports/core';
 import { homeRoutes } from 'utils/imports/data';
 // material
-import Fab, { Label, Icon } from '@smui/fab/styled';
+import Fab, { Label, Icon } from '@smui/fab';
+import '@smui/fab/_index.scss';
 
 export let colorClass;
 </script>

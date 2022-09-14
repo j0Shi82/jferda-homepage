@@ -1,12 +1,13 @@
 <script>
 import { svelteLifecycleOnMount } from 'utils/imports/svelte';
-import Div from '@smui/common/elements/Div.svelte';
+import { Div } from '@smui/common/elements';
 // plugins
 import GLightbox from 'glightbox';
 // material
 import ImageList, {
   Item as ImageListItem, ImageAspectContainer, Image as ImageListImage,
-} from '@smui/image-list/styled';
+} from '@smui/image-list';
+import '@smui/image-list/_index.scss';
 // components
 import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
 

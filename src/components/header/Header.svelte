@@ -11,8 +11,10 @@ import {
   menuMobileState, isMobileBreakpoint, currentRouteName, currentLocale,
 } from 'utils/imports/store';
 // material
-import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar/styled';
-import IconButton from '@smui/icon-button/styled';
+import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
+import IconButton from '@smui/icon-button';
+import '@smui/top-app-bar/_index.scss';
+import '@smui/icon-button/_index.scss';
 // components
 import Icon from 'fa-svelte';
 

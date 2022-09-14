@@ -20,9 +20,9 @@ setTimeout(() => {
 }, delay);
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
   @import 'src/assets/style/variables.scss';
-  :global(.jdev-skills-progress .mdc-linear-progress__bar-inner) {
+  .jdev-skills-progress .mdc-linear-progress__bar-inner {
     border-top-width: $skill-progress-height;
     border-top-style: solid;
   } 

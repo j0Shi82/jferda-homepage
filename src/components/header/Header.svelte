@@ -51,12 +51,12 @@ currentRouteName.subscribe((value) => {
 });
 </script>
 
-<style lang="scss">
-:global(.mdc-top-app-bar) {
+<style lang="scss" global>
+.mdc-top-app-bar {
   z-index: 7;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.75);
 
-  :global(.jdev-title) {
+  .jdev-title {
     padding-left: 0;
     width: 100%;
     text-align: center;
@@ -65,7 +65,7 @@ currentRouteName.subscribe((value) => {
 
 @import 'src/assets/style/variables.scss';
 
-:global(.mdc-top-app-bar .jdev-drawer-toggle) {
+.mdc-top-app-bar .jdev-drawer-toggle {
   display: none;
 
   @media #{$breakpoint-mobile} {
@@ -75,12 +75,6 @@ currentRouteName.subscribe((value) => {
   @media #{$breakpoint-tablet} {
     display: block;
   }
-}
-
-.jdev-ukraine-heart-icon {
-  height: 48px;
-  width: 48px;
-  background-size: 48px;
 }
 </style>
 
@@ -104,7 +98,7 @@ currentRouteName.subscribe((value) => {
               {/if}
               </IconButton>
             {/if}
-            <div class="jdev-ukraine-heart-icon" style="background-image: url({ukraineHeartIcon});"></div>
+            <div class="jdev-ukraine-heart-icon" style="height: 48px; width: 48px; background-size: 48px; background-image: url({ukraineHeartIcon});"></div>
         </Section>
         {/if}
         <Section>

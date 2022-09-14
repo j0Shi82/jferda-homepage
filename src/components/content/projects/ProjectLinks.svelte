@@ -12,19 +12,14 @@ export let projectData;
 export let animationTotalDuration;
 </script>
 
-<style lang="scss">
-  .mdc-layout-grid__cell {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
-  :global(button > svg.dark.fa-svelte > path) {
+<style lang="scss" global>
+button > svg.dark.fa-svelte > path {
     fill: #000;
 }
 </style>
 
 {#if projectData.projectPage.links.length}
-    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly="{{ y: -400, duration: animationTotalDuration }}">
+    <div style="display: flex; justify-content: space-evenly;" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly="{{ y: -400, duration: animationTotalDuration }}">
     {#each projectData.projectPage.links as link, i}
         {#if link.type === 'web'}
             <Fab style="background-color: {link.bgColor};" on:click="{() => { window.open(link.url); }}" extended><Icon class="{link.colorClass} mdc-fab__icon" icon={faGlobe}></Icon><Label style="color: {link.color}">{ $localize(link.labelLocaleIdent)}</Label></Fab>

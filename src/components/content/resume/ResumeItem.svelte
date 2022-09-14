@@ -36,9 +36,9 @@ setTimeout(() => {
       visibility: visible;
     }
 
-    :global(.jdev-resume-file-attachment) {
-      font-size: 14px;
-    }
+    // :global().jdev-resume-file-attachment) {
+    //   font-size: 14px;
+    // }
   }
 </style>
 

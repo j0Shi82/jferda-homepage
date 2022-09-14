@@ -91,22 +91,22 @@ svelteLifecycleOnDestroy(() => {
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" global>
 
 @import 'src/assets/style/variables.scss';
 
-:global(.mdc-drawer) {
+.mdc-drawer {
   @media #{$breakpoint-mobile} {
     width: 100%;
   }
 }
 
-:global(.mdc-drawer--modal) {
+.mdc-drawer--modal {
   /* This is not needed for a page-wide modal. */
   position: absolute;
 }
 
-:global(.mdc-drawer-scrim) {
+.mdc-drawer-scrim {
   /* This is not needed for a page-wide modal. */
   position: absolute;
 }

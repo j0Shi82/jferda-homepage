@@ -50,12 +50,6 @@ export default {
         labelLocaleIdent: 'project.nwoun.links.forum',
         bgColor: '#b51208',
       },
-      {
-        type: 'github',
-        url: 'https://github.com/j0Shi82/nwoun-homepage-index',
-        labelLocaleIdent: 'project.nwoun.links.repo',
-        bgColor: '#b51208',
-      },
     ],
     descLocaleKey: 'project.nwoun.desc',
     keys: [

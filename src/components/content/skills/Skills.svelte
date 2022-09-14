@@ -11,6 +11,7 @@ import { LeadingIcon } from '@smui/chips';
 import '@smui/tab/_index.scss';
 import '@smui/tab-bar/_index.scss';
 import '@smui/chips/_index.scss';
+
 // components
 import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
 // polyfill

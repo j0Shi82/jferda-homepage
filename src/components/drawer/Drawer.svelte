@@ -135,10 +135,10 @@ svelteLifecycleOnDestroy(() => {
 
       <Separator nav />
 
-      <Item on:click={() => animationsActive.set(!$animationsActive)}>
-        <FormField class="jdev-animation-toggle">
+      <Item>
+        <FormField class="jdev-animation-toggle" style="user-select: none;">
           <Switch bind:checked={$animationsActive} />
-          <span slot="label" class="jdev-cursor-pointer" on:click={() => animationsActive.set(!$animationsActive)}>{$localize('navigation.animationSwitchLabel')}</span>
+          <span slot="label" class="jdev-cursor-pointer">{$localize('navigation.animationSwitchLabel')}</span>
         </FormField>
       </Item>
 

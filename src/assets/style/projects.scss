@@ -57,28 +57,25 @@
       cursor: pointer;
     }
 
+    &.hover {
+      .jdev-project-back-wrapper {
+        transform: rotateY(0deg);
+      }
+
+      .jdev-project-front-content, .jdev-project-front-media {
+        transform: rotateY(180deg);
+      }
+    }
+
     &.animations {
       .jdev-project-back-wrapper {
         transition: transform 0.8s;
         transform-style: preserve-3d;
-        backface-visibility: hidden;
-        transform: rotateY(180deg);
       }
 
       .jdev-project-front-content, .jdev-project-front-media, .jdev-project-back-media {
         transition: transform 0.8s;
         transform-style: preserve-3d;
-        backface-visibility: hidden;
-      }
-
-      &.hover {
-        .jdev-project-back-wrapper {
-          transform: rotateY(0deg);
-        }
-  
-        .jdev-project-front-content, .jdev-project-front-media {
-          transform: rotateY(180deg);
-        }
       }
     }
 
@@ -123,6 +120,10 @@
       position: relative;
     }
 
+    .jdev-project-front-content, .jdev-project-front-media, .jdev-project-back-media {
+      backface-visibility: hidden;
+    }
+
     .jdev-project-back-wrapper {
       position: absolute;
       top: 0;
@@ -131,6 +132,8 @@
       width: 100%;
       display: flex;
       flex-direction: column;
+      backface-visibility: hidden;
+      transform: rotateY(180deg);
       // background: linear-gradient(0deg, rgba(230,230,230,0) 0%, rgba(230,230,230,0.8) 30%, rgba(230,230,230,0.95) 100%);
   
       .jdev-project-back-overlay {

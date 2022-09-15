@@ -18,7 +18,7 @@ export let i;
 export let project;
 </script>
 
-<div class:hover="{hover || !project.live}"class:upcoming="{!project.live}" class:animations="{animationsActive}" class="jdev-project-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone" on:click={() => { hover = !hover; }}>
+<div class:hover="{hover || !project.live}"class:upcoming="{!project.live}" class:animations="{$animationsActive}" class="jdev-project-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone" on:click={() => { hover = !hover; }}>
     <div 
         class="card-container" 
         in:svelteTransitionScale="{{

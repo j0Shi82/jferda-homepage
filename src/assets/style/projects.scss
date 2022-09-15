@@ -16,28 +16,30 @@
   }
 
   .card-media-16x9 {
-    background-size: cover;
+    background-size: contain;
+    opacity: 0.7;
+    margin: 5px;
 
     &.nwoun {
-      background-image: url('../media/images/projects/nwoun/logo-un-500.jpg');
+      background-image: url('../media/images/projects/nwoun/logo-uncensored-1000.png');
     }
 
     &.nwgondtools {
-      background-image: url('../media/images/projects/gondtools/logo-small.png');
-      background-position: 68%;
+      background-image: url('../media/images/projects/gondtools/logo.png');
     }
 
     &.greezy {
-      background-image: url('../media/images/projects/greezy/greezy1.png');
-      background-position: 68%;
+      background-image: url('../media/images/projects/greezy/logo.png');
     }
 
     &.edom {
-      background-image: url('../media/images/projects/edom/projects-banner.jpg');
+      background-image: url('../media/images/projects/edom/logo.svg');
     }
 
     &.neighboring {
       background-image: url('../media/images/projects/neighboring/mainbackground2.png');
+      background-size: cover;
+      border-radius: 4px;
     }
 
     &.jferda {
@@ -49,99 +51,133 @@
     }
   }
 
-  .jdev-card-headline {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    text-align: center;
-  }
+  .jdev-project-card {
 
-  .jdev-card-subtitle {
-    margin: 0;
-    color: smui-theme.$primary;
-    text-align: center;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    &:not(.upcoming) {
+      cursor: pointer;
+    }
 
-    height: 16px;
-    position: relative;
-    margin-top: 10px;
-    > div {
+    &.animations {
+      .jdev-project-back-wrapper {
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+      }
+
+      .jdev-project-front-content, .jdev-project-front-media, .jdev-project-back-media {
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+      }
+
+      &.hover {
+        .jdev-project-back-wrapper {
+          transform: rotateY(0deg);
+        }
+  
+        .jdev-project-front-content, .jdev-project-front-media {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+
+    .jdev-project-front-content {
+      background-color: rgba(card-variables.$outline-color, 25%);
+      border-top: 1px solid card-variables.$outline-color;
+    }
+
+    .jdev-card-headline {
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .jdev-card-subtitle {
+      margin: 0;
+      color: smui-theme.$primary;
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+  
+      height: 16px;
+      position: relative;
+      margin-top: 10px;
+      > div {
+          position: absolute;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          z-index: 2;
+  
+          .jdev-techlogo + .jdev-techlogo {
+              margin-left: 5px;
+          }
+      }
+    }
+
+    .mdc-card {
+      position: relative;
+    }
+
+    .jdev-project-back-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      // background: linear-gradient(0deg, rgba(230,230,230,0) 0%, rgba(230,230,230,0.8) 30%, rgba(230,230,230,0.95) 100%);
+  
+      .jdev-project-back-overlay {
+        box-sizing: border-box;
         position: absolute;
         display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 1;
+        top: 0px;
+        left: 0px;
+        user-select: none;
+        height: 100%;
         width: 100%;
-        justify-content: center;
-        z-index: 2;
-
-        .jdev-techlogo + .jdev-techlogo {
-            margin-left: 5px;
+        padding: 16px;
+        background: rgba(230, 230, 230, 0.95);
+  
+        span {
+          text-align: center;
+  
+          &.link {
+            cursor: pointer;
+          }
         }
-    }
-  }
-
-  .mdc-card {
-    position: relative;
-  }
-
-  .jdev-project-hover-toggle {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width:48px;
-    height: 48px;
-    z-index: 3;
-    cursor: pointer;
-    background-color: card-variables.$outline-color;
-    border-radius: 100% 100% 0% 100%;
-
-    svg {
-      fill: smui-theme.$primary
-    }
-  }
-
-  .jdev-project-hover-content {
-    position: absolute;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 1;
-    user-select: none;
-    height: 100%;
-    width: 100%;
-    background: rgba(230, 230, 230, 0.95);
-    // background: linear-gradient(0deg, rgba(230,230,230,0) 0%, rgba(230,230,230,0.8) 30%, rgba(230,230,230,0.95) 100%);
-
-    span {
-      text-align: center;
-
-      &.link {
-        cursor: pointer;
+  
+        a, span.link {
+          font-weight: bold;
+          color: smui-theme.$primary;
+          text-decoration: none;
+  
+          &:hover {
+            opacity: 0.8;
+          }
+        }
       }
     }
-
-    a, span.link {
-      font-weight: bold;
-      color: smui-theme.$primary;
-      text-decoration: none;
-
-      &:hover {
-        opacity: 0.8;
-      }
+  
+    .jdev-project-upcoming-band {
+      background-image: url('../media/images/projects/upcoming-band.png');
+      width: 100%;
+      height: 70px;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      position: absolute;
+      background-repeat: no-repeat;
     }
-  }
-
-  .jdev-project-upcoming-band {
-    background-image: url('../media/images/projects/upcoming-band.png');
-    width: 100%;
-    height: 70px;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    position: absolute;
-    background-repeat: no-repeat;
   }
 }

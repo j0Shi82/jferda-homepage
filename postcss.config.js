@@ -4,7 +4,7 @@ const postcssDiscardDuplicates = require('postcss-discard-duplicates');
 const purgecss = require('@fullhuman/postcss-purgecss');
 
 const plugins = [
-  purgecss({
+  process.env.NODE_ENV === 'production' ? purgecss({
     content: [
       './src/**/*.html',
       './src/**/*.svelte',
@@ -15,7 +15,7 @@ const plugins = [
       './node_modules/glightbox/**/*.js',
     ],
     safelist: ['glightbox-clean', 'glightbox-body', 'glightbox-container', 'glightbox-slider', 'gslide-media', 'gslide-image', 'gslide', 'gslide-inner-content', 'gfadeIn', 'gfadeOut', 'gslideOutLeft', 'gslideInLeft', 'gslideOutRight', 'gslideInRight', 'gzoomIn', 'gzoomOut', 'gloader', 'goverlay', 'gcontainer', 'gclose', 'gprev', 'gnext', 'gbtn'],
-  }),
+  }) : () => {},
   autoprefixer(),
   postcssDiscardDuplicates,
 ];

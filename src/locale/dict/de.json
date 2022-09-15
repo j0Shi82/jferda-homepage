@@ -124,6 +124,12 @@
         "nwoun": {
             "desc": "Neverwinter:Uncensored ist bis heute mein größtes privates Projekt und eine echte Herzensangelegenheit. Während fünf spannender Jahre durfte ich Content und Web-Applikationen über 100.000 monatlichen Benutzern präsentieren."
         },
+        "gondtools": {
+            "desc": "Gond Tools sind die überarbeiteten und unter neuer Marke auftretenden Online-Tools, die ursprünglich für Neverwinter Uncensored erstellt wurden. Es ist ein News-Portal und diverse spiel-spezifische Apps für ein MMORPG online."
+        },
+        "greezy": {
+            "desc": "Greezy ist eine App, die es Benutzern erlaubt Rezepte, Gruppen und Einkaufslisten zu erstellen und zu verwalten sowie basierend auf diesen Rezepten und Listen Lebensmittel bei diversen Anbietern zu bestellen."
+        },
         "neighboring": {
             "desc": "Neighboring Satellites ist ein öffentliche gefördertes Projekt, welches die Kunstszene in Gelsenkirchen-Ückendorf fördern soll. Ich wurde mit der tecnischen Realisierung der Webseite beauftragt."
         },
@@ -175,6 +181,73 @@
             "links": {
                 "forum": "Webseite",
                 "repo": "Repository"
+            }
+        },
+        "gondtools": {
+            "desc": "Neverwinter Gond Tools ist als Nachfolger zu Neverwinter Uncensored entstanden. Ich erstelle keine Inhalte mehr für das Spiel, hoste meine Online-Tools aber weiterhin unter einer neuen URL und Marke. Zusätzlich steht der Quell-Code des Frontends als Open-Source zur Verfügung und die zugehörige API sowie der Web-Crawler werden folgen.<br /><br />Die ursprünglichen in jQuery geschriebenen Tools wurden komplett überarbeitet und auf eine modernere Basis gestellt. Das Frontend basiert auf Svelte und Tailwind, die API und der Web-Crawler sind in PHP und MySQL geschrieben. Zusätzlich gibt es einen Game-Crawler, der in einer Windows VM auf der GCP beheimatet ist. Diese verschiedenen Teile miteinander zu verknüpfen war die größte Herausforderung des Projektes und hat viel Spaß gebracht.<br /><br />Es werden hoffentlich in Zukunft noch weitere Features hinzugefügt. Die Original-Tools waren umfangreicher, werden aber Stück für Stück portiert.",
+            "highlights": {
+                "1": {
+                    "1": "Javascript Frontend",
+                    "2": "Basiert auf Svelte, Tailwind, und Webpack",
+                    "3": "Desktop und mobile Ansichten"
+                },
+                "2": {
+                    "1": "Web Scraper",
+                    "2": "PHP-Scraper, der per Cron gesteuert wird",
+                    "3": "Content-Tags für leichtere Suchen"
+                },
+                "3": {
+                    "1": "Drittanbieter APIs",
+                    "2": "YouTube, Twitter, Patreon",
+                    "3": "Plus zugehörige Bibliotheken"
+                },
+                "4": {
+                    "1": "Slim PHP API",
+                    "2": "Eigenständige REST API",
+                    "3": "Volle Dokumentation der Schnittstelle"
+                },
+                "5": {
+                    "1": "Cloud Computing und Hosting",
+                    "2": "Erfahrung gesammelt mit Cloud-Lösungen",
+                    "3": "z.B. AWS, Vercel, GCP"
+                }
+            },
+            "links": {
+                "web": "gond.tools",
+                "repo": "Repository"
+            }
+        },
+        "greezy": {
+            "desc": "Greezy ist ein klassisches \"Gibt es nicht? Mach ich selbst!\"-Projekt. Wir hatten als Familie viel zu viel mit der wöchentlichen Essenplanung zu tun. Also fing ich an eine App zu schrieben, die uns das Leben erleichtert. Wir hatten dank COVID ohnehin alle Einkäufe online abgewickelt, aber die wöchentlichen Einkaufslisten zu erstellen und zu bestellen war zeitaufwendig und langweilig. Daher erlaubt es Greezy diesen Prozess zu automatiseren und bei verschiedenen Anbietern Lebensmittel basierend auf Rezept- oder Einkaufslisten zu bestellen.<br /><br />Dazu können sich Benutzer unterdinander verbinden und Daten und sogar Anbieter-Logins teilen. Außerdem können Listen in verschiedene andere populäre Apps importiert werden. Das Rezept-Management erlaubt es dank vieler Optionen, die periodische Essenplanung immer wieder den eigenen Vorlieben anzupassen ohne dass man dafür ständig die Rezepte grundlegend ändern muss.",
+            "highlights": {
+                "1": {
+                    "1": "NUXT",
+                    "2": "VUE-Vertiefung mit NUXT",
+                    "3": "Vollwertige Server / Client-Applikation"
+                },
+                "2": {
+                    "1": "Gehostet mittels Cloud/Edge",
+                    "2": "Erfahrungen mit Vercel und Heroku gesammlt",
+                    "3": "Die Datenbank auf eigenen Server"
+                },
+                "3": {
+                    "1": "Vendor Logins",
+                    "2": "Login zu verschiedenen Anbietern ermöglichen",
+                    "3": "Suche und Bestellung von Artikeln"
+                },
+                "4": {
+                    "1": "Rezept-Verwaltung",
+                    "2": "Übernahme von Rezepten anderer Seiten",
+                    "3": "Icon-Schnittstellen zu anderen Services"
+                },
+                "5": {
+                    "1": "Login- und User-Verwaltung",
+                    "2": "Soziale Logins ermöglichen",
+                    "3": "Eigene Session-Verwaltung"
+                }
+            },
+            "links": {
+                "web": "greezy.app"
             }
         },
         "edom": {

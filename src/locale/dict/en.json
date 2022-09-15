@@ -226,7 +226,7 @@
             "desc": "Greezy started as little helper for our family. We had a hard time organising our weekly meal plans and grocery runs. So I wrote an app to help us handle all that. Thanks to COVID we already ordered all our food online, but assembling shopping lists and then buying the required ingredients from vendors was a repetitive task each and every week. Greezy let's you create shopping lists and recipe groups and automatically searches connected vendors for the items, which makes filling your shopping cart that much easier.<br /><br />Greezy let's users share vendor logins, recipes, and lists by connecting as family and also allows you to import and export data to other pupular related apps. The recipe management additionally offers many options so that you can quickly change aspects of your weekly meal plans without having to create different recipes and groups all the time.",
             "highlights": {
                 "1": {
-                    "1": "Nuxt",
+                    "1": "NUXT",
                     "2": "Enhanced VUE knowlegde with NUXT",
                     "3": "Full server / client application"
                 },

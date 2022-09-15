@@ -8,6 +8,8 @@
             "projects": "Projects",
             "projects_mmb": "MavsMoneyball",
             "projects_nwoun": "Neverwinter Uncensored",
+            "projects_nwgondtools": "Neverwinter Gond Tools",
+            "projects_greezy": "greezy.app",
             "projects_jferda": "j0shi.dev",
             "projects_lwm": "Last War Manager",
             "projects_edom": "e-domizil.de",
@@ -127,6 +129,12 @@
         "nwoun": {
             "desc": "'NWO:UN' has been my biggest personal project to date. We served a MMORPG's community for nearly five years and delivered content and tools to over 100,000 players per month."
         },
+        "gondtools": {
+            "desc": "Gond Tools are the refactored and rebranded tools I originally made for Neverwinter:Uncensored. It's a news aggregator and collection of apps for the Neverwinter MMORPG."
+        },
+        "greezy": {
+            "desc": "Greezy is an app that let's users manage recipes, recipe groups, and shopping lists and connects to vendors to automatically order ingredients based on your lists and recipes."
+        },
         "neighboring": {
             "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
         },
@@ -178,6 +186,73 @@
             "links": {
                 "forum": "Project Site",
                 "repo": "Repository"
+            }
+        },
+        "gondtools": {
+            "desc": "Neverwinter Gond Tools is a partial successor to Neverwinter Uncensored. I no longer create content for the game, but host my tool collection under a new website and brand. The front end is already open source and the associated API and web crawler will soon follow.<br /><br />I completely revamped the original tools that were mostly written in jQuery and based the project on a more modern tech stack. It consists of the front end (Svelte, Tailwind), the API (PHP, MySQL), a web crawler (PHP), and a game crawler (Windows VM, currently hosted on GCP). Connecting all these different tools to work alongside each other has been a major challenge and tons of fun.<br /><br />I hope to add more features to the site eventually. The original set of tools was way bigger and I'm refactoring them one by one.",
+            "highlights": {
+                "1": {
+                    "1": "Javascript Frontend",
+                    "2": "Based on Svelte, Tailwind, and Webpack",
+                    "3": "Full desktop and mobile support"
+                },
+                "2": {
+                    "1": "Web Scraper",
+                    "2": "Build a cron-based web scraper in PHP",
+                    "3": "Tag content so users can search for keywords"
+                },
+                "3": {
+                    "1": "Worked with 3rd Party APIs",
+                    "2": "YouTube, Twitter, Patreon",
+                    "3": "And related libraries"
+                },
+                "4": {
+                    "1": "Slim PHP API",
+                    "2": "Standalone REST API for the site",
+                    "3": "Full documentation of endpoints"
+                },
+                "5": {
+                    "1": "Cloud Computing and Hosting",
+                    "2": "Learned a lot about big cloud solutions",
+                    "3": "AWS, Vercel, GCP"
+                }
+            },
+            "links": {
+                "web": "gond.tools",
+                "repo": "Repository"
+            }
+        },
+        "greezy": {
+            "desc": "Greezy started as little helper for our family. We had a hard time organising our weekly meal plans and grocery runs. So I wrote an app to help us handle all that. Thanks to COVID we already ordered all our food online, but assembling shopping lists and then buying the required ingredients from vendors was a repetitive task each and every week. Greezy let's you create shopping lists and recipe groups and automatically searches connected vendors for the items, which makes filling your shopping cart that much easier.<br /><br />Greezy let's users share vendor logins, recipes, and lists by connecting as family and also allows you to import and export data to other pupular related apps. The recipe management additionally offers many options so that you can quickly change aspects of your weekly meal plans without having to create different recipes and groups all the time.",
+            "highlights": {
+                "1": {
+                    "1": "Nuxt",
+                    "2": "Enhanced VUE knowlegde with NUXT",
+                    "3": "Full server / client application"
+                },
+                "2": {
+                    "1": "Hosted on the Edge",
+                    "2": "Experience with Vercel and Heroku",
+                    "3": "Database on own server"
+                },
+                "3": {
+                    "1": "Vendor Logins",
+                    "2": "Log into different vendors",
+                    "3": "Search and order items"
+                },
+                "4": {
+                    "1": "Full Recipe Management",
+                    "2": "Parsing using structured data",
+                    "3": "Pull icons from various sources"
+                },
+                "5": {
+                    "1": "Login and User Management",
+                    "2": "Social Logins",
+                    "3": "Custom build session management"
+                }
+            },
+            "links": {
+                "web": "greezy.app"
             }
         },
         "edom": {

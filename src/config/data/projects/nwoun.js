@@ -38,7 +38,7 @@ export default {
   ident: 'nwoun',
   live: true,
   titleLocaleKey: 'navigation.routes.projects_nwoun',
-  skillsLocaleKeys: ['skills.js', 'skills.php', 'skills.wp', 'skills.sql', 'skills.svelte', 'skills.tailwind'],
+  skillsLocaleKeys: ['skills.js', 'skills.php', 'skills.wp', 'skills.sql'],
   descLocaleKey: 'projects.nwoun.desc',
   routeName: 'projects_nwoun',
   projectPage: {

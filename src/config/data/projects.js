@@ -11,6 +11,8 @@ import gallery5Edom from 'assets/media/images/projects/edom/gallery5.jpg';
 import gallery5Edom250 from 'assets/media/images/projects/edom/gallery5-250.jpg';
 
 import nwoun from 'config/data/projects/nwoun';
+import gondtools from 'config/data/projects/gondtools';
+import greezy from 'config/data/projects/greezy';
 import neighboring from 'config/data/projects/neighboring';
 import jferda from 'config/data/projects/jferda';
 import easycourses from 'config/data/projects/easycourses';
@@ -96,6 +98,8 @@ const projects = [
     },
   },
   nwoun,
+  gondtools,
+  greezy,
   jferda,
   neighboring,
   easycourses,

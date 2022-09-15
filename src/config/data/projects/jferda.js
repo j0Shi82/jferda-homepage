@@ -8,7 +8,7 @@ export default {
   ident: 'jferda',
   live: true,
   titleLocaleKey: 'navigation.routes.projects_jferda',
-  skillsLocaleKeys: ['skills.svelte', 'skills.material'],
+  skillsLocaleKeys: ['skills.svelte', 'skills.material', 'skills.webpack'],
   descLocaleKey: 'projects.jferda.desc',
   routeName: 'projects_jferda',
   projectPage: {

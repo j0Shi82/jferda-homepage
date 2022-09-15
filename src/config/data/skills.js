@@ -21,7 +21,7 @@ import qwikLogo from 'assets/media/images/skills/frameworks/qwik.png';
 import babelLogo from 'assets/media/images/skills/jspackages/babel.svg';
 import eslintLogo from 'assets/media/images/skills/jspackages/eslint.svg';
 import npmLogo from 'assets/media/images/skills/jspackages/npm.svg';
-import webpackLogo from 'assets/media/images/skills/jspackages/webpack.svg';
+import webpackLogo from 'assets/media/images/skills/jspackages/webpack.png';
 import expressLogo from 'assets/media/images/skills/jspackages/express.png';
 import jestLogo from 'assets/media/images/skills/jspackages/jest.png';
 import i18nextLogo from 'assets/media/images/skills/jspackages/i18next.png';

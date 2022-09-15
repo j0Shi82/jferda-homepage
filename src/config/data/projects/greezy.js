@@ -6,7 +6,7 @@ import groupPage from 'assets/media/images/projects/greezy/greezy3.png';
 import groupPage250 from 'assets/media/images/projects/greezy/greezy3-250.jpg';
 import orderPage from 'assets/media/images/projects/greezy/greezy4.jpg';
 import orderPage250 from 'assets/media/images/projects/greezy/greezy4-250.jpg';
-import logo from 'assets/media/images/projects/greezy/greezy-logo.PNG';
+import logo from 'assets/media/images/projects/greezy/greezy-logo.png';
 
 export default {
   ident: 'greezy',

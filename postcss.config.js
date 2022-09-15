@@ -14,7 +14,7 @@ const plugins = [
       './node_modules/@material/**/*.js',
       './node_modules/glightbox/**/*.js',
     ],
-    safelist: ['glightbox-clean', 'glightbox-body', 'glightbox-container', 'glightbox-slider', 'gslide-media', 'gslide-image', 'gslide', 'gslide-inner-content', 'gfadeIn', 'gfadeOut', 'gslideOutLeft', 'gslideInLeft', 'gslideOutRight', 'gslideInRight', 'gzoomIn', 'gzoomOut', 'gloader', 'goverlay', 'gcontainer', 'gclose', 'gprev', 'gnext', 'gbtn'],
+    safelist: [/g(lightbox|slide|fade|zoom|loader|overlay|container|close|prev|next|btn)/, /svelte/],
   }) : () => {},
   autoprefixer(),
   postcssDiscardDuplicates,

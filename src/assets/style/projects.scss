@@ -3,6 +3,8 @@
 @use '@material/card/variables' as card-variables;
 
 .jdev-route-projects {
+  user-select: none; 
+  
   .mdc-layout-grid__inner {
     @media #{variables.$breakpoint-tablet} {
       max-width: 500px;

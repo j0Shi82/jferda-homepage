@@ -12,20 +12,6 @@
     }
   }
 
-  .jdev-headline-underline {
-    height: 1px;
-    width: 100%;
-    border-top: 1px solid #000;
-    margin-bottom: variables.$h2-margin;
-  }
-
-  h2 {
-    text-align: center;
-    margin-top: variables.$h2-margin;
-    margin-bottom: 0;
-    transition: all 1s ease-in-out;
-  }
-
   .jdev-resume-date {
     @media #{variables.$breakpoint-mobile} {
       background-color: smui-theme.$surface;

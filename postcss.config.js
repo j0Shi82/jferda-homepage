@@ -14,7 +14,7 @@ const plugins = [
       './node_modules/@material/**/*.js',
       './node_modules/glightbox/**/*.js',
     ],
-    safelist: [/g(lightbox|slide|fade|zoom|loader|overlay|container|close|prev|next|btn)/, /svelte/],
+    safelist: [/g(lightbox|slide|fade|zoom|loader|overlay|container|close|prev|next|btn)/, /^svelte-/, /^tippy-/, /data-/],
   }) : () => {},
   autoprefixer(),
   postcssDiscardDuplicates,

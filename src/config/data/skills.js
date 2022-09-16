@@ -85,7 +85,7 @@ const skills = [
     type: 'software', name: 'node', class: 'node', logo: nodeLogo, progress: 0.5,
   },
   {
-    type: 'frameworks', name: 'VUE.js', class: 'vue', logo: vueLogo, progress: 0.85,
+    type: 'frameworks', name: 'VUE.js', class: 'vue', logo: vueLogo, progress: 0.9,
   },
   {
     type: 'frameworks', name: 'Laravel', class: 'laravel', logo: laravelLogo, progress: 0.6,
@@ -139,7 +139,7 @@ const skills = [
     type: 'jspackages', name: 'i18next', class: 'i18next', logo: i18nextLogo, progress: 0.6,
   },
   {
-    type: 'jspackages', name: 'Vite', class: 'vite', logo: viteLogo, progress: 0,
+    type: 'jspackages', name: 'Vite', class: 'vite', logo: viteLogo, progress: 0.1,
   },
   {
     type: 'nwoun', name: 'HTML', class: 'html', logo: htmlLogo, progress: 0.4,
@@ -161,12 +161,6 @@ const skills = [
   },
   {
     type: 'nwoun', name: 'Photoshop CS6', class: 'photoshop', logo: photoshopLogo, progress: 0.4,
-  },
-  {
-    type: 'nwoun', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 0.7,
-  },
-  {
-    type: 'nwoun', name: 'Tailwind CSS', class: 'tailwind', logo: tailwindLogo, progress: 0.5,
   },
   {
     type: 'nwoun', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.2,
@@ -209,6 +203,33 @@ const skills = [
   },
   {
     type: 'jferda', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.2,
+  },
+  {
+    type: 'nwgondtools', name: 'Svelte', class: 'svelte', logo: svelteLogo, progress: 0.7,
+  },
+  {
+    type: 'nwgondtools', name: 'Tailwind CSS', class: 'tailwind', logo: tailwindLogo, progress: 0.6,
+  },
+  {
+    type: 'nwgondtools', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.4,
+  },
+  {
+    type: 'nwgondtools', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.2,
+  },
+  {
+    type: 'nwgondtools', name: 'Webpack', class: 'webpack', logo: webpackLogo, progress: 0.2,
+  },
+  {
+    type: 'greezy', name: 'Vue.js', class: 'vue', logo: vueLogo, progress: 0.8,
+  },
+  {
+    type: 'greezy', name: 'Tailwind CSS', class: 'tailwind', logo: tailwindLogo, progress: 0.4,
+  },
+  {
+    type: 'greezy', name: 'Vite', class: 'vite', logo: viteLogo, progress: 0.2,
+  },
+  {
+    type: 'greezy', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.2,
   },
 ];
 

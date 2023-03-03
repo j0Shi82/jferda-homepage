@@ -29,6 +29,9 @@ module.exports = {
     resolve: {
         alias: {
             svelte: path.resolve('node_modules', 'svelte'),
+            // workaround for weird error Module not found: Error: Package path . is not exported from package
+            regexparam: path.resolve('node_modules', 'regexparam', 'dist', 'index.mjs'),
+
         },
         extensions: ['.mjs', '.js', '.svelte'],
         mainFields: ['svelte', 'browser', 'module', 'main'],

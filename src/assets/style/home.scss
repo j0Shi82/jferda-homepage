@@ -105,6 +105,7 @@
       transition: all 2s;
     }
 
+    &.titus b { color: $titus-primary-color; text-shadow: 1px 1px 2px $titus-secondary-color; }
     &.vue b { color: $vue-primary-color; text-shadow: 1px 1px 2px $vue-secondary-color; }
     &.php b { color: $php-primary-color; text-shadow: 1px 1px 2px $php-secondary-color; }
     &.javascript b { color: $javascript-primary-color; text-shadow: 1px 1px 2px $javascript-secondary-color; }
@@ -120,6 +121,7 @@
   }
 
   .home-routes {
+    &.titus .mdc-fab { background-color: $titus-secondary-color; }
     &.vue .mdc-fab { background-color: $vue-secondary-color; }
     &.php .mdc-fab { background-color: $php-secondary-color; }
     &.javascript .mdc-fab { background-color: $javascript-secondary-color; }

@@ -6,6 +6,9 @@ import { svelteTransitionFly } from 'utils/imports/svelte';
 import Fab, { Label } from '@smui/fab';
 import '@smui/fab/_index.scss';
 
+// plugins
+const tippy = () => import('tippy.js');
+
 let el;
 export let headlineLocaleIdent;
 export let textLocaleIdent;

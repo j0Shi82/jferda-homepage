@@ -19,10 +19,6 @@ let pageTitle;
 let canonical;
 let isHomeRoute = false;
 
-function mailMe() {
-  window.location.href = 'mailto:janosch.ferda@e-domizil.de';
-}
-
 function setMetaData() {
   pageTitle = $currentRouteName === 'home' || $currentRouteName === null ? '>_ j0Shi.dev --help' : `>_ j0Shi.dev --help --${$localize(`navigation.routes.${$currentRouteName}`).toLowerCase()}`;
   canonical = $currentRouteName === 'home' || $currentRouteName === null ? process.env.BASEURL : `${process.env.BASEURL}/#${getLocalizedRoute($currentRouteName)}`;
@@ -112,7 +108,9 @@ currentRouteName.subscribe((value) => {
           <a href="https://github.com/j0Shi82" target="_blank" rel="noreferrer">
             <IconButton class="material-icons" aria-label="{$localize('header.label.github')}"><Icon icon={faGithub}></Icon></IconButton>
           </a>
-          <IconButton on:click={mailMe} class="material-icons" aria-label="{$localize('header.label.mail')}"><Icon icon={faEnvelope}></Icon></IconButton>
+          <a href="&#77;&#97;&#73;&#76;&#116;&#111;&#58;&#106;&#48;&#115;&#104;&#105;&#46;&#119;&#101;&#98;&#100;&#101;&#118;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">
+            <IconButton class="material-icons" aria-label="{$localize('header.label.mail')}"><Icon icon={faEnvelope}></Icon></IconButton>
+          </a>
           {#if !$isMobileBreakpoint}<div class="jdev-ukraine-heart-icon" style="background-image: url({ukraineHeartIcon});"></div>{/if}
         </Section>
     </Row>

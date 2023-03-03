@@ -1,9 +1,7 @@
 <script>
-import { svelteTransitionFly } from 'utils/imports/svelte';
 import { localize } from 'utils/imports/core';
 import { animationsActive, screenWidth } from 'utils/imports/store';
-// plugins
-const tippy = () => import('tippy.js');
+import { svelteTransitionFly } from 'utils/imports/svelte';
 // material
 import Fab, { Label } from '@smui/fab';
 import '@smui/fab/_index.scss';
@@ -41,6 +39,7 @@ const initTippy = () => {
   bind:this="{el}"
   on:mouseenter="{initTippy}"
   on:click="{initTippy}"
+  on:keypress="{initTippy}"
   on:touchstart="{initTippy}"
   in:svelteTransitionFly="{{
     x: $screenWidth / 2, duration: transitionDuration, delay,

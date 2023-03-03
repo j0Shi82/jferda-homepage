@@ -1,20 +1,17 @@
 <script>
-import { getLocalizedRoute, routerPush } from 'utils/imports/core';
-import { localize } from 'utils/imports/core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import ukraineHeartIcon from 'assets/media/images/flags/ukraine-heart.svg';
+import { getLocalizedRoute, localize, routerPush } from 'utils/imports/core';
 
 import avatarImage from 'assets/media/images/profile/avatar-100.jpg';
 
-import {
-  menuMobileState, isMobileBreakpoint, currentRouteName, currentLocale,
-} from 'utils/imports/store';
+import { currentLocale, currentRouteName, isMobileBreakpoint, menuMobileState } from 'utils/imports/store';
 // material
-import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
 import IconButton from '@smui/icon-button';
-import '@smui/top-app-bar/_index.scss';
 import '@smui/icon-button/_index.scss';
+import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
+import '@smui/top-app-bar/_index.scss';
 // components
 import Icon from 'fa-svelte';
 
@@ -90,7 +87,7 @@ currentRouteName.subscribe((value) => {
         {#if $isMobileBreakpoint}
         <Section>
             {#if !isHomeRoute}
-              <IconButton class="material-icons jdev-drawer-toggle" aria-label="{$localize(!$menuMobileState ? 'header.label.menu_open' : 'header.label.menu_close')}" on:click="{menuMobileState.set(!$menuMobileState)}">
+              <IconButton class="material-icons jdev-drawer-toggle" aria-label="{$localize(!$menuMobileState ? 'header.label.menu_open' : 'header.label.menu_close')}" on:click="{menuMobileState.set(!$menuMobileState)}" on:keypress="{menuMobileState.set(!$menuMobileState)}">
               {#if !$menuMobileState}
                 <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#FFFFFF"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
               {:else}
@@ -103,7 +100,7 @@ currentRouteName.subscribe((value) => {
         {/if}
         <Section>
           <div class="jdev-avatar">
-            <div style="background-image: url({avatarImage});" on:click="{() => { routerPush(getLocalizedRoute('home')); }}"></div>
+            <div style="background-image: url({avatarImage});" on:click="{() => { routerPush(getLocalizedRoute('home')); }}" on:keypress="{() => { routerPush(getLocalizedRoute('home')); }}"></div>
           </div>
         </Section>
         {#if !$isMobileBreakpoint}
@@ -112,7 +109,7 @@ currentRouteName.subscribe((value) => {
         </Section>
         {/if}
         <Section align="end" toolbar>
-          <a href="https://github.com/j0Shi82" target="_blank">
+          <a href="https://github.com/j0Shi82" target="_blank" rel="noreferrer">
             <IconButton class="material-icons" aria-label="{$localize('header.label.github')}"><Icon icon={faGithub}></Icon></IconButton>
           </a>
           <IconButton on:click={mailMe} class="material-icons" aria-label="{$localize('header.label.mail')}"><Icon icon={faEnvelope}></Icon></IconButton>

@@ -1,14 +1,14 @@
 <script>
-import { localize, getLocalizedRoute } from 'utils/imports/core';
-import { svelteTransitionScale } from 'utils/imports/svelte';
-import { headerTransitionDuration, atomTransitionDurationShort, atomTransitionDuration } from 'utils/imports/config';
+import { atomTransitionDuration, atomTransitionDurationShort, headerTransitionDuration } from 'utils/imports/config';
+import { getLocalizedRoute, localize } from 'utils/imports/core';
 import { animationsActive } from 'utils/imports/store';
+import { svelteTransitionScale } from 'utils/imports/svelte';
 // material
 import Card, {
-  Content as CardContent, Media as CardMedia,
+    Content as CardContent, Media as CardMedia
 } from '@smui/card';
-import { LeadingIcon } from '@smui/chips';
 import '@smui/card/_index.scss';
+import { LeadingIcon } from '@smui/chips';
 import '@smui/chips/_index.scss';
 // components
 import TechLogo from 'components/utilities/atoms/TechLogo.svelte';
@@ -18,7 +18,7 @@ export let i;
 export let project;
 </script>
 
-<div class:hover="{hover || !project.live}"class:upcoming="{!project.live}" class:animations="{$animationsActive}" class="jdev-project-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone" on:click={() => { hover = !hover; }}>
+<div class:hover="{hover || !project.live}"class:upcoming="{!project.live}" class:animations="{$animationsActive}" class="jdev-project-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone" on:click={() => { hover = !hover; }} on:keypress={() => { hover = !hover; }}>
     <div 
         class="card-container" 
         in:svelteTransitionScale="{{

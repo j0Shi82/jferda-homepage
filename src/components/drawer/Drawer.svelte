@@ -2,34 +2,28 @@
 import { svelteLifecycleOnDestroy } from 'utils/imports/svelte';
 
 import {
-  getLocalizedRoute,
-  routerPush,
-  localize,
+    getLocalizedRoute, localize, routerPush
 } from 'utils/imports/core';
 import {
-  currentRouteName,
-  isMobileBreakpoint,
-  currentLocale,
-  locales,
-  menuMobileState,
-  animationsActive,
-  projectInitializing,
-} from 'utils/imports/store';
-import {
-  drawerMenuItems,
-  drawerMenuProjectItems,
+    drawerMenuItems,
+    drawerMenuProjectItems
 } from 'utils/imports/data';
+import {
+    animationsActive, currentLocale, currentRouteName,
+    isMobileBreakpoint, locales,
+    menuMobileState, projectInitializing
+} from 'utils/imports/store';
 // material
 import Drawer, { Content } from '@smui/drawer';
-import List, {
-  Item, Text, Separator, Subheader,
-} from '@smui/list';
-import Switch from '@smui/switch';
-import FormField from '@smui/form-field';
 import '@smui/drawer/_index.scss';
-import '@smui/list/_index.scss';
-import '@smui/switch/_index.scss';
+import FormField from '@smui/form-field';
 import '@smui/form-field/_index.scss';
+import List, {
+    Item, Separator, Subheader, Text
+} from '@smui/list';
+import '@smui/list/_index.scss';
+import Switch from '@smui/switch';
+import '@smui/switch/_index.scss';
 
 import 'assets/style/drawer.scss';
 
@@ -116,7 +110,7 @@ svelteLifecycleOnDestroy(() => {
   <Content>
     <List>
       {#each drawerMenuItems as item}
-        <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName}>
+        <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName} on:keypress={() => go()}>
           <span class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">
             {@html item.icon}
           </span>
@@ -128,7 +122,7 @@ svelteLifecycleOnDestroy(() => {
 
       <Subheader>{$localize('navigation.routes.projects')}</Subheader>
       {#each drawerMenuProjectItems as item}
-        <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName}>
+        <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()}  on:keypress={() => go()} activated={$currentRouteName === item.routeName}>
           <Text>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</Text>
         </Item>
       {/each}
@@ -146,7 +140,7 @@ svelteLifecycleOnDestroy(() => {
       <div class="jdev-list-item">
         <!-- <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}"> -->
           {#each $locales as loc}
-          <div class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)}>
+          <div class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)} on:keypress={() => currentLocale.set(loc)}>
             <div class="jdev-flag {loc}" />
           </div>
             <!-- <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption> -->

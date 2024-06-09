@@ -1,13 +1,12 @@
 <script>
-import { localize } from 'utils/imports/core';
-import { svelteTransitionFly, svelteEasingBackOut } from 'utils/imports/svelte';
-import { atomTransitionDuration } from 'utils/imports/config';
-import { screenWidth, currentLocale } from 'utils/imports/store';
-import { getLocalizedRoute } from 'utils/imports/core';
-import { homeRoutes } from 'utils/imports/data';
+import { atomTransitionDuration } from 'utils/imports/config'
+import { getLocalizedRoute, localize } from 'utils/imports/core'
+import { homeRoutes } from 'utils/imports/data'
+import { currentLocale, screenWidth } from 'utils/imports/store'
+import { svelteEasingBackOut, svelteTransitionFly } from 'utils/imports/svelte'
 // material
-import Fab, { Label, Icon } from '@smui/fab';
-import '@smui/fab/_index.scss';
+import Fab, { Icon, Label } from '@smui/fab'
+// import '@smui/fab/_index.scss';
 
 export let colorClass;
 </script>

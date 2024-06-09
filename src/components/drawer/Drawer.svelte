@@ -1,37 +1,39 @@
 <script>
-import { svelteLifecycleOnDestroy } from 'utils/imports/svelte';
+import { svelteLifecycleOnDestroy } from 'utils/imports/svelte'
 
 import {
-  getLocalizedRoute,
-  routerPush,
-  localize,
-} from 'utils/imports/core';
+	getLocalizedRoute,
+	localize,
+	routerPush,
+} from 'utils/imports/core'
 import {
-  currentRouteName,
-  isMobileBreakpoint,
-  currentLocale,
-  locales,
-  menuMobileState,
-  animationsActive,
-  projectInitializing,
-} from 'utils/imports/store';
+	drawerMenuItems,
+	drawerMenuProjectItems,
+} from 'utils/imports/data'
 import {
-  drawerMenuItems,
-  drawerMenuProjectItems,
-} from 'utils/imports/data';
+	animationsActive,
+	currentLocale,
+	currentRouteName,
+	isMobileBreakpoint,
+	locales,
+	menuMobileState,
+	projectInitializing,
+} from 'utils/imports/store'
 // material
-import Drawer, { Content } from '@smui/drawer';
+import Drawer, { Content } from '@smui/drawer'
+import FormField from '@smui/form-field'
 import List, {
-  Item, Text, Separator, Subheader,
-} from '@smui/list';
-import Switch from '@smui/switch';
-import FormField from '@smui/form-field';
-import '@smui/drawer/_index.scss';
-import '@smui/list/_index.scss';
-import '@smui/switch/_index.scss';
-import '@smui/form-field/_index.scss';
+	Item,
+	Separator, Subheader,
+	Text,
+} from '@smui/list'
+import Switch from '@smui/switch'
+// import '@smui/drawer/_index.scss';
+// import '@smui/list/_index.scss';
+// import '@smui/switch/_index.scss';
+// import '@smui/form-field/_index.scss';
 
-import 'assets/style/drawer.scss';
+import 'assets/style/drawer.scss'
 
 export let modal = false;
 

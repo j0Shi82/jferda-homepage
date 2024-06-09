@@ -1,15 +1,15 @@
 <script>
-import { svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { Div } from '@smui/common/elements';
+import { svelteLifecycleOnMount } from 'utils/imports/svelte'
 // plugins
-import GLightbox from 'glightbox';
+import GLightbox from 'glightbox'
 // material
 import ImageList, {
-  Item as ImageListItem, ImageAspectContainer, Image as ImageListImage,
-} from '@smui/image-list';
-import '@smui/image-list/_index.scss';
+	ImageAspectContainer, Image as ImageListImage,
+	Item as ImageListItem,
+} from '@smui/image-list'
+// import '@smui/image-list/_index.scss'
 // components
-import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
 
 export let projectData = {};
 export let animationParams = {
@@ -68,7 +68,7 @@ function openGallery(i) {
         {#each projectData.projectPage.gallery as item, i}
         <ImageListItem>
             <ImageAspectContainer>
-            <ImageListImage src="{item.thumb}" component={Div} style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
+            <ImageListImage src="{item.thumb}" tag="div" style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});" on:click="{() => { openGallery(i); }}" />
             </ImageAspectContainer>
         </ImageListItem>
         {/each}

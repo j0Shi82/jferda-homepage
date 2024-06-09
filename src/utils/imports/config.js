@@ -1,28 +1,33 @@
-import config from 'config/index';
+import config from 'config/index.js'
 
 const {
-  home: menuHomeIcon,
-  about: menuAboutIcon,
-  about48: menuAbout48Icon,
-  resume: menuResumeIcon,
-  skills: menuSkillsIcon,
-  projects: menuProjectsIcon,
-} = config.app.menu.icons;
+	home: menuHomeIcon,
+	about: menuAboutIcon,
+	about48: menuAbout48Icon,
+	resume: menuResumeIcon,
+	skills: menuSkillsIcon,
+	projects: menuProjectsIcon,
+} = config.app.menu.icons
 
-const { routingFadeDuration } = config.app.router;
-const { headerTransitionDuration, atomTransitionDuration, atomTransitionDurationShort } = config.app.animations;
-const { standardLanguage, supportedLanguages } = config.app.locale;
-const { mobile, tablet, desktop } = config.app.breakpoints;
+const { routingFadeDuration } = config.app.router
+const { headerTransitionDuration, atomTransitionDuration, atomTransitionDurationShort } = config.app.animations
+const { standardLanguage, supportedLanguages } = config.app.locale
+const { mobile, tablet, desktop } = config.app.breakpoints
 
 export {
-  menuHomeIcon, menuAboutIcon, menuResumeIcon, menuSkillsIcon, menuAbout48Icon, menuProjectsIcon,
-  routingFadeDuration,
-  headerTransitionDuration,
-  atomTransitionDuration,
-  atomTransitionDurationShort,
-  standardLanguage as localeStandardLanguage,
-  supportedLanguages as localeSupportedLanguages,
-  mobile as mobileBreakpointQueryString,
-  tablet as tabletBreakpointQueryString,
-  desktop as desktopBreakpointQueryString,
-};
+	atomTransitionDuration,
+	atomTransitionDurationShort,
+	desktop as desktopBreakpointQueryString,
+	headerTransitionDuration,
+	standardLanguage as localeStandardLanguage,
+	supportedLanguages as localeSupportedLanguages,
+	menuAbout48Icon,
+	menuAboutIcon,
+	menuHomeIcon,
+	menuProjectsIcon,
+	menuResumeIcon,
+	menuSkillsIcon,
+	mobile as mobileBreakpointQueryString,
+	routingFadeDuration,
+	tablet as tabletBreakpointQueryString,
+}

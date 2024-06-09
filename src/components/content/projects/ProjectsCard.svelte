@@ -1,17 +1,17 @@
 <script>
-import { localize, getLocalizedRoute } from 'utils/imports/core';
-import { svelteTransitionScale } from 'utils/imports/svelte';
-import { headerTransitionDuration, atomTransitionDurationShort, atomTransitionDuration } from 'utils/imports/config';
-import { animationsActive } from 'utils/imports/store';
+import { atomTransitionDuration, atomTransitionDurationShort, headerTransitionDuration } from 'utils/imports/config'
+import { getLocalizedRoute, localize } from 'utils/imports/core'
+import { animationsActive } from 'utils/imports/store'
+import { svelteTransitionScale } from 'utils/imports/svelte'
 // material
 import Card, {
-  Content as CardContent, Media as CardMedia,
-} from '@smui/card';
-import { LeadingIcon } from '@smui/chips';
-import '@smui/card/_index.scss';
-import '@smui/chips/_index.scss';
+	Content as CardContent, Media as CardMedia,
+} from '@smui/card'
+import { LeadingIcon } from '@smui/chips'
+// import '@smui/card/_index.scss';
+// import '@smui/chips/_index.scss';
 // components
-import TechLogo from 'components/utilities/atoms/TechLogo.svelte';
+import TechLogo from 'components/utilities/atoms/TechLogo.svelte'
 
 let hover = false;
 export let i;

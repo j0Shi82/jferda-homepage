@@ -1,23 +1,23 @@
 <script>
-import { localize } from 'utils/imports/core';
-import { svelteTransitionFade, svelteLifecycleOnMount, svelteTick } from 'utils/imports/svelte';
-import { skillCategories, skillList } from 'utils/imports/data';
-import { routingFadeDuration } from 'utils/imports/config';
-import { preloadImages } from 'utils/imports/helpers';
+import { routingFadeDuration } from 'utils/imports/config'
+import { localize } from 'utils/imports/core'
+import { skillCategories, skillList } from 'utils/imports/data'
+import { preloadImages } from 'utils/imports/helpers'
+import { svelteLifecycleOnMount, svelteTick, svelteTransitionFade } from 'utils/imports/svelte'
 // material
-import Tab, { Label as TabLabel } from '@smui/tab';
-import TabBar from '@smui/tab-bar';
-import { LeadingIcon } from '@smui/chips';
-import '@smui/tab/_index.scss';
-import '@smui/tab-bar/_index.scss';
-import '@smui/chips/_index.scss';
+import { LeadingIcon } from '@smui/chips'
+import Tab, { Label as TabLabel } from '@smui/tab'
+import TabBar from '@smui/tab-bar'
+// import '@smui/tab/_index.scss';
+// import '@smui/tab-bar/_index.scss';
+// import '@smui/chips/_index.scss';
 
 // components
-import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte';
+import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte'
 // polyfill
-import 'intersection-observer';
+import 'intersection-observer'
 
-import 'assets/style/skills.scss';
+import 'assets/style/skills.scss'
 
 const openCat = 'lang';
 let currentCat;

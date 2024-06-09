@@ -1,7 +1,4 @@
-import preloadImages from 'utils/helpers/preloadImages';
-import getAnimationParams from 'utils/helpers/project/getanimationParams';
+import preloadImages from 'utils/helpers/preloadImages.js'
+import getAnimationParams from 'utils/helpers/project/getanimationParams.js'
 
-export {
-  preloadImages,
-  getAnimationParams as getProjectAnimationParams,
-};
+export { getAnimationParams as getProjectAnimationParams, preloadImages }

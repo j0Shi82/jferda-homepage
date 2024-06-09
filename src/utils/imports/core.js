@@ -1,29 +1,23 @@
 // routing
-import getLocalizedRoute from 'locale/utils/routeHelper';
-import getGuards from 'router/utils/getGuards';
-import Router, { push } from 'svelte-spa-router';
-import wrap from 'svelte-spa-router/wrap';
-import routes from 'router/index';
-import routeLoaded from 'router/routeLoaded';
+import getLocalizedRoute from 'locale/utils/routeHelper.js'
+import routes from 'router/index.js'
+import routeLoaded from 'router/routeLoaded.js'
+import Router, { push } from 'svelte-spa-router'
 
 // locale
-import {
-  _, register, init, date, addMessages,
-} from 'svelte-i18n';
-import setupLocalization from 'locale/i18n';
+import setupLocalization from 'locale/i18n.js'
+import { _, addMessages, date, init, register } from 'svelte-i18n'
 
 export {
-  getLocalizedRoute,
-  getGuards as getRouteGuards,
-  Router as RouterComponent,
-  routes,
-  routeLoaded as routerOnRouteLoaded,
-  push as routerPush,
-  wrap as routeWrapper,
-  _ as localize,
-  date as formatDate,
-  register as registerLocaleDict,
-  init as initLocalization,
-  addMessages as addLocalizationFile,
-  setupLocalization,
-};
+	Router as RouterComponent,
+	addMessages as addLocalizationFile,
+	date as formatDate,
+	getLocalizedRoute,
+	init as initLocalization,
+	_ as localize,
+	register as registerLocaleDict,
+	routeLoaded as routerOnRouteLoaded,
+	push as routerPush,
+	routes,
+	setupLocalization,
+}

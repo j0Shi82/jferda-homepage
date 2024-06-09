@@ -1,10 +1,9 @@
 <script>
-import { isMobileBreakpoint, screenWidth } from 'utils/imports/store';
-import { RouterComponent, routes, routerOnRouteLoaded } from 'utils/imports/core';
-import { projectInitializing } from 'utils/imports/store';
+import { RouterComponent, routerOnRouteLoaded, routes } from 'utils/imports/core'
+import { isMobileBreakpoint, projectInitializing, screenWidth } from 'utils/imports/store'
 // material
-import { AppContent, Scrim } from '@smui/drawer';
-import '@smui/drawer/_index.scss';
+import { AppContent, Scrim } from '@smui/drawer'
+// import '@smui/drawer/_index.scss';
 </script>
 
 {#if $isMobileBreakpoint}<Scrim />{/if}

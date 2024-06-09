@@ -1,12 +1,9 @@
 <script>
-import { svelteTransitionFly } from 'utils/imports/svelte';
-import { localize } from 'utils/imports/core';
-import { animationsActive, screenWidth } from 'utils/imports/store';
-// plugins
-const tippy = () => import('tippy.js');
+import { localize } from 'utils/imports/core'
+import { animationsActive, screenWidth } from 'utils/imports/store'
+import { svelteTransitionFly } from 'utils/imports/svelte'
 // material
-import Fab, { Label } from '@smui/fab';
-import '@smui/fab/_index.scss';
+import Fab, { Label } from '@smui/fab'
 
 let el;
 export let headlineLocaleIdent;
@@ -23,7 +20,7 @@ $: {
 const initTippy = () => {
   // eslint-disable-next-line no-underscore-dangle
   if (el._tippy) return;
-  tippy().then((module) => {
+  import('tippy.js').then((module) => {
     module.default(el, {
       content: $localize(textLocaleIdent),
       animation: 'shift-away',

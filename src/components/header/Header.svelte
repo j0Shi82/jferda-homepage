@@ -1,22 +1,24 @@
 <script>
-import { getLocalizedRoute, routerPush } from 'utils/imports/core';
-import { localize } from 'utils/imports/core';
-import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
-import ukraineHeartIcon from 'assets/media/images/flags/ukraine-heart.svg';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
+import ukraineHeartIcon from 'assets/media/images/flags/ukraine-heart.svg'
+import { getLocalizedRoute, localize, routerPush } from 'utils/imports/core'
 
-import avatarImage from 'assets/media/images/profile/avatar-100.jpg';
+import avatarImage from 'assets/media/images/profile/avatar-100.jpg'
 
 import {
-  menuMobileState, isMobileBreakpoint, currentRouteName, currentLocale,
-} from 'utils/imports/store';
+	currentLocale,
+	currentRouteName,
+	isMobileBreakpoint,
+	menuMobileState,
+} from 'utils/imports/store'
 // material
-import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
-import IconButton from '@smui/icon-button';
-import '@smui/top-app-bar/_index.scss';
-import '@smui/icon-button/_index.scss';
+import IconButton from '@smui/icon-button'
+import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar'
+// import '@smui/top-app-bar/_index.scss';
+// import '@smui/icon-button/_index.scss';
 // components
-import Icon from 'fa-svelte';
+import Icon from 'fa-svelte'
 
 let pageTitle;
 let canonical;
@@ -103,7 +105,7 @@ currentRouteName.subscribe((value) => {
         {/if}
         <Section>
           <div class="jdev-avatar">
-            <div style="background-image: url({avatarImage});" on:click="{() => { routerPush(getLocalizedRoute('home')); }}"></div>
+            <div style="background-image: url({avatarImage});" on:click="{() => { routerPush(getLocalizedRoute('home')); }}" role="navigation"></div>
           </div>
         </Section>
         {#if !$isMobileBreakpoint}

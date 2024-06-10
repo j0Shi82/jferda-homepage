@@ -101,6 +101,9 @@ importers:
       regenerator-runtime:
         specifier: ^0.14.1
         version: 0.14.1
+      regexparam:
+        specifier: ^3.0.0
+        version: 3.0.0
       svelte-i18n:
         specifier: ^4.0.0
         version: 4.0.0(svelte@4.2.18)
@@ -189,6 +192,12 @@ importers:
       postcss-loader:
         specifier: ^8.1.1
         version: 8.1.1(postcss@8.4.38)(typescript@4.9.5)(webpack@5.91.0(webpack-cli@5.1.4))
+      prettier:
+        specifier: ^3.3.1
+        version: 3.3.1
+      prettier-plugin-svelte:
+        specifier: ^3.2.4
+        version: 3.2.4(prettier@3.3.1)(svelte@4.2.18)
       robotstxt-webpack-plugin:
         specifier: ^8.0.0
         version: 8.0.0(webpack@5.91.0(webpack-cli@5.1.4))
@@ -4144,6 +4153,17 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
+  prettier-plugin-svelte@3.2.4:
+    resolution: {integrity: sha512-tZv+ADfeOWFNQkXkRh6zUXE16w3Vla8x2Ug0B/EnSmjR4EnwdwZbGgL/liSwR1kcEALU5mAAyua98HBxheCxgg==}
+    peerDependencies:
+      prettier: ^3.0.0
+      svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
+
+  prettier@3.3.1:
+    resolution: {integrity: sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   pretty-bytes@5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
@@ -4269,6 +4289,10 @@ packages:
 
   regexparam@2.0.2:
     resolution: {integrity: sha512-A1PeDEYMrkLrfyOwv2jwihXbo9qxdGD3atBYQA9JJgreAx8/7rC6IUkWOw2NQlOxLp2wL0ifQbh1HuidDfYA6w==}
+    engines: {node: '>=8'}
+
+  regexparam@3.0.0:
+    resolution: {integrity: sha512-RSYAtP31mvYLkAHrOlh25pCNQ5hWnT106VukGaaFfuJrZFkGRX5GhUAdPqpSDXxOhA2c4akmRuplv1mRqnBn6Q==}
     engines: {node: '>=8'}
 
   regexpu-core@5.3.2:
@@ -10323,6 +10347,13 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
+  prettier-plugin-svelte@3.2.4(prettier@3.3.1)(svelte@4.2.18):
+    dependencies:
+      prettier: 3.3.1
+      svelte: 4.2.18
+
+  prettier@3.3.1: {}
+
   pretty-bytes@5.6.0: {}
 
   pretty-error@4.0.0:
@@ -10468,6 +10499,8 @@ snapshots:
       set-function-name: 2.0.2
 
   regexparam@2.0.2: {}
+
+  regexparam@3.0.0: {}
 
   regexpu-core@5.3.2:
     dependencies:

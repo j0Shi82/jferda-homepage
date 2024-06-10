@@ -1,13 +1,14 @@
 // store values we need
-import dockerKnowledgeLogo from 'assets/media/images/knowledge-logos/docker.png'
-import gitKnowledgeLogo from 'assets/media/images/knowledge-logos/git.png'
-import javascriptKnowledgeLogo from 'assets/media/images/knowledge-logos/javascript.png'
-import nodeKnowledgeLogo from 'assets/media/images/knowledge-logos/node.png'
-import phpKnowledgeLogo from 'assets/media/images/knowledge-logos/php.png'
-import svelteKnowledgeLogo from 'assets/media/images/knowledge-logos/svelte.png'
-import vuejsKnowledgeLogo from 'assets/media/images/knowledge-logos/vuejs.png'
-import wpKnowledgeLogo from 'assets/media/images/knowledge-logos/wp.png'
-import { atomTransitionDuration, menuAbout48Icon, menuProjectsIcon } from 'utils/imports/config.js'
+import dockerKnowledgeLogo from 'assets/media/images/knowledge-logos/docker.png';
+import gitKnowledgeLogo from 'assets/media/images/knowledge-logos/git.png';
+import javascriptKnowledgeLogo from 'assets/media/images/knowledge-logos/javascript.png';
+import nodeKnowledgeLogo from 'assets/media/images/knowledge-logos/node.png';
+import phpKnowledgeLogo from 'assets/media/images/knowledge-logos/php.png';
+import svelteKnowledgeLogo from 'assets/media/images/knowledge-logos/svelte.png';
+import titusCorporateLogo from 'assets/media/images/knowledge-logos/titus.png';
+import vuejsKnowledgeLogo from 'assets/media/images/knowledge-logos/vuejs.png';
+import wpKnowledgeLogo from 'assets/media/images/knowledge-logos/wp.png';
+import { atomTransitionDuration, menuAbout48Icon, menuProjectsIcon } from 'utils/imports/config.js';
 
 const menuItems = [
 	{
@@ -29,6 +30,10 @@ menuItems.forEach((item, i) => {
 })
 
 const knowledgeLogoItems = [
+    {
+        ident: 'titus',
+        logo: titusCorporateLogo,
+    },
 	{
 		ident: 'vue',
 		logo: vuejsKnowledgeLogo,
@@ -63,4 +68,5 @@ const knowledgeLogoItems = [
 	},
 ]
 
-export { knowledgeLogoItems, menuItems }
+export { knowledgeLogoItems, menuItems };
+

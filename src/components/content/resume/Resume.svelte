@@ -1,12 +1,12 @@
 <script>
-import { svelteTransitionFade } from 'utils/imports/svelte';
-import { routingFadeDuration, atomTransitionDuration, headerTransitionDuration } from 'utils/imports/config';
-import { resumeEducationList, resumeExperienceList, resumeSkillList } from 'utils/imports/data';
+import { svelteTransitionFade } from 'utils/imports/svelte'
+import { routingFadeDuration, atomTransitionDuration, headerTransitionDuration } from 'utils/imports/config'
+import { resumeEducationList, resumeExperienceList, resumeSkillList } from 'utils/imports/data'
 // components
-import ResumeItem from 'components/content/resume/ResumeItem.svelte';
-import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
+import ResumeItem from 'components/content/resume/ResumeItem.svelte'
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
 
-import 'assets/style/resume.scss';
+import 'assets/style/resume.scss'
 </script>
 
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-resume" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">

@@ -1,37 +1,37 @@
 <script>
-import { svelteTransitionFade, svelteLifecycleOnMount } from 'utils/imports/svelte';
-import { isDesktopBreakpoint } from 'utils/imports/store';
-import { routingFadeDuration, headerTransitionDuration, atomTransitionDuration } from 'utils/imports/config';
-import { aboutPhilosophies } from 'utils/imports/data';
-import { preloadImages } from 'utils/imports/helpers';
+import { svelteTransitionFade, svelteLifecycleOnMount } from 'utils/imports/svelte'
+import { isDesktopBreakpoint } from 'utils/imports/store'
+import { routingFadeDuration, headerTransitionDuration, atomTransitionDuration } from 'utils/imports/config'
+import { aboutPhilosophies } from 'utils/imports/data'
+import { preloadImages } from 'utils/imports/helpers'
 // components
-import AboutPhilosophyButton from 'components/content/about/AboutPhilosophyButton.svelte';
-import AboutPhilosophyHint from 'components/content/about/AboutPhilosophyHint.svelte';
-import AboutBio from 'components/content/about/AboutBio.svelte';
-import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
+import AboutPhilosophyButton from 'components/content/about/AboutPhilosophyButton.svelte'
+import AboutPhilosophyHint from 'components/content/about/AboutPhilosophyHint.svelte'
+import AboutBio from 'components/content/about/AboutBio.svelte'
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
 // polyfill
-import 'intersection-observer';
+import 'intersection-observer'
 
-import 'assets/style/about.scss';
+import 'assets/style/about.scss'
 
 // preload images to smoothen transitions
-preloadImages(aboutPhilosophies.map((el) => el.image));
+preloadImages(aboutPhilosophies.map(el => el.image))
 
 // skip intro transition of philosophy buttons if not in view
-let philosophyVisible = false;
-let philosophyWrapper;
+let philosophyVisible = false
+let philosophyWrapper
 svelteLifecycleOnMount(() => {
   const observer = new IntersectionObserver((entries) => {
-    philosophyVisible = entries[0].isIntersecting;
-    if (philosophyVisible) observer.unobserve(philosophyWrapper);
-  });
+    philosophyVisible = entries[0].isIntersecting
+    if (philosophyVisible) observer.unobserve(philosophyWrapper)
+  })
 
-  observer.observe(philosophyWrapper);
+  observer.observe(philosophyWrapper)
 
   return () => {
-    observer.unobserve(philosophyWrapper);
-  };
-});
+    observer.unobserve(philosophyWrapper)
+  }
+})
 </script>
 
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-about" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
@@ -46,10 +46,10 @@ svelteLifecycleOnMount(() => {
         <AboutPhilosophyHint />
         <div class="jdev-philosophy-wrapper">
           {#each aboutPhilosophies as philosophy, i}
-            <AboutPhilosophyButton 
-              textLocaleIdent="{philosophy.textLocaleIdent}" 
-              headlineLocaleIdent="{philosophy.headlineLocaleIdent}" 
-              image="{philosophy.image}" 
+            <AboutPhilosophyButton
+              textLocaleIdent="{philosophy.textLocaleIdent}"
+              headlineLocaleIdent="{philosophy.headlineLocaleIdent}"
+              image="{philosophy.image}"
               delay="{i * (atomTransitionDuration / 2) + headerTransitionDuration}"
               transitionDuration="{atomTransitionDuration / 2}"
             />

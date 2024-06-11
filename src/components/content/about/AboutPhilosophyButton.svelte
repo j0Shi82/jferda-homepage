@@ -5,9 +5,6 @@
   // material
   import Fab, { Label } from '@smui/fab'
 
-  // plugins
-  const tippy = () => import('tippy.js')
-
   let el
   export let headlineLocaleIdent
   export let textLocaleIdent
@@ -21,7 +18,6 @@
   }
 
   const initTippy = () => {
-    // eslint-disable-next-line no-underscore-dangle
     if (el._tippy) return
     import('tippy.js').then((module) => {
       module.default(el, {
@@ -30,7 +26,6 @@
         placement: 'bottom',
         offset: [0, 0],
       })
-      // eslint-disable-next-line no-underscore-dangle
       el._tippy.show()
     })
   }
@@ -48,6 +43,8 @@
     duration: transitionDuration,
     delay,
   }}
+  role="button"
+  tabindex=""
 >
   <Fab extended ripple="false" color="primary"><span class="background" style="background-image: url({image});"></span><Label>{$localize(headlineLocaleIdent)}</Label></Fab>
 </div>

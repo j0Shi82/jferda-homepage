@@ -1,8 +1,8 @@
-import nodeLogo from 'assets/media/images/knowledge-logos/node.png';
-import pageSpeedInsights from 'assets/media/images/projects/jferda/page-speed-insights.png';
-import pageSpeedInsights250 from 'assets/media/images/projects/jferda/page-speed-insights-250.png';
-import gtmetrixInsights from 'assets/media/images/projects/jferda/gtmetrix-insights.png';
-import gtmetrixInsights250 from 'assets/media/images/projects/jferda/gtmetrix-insights-250.png';
+import nodeLogo from 'assets/media/images/knowledge-logos/node.png'
+import pageSpeedInsights from 'assets/media/images/projects/jferda/page-speed-insights.png'
+import pageSpeedInsights250 from 'assets/media/images/projects/jferda/page-speed-insights-250.png'
+import gtmetrixInsights from 'assets/media/images/projects/jferda/gtmetrix-insights.png'
+import gtmetrixInsights250 from 'assets/media/images/projects/jferda/gtmetrix-insights-250.png'
 
 export default {
   ident: 'jferda',
@@ -63,4 +63,4 @@ export default {
         description: false,
       }],
   },
-};
+}

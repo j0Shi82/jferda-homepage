@@ -38,17 +38,20 @@
       sentry: () => import('assets/media/images/skills/software/sentry.svg'),
       vscode: () => import('assets/media/images/skills/software/vscode.png'),
       node: () => import('assets/media/images/skills/software/node.svg'),
-    };
-    
-    export let ident = 'bootstrap';
-    export let height = 24;
+    }
 
-    let logoURL = null;
+    export let ident = 'bootstrap'
+    export let height = 24
+
+    let logoURL = null
 
     if (logos[ident]) {
-      logos[ident]().then((module) => { logoURL = module.default; });
-    } else {
-      logoURL = 'notfound.gif';
+      logos[ident]().then(
+        (module) => { logoURL = module.default },
+      )
+    }
+    else {
+      logoURL = 'notfound.gif'
     }
 </script>
 

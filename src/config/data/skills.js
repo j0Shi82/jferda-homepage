@@ -1,42 +1,42 @@
-import phpLogo from 'assets/media/images/skills/language/php.svg';
-import cLogo from 'assets/media/images/skills/language/csharp.svg';
-import sqlLogo from 'assets/media/images/skills/language/sql.png';
-import javaLogo from 'assets/media/images/skills/language/java.svg';
-import htmlLogo from 'assets/media/images/skills/language/html.svg';
-import javascriptLogo from 'assets/media/images/skills/language/javascript.svg';
-import cssLogo from 'assets/media/images/skills/language/css.svg';
+import phpLogo from 'assets/media/images/skills/language/php.svg'
+import cLogo from 'assets/media/images/skills/language/csharp.svg'
+import sqlLogo from 'assets/media/images/skills/language/sql.png'
+import javaLogo from 'assets/media/images/skills/language/java.svg'
+import htmlLogo from 'assets/media/images/skills/language/html.svg'
+import javascriptLogo from 'assets/media/images/skills/language/javascript.svg'
+import cssLogo from 'assets/media/images/skills/language/css.svg'
 
-import bootstrapLogo from 'assets/media/images/skills/frameworks/bootstrap.svg';
-import tailwindLogo from 'assets/media/images/skills/frameworks/tailwind.svg';
-import laravelLogo from 'assets/media/images/skills/frameworks/laravel.svg';
-import phpbbLogo from 'assets/media/images/skills/frameworks/phpbb.svg';
-import vueLogo from 'assets/media/images/skills/frameworks/vue.svg';
-import svelteLogo from 'assets/media/images/skills/frameworks/svelte.svg';
-import wordpressLogo from 'assets/media/images/skills/frameworks/wordpress.svg';
-import jqueryLogo from 'assets/media/images/skills/frameworks/jquery.svg';
-import materialLogo from 'assets/media/images/skills/frameworks/material.svg';
-import bulmaLogo from 'assets/media/images/skills/frameworks/bulma.png';
-import qwikLogo from 'assets/media/images/skills/frameworks/qwik.png';
+import bootstrapLogo from 'assets/media/images/skills/frameworks/bootstrap.svg'
+import tailwindLogo from 'assets/media/images/skills/frameworks/tailwind.svg'
+import laravelLogo from 'assets/media/images/skills/frameworks/laravel.svg'
+import phpbbLogo from 'assets/media/images/skills/frameworks/phpbb.svg'
+import vueLogo from 'assets/media/images/skills/frameworks/vue.svg'
+import svelteLogo from 'assets/media/images/skills/frameworks/svelte.svg'
+import wordpressLogo from 'assets/media/images/skills/frameworks/wordpress.svg'
+import jqueryLogo from 'assets/media/images/skills/frameworks/jquery.svg'
+import materialLogo from 'assets/media/images/skills/frameworks/material.svg'
+import bulmaLogo from 'assets/media/images/skills/frameworks/bulma.png'
+import qwikLogo from 'assets/media/images/skills/frameworks/qwik.png'
 
-import babelLogo from 'assets/media/images/skills/jspackages/babel.svg';
-import eslintLogo from 'assets/media/images/skills/jspackages/eslint.svg';
-import npmLogo from 'assets/media/images/skills/jspackages/npm.svg';
-import webpackLogo from 'assets/media/images/skills/jspackages/webpack.png';
-import expressLogo from 'assets/media/images/skills/jspackages/express.png';
-import jestLogo from 'assets/media/images/skills/jspackages/jest.png';
-import i18nextLogo from 'assets/media/images/skills/jspackages/i18next.png';
-import viteLogo from 'assets/media/images/skills/jspackages/vite.svg';
+import babelLogo from 'assets/media/images/skills/jspackages/babel.svg'
+import eslintLogo from 'assets/media/images/skills/jspackages/eslint.svg'
+import npmLogo from 'assets/media/images/skills/jspackages/npm.svg'
+import webpackLogo from 'assets/media/images/skills/jspackages/webpack.png'
+import expressLogo from 'assets/media/images/skills/jspackages/express.png'
+import jestLogo from 'assets/media/images/skills/jspackages/jest.png'
+import i18nextLogo from 'assets/media/images/skills/jspackages/i18next.png'
+import viteLogo from 'assets/media/images/skills/jspackages/vite.svg'
 
-import dockerLogo from 'assets/media/images/skills/software/docker.svg';
-import gitLogo from 'assets/media/images/skills/software/git.svg';
-import jiraLogo from 'assets/media/images/skills/software/jira.png';
-import mysqlLogo from 'assets/media/images/skills/software/mysql.svg';
-import photoshopLogo from 'assets/media/images/skills/software/photoshop.svg';
-import sentryLogo from 'assets/media/images/skills/software/sentry.svg';
-import vscodeLogo from 'assets/media/images/skills/software/vscode.png';
-import nodeLogo from 'assets/media/images/skills/software/node.svg';
+import dockerLogo from 'assets/media/images/skills/software/docker.svg'
+import gitLogo from 'assets/media/images/skills/software/git.svg'
+import jiraLogo from 'assets/media/images/skills/software/jira.png'
+import mysqlLogo from 'assets/media/images/skills/software/mysql.svg'
+import photoshopLogo from 'assets/media/images/skills/software/photoshop.svg'
+import sentryLogo from 'assets/media/images/skills/software/sentry.svg'
+import vscodeLogo from 'assets/media/images/skills/software/vscode.png'
+import nodeLogo from 'assets/media/images/skills/software/node.svg'
 
-const cats = ['lang', 'frameworks', 'jspackages', 'software'];
+const cats = ['lang', 'frameworks', 'jspackages', 'software']
 
 const skills = [
   {
@@ -231,6 +231,6 @@ const skills = [
   {
     type: 'greezy', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.2,
   },
-];
+]
 
-export { cats, skills };
+export { cats, skills }

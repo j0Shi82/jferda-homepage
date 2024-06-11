@@ -1,12 +1,12 @@
-import startPage from 'assets/media/images/projects/greezy/greezy1.png';
-import startPage250 from 'assets/media/images/projects/greezy/greezy1-250.jpg';
-import recipePage from 'assets/media/images/projects/greezy/greezy2.png';
-import recipePage250 from 'assets/media/images/projects/greezy/greezy2-250.jpg';
-import groupPage from 'assets/media/images/projects/greezy/greezy3.png';
-import groupPage250 from 'assets/media/images/projects/greezy/greezy3-250.jpg';
-import orderPage from 'assets/media/images/projects/greezy/greezy4.jpg';
-import orderPage250 from 'assets/media/images/projects/greezy/greezy4-250.jpg';
-import logo from 'assets/media/images/projects/greezy/logo.png';
+import startPage from 'assets/media/images/projects/greezy/greezy1.png'
+import startPage250 from 'assets/media/images/projects/greezy/greezy1-250.jpg'
+import recipePage from 'assets/media/images/projects/greezy/greezy2.png'
+import recipePage250 from 'assets/media/images/projects/greezy/greezy2-250.jpg'
+import groupPage from 'assets/media/images/projects/greezy/greezy3.png'
+import groupPage250 from 'assets/media/images/projects/greezy/greezy3-250.jpg'
+import orderPage from 'assets/media/images/projects/greezy/greezy4.jpg'
+import orderPage250 from 'assets/media/images/projects/greezy/greezy4-250.jpg'
+import logo from 'assets/media/images/projects/greezy/logo.png'
 
 export default {
   ident: 'greezy',
@@ -79,4 +79,4 @@ export default {
         description: false,
       }],
   },
-};
+}

@@ -25,6 +25,8 @@
   on:keypress={() => {
     hover = !hover
   }}
+  role="button"
+  tabindex=""
 >
   <div
     class="card-container"
@@ -57,11 +59,11 @@
           <h3 class="jdev-card-subtitle mdc-typography--subtitle2">
             <div>
               {#each project.skillsLocaleKeys
-                .map((skillLocaleKey) => skillLocaleKey.replace('skills.', ''))
+                .map(skillLocaleKey => skillLocaleKey.replace('skills.', ''))
                 .sort((a, b) => {
                   const x = a.toLowerCase()
                   const y = b.toLowerCase()
-                  // eslint-disable-next-line no-nested-ternary
+
                   return x < y ? -1 : x > y ? 1 : 0
                 }) as skill}
                 <TechLogo ident={skill} height="16" />
@@ -81,11 +83,11 @@
         <h3 class="jdev-card-subtitle mdc-typography--subtitle2">
           <div>
             {#each project.skillsLocaleKeys
-              .map((skillLocaleKey) => skillLocaleKey.replace('skills.', ''))
+              .map(skillLocaleKey => skillLocaleKey.replace('skills.', ''))
               .sort((a, b) => {
                 const x = a.toLowerCase()
                 const y = b.toLowerCase()
-                // eslint-disable-next-line no-nested-ternary
+
                 return x < y ? -1 : x > y ? 1 : 0
               }) as skill}
               <TechLogo ident={skill} height="16" />

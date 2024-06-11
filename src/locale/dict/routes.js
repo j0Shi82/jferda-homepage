@@ -27,4 +27,4 @@ export default {
     projects_jferda: '/projects/jferda',
     404: '/*',
   },
-};
+}

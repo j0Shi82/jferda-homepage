@@ -1,119 +1,119 @@
 <script>
 import {
   svelteTransitionFade, svelteLifecycleOnMount, svelteLifecycleOnDestroy,
-} from 'utils/imports/svelte';
-import { currentProject, animationsActive, projectInitializing } from 'utils/imports/store';
-import { routingFadeDuration } from 'utils/imports/config';
-import { preloadImages, getProjectAnimationParams } from 'utils/imports/helpers';
-import { projectList, skillList } from 'utils/imports/data';
+} from 'utils/imports/svelte'
+import { currentProject, animationsActive, projectInitializing } from 'utils/imports/store'
+import { routingFadeDuration } from 'utils/imports/config'
+import { preloadImages, getProjectAnimationParams } from 'utils/imports/helpers'
+import { projectList, skillList } from 'utils/imports/data'
 // components
-import ProjectDescription from 'components/content/projects/ProjectDescription.svelte';
-import ProjectKeys from 'components/content/projects/ProjectKeys.svelte';
-import ProjectSkills from 'components/content/projects/ProjectSkills.svelte';
-import ProjectGallery from 'components/content/projects/ProjectGallery.svelte';
-import ProjectLinks from 'components/content/projects/ProjectLinks.svelte';
+import ProjectDescription from 'components/content/projects/ProjectDescription.svelte'
+import ProjectKeys from 'components/content/projects/ProjectKeys.svelte'
+import ProjectSkills from 'components/content/projects/ProjectSkills.svelte'
+import ProjectGallery from 'components/content/projects/ProjectGallery.svelte'
+import ProjectLinks from 'components/content/projects/ProjectLinks.svelte'
 
-import 'assets/style/project.scss';
+import 'assets/style/project.scss'
 
-let animationTotalDuration = $animationsActive ? 1500 : 0;
-$: animationTotalDuration = $animationsActive ? 1500 : 0;
-let currentTimeout = null;
+let animationTotalDuration = $animationsActive ? 1500 : 0
+$: animationTotalDuration = $animationsActive ? 1500 : 0
+let currentTimeout = null
 
 // animation logic
-let skillsAnimationParams;
-let descAnimationParams;
-let keysAnimationParams;
-let galleryAnimationParams;
+let skillsAnimationParams
+let descAnimationParams
+let keysAnimationParams
+let galleryAnimationParams
 
 function getSectionAnimationParams(projectData) {
-  const skillCount = skillList.filter((el) => el.type === projectData.ident).length;
-  const keysCount = projectData.projectPage.keys.length;
+  const skillCount = skillList.filter(el => el.type === projectData.ident).length
+  const keysCount = projectData.projectPage.keys.length
   const galleryCount = projectData.projectPage.gallery.length;
   [
     skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams,
-  ] = getProjectAnimationParams(animationTotalDuration, $animationsActive, [skillCount, 1, keysCount, galleryCount]);
+  ] = getProjectAnimationParams(animationTotalDuration, $animationsActive, [skillCount, 1, keysCount, galleryCount])
   return [
     skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams,
-  ];
+  ]
 }
 
 // scaling and animations
-let projectData;
-let scaleY = 1;
-let padding = 2;
-let initialized = false;
-let loading = true;
-let routeContainer;
-let projectContainer;
+let projectData
+let scaleY = 1
+let padding = 2
+let initialized = false
+let loading = true
+let routeContainer
+let projectContainer
 
 function load() {
-  loading = true;
-  initialized = false;
-  const images = [];
-  const [data] = projectList.filter((project) => project.ident === $currentProject);
-  const projectSkills = skillList.filter((el) => el.type === $currentProject);
-  images.push(data.projectPage.titleImage);
-  images.push(...data.projectPage.gallery.map((image) => image.thumb));
-  images.push(...projectSkills.map((skill) => skill.logo));
+  loading = true
+  initialized = false
+  const images = []
+  const [data] = projectList.filter(project => project.ident === $currentProject)
+  const projectSkills = skillList.filter(el => el.type === $currentProject)
+  images.push(data.projectPage.titleImage)
+  images.push(...data.projectPage.gallery.map(image => image.thumb))
+  images.push(...projectSkills.map(skill => skill.logo))
   preloadImages(images).finally(() => {
-    loading = false;
-  });
+    loading = false
+  })
 }
 
 function scale() {
   if ($animationsActive) {
-    initialized = false;
+    initialized = false
     // scale window to device height and unfold when animations finished
-    scaleY = (window.innerHeight - 96) / projectContainer.clientHeight;
+    scaleY = (window.innerHeight - 96) / projectContainer.clientHeight
 
     // changing padding will force browsers to redraw the page, it's an ugly way to get rid of blurry text after scale in chrome
-    const el = document.querySelector('.jdev-route-project');
+    const el = document.querySelector('.jdev-route-project')
     el.addEventListener('transitionend', (e) => {
       if (e.target === el) {
-        padding = 0;
+        padding = 0
       }
-    });
+    })
 
-    if (currentTimeout) clearTimeout(currentTimeout);
+    if (currentTimeout) clearTimeout(currentTimeout)
     currentTimeout = setTimeout(() => {
-      scaleY = 1;
-      initialized = true;
-      projectInitializing.set(false);
-    }, animationTotalDuration + 250);
+      scaleY = 1
+      initialized = true
+      projectInitializing.set(false)
+    }, animationTotalDuration + 250)
   }
 }
 
 $: {
-  [projectData] = projectList.filter((project) => project.ident === $currentProject);
+  [projectData] = projectList.filter(project => project.ident === $currentProject);
   [
     skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams,
-  ] = getSectionAnimationParams(projectData);
-  load();
+  ] = getSectionAnimationParams(projectData)
+  load()
 }
 
 $: {
   // using bing:this as onUpdateOnMount service
   // route change => new content gets rendered => projectContainer gets updated => scale gets triggered
   if (routeContainer) {
-    scale();
+    scale()
   }
 }
 
 // first scaling on page load
 svelteLifecycleOnMount(() => {
-  load();
-});
+  load()
+})
 
 // destroy timer so that different project routes do not overlap
 svelteLifecycleOnDestroy(() => {
-  if (currentTimeout) clearTimeout(currentTimeout);
-});
+  if (currentTimeout) clearTimeout(currentTimeout)
+})
 </script>
 
 {#if !loading}
-<div 
-  class="jdev-route-project mdc-typography--body1" 
-  style="transform: scaleY({scaleY});" 
+<div
+  class="jdev-route-project mdc-typography--body1"
+  style="transform: scaleY({scaleY});"
   in:svelteTransitionFade="{{ duration: routingFadeDuration }}"
   class:initialized="{initialized}"
   bind:this="{routeContainer}"

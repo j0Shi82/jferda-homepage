@@ -33,7 +33,8 @@
       if (isHomeRoute) {
         skeletonLoaderWrapper.classList.add('jdev-skeleton-loader-wrapper-home')
         skeletonLoaderWrapper.classList.remove('jdev-skeleton-loader-wrapper-nothome')
-      } else {
+      }
+      else {
         skeletonLoaderWrapper.classList.add('jdev-skeleton-loader-wrapper-nothome')
         skeletonLoaderWrapper.classList.remove('jdev-skeleton-loader-wrapper-home')
       }
@@ -84,6 +85,8 @@
           on:keypress={() => {
             routerPush(getLocalizedRoute('home'))
           }}
+          role="button"
+          tabindex=""
         ></div>
       </div>
     </Section>

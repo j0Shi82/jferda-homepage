@@ -19,48 +19,48 @@ import 'intersection-observer'
 
 import 'assets/style/skills.scss'
 
-const openCat = 'lang';
-let currentCat;
-let initialPreloadFinished = false;
+const openCat = 'lang'
+let currentCat
+let initialPreloadFinished = false
 
 // observe elements on each side of the navigation
 // if not visible, show corresponding arrows
-let rightArrowOberserver;
-let leftArrowOberserver;
-let showRightArrow = false;
-let showLeftArrow = false;
+let rightArrowOberserver
+let leftArrowOberserver
+let showRightArrow = false
+let showLeftArrow = false
 
 svelteLifecycleOnMount(() => {
-  let observerLeft;
-  let observerRight;
+  let observerLeft
+  let observerRight
   // preload images to smoothen transitions
-  preloadImages(skillList.filter((skill) => skill.type === openCat).map((skill) => skill.logo)).finally(() => {
-    currentCat = openCat;
-    initialPreloadFinished = true;
+  preloadImages(skillList.filter(skill => skill.type === openCat).map(skill => skill.logo)).finally(() => {
+    currentCat = openCat
+    initialPreloadFinished = true
 
     svelteTick().then(() => {
       observerLeft = new IntersectionObserver((entries) => {
-        showLeftArrow = !entries[0].isIntersecting;
-      });
+        showLeftArrow = !entries[0].isIntersecting
+      })
 
       observerRight = new IntersectionObserver((entries) => {
-        showRightArrow = !entries[0].isIntersecting;
-      });
+        showRightArrow = !entries[0].isIntersecting
+      })
 
-      observerLeft.observe(leftArrowOberserver);
-      observerRight.observe(rightArrowOberserver);
-    });
+      observerLeft.observe(leftArrowOberserver)
+      observerRight.observe(rightArrowOberserver)
+    })
 
     setTimeout(() => {
-      preloadImages(skillList.filter((skill) => skill.type !== openCat).map((skill) => skill.logo));
-    }, 250);
-  });
+      preloadImages(skillList.filter(skill => skill.type !== openCat).map(skill => skill.logo))
+    }, 250)
+  })
 
   return () => {
-    if (observerLeft) observerLeft.unobserve(leftArrowOberserver);
-    if (observerRight) observerRight.unobserve(rightArrowOberserver);
-  };
-});
+    if (observerLeft) observerLeft.unobserve(leftArrowOberserver)
+    if (observerRight) observerRight.unobserve(rightArrowOberserver)
+  }
+})
 </script>
 
 {#if initialPreloadFinished}

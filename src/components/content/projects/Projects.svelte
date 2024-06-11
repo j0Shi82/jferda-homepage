@@ -1,12 +1,12 @@
 <script>
-import { svelteTransitionFade } from 'utils/imports/svelte';
-import { routingFadeDuration } from 'utils/imports/config';
-import { projectList } from 'utils/imports/data';
+import { svelteTransitionFade } from 'utils/imports/svelte'
+import { routingFadeDuration } from 'utils/imports/config'
+import { projectList } from 'utils/imports/data'
 // components
-import ProjectsCard from 'components/content/projects/ProjectsCard.svelte';
-import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte';
+import ProjectsCard from 'components/content/projects/ProjectsCard.svelte'
+import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
 
-import 'assets/style/projects.scss';
+import 'assets/style/projects.scss'
 </script>
 
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-projects" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
@@ -17,4 +17,3 @@ import 'assets/style/projects.scss';
         {/each}
     </div>
 </div>
-  

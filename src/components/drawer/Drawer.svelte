@@ -33,7 +33,8 @@
       timeout = setTimeout(() => {
         document.querySelector('body').classList.add('jdev-scroll-lock')
       }, 250)
-    } else {
+    }
+    else {
       document.querySelector('body').classList.remove('jdev-scroll-lock')
     }
   }
@@ -44,7 +45,8 @@
       if (!modal && $currentRouteName === 'home') {
         drawer.setOpen(false)
         handleScrollLock(false)
-      } else {
+      }
+      else {
         drawer.setOpen(true)
         handleScrollLock(true)
       }
@@ -76,6 +78,7 @@
       {#each drawerMenuItems as item}
         <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName} on:keypress={() => go()}>
           <span class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">
+            <!-- eslint-disable-next-line svelte/no-at-html-tags -->
             {@html item.icon}
           </span>
           <Text>{$localize(`navigation.routes.${item.routeName}`)}</Text>
@@ -104,7 +107,7 @@
         <div class="jdev-list-item">
           <!-- <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}"> -->
           {#each $locales as loc}
-            <div class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)} on:keypress={() => currentLocale.set(loc)}>
+            <div role="button" tabindex="" class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)} on:keypress={() => currentLocale.set(loc)}>
               <div class="jdev-flag {loc}" />
             </div>
             <!-- <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption> -->

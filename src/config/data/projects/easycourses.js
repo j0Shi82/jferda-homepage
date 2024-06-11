@@ -1,4 +1,4 @@
-import nodeLogo from 'assets/media/images/knowledge-logos/node.png';
+import nodeLogo from 'assets/media/images/knowledge-logos/node.png'
 
 export default {
   ident: 'easycourses',
@@ -40,4 +40,4 @@ export default {
     ],
     gallery: [],
   },
-};
+}

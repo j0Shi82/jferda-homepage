@@ -1,15 +1,15 @@
 <script>
-import { localize } from 'utils/imports/core';
-import { svelteTransitionFly } from 'utils/imports/svelte';
-import { headerTransitionDuration } from 'utils/imports/config';
-import { screenWidth, animationsActive } from 'utils/imports/store';
+import { localize } from 'utils/imports/core'
+import { svelteTransitionFly } from 'utils/imports/svelte'
+import { headerTransitionDuration } from 'utils/imports/config'
+import { screenWidth, animationsActive } from 'utils/imports/store'
 
-export let localeKey;
-export let transitionDirection = ['left', 'right'];
-export let transitionDuration = headerTransitionDuration;
-export let transitionDelay = 0;
+export let localeKey
+export let transitionDirection = ['left', 'right']
+export let transitionDuration = headerTransitionDuration
+export let transitionDelay = 0
 
-const transitionX = transitionDirection.map((direction) => $screenWidth * (direction === 'left' ? -2 : 2));
+const transitionX = transitionDirection.map(direction => $screenWidth * (direction === 'left' ? -2 : 2))
 </script>
 
 <style lang="scss">

@@ -1,11 +1,11 @@
 import {
   onDestroy, onMount, createEventDispatcher, afterUpdate, tick,
-} from 'svelte';
-import { writable } from 'svelte/store';
+} from 'svelte'
+import { writable } from 'svelte/store'
 import {
   fade, slide, fly, scale,
-} from 'svelte/transition';
-import { backOut } from 'svelte/easing';
+} from 'svelte/transition'
+import { backOut } from 'svelte/easing'
 
 export {
   onDestroy as svelteLifecycleOnDestroy,
@@ -19,4 +19,4 @@ export {
   writable as storeTypeWritable,
   createEventDispatcher as svelteCreateEventDispatcher,
   tick as svelteTick,
-};
+}

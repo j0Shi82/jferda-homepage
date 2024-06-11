@@ -6,18 +6,18 @@ import LinearProgress from '@smui/linear-progress'
 // import '@smui/linear-progress/_index.scss';
 // import '@smui/fab/_index.scss';
 
-export let logoSrc;
-export let progress;
-export let logoAlt;
-export let themeClass;
-export let delay = 0;
+export let logoSrc
+export let progress
+export let logoAlt
+export let themeClass
+export let delay = 0
 
-const upcoming = progress === 0 ? 'jdev-skills-upcoming' : '';
+const upcoming = progress === 0 ? 'jdev-skills-upcoming' : ''
 
-let currentProgress = $animationsActive ? 0 : progress;
+let currentProgress = $animationsActive ? 0 : progress
 setTimeout(() => {
-  currentProgress = progress;
-}, delay);
+  currentProgress = progress
+}, delay)
 </script>
 
 <style lang="scss" global>
@@ -25,7 +25,7 @@ setTimeout(() => {
   .jdev-skills-progress .mdc-linear-progress__bar-inner {
     border-top-width: $skill-progress-height;
     border-top-style: solid;
-  } 
+  }
 </style>
 
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-1-phone {upcoming}">

@@ -1,30 +1,30 @@
 <script>
-import { svelteTransitionSlide } from 'utils/imports/svelte';
-import { skillList } from 'utils/imports/data';
-import { atomTransitionDuration, atomTransitionDurationShort } from 'utils/imports/config';
-import { animationsActive } from 'utils/imports/store';
+import { svelteTransitionSlide } from 'utils/imports/svelte'
+import { skillList } from 'utils/imports/data'
+import { atomTransitionDuration, atomTransitionDurationShort } from 'utils/imports/config'
+import { animationsActive } from 'utils/imports/store'
 // components
-import SkillsProgressRow from 'components/content/skills/SkillsProgressRow.svelte';
+import SkillsProgressRow from 'components/content/skills/SkillsProgressRow.svelte'
 
-import 'assets/style/skillsprogress.scss';
+import 'assets/style/skillsprogress.scss'
 
 function getSortedSkillList(type = 'lang') {
-  return skillList.filter((el) => el.type === type).sort((a, b) => {
-    if (a.name.toUpperCase() < b.name.toUpperCase()) return -1;
-    if (a.name.toUpperCase() > b.name.toUpperCase()) return 1;
-    return 0;
-  });
+  return skillList.filter(el => el.type === type).sort((a, b) => {
+    if (a.name.toUpperCase() < b.name.toUpperCase()) return -1
+    if (a.name.toUpperCase() > b.name.toUpperCase()) return 1
+    return 0
+  })
 }
 
-export let catIdent;
-export let catOpen = false;
-export let slideDelay = 0;
-export let slideDuration = atomTransitionDuration;
-export let rowIterationDelay = atomTransitionDurationShort;
+export let catIdent
+export let catOpen = false
+export let slideDelay = 0
+export let slideDuration = atomTransitionDuration
+export let rowIterationDelay = atomTransitionDurationShort
 
 $: {
-  slideDuration = $animationsActive ? slideDuration : 0;
-  slideDelay = $animationsActive ? slideDelay : 0;
+  slideDuration = $animationsActive ? slideDuration : 0
+  slideDelay = $animationsActive ? slideDelay : 0
 }
 </script>
 

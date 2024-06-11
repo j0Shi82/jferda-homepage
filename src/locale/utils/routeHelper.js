@@ -5,15 +5,15 @@ import { currentLocale } from 'utils/imports/store.js'
 let localeStoreValue
 
 currentLocale.subscribe((value) => {
-	localeStoreValue = value
+  localeStoreValue = value
 })
 
 const getLocalizedRoute = (routeName, lang = localeStoreValue) => {
-	let routePath = routeLocaleDict[lang][routeName]
-	if (lang !== localeStandardLanguage) {
-		routePath = `/${lang}${routePath}`
-	}
-	return routePath
+  let routePath = routeLocaleDict[lang][routeName]
+  if (lang !== localeStandardLanguage) {
+    routePath = `/${lang}${routePath}`
+  }
+  return routePath
 }
 
 export default getLocalizedRoute

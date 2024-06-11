@@ -1,13 +1,13 @@
-import App from './App.svelte';
+import App from './App.svelte'
 
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').then((registration) => {
-      console.log('SW registered: ', registration);
+      console.log('SW registered: ', registration)
     }).catch((registrationError) => {
-      console.log('SW registration failed: ', registrationError);
-    });
-  });
+      console.log('SW registration failed: ', registrationError)
+    })
+  })
 }
 
 const app = new App({
@@ -16,8 +16,8 @@ const app = new App({
     name: 'j0Shi.dev',
     legacy: false,
   },
-});
+})
 
-window.app = app;
+window.app = app
 
-export default app;
+export default app

@@ -1,354 +1,359 @@
 {
-    "navigation": {
-        "routes": {
-            "home": "Startseite",
-            "about": "Über Mich",
-            "resume": "Lebenslauf",
-            "skills": "Kompetenzen",
-            "projects": "Projekte",
-            "projects_mmb": "MavsMoneyball",
-            "projects_nwoun": "Neverwinter Uncensored",
-            "projects_jferda": "j0shi.dev",
-            "projects_lwm": "Last War Manager",
-            "projects_edom": "e-domizil.de",
-            "projects_neighboring": "Neighboring Satellites",
-            "projects_easycourses": "easycourses.io",
-            "404": "404 - Nicht gefunden"
-        },
-        "animationSwitchLabel": "Animationen"
+  "navigation": {
+    "routes": {
+      "home": "Startseite",
+      "about": "Über Mich",
+      "resume": "Lebenslauf",
+      "skills": "Kompetenzen",
+      "projects": "Projekte",
+      "projects_mmb": "MavsMoneyball",
+      "projects_nwoun": "Neverwinter Uncensored",
+      "projects_nwgondtools": "Neverwinter Gond Tools",
+      "projects_greezy": "greezy.app",
+      "projects_jferda": "j0shi.dev",
+      "projects_lwm": "Last War Manager",
+      "projects_edom": "e-domizil.de",
+      "projects_neighboring": "Neighboring Satellites",
+      "projects_easycourses": "easycourses.io",
+      "404": "404 - Nicht gefunden"
     },
-    "locale": {
-        "headline": "Sprace",
-        "en": "English",
-        "de": "Deutsch"
+    "animationSwitchLabel": "Animationen"
+  },
+  "locale": {
+    "headline": "Sprace",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "header": {
+    "label": {
+      "menu_open": "Menü Öffnen",
+      "menu_close": "Menü Schließen",
+      "github": "Github Profil Aufrufen",
+      "mail": "Per Mail Kontaktieren"
+    }
+  },
+  "home": {
+    "maintext": "Hallo! Mein Name ist <b>Janosch</b>. Ich bin <b>Full-Stack Web-Entwickler</b> aus Deutschland und habe Spaß am Erstellen von schnellen, optimierten und modernen <b>Javascript</b> Applikationen. Ich lade dich auf meiner Webseite ein, mehr über meine <b>Philosophie</b> und <b>Antrieb</b> zu erfahren."
+  },
+  "about": {
+    "bio": {
+      "headline": "Biographie",
+      "bio1": "Angetrieben von Dingen, die ich brauchte aber nirgends finden konnte, programmiere ich schon seit 1997. Lange Zeit war es \"nur\" ein Hobby, welches aber oft mehr Zeit in Anspruch nahm als andere Tätigkeiten. Deshalb habe ich konsequenterweise an einem Wendepunkt in meinem Leben beschlossen, meine Berufung auch zu meinem Beruf zu machen.",
+      "bio2": "Obwohl ich wenig Erfahrung in der professionellen IT-Arbeitswelt vorzuweisen hatte, war der Übergang einfach. Ich habe mich seinerzeit für Web-Entwicklung entschieden, weil ohnehin viele meiner Hobby-Projekte darauf basierten. Zudem war ich schon immer beeindruckt von den Möglichkeiten des Webs und empfand es als extrem zufriedenstellend, wie einfach man dort seine Arbeit der Welt präsentieren konnte.",
+      "bio3": "Über die Jahre bin ich mit vielen Programmiersprachen und Umgebungen in Berührung gekommen. Meinen ersten Code überhaupt verfasste ich in Visual Basic, bevor ich über ein kleines Intermezzo in C zu Web-Applikationen in PHP/SQL und HTML/CSS kam. Die berüchtigte jQuery-Bibliothek war dann mein Einstieg in JavasScript und über die Zeit ist dies und diverse verwandte Frameworks zu meiner Kernkompetenz herangewachsen."
     },
-    "header": {
-        "label": {
-            "menu_open": "Menü Öffnen",
-            "menu_close": "Menü Schließen",
-            "github": "Github Profil Aufrufen",
-            "mail": "Per Mail Kontaktieren"
-        }
+    "philosophy": {
+      "headline": "Coding heißt für mich...",
+      "hint": {
+        "touch": "für mehr Info Buttons klicken",
+        "notouch": "für mehr Info über Buttons hovern"
+      },
+      "satisfaction": {
+        "headline": "Befriedigung",
+        "text": "Innerhalb einer Applikation gibt es so gut wie keine Probleme, die man nicht lösen könnte. Das macht Entwicklung zu einem befriedigenden Belohnungssystem, welches immer wieder Erfolge generiert."
+      },
+      "community": {
+        "headline": "Gemeinschaft",
+        "text": "Die Teilnahme an verschiedenen Gemeinschaften und der Open-Source-Bewegung ist ein exzellenter Weg, um sich fortwährend auszutauschen, ohne viel Aufwand neue Wege zu beschreiten und die Qualität der eigenen Arbeit zu verbessern."
+      },
+      "creativity": {
+        "headline": "Kreativität",
+        "text": "Niemand würde Programmieren mit Kunst vergleichen. Aber warum eigentlich nicht? Entwickler sind in der Lage aus Nichts etwas entstehen zu lassen und die einzigen Hilfsmittel sind Kreativität, Logik und Vorstellungskraft."
+      },
+      "helloworld": {
+        "headline": "Hallo Welt",
+        "text": "Sein Schaffen der Welt zu präsentieren ist ein integraler Bestandteil meiner Motivation. Auch und gerade der Austausch mit Benutzern einer Software schätze ich wert und hilft mir, niemals stehen zu bleiben."
+      },
+      "progressive": {
+        "headline": "Fortschritt",
+        "text": "Entwicklung ist ein Bereich des konstanten Wandels. Dank Innovation und moderner Technologien hilft es sogar im besten Fall, die Welt zu einem besseren Ort für alle zu machen."
+      },
+      "lit": {
+        "headline": "Trendy",
+        "text": "Das Label \"nerdy\" ist für mich längst kein Vorurteil mehr, sondern Verpflichtung und Lebensart. Meine Generation ist lebensoffen, modern, und sozial. Gerüchten zufolge werden aber weiterhin Energy-Drinks konsumiert."
+      },
+      "givingback": {
+        "headline": "Zurückgeben",
+        "text": "Ich bin immer interessiert daran, zu lernen und mich weiterzuentwickeln. Aber ich lebe auch vom Austausch und Weitergeben meiner persönlichen Erfahrung, um den Horizont anderer in gleicher Weise zu erweitern."
+      }
+    }
+  },
+  "resume": {
+    "stillgoing": "seit",
+    "education": {
+      "headline": "Ausbildung",
+      "gym": "Allgemeine Hochschulreife am Ricarda-Huch-Gymnasium und Berufskolleg Königstraße in Gelsenkirchen",
+      "uni": "Studierender an der Westfälischen Wilhelms-Universität in Münster im Fach Psychologie Bsc",
+      "edom": "Ausbildung zum Fachinformatiker der Anwendungsentwicklung bei der e-domizil GmbH in Münster"
     },
-    "home": {
-        "maintext": "Hallo! Mein Name ist <b>Janosch</b>. Ich bin <b>Full-Stack Web-Entwickler</b> aus Deutschland und habe Spaß am Erstellen von schnellen, optimierten und modernen <b>Javascript</b> Applikationen. Ich lade dich auf meiner Webseite ein, mehr über meine <b>Philosophie</b> und <b>Arbeit</b> zu erfahren."
-    },
-    "about": {
-        "bio": {
-            "headline": "Biographie",
-            "bio1": "Angetrieben von Dingen, die ich brauchte aber nirgends finden konnte, programmiere ich schon seit 1997. Lange Zeit war es \"nur\" ein Hobby, welches aber oft mehr Zeit in Anspruch nahm als andere Tätigkeiten. Deshalb habe ich konsequenterweise an einem Wendepunkt in meinem Leben beschlossen, meine Berufung auch zu meinem Beruf zu machen.",
-            "bio2": "Obwohl ich wenig Erfahrung in der professionellen IT-Arbeitswelt vorzuweisen hatte, war der Übergang einfach. Ich habe mich seinerzeit für Web-Entwicklung entschieden, weil ohnehin viele meiner Hobby-Projekte darauf basierten. Zudem war ich schon immer beeindruckt von den Möglichkeiten des Webs und empfand es als extrem zufriedenstellend, wie einfach man dort seine Arbeit der Welt präsentieren konnte.",
-            "bio3": "Über die Jahre bin ich mit vielen Programmiersprachen und Umgebungen in Berührung gekommen. Meinen ersten Code überhaupt verfasste ich in Visual Basic, bevor ich über ein kleines Intermezzo in C zu Web-Applikationen in PHP/SQL und HTML/CSS kam. Die berüchtigte jQuery-Bibliothek war dann mein Einstieg in JavasScript und über die Zeit ist dies und diverse verwandte Frameworks zu meiner Kernkompetenz herangewachsen."
-        },
-        "philosophy": {
-            "headline": "Coding heißt für mich...",
-            "hint": {
-                "touch": "für mehr Info Buttons klicken",
-                "notouch": "für mehr Info über Buttons hovern"
-            },
-            "satisfaction": {
-                "headline": "Befriedigung",
-                "text": "Innerhalb einer Applikation gibt es so gut wie keine Probleme, die man nicht lösen könnte. Das macht Entwicklung zu einem befriedigenden Belohnungssystem, welches immer wieder Erfolge generiert."
-            },
-            "community": {
-                "headline": "Gemeinschaft",
-                "text": "Die Teilnahme an verschiedenen Gemeinschaften und der Open-Source-Bewegung ist ein exzellenter Weg, um sich fortwährend auszutauschen, ohne viel Aufwand neue Wege zu beschreiten und die Qualität der eigenen Arbeit zu verbessern."
-            },
-            "creativity": {
-                "headline": "Kreativität",
-                "text": "Niemand würde Programmieren mit Kunst vergleichen. Aber warum eigentlich nicht? Entwickler sind in der Lage aus Nichts etwas entstehen zu lassen und die einzigen Hilfsmittel sind Kreativität, Logik und Vorstellungskraft."
-            },
-            "helloworld": {
-                "headline": "Hallo Welt",
-                "text": "Sein Schaffen der Welt zu präsentieren ist ein integraler Bestandteil meiner Motivation. Auch und gerade der Austausch mit Benutzern einer Software schätze ich wert und hilft mir, niemals stehen zu bleiben."
-            },
-            "progressive": {
-                "headline": "Fortschritt",
-                "text": "Entwicklung ist ein Bereich des konstanten Wandels. Dank Innovation und moderner Technologien hilft es sogar im besten Fall, die Welt zu einem besseren Ort für alle zu machen."
-            },
-            "lit": {
-                "headline": "Trendy",
-                "text": "Das Label \"nerdy\" ist für mich längst kein Vorurteil mehr, sondern Verpflichtung und Lebensart. Meine Generation ist lebensoffen, modern, und sozial. Gerüchten zufolge werden aber weiterhin Energy-Drinks konsumiert."
-            },
-            "givingback": {
-                "headline": "Zurückgeben",
-                "text": "Ich bin immer interessiert daran, zu lernen und mich weiterzuentwickeln. Aber ich lebe auch vom Austausch und Weitergeben meiner persönlichen Erfahrung, um den Horizont anderer in gleicher Weise zu erweitern."
-            }
-        }
-    },
-    "resume": {
-        "stillgoing": "seit",
-        "education": {
-            "headline": "Ausbildung",
-            "gym": "Allgemeine Hochschulreife am Ricarda-Huch-Gymnasium und Berufskolleg Königstraße in Gelsenkirchen",
-            "uni": "Studierender an der Westfälischen Wilhelms-Universität in Münster im Fach Psychologie Bsc",
-            "edom": "Ausbildung zum Fachinformatiker der Anwendungsentwicklung bei der e-domizil GmbH in Münster"
-        },
-        "experience": {
-            "headline": "Erfahrung",
-            "hs": "Freier redaktioneller und technischer Mitarbeiter bei der <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
-            "mmb": "Autor und Editor bei <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, einem Online-Basketball-Blog. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
-            "nwoun": "Admin von <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, einer Online-Community und Software-Projekt für das MMORPG Neverwinter von Cryptic Studios und Gearbox Software.",
-            "neighboring": "Planung und technische Umsetzung der Webpräsenz für das Projekt <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
-            "edom": "Full-Stack Web-Developer bei <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, einem Online-Reisebüro für Ferienhäuser.",
-            "titus": "Full-Stack-Entwickler des Shopsystems bei <a href='https://www.titus.de/' target='_blank'>Titus</a>, einem E-Commerce-Unternehmen für Skate-Lifestyle."
-        },
-        "skills": {
-            "headline": "Sonstige Fähigkeiten und Zertifikate",
-            "kmk": "KMK-Fremdsprachenzertifikat Englisch für IT-Berufe, Niveau C1",
-            "sql": "Weiterbildungslehrgang SQL der Fernuniversität Hagen"
-        }
+    "experience": {
+      "headline": "Erfahrung",
+      "hs": "Freier redaktioneller und technischer Mitarbeiter bei der <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
+      "mmb": "Autor und Editor bei <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, einem Online-Basketball-Blog. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
+      "nwoun": "Admin von <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, einer Online-Community und Software-Projekt für das MMORPG Neverwinter von Cryptic Studios und Gearbox Software.",
+      "neighboring": "Planung und technische Umsetzung der Webpräsenz für das Projekt <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
+      "edom": "Full-Stack Web-Developer bei <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, einem Online-Reisebüro für Ferienhäuser.",
+      "titus": "Full-Stack-Entwickler des Shopsystems bei <a href='https://www.titus.de/' target='_blank'>Titus</a>, einem E-Commerce-Unternehmen für Skate-Lifestyle."
     },
     "skills": {
-        "software": "Software",
-        "frameworks": "Frameworks / CMS",
-        "jspackages": "Javascript-Pakete",
-        "lang": "Programmiersprachen",
-        "js": "JavaScript",
-        "php": "PHP",
-        "wp": "Wordpress",
-        "sql": "SQL",
-        "jquery": "jQuery",
-        "vue": "Vue",
-        "laravel": "Laravel",
-        "docker": "Docker",
-        "bootstrap": "Bootstrap",
-        "node": "Node",
-        "css": "CSS"
-    },
-    "projects": {
-        "learnmore": "Mehr erfahren",
-        "skillsep": ", ",
-        "edom": {
-            "desc": "e-domizil.de ist das erste kommerzielle Projekt, an dem ich mitarbeiten durfte. Dank der technische Realisierung eines kompletten Relaunches wurden Lernprozesse und Kompetenzen in allen Bereichen der Full-Stack-Entiwklung abgerufen und gefördert."
-        },
-        "nwoun": {
-            "desc": "Neverwinter:Uncensored ist bis heute mein größtes privates Projekt und eine echte Herzensangelegenheit. Während fünf spannender Jahre durfte ich Content und Web-Applikationen über 100.000 monatlichen Benutzern präsentieren."
-        },
-        "gondtools": {
-            "desc": "Gond Tools sind die überarbeiteten und unter neuer Marke auftretenden Online-Tools, die ursprünglich für Neverwinter Uncensored erstellt wurden. Es ist ein News-Portal und diverse spiel-spezifische Apps für ein MMORPG online."
-        },
-        "greezy": {
-            "desc": "Greezy ist eine App, die es Benutzern erlaubt Rezepte, Gruppen und Einkaufslisten zu erstellen und zu verwalten sowie basierend auf diesen Rezepten und Listen Lebensmittel bei diversen Anbietern zu bestellen."
-        },
-        "neighboring": {
-            "desc": "Neighboring Satellites ist ein öffentliche gefördertes Projekt, welches die Kunstszene in Gelsenkirchen-Ückendorf fördern soll. Ich wurde mit der tecnischen Realisierung der Webseite beauftragt."
-        },
-        "jferda": {
-            "desc": "Als ich nach einem halbwegs sinnvollen Projekt suchte, um neue Technologien (Svelte, Tailwind CSS) auszuprobieren, wurde j0shi.dev geboren! "
-        },
-        "easycourses": {
-            "desc": "Hier entsteht eine Web-Applikation, die es in wenigen Schritten ermöglicht Teilnehmer zufällig auf eine Kursliste zu verteilen. Das Hauptaugenmerk liegt dabei auf einer einfachen Bedienbarkeit und der Einhaltung strikter Datenschutzrichtlinien."
-        }
-    },
-    "project": {
-        "desc": "Beschreibung",
-        "highlights": "Features",
-        "skills": "Benutzte Technologien",
-        "gallery": "Galerie",
-        "links": {
-            "web": "Website",
-            "github": "Repository"
-        },
-        "nwoun": {
-            "desc": "Neverwinter Uncensored entstand aus dem Mangel einer unabhängigen News-Plattform und Community für ein MMORPG, welches ich seit 2013 aktiv spiele. Als reines Fanprojekt gestartet entwickelte es sich über die Zeit zur #1 Fanseite des Spieles! Wir konnten über 100.000 Benutzer mit Content und Web-Applikationen versorgen und es war eine schwere Entscheidung, das Projekt 2019 aus Zeitgründen nicht länger fortzusetzen. Unter der alten URL ist aber bis heute noch ein kleiner News-Aggregator zu finden, den ich komplett neu aufgesetzt habe.<br /><br />Es war eine unglaubliche Erfahrung, eine Community und Webseite dieser Dimension allein zu betreuen. Die technische Umsetzung bestand aus einem selbst angepassten Wordpress-Blog, die Online-Tools wurden mit dem Plugin-System einer Foren-Software auf Basis von Symfony realisiert. Darüberhinaus konnte ich viel Erfahrung mit sozialen Medien und Branding, sowie SEO und SEA sammeln.",
-            "highlights": {
-                "1": {
-                    "1": "Angespasster Wordpress Blog",
-                    "2": "Einbindung unzähliger Plugins",
-                    "3": "Optimierungen in vielen Bereichen"
-                },
-                "2": {
-                    "1": "Spiel-bezogene Apps",
-                    "2": "\"Data Crawling\" ohne offizielle API",
-                    "3": "Einzigartige PHP / JS Applikationen"
-                },
-                "3": {
-                    "1": "Monatliche Zahlen",
-                    "2": "100,000+ Benutzer",
-                    "3": "350,000+ Seitenaufrufe"
-                },
-                "4": {
-                    "1": "Social Management",
-                    "2": "Communities auf Twitter, Discord, Facebook",
-                    "3": "Integrierung vieler APIs"
-                },
-                "5": {
-                    "1": "Branding",
-                    "2": "Logos, Banners & Farbschema",
-                    "3": "Hunderte von Bildern und Logos"
-                }
-            },
-            "links": {
-                "forum": "Webseite",
-                "repo": "Repository"
-            }
-        },
-        "gondtools": {
-            "desc": "Neverwinter Gond Tools ist als Nachfolger zu Neverwinter Uncensored entstanden. Ich erstelle keine Inhalte mehr für das Spiel, hoste meine Online-Tools aber weiterhin unter einer neuen URL und Marke. Zusätzlich steht der Quell-Code des Frontends als Open-Source zur Verfügung und die zugehörige API sowie der Web-Crawler werden folgen.<br /><br />Die ursprünglichen in jQuery geschriebenen Tools wurden komplett überarbeitet und auf eine modernere Basis gestellt. Das Frontend basiert auf Svelte und Tailwind, die API und der Web-Crawler sind in PHP und MySQL geschrieben. Zusätzlich gibt es einen Game-Crawler, der in einer Windows VM auf der GCP beheimatet ist. Diese verschiedenen Teile miteinander zu verknüpfen war die größte Herausforderung des Projektes und hat viel Spaß gebracht.<br /><br />Es werden hoffentlich in Zukunft noch weitere Features hinzugefügt. Die Original-Tools waren umfangreicher, werden aber Stück für Stück portiert.",
-            "highlights": {
-                "1": {
-                    "1": "Javascript Frontend",
-                    "2": "Basiert auf Svelte, Tailwind, und Webpack",
-                    "3": "Desktop und mobile Ansichten"
-                },
-                "2": {
-                    "1": "Web Scraper",
-                    "2": "PHP-Scraper, der per Cron gesteuert wird",
-                    "3": "Content-Tags für leichtere Suchen"
-                },
-                "3": {
-                    "1": "Drittanbieter APIs",
-                    "2": "YouTube, Twitter, Patreon",
-                    "3": "Plus zugehörige Bibliotheken"
-                },
-                "4": {
-                    "1": "Slim PHP API",
-                    "2": "Eigenständige REST API",
-                    "3": "Volle Dokumentation der Schnittstelle"
-                },
-                "5": {
-                    "1": "Cloud Computing und Hosting",
-                    "2": "Erfahrung gesammelt mit Cloud-Lösungen",
-                    "3": "z.B. AWS, Vercel, GCP"
-                }
-            },
-            "links": {
-                "web": "gond.tools",
-                "repo": "Repository"
-            }
-        },
-        "greezy": {
-            "desc": "Greezy ist ein klassisches \"Gibt es nicht? Mach ich selbst!\"-Projekt. Wir hatten als Familie viel zu viel mit der wöchentlichen Essenplanung zu tun. Also fing ich an eine App zu schrieben, die uns das Leben erleichtert. Wir hatten dank COVID ohnehin alle Einkäufe online abgewickelt, aber die wöchentlichen Einkaufslisten zu erstellen und zu bestellen war zeitaufwendig und langweilig. Daher erlaubt es Greezy diesen Prozess zu automatiseren und bei verschiedenen Anbietern Lebensmittel basierend auf Rezept- oder Einkaufslisten zu bestellen.<br /><br />Dazu können sich Benutzer unterdinander verbinden und Daten und sogar Anbieter-Logins teilen. Außerdem können Listen in verschiedene andere populäre Apps importiert werden. Das Rezept-Management erlaubt es dank vieler Optionen, die periodische Essenplanung immer wieder den eigenen Vorlieben anzupassen ohne dass man dafür ständig die Rezepte grundlegend ändern muss.",
-            "highlights": {
-                "1": {
-                    "1": "NUXT",
-                    "2": "VUE-Vertiefung mit NUXT",
-                    "3": "Vollwertige Server / Client-Applikation"
-                },
-                "2": {
-                    "1": "Gehostet mittels Cloud/Edge",
-                    "2": "Erfahrungen mit Vercel und Heroku gesammlt",
-                    "3": "Die Datenbank auf eigenen Server"
-                },
-                "3": {
-                    "1": "Vendor Logins",
-                    "2": "Login zu verschiedenen Anbietern ermöglichen",
-                    "3": "Suche und Bestellung von Artikeln"
-                },
-                "4": {
-                    "1": "Rezept-Verwaltung",
-                    "2": "Übernahme von Rezepten anderer Seiten",
-                    "3": "Icon-Schnittstellen zu anderen Services"
-                },
-                "5": {
-                    "1": "Login- und User-Verwaltung",
-                    "2": "Soziale Logins ermöglichen",
-                    "3": "Eigene Session-Verwaltung"
-                }
-            },
-            "links": {
-                "web": "greezy.app"
-            }
-        },
-        "edom": {
-            "desc": "e-domizil.de ist ein Online-Reisebüro für Ferienhäuser. Die Web-Präsenz wurde 2019 mit einem Fokus auf mobile Unterstützung, Geschwindigkeit, SEO und White-Label-Fähigkeit komplett neugestaltet und relaunched. Das Projekt benutzt das VUE.js-Framework und Node.js / Express für Server-Rendering. Die Microservies werden mit Hilfe von Lumen (Laravel) realisiert.<br /><br />Als volles Mitglied des Entwicklungsteams habe ich mitgeholfen, die Applikation in allen Bereichen der Full-Stack-Entwicklung von Grund auf zu gestalten und habe mich im Prozess speziell mit der Rendering-Logik, PWA-Funktionalität, API, Routing, Lokalisation, Bundling und Performance-Analyse befasst. Zudem oblag mir die Anpassung und Konfiguration essentieller Pakete wie Babel, ESLint oder Jest.<br /><br />Über die Zeit habe ich wichtige Erfahrungen mit Javascript-Frameworks und im speziellen mit Vue.js gesammelt und gelernt, wie man verschiedenste Bereiche der Applikation optimiert.",
-            "highlights": {
-                "1": {
-                    "1": "Full-Stack Entwicklung",
-                    "2": "Vue.js, Express, Docker",
-                    "3": "Lumen, API design, Elastic Search"
-                },
-                "2": {
-                    "1": "SEO & Geschwindigkeit",
-                    "2": "Core Web Vitals und andere Kennzahlen",
-                    "3": "Cache-Logik entwicklen"
-                },
-                "3": {
-                    "1": "A/B-Tests",
-                    "2": "A/B-Test-Funktionalität bei SSR/SPA bereitstellen",
-                    "3": "Angepasste Lösung mittels eigener DB und Google"
-                },
-                "4": {
-                    "1": "Kalender-Funktionalität",
-                    "2": "Auf die Seite angepasste Software",
-                    "3": "Basierend auf Flatpickr"
-                },
-                "5": {
-                    "1": "Unterstützung alter Browser",
-                    "2": "Unterstützung bis IE 11",
-                    "3": "Unterschiedliches Bundle für moderne Browser"
-                }
-            },
-            "links": {
-                "edom": "e-domizil.de"
-            }
-        },
-        "neighboring": {
-            "desc": "Neighboring Satellites ist ein interessantes Projekt, welches die Kunstszene in einem aufkeimenden Stadtteil in Gelsenkirchen zu unterstützen versucht. Die größte Herausforderung war es, die Webseite auf die Bedürfnisse des Kunden im Bezug auf Aussehen anzupassen. Die meiste Zeit brauchte es, ein passendes Theme zu finden und anzupassen. Die Schnittstelle und Erwartungshaltung zwischen Print- und Webdesign war dabei äußerst spannend und die Schulung des Kunden genauso zeitintensiv wie essentiell.<br /><br />Die folgende Umsetzung war dann mit der Installation einer einfachen Wordpress-Anwendung relativ einfach, wobei wir einen besonderes Fokus auf die einfache Bedienbarkeit und Administration legten, damit der Kunde die Seite in Zukunft größtenteils selbst verwalten kann.",
-            "highlights": {
-                "1": {
-                    "1": "Angepasste Wordpress-Applikation",
-                    "2": "Umsetzung des Setups mit vorgegebenem Host",
-                    "3": "Einbinden unzähliger Plugins"
-                },
-                "2": {
-                    "1": "Autoren-Schulung",
-                    "2": "Wordpress-Grundlagen vermitteln",
-                    "3": "Die Anwendung ist leicht zu pflegen"
-                },
-                "3": {
-                    "1": "Umsetzung eines vorgegebenen Layouts",
-                    "2": "Suche eines passenden Themes",
-                    "3": "Entsprechende kundenorientierte Anpassung"
-                },
-                "4": {
-                    "1": "Privatsphäre",
-                    "2": "Umsetzung von GDPR-Vorgaben",
-                    "3": "Recherche zur rechtlichen Sachlage"
-                },
-                "5": {
-                    "1": "Elementor",
-                    "2": "Arbeit und Einführung in das Elementor-Plugin",
-                    "3": "Seitenerstellung anhand einer Vorlage"
-                }
-            },
-            "links": {
-                "site": "Webseite"
-            }
-        },
-        "jferda": {
-            "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte & Tailwind CSS). Ich habe zudem eine vollständige Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise heutzutage ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde. Viel Spaß beim Kennenlernen!",
-            "highlights": {
-                "1": {
-                    "1": "Webpack und Svelte",
-                    "2": "Einführung in Svelte und verwandte Pakete",
-                    "3": "Integration von Webpack"
-                },
-                "2": {
-                    "1": "CSS-Animationen",
-                    "2": "Experimentieren mit verschiedenen CSS-Animationen",
-                    "3": "Intelligentes und stimmiges Timing"
-                },
-                "3": {
-                    "1": "Material Design",
-                    "2": "Erste Gehversuche mit Material Design",
-                    "3": "Umsetzung mittels SMUI"
-                },
-                "4": {
-                    "1": "Branding",
-                    "2": "Redesign von bekannten Tech-Logos",
-                    "3": "Hauptsache Spaß!"
-                },
-                "5": {
-                    "1": "Portfolio",
-                    "2": "Das wichtigste in Kürze aufbereiten",
-                    "3": "Kompetenzen und Projekte richtig einschätzen"
-                }
-            },
-            "links": {
-                "repo": "Repository"
-            }
-        }
+      "headline": "Sonstige Fähigkeiten und Zertifikate",
+      "kmk": "KMK-Fremdsprachenzertifikat Englisch für IT-Berufe, Niveau C1",
+      "sql": "Weiterbildungslehrgang SQL der Fernuniversität Hagen"
     }
+  },
+  "skills": {
+    "software": "Software",
+    "frameworks": "Frameworks / CMS",
+    "jspackages": "Javascript-Pakete",
+    "lang": "Programmiersprachen",
+    "js": "JavaScript",
+    "php": "PHP",
+    "wp": "Wordpress",
+    "sql": "SQL",
+    "jquery": "jQuery",
+    "vue": "Vue",
+    "laravel": "Laravel",
+    "docker": "Docker",
+    "bootstrap": "Bootstrap",
+    "node": "Node",
+    "css": "CSS",
+    "tailwind": "Tailwind CSS",
+    "svelte": "Svelte",
+    "material": "Material Design"
+  },
+  "projects": {
+    "learnmore": "Mehr erfahren",
+    "skillsep": ", ",
+    "edom": {
+      "desc": "e-domizil.de ist das erste kommerzielle Projekt, an dem ich mitarbeiten durfte. Dank der technische Realisierung eines kompletten Relaunches wurden Lernprozesse und Kompetenzen in allen Bereichen der Full-Stack-Entiwklung abgerufen und gefördert."
+    },
+    "nwoun": {
+      "desc": "Neverwinter:Uncensored ist bis heute mein größtes privates Projekt und eine echte Herzensangelegenheit. Während fünf spannender Jahre durfte ich Content und Web-Applikationen über 100.000 monatlichen Benutzern präsentieren."
+    },
+    "gondtools": {
+      "desc": "Gond Tools sind die überarbeiteten und unter neuer Marke auftretenden Online-Tools, die ursprünglich für Neverwinter Uncensored erstellt wurden. Es ist ein News-Portal und diverse spiel-spezifische Apps für ein MMORPG online."
+    },
+    "greezy": {
+      "desc": "Greezy ist eine App, die es Benutzern erlaubt Rezepte, Gruppen und Einkaufslisten zu erstellen und zu verwalten sowie basierend auf diesen Rezepten und Listen Lebensmittel bei diversen Anbietern zu bestellen."
+    },
+    "neighboring": {
+      "desc": "Neighboring Satellites ist ein öffentliche gefördertes Projekt, welches die Kunstszene in Gelsenkirchen-Ückendorf fördern soll. Ich wurde mit der tecnischen Realisierung der Webseite beauftragt."
+    },
+    "jferda": {
+      "desc": "Als ich nach einem halbwegs sinnvollen Projekt suchte, um neue Technologien (Svelte, Tailwind CSS) auszuprobieren, wurde j0shi.dev geboren! "
+    },
+    "easycourses": {
+      "desc": "Hier entsteht eine Web-Applikation, die es in wenigen Schritten ermöglicht Teilnehmer zufällig auf eine Kursliste zu verteilen. Das Hauptaugenmerk liegt dabei auf einer einfachen Bedienbarkeit und der Einhaltung strikter Datenschutzrichtlinien."
+    }
+  },
+  "project": {
+    "desc": "Beschreibung",
+    "highlights": "Features",
+    "skills": "Benutzte Technologien",
+    "gallery": "Galerie",
+    "links": {
+      "web": "Website",
+      "github": "Repository"
+    },
+    "nwoun": {
+      "desc": "Neverwinter Uncensored entstand aus dem Mangel einer unabhängigen News-Plattform und Community für ein MMORPG, welches ich seit 2013 aktiv spiele. Als reines Fanprojekt gestartet entwickelte es sich über die Zeit zur #1 Fanseite des Spieles! Wir konnten über 100.000 Benutzer mit Content und Web-Applikationen versorgen und es war eine schwere Entscheidung, das Projekt 2019 aus Zeitgründen nicht länger fortzusetzen. Unter der alten URL ist aber bis heute noch ein kleiner News-Aggregator zu finden, den ich komplett neu aufgesetzt habe.<br /><br />Es war eine unglaubliche Erfahrung, eine Community und Webseite dieser Dimension allein zu betreuen. Die technische Umsetzung bestand aus einem selbst angepassten Wordpress-Blog, die Online-Tools wurden mit dem Plugin-System einer Foren-Software auf Basis von Symfony realisiert. Darüberhinaus konnte ich viel Erfahrung mit sozialen Medien und Branding, sowie SEO und SEA sammeln.",
+      "highlights": {
+        "1": {
+          "1": "Angespasster Wordpress Blog",
+          "2": "Einbindung unzähliger Plugins",
+          "3": "Optimierungen in vielen Bereichen"
+        },
+        "2": {
+          "1": "Spiel-bezogene Apps",
+          "2": "\"Data Crawling\" ohne offizielle API",
+          "3": "Einzigartige PHP / JS Applikationen"
+        },
+        "3": {
+          "1": "Monatliche Zahlen",
+          "2": "100,000+ Benutzer",
+          "3": "350,000+ Seitenaufrufe"
+        },
+        "4": {
+          "1": "Social Management",
+          "2": "Communities auf Twitter, Discord, Facebook",
+          "3": "Integrierung vieler APIs"
+        },
+        "5": {
+          "1": "Branding",
+          "2": "Logos, Banners & Farbschema",
+          "3": "Hunderte von Bildern und Logos"
+        }
+      },
+      "links": {
+        "forum": "Webseite",
+        "repo": "Repository"
+      }
+    },
+    "gondtools": {
+      "desc": "Neverwinter Gond Tools ist als Nachfolger zu Neverwinter Uncensored entstanden. Ich erstelle keine Inhalte mehr für das Spiel, hoste meine Online-Tools aber weiterhin unter einer neuen URL und Marke. Zusätzlich steht der Quell-Code des Frontends als Open-Source zur Verfügung und die zugehörige API sowie der Web-Crawler werden folgen.<br /><br />Die ursprünglichen in jQuery geschriebenen Tools wurden komplett überarbeitet und auf eine modernere Basis gestellt. Das Frontend basiert auf Svelte und Tailwind, die API und der Web-Crawler sind in PHP und MySQL geschrieben. Zusätzlich gibt es einen Game-Crawler, der in einer Windows VM auf der GCP beheimatet ist. Diese verschiedenen Teile miteinander zu verknüpfen war die größte Herausforderung des Projektes und hat viel Spaß gebracht.<br /><br />Es werden hoffentlich in Zukunft noch weitere Features hinzugefügt. Die Original-Tools waren umfangreicher, werden aber Stück für Stück portiert.",
+      "highlights": {
+        "1": {
+          "1": "Javascript Frontend",
+          "2": "Basiert auf Svelte, Tailwind, und Webpack",
+          "3": "Desktop und mobile Ansichten"
+        },
+        "2": {
+          "1": "Web Scraper",
+          "2": "PHP-Scraper, der per Cron gesteuert wird",
+          "3": "Content-Tags für leichtere Suchen"
+        },
+        "3": {
+          "1": "Drittanbieter APIs",
+          "2": "YouTube, Twitter, Patreon",
+          "3": "Plus zugehörige Bibliotheken"
+        },
+        "4": {
+          "1": "Slim PHP API",
+          "2": "Eigenständige REST API",
+          "3": "Volle Dokumentation der Schnittstelle"
+        },
+        "5": {
+          "1": "Cloud Computing und Hosting",
+          "2": "Erfahrung gesammelt mit Cloud-Lösungen",
+          "3": "z.B. AWS, Vercel, GCP"
+        }
+      },
+      "links": {
+        "web": "gond.tools",
+        "repo": "Repository"
+      }
+    },
+    "greezy": {
+      "desc": "Greezy ist ein klassisches \"Gibt es nicht? Mach ich selbst!\"-Projekt. Wir hatten als Familie viel zu viel mit der wöchentlichen Essenplanung zu tun. Also fing ich an eine App zu schrieben, die uns das Leben erleichtert. Wir hatten dank COVID ohnehin alle Einkäufe online abgewickelt, aber die wöchentlichen Einkaufslisten zu erstellen und zu bestellen war zeitaufwendig und langweilig. Daher erlaubt es Greezy diesen Prozess zu automatiseren und bei verschiedenen Anbietern Lebensmittel basierend auf Rezept- oder Einkaufslisten zu bestellen.<br /><br />Dazu können sich Benutzer unterdinander verbinden und Daten und sogar Anbieter-Logins teilen. Außerdem können Listen in verschiedene andere populäre Apps importiert werden. Das Rezept-Management erlaubt es dank vieler Optionen, die periodische Essenplanung immer wieder den eigenen Vorlieben anzupassen ohne dass man dafür ständig die Rezepte grundlegend ändern muss.",
+      "highlights": {
+        "1": {
+          "1": "NUXT",
+          "2": "VUE-Vertiefung mit NUXT",
+          "3": "Vollwertige Server / Client-Applikation"
+        },
+        "2": {
+          "1": "Gehostet mittels Cloud/Edge",
+          "2": "Erfahrungen mit Vercel und Heroku gesammlt",
+          "3": "Die Datenbank auf eigenen Server"
+        },
+        "3": {
+          "1": "Vendor Logins",
+          "2": "Login zu verschiedenen Anbietern ermöglichen",
+          "3": "Suche und Bestellung von Artikeln"
+        },
+        "4": {
+          "1": "Rezept-Verwaltung",
+          "2": "Übernahme von Rezepten anderer Seiten",
+          "3": "Icon-Schnittstellen zu anderen Services"
+        },
+        "5": {
+          "1": "Login- und User-Verwaltung",
+          "2": "Soziale Logins ermöglichen",
+          "3": "Eigene Session-Verwaltung"
+        }
+      },
+      "links": {
+        "web": "greezy.app"
+      }
+    },
+    "edom": {
+      "desc": "e-domizil.de ist ein Online-Reisebüro für Ferienhäuser. Die Web-Präsenz wurde 2019 mit einem Fokus auf mobile Unterstützung, Geschwindigkeit, SEO und White-Label-Fähigkeit komplett neugestaltet und relaunched. Das Projekt benutzt das VUE.js-Framework und Node.js / Express für Server-Rendering. Die Microservies werden mit Hilfe von Lumen (Laravel) realisiert.<br /><br />Als volles Mitglied des Entwicklungsteams habe ich mitgeholfen, die Applikation in allen Bereichen der Full-Stack-Entwicklung von Grund auf zu gestalten und habe mich im Prozess speziell mit der Rendering-Logik, PWA-Funktionalität, API, Routing, Lokalisation, Bundling und Performance-Analyse befasst. Zudem oblag mir die Anpassung und Konfiguration essentieller Pakete wie Babel, ESLint oder Jest.<br /><br />Über die Zeit habe ich wichtige Erfahrungen mit Javascript-Frameworks und im speziellen mit Vue.js gesammelt und gelernt, wie man verschiedenste Bereiche der Applikation optimiert.",
+      "highlights": {
+        "1": {
+          "1": "Full-Stack Entwicklung",
+          "2": "Vue.js, Express, Docker",
+          "3": "Lumen, API design, Elastic Search"
+        },
+        "2": {
+          "1": "SEO & Geschwindigkeit",
+          "2": "Core Web Vitals und andere Kennzahlen",
+          "3": "Cache-Logik entwicklen"
+        },
+        "3": {
+          "1": "A/B-Tests",
+          "2": "A/B-Test-Funktionalität bei SSR/SPA bereitstellen",
+          "3": "Angepasste Lösung mittels eigener DB und Google"
+        },
+        "4": {
+          "1": "Kalender-Funktionalität",
+          "2": "Auf die Seite angepasste Software",
+          "3": "Basierend auf Flatpickr"
+        },
+        "5": {
+          "1": "Unterstützung alter Browser",
+          "2": "Unterstützung bis IE 11",
+          "3": "Unterschiedliches Bundle für moderne Browser"
+        }
+      },
+      "links": {
+        "edom": "e-domizil.de"
+      }
+    },
+    "neighboring": {
+      "desc": "Neighboring Satellites ist ein interessantes Projekt, welches die Kunstszene in einem aufkeimenden Stadtteil in Gelsenkirchen zu unterstützen versucht. Die größte Herausforderung war es, die Webseite auf die Bedürfnisse des Kunden im Bezug auf Aussehen anzupassen. Die meiste Zeit brauchte es, ein passendes Theme zu finden und anzupassen. Die Schnittstelle und Erwartungshaltung zwischen Print- und Webdesign war dabei äußerst spannend und die Schulung des Kunden genauso zeitintensiv wie essentiell.<br /><br />Die folgende Umsetzung war dann mit der Installation einer einfachen Wordpress-Anwendung relativ einfach, wobei wir einen besonderes Fokus auf die einfache Bedienbarkeit und Administration legten, damit der Kunde die Seite in Zukunft größtenteils selbst verwalten kann.",
+      "highlights": {
+        "1": {
+          "1": "Angepasste Wordpress-Applikation",
+          "2": "Umsetzung des Setups mit vorgegebenem Host",
+          "3": "Einbinden unzähliger Plugins"
+        },
+        "2": {
+          "1": "Autoren-Schulung",
+          "2": "Wordpress-Grundlagen vermitteln",
+          "3": "Die Anwendung ist leicht zu pflegen"
+        },
+        "3": {
+          "1": "Umsetzung eines vorgegebenen Layouts",
+          "2": "Suche eines passenden Themes",
+          "3": "Entsprechende kundenorientierte Anpassung"
+        },
+        "4": {
+          "1": "Privatsphäre",
+          "2": "Umsetzung von GDPR-Vorgaben",
+          "3": "Recherche zur rechtlichen Sachlage"
+        },
+        "5": {
+          "1": "Elementor",
+          "2": "Arbeit und Einführung in das Elementor-Plugin",
+          "3": "Seitenerstellung anhand einer Vorlage"
+        }
+      },
+      "links": {
+        "site": "Webseite"
+      }
+    },
+    "jferda": {
+      "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte & Tailwind CSS). Ich habe zudem eine vollständige Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise heutzutage ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde. Viel Spaß beim Kennenlernen!",
+      "highlights": {
+        "1": {
+          "1": "Webpack und Svelte",
+          "2": "Einführung in Svelte und verwandte Pakete",
+          "3": "Integration von Webpack"
+        },
+        "2": {
+          "1": "CSS-Animationen",
+          "2": "Experimentieren mit verschiedenen CSS-Animationen",
+          "3": "Intelligentes und stimmiges Timing"
+        },
+        "3": {
+          "1": "Material Design",
+          "2": "Erste Gehversuche mit Material Design",
+          "3": "Umsetzung mittels SMUI"
+        },
+        "4": {
+          "1": "Branding",
+          "2": "Redesign von bekannten Tech-Logos",
+          "3": "Hauptsache Spaß!"
+        },
+        "5": {
+          "1": "Portfolio",
+          "2": "Das wichtigste in Kürze aufbereiten",
+          "3": "Kompetenzen und Projekte richtig einschätzen"
+        }
+      },
+      "links": {
+        "repo": "Repository"
+      }
+    }
+  }
 }

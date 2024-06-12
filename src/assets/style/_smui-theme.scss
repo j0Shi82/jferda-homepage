@@ -1,25 +1,25 @@
 @use 'sass:color';
 
-@use "@material/theme/color-palette";
+@use '@material/theme/color-palette';
 
-@use "@material/theme/index" as theme with (
-    $primary : color-palette.$light-green-700,
-    $secondary : color-palette.$grey-700,
-    $background : color-palette.$grey-900,
-    $surface : color-palette.$grey-100,
-    $error : color-palette.$red-900,
-    $on-primary : color-palette.$grey-100,
-    $on-secondary : color-palette.$grey-200,
-    // $on-surface : color-palette.$grey-200,
-    // $on-error : black,
+@use '@material/theme/index' as theme with (
+  $primary: color-palette.$light-green-700,
+  $secondary: color-palette.$grey-700,
+  $background: color-palette.$grey-900,
+  $surface: color-palette.$grey-100,
+  $error: color-palette.$red-900,
+  $on-primary: color-palette.$grey-100,
+  $on-secondary: color-palette.$grey-200,
+  // $on-surface : color-palette.$grey-200,
+  // $on-error : black,
 );
 
-@use "@material/layout-grid/index" as layout-grid with (
-    $breakpoints: (
-        desktop: 1024px,
-        tablet: 768px,
-        phone: 0px,
-    )
+@use '@material/layout-grid/index' as layout-grid with (
+  $breakpoints: (
+    desktop: 1024px,
+    tablet: 768px,
+    phone: 0px,
+  )
 );
 
 // $text-primary-on-background : rgb(0, 0, 0),
@@ -38,10 +38,4 @@
 //     // $text-disabled-on-dark : hsla(0, 0%, 100%, 0.5),
 //     // $text-icon-on-dark : hsla(0, 0%, 100%, 0.5),
 
-@forward "@material/theme/index";
-
-:root {
-    --mdc-theme-text-primary-on-background: rgb(0, 0, 0);
-    --mdc-theme-text-secondary-on-background: hsla(0, 0%, 0%, 0.7);
-    --mdc-theme-text-icon-on-background: hsla(0, 0%, 0%, 0.5);
-}
+@forward '@material/theme/index';

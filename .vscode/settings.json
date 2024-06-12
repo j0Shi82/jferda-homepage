@@ -5,8 +5,8 @@
   },
   "[svelte]": {
     "editor.formatOnSave": false,
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "editor.codeActionsOnSave": ["source.sortImports", "source.formatDocument", "source.fixAll.format"]
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": ["source.sortImports", "source.formatDocument", "source.fixAll.format", "source.fixAll.eslint"]
   },
   "[javascript]": {
     "editor.formatOnSave": false,

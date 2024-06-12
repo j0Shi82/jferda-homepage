@@ -2,10 +2,23 @@
 @import '@material/typography/mdc-typography';
 @import '@material/layout-grid/mdc-layout-grid.scss';
 @import '@material/top-app-bar/variables';
+@import 'src/assets/style/variables.scss';
 // @import "@smui/snackbar";
+
+:root {
+  --mdc-theme-text-primary-on-background: rgb(0, 0, 0);
+  --mdc-theme-text-secondary-on-background: hsla(0, 0%, 0%, 0.7);
+  --mdc-theme-text-icon-on-background: hsla(0, 0%, 0%, 0.5);
+}
 
 .mdc-top-app-bar__section {
   flex: 1 1 0;
+
+  &.section-left {
+    @media #{$breakpoint-mobile} {
+      flex: 0 0 auto;
+    }
+  }
 }
 
 .mdc-drawer-app-content {
@@ -35,8 +48,6 @@
   }
 }
 
-@import 'src/assets/style/variables.scss';
-
 .jfd-d-desktop-none,
 .jdev-d-desktop-none {
   @media #{$breakpoint-desktop} {
@@ -59,18 +70,6 @@
 }
 
 .jdev-avatar {
-  margin: 0 auto;
-
-  @media #{$breakpoint-tablet} {
-    margin: 0;
-    margin-left: 12px;
-  }
-
-  @media #{$breakpoint-desktop} {
-    margin: 0;
-    margin-left: 12px;
-  }
-
   width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
   height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
   border: 2px solid #{smui-theme.$primary};

@@ -1,359 +1,359 @@
 {
-    "navigation": {
-        "routes": {
-            "home": "Home",
-            "about": "About",
-            "resume": "Resume",
-            "skills": "Skills",
-            "projects": "Projects",
-            "projects_mmb": "MavsMoneyball",
-            "projects_nwoun": "Neverwinter Uncensored",
-            "projects_nwgondtools": "Neverwinter Gond Tools",
-            "projects_greezy": "greezy.app",
-            "projects_jferda": "j0shi.dev",
-            "projects_lwm": "Last War Manager",
-            "projects_edom": "e-domizil.de",
-            "projects_neighboring": "Neighboring Satellites",
-            "projects_easycourses": "easycourses.io",
-            "404": "404 - Not Found"
-        },
-        "animationSwitchLabel": "Toggle animations"
+  "navigation": {
+    "routes": {
+      "home": "Home",
+      "about": "About",
+      "resume": "Resume",
+      "skills": "Skills",
+      "projects": "Projects",
+      "projects_mmb": "MavsMoneyball",
+      "projects_nwoun": "Neverwinter Uncensored",
+      "projects_nwgondtools": "Neverwinter Gond Tools",
+      "projects_greezy": "greezy.app",
+      "projects_jferda": "j0shi.dev",
+      "projects_lwm": "Last War Manager",
+      "projects_edom": "e-domizil.de",
+      "projects_neighboring": "Neighboring Satellites",
+      "projects_easycourses": "easycourses.io",
+      "404": "404 - Not Found"
     },
-    "locale": {
-        "headline": "Language",
-        "en": "English",
-        "de": "Deutsch"
+    "animationSwitchLabel": "Toggle animations"
+  },
+  "locale": {
+    "headline": "Language",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "header": {
+    "label": {
+      "menu_open": "Open Menu",
+      "menu_close": "Close Menu",
+      "github": "Browse to Github Profile",
+      "mail": "Contact Through Mail"
+    }
+  },
+  "home": {
+    "maintext": "Hey! My name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating lightweight, fast, and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and <b>passion</b>."
+  },
+  "about": {
+    "bio": {
+      "headline": "Biography",
+      "bio1": "Driven by things that I needed and couldn't find elsewhere, I have been coding since 1997. For most of my life I was labeling coding a hobby. But in reality that 'hobby' often consumed more time than all other activities combined. That's why I decided to finally turn my passion into a profession at a time when I got stuck in life and needed to make a decision about my future.",
+      "bio2": "Although I surely had to get used to doing in a professional environment what I had been doing for much of my life, it was a smooth transition. It just felt natural and I'm glad I made that choice. I got into web development because most of my work had been web apps anyway. But more than that I had always been fascinated by the amount of possibilities the web offers. It has never been easier to connect with people and show your work to the world.",
+      "bio3": "Over the years I naturally touched many areas of development. The first code I've ever written was in Visual Basic before trying (and failing at) C. Then my focus for years were web apps based on PHP/SQL (back end) and plain HTML/CSS (front end). The infamous jQuery library then got me into JavaScript and currently it's most of what I'm doing. This surely isn't the end of the road however and I'm eager to learn what's next and evolve as developer and person."
     },
-    "header": {
-        "label": {
-            "menu_open": "Open Menu",
-            "menu_close": "Close Menu",
-            "github": "Browse to Github Profile",
-            "mail": "Contact Through Mail"
-        }
+    "philosophy": {
+      "headline": "Coding is...",
+      "hint": {
+        "touch": "click elements for more info",
+        "notouch": "hover over elements for more info"
+      },
+      "satisfaction": {
+        "headline": "Satisfaction",
+        "text": "Within an app or project, there's not much you won't be able to do. That's why coding is a constant reward system that just keeps on giving, because you're    operating in a world in which pretty much all problems are solvable."
+      },
+      "community": {
+        "headline": "Community",
+        "text": "Participating in different coding communities is a great way to drive change, stay open-minded, and yield great results thanks to collective intelligence."
+      },
+      "creativity": {
+        "headline": "Creativity",
+        "text": "Nobody would compare coding to classic art. But why? Devs are able to create software out of thin air just using their imagination and creativity."
+      },
+      "helloworld": {
+        "headline": "Hello World",
+        "text": "Publishing, blogging, or generally expressing myself in showing the world my work is an integral part of who I am. Especially direct interaction with users keeps me engaged."
+      },
+      "progressive": {
+        "headline": "Progressive",
+        "text": "Coding is a field of constant change. It leads to innovation, cutting edge technology, and with the proper ideas even helps making the world a better place for everyone."
+      },
+      "lit": {
+        "headline": "Rocking",
+        "text": "The term 'nerdy' is no longer a stigma but an obligation. The new generation is a modern, open-minded, and social bunch. We do still consume energy drinks though."
+      },
+      "givingback": {
+        "headline": "Giving Back",
+        "text": "I'm eager to learn and evolve, but also always want to share or publish my personal experience to help others grow as well."
+      }
+    }
+  },
+  "resume": {
+    "stillgoing": "since",
+    "education": {
+      "headline": "Education",
+      "gym": "German university entrance qualification at different schools in Gelsenkirchen, Germany.",
+      "uni": "Student of Bsc Psychology at Westfälische-Wilhelm-University in Münster, Germany.",
+      "edom": "Apprentice as software developer at e-domizil.de in Münster, Germany."
     },
-    "home": {
-        "maintext": "Hey, my name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating lightweight, fast, and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and my <b>work</b>."
-    },
-    "about": {
-        "bio": {
-            "headline": "Biography",
-            "bio1": "Driven by things that I needed and couldn't find elsewhere, I have been coding since 1997. For most of my life I was labeling coding a hobby. But in reality that 'hobby' often consumed more time than all other activities combined. That's why I decided to finally turn my passion into a profession at a time when I got stuck in life and needed to make a decision about my future.",
-            "bio2": "Although I surely had to get used to doing in a professional environment what I had been doing for much of my life, it was a smooth transition. It just felt natural and I'm glad I made that choice. I got into web development because most of my work had been web apps anyway. But more than that I had always been fascinated by the amount of possibilities the web offers. It has never been easier to connect with people and show your work to the world.",
-            "bio3": "Over the years I naturally touched many areas of development. The first code I've ever written was in Visual Basic before trying (and failing at) C. Then my focus for years were web apps based on PHP/SQL (back end) and plain HTML/CSS (front end). The infamous jQuery library then got me into JavaScript and currently it's most of what I'm doing. This surely isn't the end of the road however and I'm eager to learn what's next and evolve as developer and person."
-        },
-        "philosophy": {
-            "headline": "Coding is...",
-            "hint": {
-                "touch": "click elements for more info",
-                "notouch": "hover over elements for more info"
-            },
-            "satisfaction": {
-                "headline": "Satisfaction",
-                "text": "Within an app or project, there's not much you won't be able to do. That's why coding is a constant reward system that just keeps on giving, because you're    operating in a world in which pretty much all problems are solvable."
-            },
-            "community": {
-                "headline": "Community",
-                "text": "Participating in different coding communities is a great way to drive change, stay open-minded, and yield great results thanks to collective intelligence."
-            },
-            "creativity": {
-                "headline": "Creativity",
-                "text": "Nobody would compare coding to classic art. But why? Devs are able to create software out of thin air just using their imagination and creativity."
-            },
-            "helloworld": {
-                "headline": "Hello World",
-                "text": "Publishing, blogging, or generally expressing myself in showing the world my work is an integral part of who I am. Especially direct interaction with users keeps me engaged."
-            },
-            "progressive": {
-                "headline": "Progressive",
-                "text": "Coding is a field of constant change. It leads to innovation, cutting edge technology, and with the proper ideas even helps making the world a better place for everyone."
-            },
-            "lit": {
-                "headline": "Rocking",
-                "text": "The term 'nerdy' is no longer a stigma but an obligation. The new generation is a modern, open-minded, and social bunch. We do still consume energy drinks though."
-            },
-            "givingback": {
-                "headline": "Giving Back",
-                "text": "I'm eager to learn and evolve, but also always want to share or publish my personal experience to help others grow as well."
-            }
-        }
-    },
-    "resume": {
-        "stillgoing": "since",
-        "education": {
-            "headline": "Education",
-            "gym": "German university entrance qualification at different schools in Gelsenkirchen, Germany.",
-            "uni": "Student of Bsc Psychology at Westfälische-Wilhelm-University in Münster, Germany.",
-            "edom": "Apprentice as software developer at e-domizil.de in Münster, Germany."
-        },
-        "experience": {
-            "headline": "Experience",
-            "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster, Germany. Developed complementary and assisting web apps for personal use.",
-            "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps for personal use.",
-            "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Gearbox Software.",
-            "neighboring": "Plan and develop the Wordpress based web presence <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
-            "edom": "Full-stack developer at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes.",
-            "titus": "Responsible for the shop system as full-stack developer at <a href='https://www.titus-shop.com/' target='_blank'>Titus</a>, an e-commerce company for skate goods."
-        },
-        "skills": {
-            "headline": "Mixed Skills and Official Certificates",
-            "kmk": "KMK-Certificate 'English for IT Professionals', Level C1",
-            "sql": "SQL qualification at University Hagen, Germany"
-        }
+    "experience": {
+      "headline": "Experience",
+      "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster, Germany. Developed complementary and assisting web apps for personal use.",
+      "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps for personal use.",
+      "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Gearbox Software.",
+      "neighboring": "Plan and develop the Wordpress based web presence <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
+      "edom": "Full-stack developer at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes.",
+      "titus": "Responsible for the shop system as full-stack developer at <a href='https://www.titus-shop.com/' target='_blank'>Titus</a>, an e-commerce company for skate goods."
     },
     "skills": {
-        "software": "Software",
-        "frameworks": "Frameworks / CMS",
-        "jspackages": "Javascript Packages",
-        "lang": "Languages",
-        "js": "JavaScript",
-        "php": "PHP",
-        "wp": "Wordpress",
-        "sql": "SQL",
-        "jquery": "jQuery",
-        "vue": "Vue",
-        "laravel": "Laravel",
-        "docker": "Docker",
-        "bootstrap": "Bootstrap",
-        "node": "Node",
-        "css": "CSS",
-        "tailwind": "Tailwind CSS",
-        "svelte": "Svelte",
-        "material": "Material Design"
-    },
-    "projects": {
-        "learnmore": "Learn more",
-        "skillsep": ", ",
-        "edom": {
-            "desc": "e-domizil.de was the first commercial project I worked on. I was very fortunate to be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
-        },
-        "nwoun": {
-            "desc": "'NWO:UN' has been my biggest personal project to date. We served a MMORPG's community for nearly five years and delivered content and tools to over 100,000 players per month."
-        },
-        "gondtools": {
-            "desc": "Gond Tools are the refactored and rebranded tools I originally made for Neverwinter:Uncensored. It's a news aggregator and collection of apps for the Neverwinter MMORPG."
-        },
-        "greezy": {
-            "desc": "Greezy is an app that let's users manage recipes, recipe groups, and shopping lists and connects to vendors to automatically order ingredients based on your lists and recipes."
-        },
-        "neighboring": {
-            "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
-        },
-        "jferda": {
-            "desc": "The idea of j0shi.dev was born when I was searching for a reason to get into new technologies I hadn't tried before (Svelte, Material Design). Plus the site obviously comes with the benefit of showing the world what I'm all about."
-        },
-        "easycourses": {
-            "desc": "I'm currently building a web application that enables users to randomly assign participants to a list of courses in very few steps. The main goals are usability and compliance with strict privacy standards."
-        }
-    },
-    "project": {
-        "desc": "Description",
-        "highlights": "Key Features / Achievements",
-        "skills": "Used Skills",
-        "gallery": "Gallery",
-        "links": {
-            "web": "Website",
-            "github": "Repository"
-        },
-        "nwoun": {
-            "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain all features on the site or create content.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
-            "highlights": {
-                "1": {
-                    "1": "Customized Wordpress Blog",
-                    "2": "Integrated dozens of plugins",
-                    "3": "Optimization, Tweaks, and Enhancements"
-                },
-                "2": {
-                    "1": "Game-Specific Apps",
-                    "2": "Data fetching without official API",
-                    "3": "Unique PHP/Javascript based online tools"
-                },
-                "3": {
-                    "1": "Monthly Traffic",
-                    "2": "100,000+ Users",
-                    "3": "350,000+ Page Views"
-                },
-                "4": {
-                    "1": "Social Management",
-                    "2": "Communities on Twitter, Discord, Facebook",
-                    "3": "Integrated many social APIs"
-                },
-                "5": {
-                    "1": "Full Branding",
-                    "2": "Logos, Banners & Color Scheme",
-                    "3": "Hundreds of self-made images"
-                }
-            },
-            "links": {
-                "forum": "Project Site",
-                "repo": "Repository"
-            }
-        },
-        "gondtools": {
-            "desc": "Neverwinter Gond Tools is a partial successor to Neverwinter Uncensored. I no longer create content for the game, but host my tool collection under a new website and brand. The front end is already open source and the associated API and web crawler will soon follow.<br /><br />I completely revamped the original tools that were mostly written in jQuery and based the project on a more modern tech stack. It consists of the front end (Svelte, Tailwind), the API (PHP, MySQL), a web crawler (PHP), and a game crawler (Windows VM, currently hosted on GCP). Connecting all these different tools to work alongside each other has been a major challenge and tons of fun.<br /><br />I hope to add more features to the site eventually. The original set of tools was way bigger and I'm refactoring them one by one.",
-            "highlights": {
-                "1": {
-                    "1": "Javascript Frontend",
-                    "2": "Based on Svelte, Tailwind, and Webpack",
-                    "3": "Full desktop and mobile support"
-                },
-                "2": {
-                    "1": "Web Scraper",
-                    "2": "Build a cron-based web scraper in PHP",
-                    "3": "Tag content so users can search for keywords"
-                },
-                "3": {
-                    "1": "Worked with 3rd Party APIs",
-                    "2": "YouTube, Twitter, Patreon",
-                    "3": "And related libraries"
-                },
-                "4": {
-                    "1": "Slim PHP API",
-                    "2": "Standalone REST API for the site",
-                    "3": "Full documentation of endpoints"
-                },
-                "5": {
-                    "1": "Cloud Computing and Hosting",
-                    "2": "Learned a lot about big cloud solutions",
-                    "3": "AWS, Vercel, GCP"
-                }
-            },
-            "links": {
-                "web": "gond.tools",
-                "repo": "Repository"
-            }
-        },
-        "greezy": {
-            "desc": "Greezy started as little helper for our family. We had a hard time organising our weekly meal plans and grocery runs. So I wrote an app to help us handle all that. Thanks to COVID we already ordered all our food online, but assembling shopping lists and then buying the required ingredients from vendors was a repetitive task each and every week. Greezy let's you create shopping lists and recipe groups and automatically searches connected vendors for the items, which makes filling your shopping cart that much easier.<br /><br />Greezy let's users share vendor logins, recipes, and lists by connecting as family and also allows you to import and export data to other pupular related apps. The recipe management additionally offers many options so that you can quickly change aspects of your weekly meal plans without having to create different recipes and groups all the time.",
-            "highlights": {
-                "1": {
-                    "1": "NUXT",
-                    "2": "Enhanced VUE knowlegde with NUXT",
-                    "3": "Full server / client application"
-                },
-                "2": {
-                    "1": "Hosted on the Edge",
-                    "2": "Experience with Vercel and Heroku",
-                    "3": "Database on own server"
-                },
-                "3": {
-                    "1": "Vendor Logins",
-                    "2": "Log into different vendors",
-                    "3": "Search and order items"
-                },
-                "4": {
-                    "1": "Full Recipe Management",
-                    "2": "Parsing using structured data",
-                    "3": "Pull icons from various sources"
-                },
-                "5": {
-                    "1": "Login and User Management",
-                    "2": "Social Logins",
-                    "3": "Custom build session management"
-                }
-            },
-            "links": {
-                "web": "greezy.app"
-            }
-        },
-        "edom": {
-            "desc": "e-domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, localization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
-            "highlights": {
-                "1": {
-                    "1": "Full-Stack Development",
-                    "2": "Vue.js, Express, Docker",
-                    "3": "Lumen, API design, Elastic Search"
-                },
-                "2": {
-                    "1": "SEO & Performance",
-                    "2": "Monitoring Core Web Vitals and other metrics",
-                    "3": "Using cache techniques where applicable"
-                },
-                "3": {
-                    "1": "A/B testing",
-                    "2": "Made A/B testing possible on the SSR/SPA",
-                    "3": "Custom solution using own db and Google"
-                },
-                "4": {
-                    "1": "Datepicker Integration",
-                    "2": "Customized to fit our needs",
-                    "3": "Based on Flatpickr"
-                },
-                "5": {
-                    "1": "Legacy Browser Support",
-                    "2": "Support all browsers down to IE 11",
-                    "3": "Separate bundles for modern and legacy clients"
-                }
-            },
-            "links": {
-                "edom": "e-domizil.de"
-            }
-        },
-        "neighboring": {
-            "desc": "Neighboring Satellites is an incredible project that tries to support the local art scene in a burgeoning environment. The most difficult task when working on the project's website was to fit the client's expecations in terms of design and layout. The most time was used to find a fitting theme and then customize it for our needs. Moderating between the realities of web and classic design was extremely fun as well as countless 'live' sessions in which we discussed and adjusted the layout.<br /><br />The rest was fairly standard with setting up a Wordpress blog on a simple webhost. We however tried to set up a system that's easy to maintain later so the authors will be able to do most of the editing and admin work themselves. That's why training folks that were new to publishing on the web, and with Wordpress, was also a key part of the process.",
-            "highlights": {
-                "1": {
-                    "1": "Customized Wordpress Blog",
-                    "2": "Taking care of base setup",
-                    "3": "Integrated dozens of plugins"
-                },
-                "2": {
-                    "1": "Train The Authors",
-                    "2": "Teach inexperienced users WP basics",
-                    "3": "Make sure setup is easy to maintain"
-                },
-                "3": {
-                    "1": "Implement a Given Layout",
-                    "2": "Search For a Fitting Theme",
-                    "3": "Plenty Styling Adjustements"
-                },
-                "4": {
-                    "1": "Legal Management",
-                    "2": "Handle privacy logic",
-                    "3": "Research necessary legal info"
-                },
-                "5": {
-                    "1": "Elementor",
-                    "2": "Getting used to the Elementor plugin",
-                    "3": "Design pages using a given layout"
-                }
-            },
-            "links": {
-                "site": "Website"
-            }
-        },
-        "jferda": {
-            "desc": "j0shi.dev is my personal portfolio site that I primarily made just for fun and to get started with Svelte (and using Webpack alongside it). It also uses Tailwind CSS for the same reasons. I did experiment with a full localization (including a custom router setup with localized urls), all sorts of CSS animations, timings, as well as a distinct import structure to make module management less chaotic.<br /><br />The most fun though was rebranding popular tech logos using my own nickname ('j0Shi') that I'm using since my teenage days. I know the notation looks a bit silly nowadays, but I roll with it because why the heck not! Never growing up is part of my identity.<br /><br />j0shi.dev obviously also showcases everything you would expect from a portfolio site, like projects and skills. Have fun getting to know me!",
-            "highlights": {
-                "1": {
-                    "1": "Webpack and Svelte",
-                    "2": "Getting used to Svelte and associated packages",
-                    "3": "Integrate and customize Webpack"
-                },
-                "2": {
-                    "1": "CSS Animations",
-                    "2": "Experiment with different CSS animations",
-                    "3": "Trying to time and chain them in a fun way"
-                },
-                "3": {
-                    "1": "Material Design",
-                    "2": "Learning and using the principles",
-                    "3": "Implementation with SMUI"
-                },
-                "4": {
-                    "1": "Branding",
-                    "2": "Rebrand logos using my nickname",
-                    "3": "Fun times (and they don't look too bad)"
-                },
-                "5": {
-                    "1": "Portfolio",
-                    "2": "Present info in a short but meaningful way",
-                    "3": "Properly reflect about skills and projects"
-                }
-            },
-            "links": {
-                "repo": "Repository"
-            }
-        }
+      "headline": "Mixed Skills and Official Certificates",
+      "kmk": "KMK-Certificate 'English for IT Professionals', Level C1",
+      "sql": "SQL qualification at University Hagen, Germany"
     }
+  },
+  "skills": {
+    "software": "Software",
+    "frameworks": "Frameworks / CMS",
+    "jspackages": "Javascript Packages",
+    "lang": "Languages",
+    "js": "JavaScript",
+    "php": "PHP",
+    "wp": "Wordpress",
+    "sql": "SQL",
+    "jquery": "jQuery",
+    "vue": "Vue",
+    "laravel": "Laravel",
+    "docker": "Docker",
+    "bootstrap": "Bootstrap",
+    "node": "Node",
+    "css": "CSS",
+    "tailwind": "Tailwind CSS",
+    "svelte": "Svelte",
+    "material": "Material Design"
+  },
+  "projects": {
+    "learnmore": "Learn more",
+    "skillsep": ", ",
+    "edom": {
+      "desc": "e-domizil.de was the first commercial project I worked on. I was very fortunate to be part of a full website rebuild and relaunch. Getting into the full range of full-stack development was a fun experience."
+    },
+    "nwoun": {
+      "desc": "'NWO:UN' has been my biggest personal project to date. We served a MMORPG's community for nearly five years and delivered content and tools to over 100,000 players per month."
+    },
+    "gondtools": {
+      "desc": "Gond Tools are the refactored and rebranded tools I originally made for Neverwinter:Uncensored. It's a news aggregator and collection of apps for the Neverwinter MMORPG."
+    },
+    "greezy": {
+      "desc": "Greezy is an app that let's users manage recipes, recipe groups, and shopping lists and connects to vendors to automatically order ingredients based on your lists and recipes."
+    },
+    "neighboring": {
+      "desc": "Neighboring Satellites is a publicly backed project that aims to support the local art scene in an emerging urban district. I was entrusted with the technical realization of the project's website."
+    },
+    "jferda": {
+      "desc": "The idea of j0shi.dev was born when I was searching for a reason to get into new technologies I hadn't tried before (Svelte, Material Design). Plus the site obviously comes with the benefit of showing the world what I'm all about."
+    },
+    "easycourses": {
+      "desc": "I'm currently building a web application that enables users to randomly assign participants to a list of courses in very few steps. The main goals are usability and compliance with strict privacy standards."
+    }
+  },
+  "project": {
+    "desc": "Description",
+    "highlights": "Key Features / Achievements",
+    "skills": "Used Skills",
+    "gallery": "Gallery",
+    "links": {
+      "web": "Website",
+      "github": "Repository"
+    },
+    "nwoun": {
+      "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain all features on the site or create content.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+      "highlights": {
+        "1": {
+          "1": "Customized Wordpress Blog",
+          "2": "Integrated dozens of plugins",
+          "3": "Optimization, Tweaks, and Enhancements"
+        },
+        "2": {
+          "1": "Game-Specific Apps",
+          "2": "Data fetching without official API",
+          "3": "Unique PHP/Javascript based online tools"
+        },
+        "3": {
+          "1": "Monthly Traffic",
+          "2": "100,000+ Users",
+          "3": "350,000+ Page Views"
+        },
+        "4": {
+          "1": "Social Management",
+          "2": "Communities on Twitter, Discord, Facebook",
+          "3": "Integrated many social APIs"
+        },
+        "5": {
+          "1": "Full Branding",
+          "2": "Logos, Banners & Color Scheme",
+          "3": "Hundreds of self-made images"
+        }
+      },
+      "links": {
+        "forum": "Project Site",
+        "repo": "Repository"
+      }
+    },
+    "gondtools": {
+      "desc": "Neverwinter Gond Tools is a partial successor to Neverwinter Uncensored. I no longer create content for the game, but host my tool collection under a new website and brand. The front end is already open source and the associated API and web crawler will soon follow.<br /><br />I completely revamped the original tools that were mostly written in jQuery and based the project on a more modern tech stack. It consists of the front end (Svelte, Tailwind), the API (PHP, MySQL), a web crawler (PHP), and a game crawler (Windows VM, currently hosted on GCP). Connecting all these different tools to work alongside each other has been a major challenge and tons of fun.<br /><br />I hope to add more features to the site eventually. The original set of tools was way bigger and I'm refactoring them one by one.",
+      "highlights": {
+        "1": {
+          "1": "Javascript Frontend",
+          "2": "Based on Svelte, Tailwind, and Webpack",
+          "3": "Full desktop and mobile support"
+        },
+        "2": {
+          "1": "Web Scraper",
+          "2": "Build a cron-based web scraper in PHP",
+          "3": "Tag content so users can search for keywords"
+        },
+        "3": {
+          "1": "Worked with 3rd Party APIs",
+          "2": "YouTube, Twitter, Patreon",
+          "3": "And related libraries"
+        },
+        "4": {
+          "1": "Slim PHP API",
+          "2": "Standalone REST API for the site",
+          "3": "Full documentation of endpoints"
+        },
+        "5": {
+          "1": "Cloud Computing and Hosting",
+          "2": "Learned a lot about big cloud solutions",
+          "3": "AWS, Vercel, GCP"
+        }
+      },
+      "links": {
+        "web": "gond.tools",
+        "repo": "Repository"
+      }
+    },
+    "greezy": {
+      "desc": "Greezy started as little helper for our family. We had a hard time organising our weekly meal plans and grocery runs. So I wrote an app to help us handle all that. Thanks to COVID we already ordered all our food online, but assembling shopping lists and then buying the required ingredients from vendors was a repetitive task each and every week. Greezy let's you create shopping lists and recipe groups and automatically searches connected vendors for the items, which makes filling your shopping cart that much easier.<br /><br />Greezy let's users share vendor logins, recipes, and lists by connecting as family and also allows you to import and export data to other pupular related apps. The recipe management additionally offers many options so that you can quickly change aspects of your weekly meal plans without having to create different recipes and groups all the time.",
+      "highlights": {
+        "1": {
+          "1": "NUXT",
+          "2": "Enhanced VUE knowlegde with NUXT",
+          "3": "Full server / client application"
+        },
+        "2": {
+          "1": "Hosted on the Edge",
+          "2": "Experience with Vercel and Heroku",
+          "3": "Database on own server"
+        },
+        "3": {
+          "1": "Vendor Logins",
+          "2": "Log into different vendors",
+          "3": "Search and order items"
+        },
+        "4": {
+          "1": "Full Recipe Management",
+          "2": "Parsing using structured data",
+          "3": "Pull icons from various sources"
+        },
+        "5": {
+          "1": "Login and User Management",
+          "2": "Social Logins",
+          "3": "Custom build session management"
+        }
+      },
+      "links": {
+        "web": "greezy.app"
+      }
+    },
+    "edom": {
+      "desc": "e-domizil.de is an online travel agency for holiday homes. The site was completely rebuild and relaunched in 2019 with a microservice approach that focused on mobile-first, performance, SEO friendliness, and white-label capability. The project is built on Vue.js for client-side rendering and Node.js / Express for server-side rendering. The microservices so far all run on Lumen.<br /><br />As a full-time member of the tech team that completely built the software from scratch I was fortunate enough to operate a wide range of full-stack development tasks. The most fun I had designing core modules and functionalities like SSR logic, PWA/service worker, API logic, routing, localization, bundling optimizations, and performance analysis as well as configuring and maintaining essential packages such as Babel, ESLint or Jest.<br /><br />Over the course of the project I gained lots of experience with Vue.js, especially regarding various SSR hurdles and general performance issues.",
+      "highlights": {
+        "1": {
+          "1": "Full-Stack Development",
+          "2": "Vue.js, Express, Docker",
+          "3": "Lumen, API design, Elastic Search"
+        },
+        "2": {
+          "1": "SEO & Performance",
+          "2": "Monitoring Core Web Vitals and other metrics",
+          "3": "Using cache techniques where applicable"
+        },
+        "3": {
+          "1": "A/B testing",
+          "2": "Made A/B testing possible on the SSR/SPA",
+          "3": "Custom solution using own db and Google"
+        },
+        "4": {
+          "1": "Datepicker Integration",
+          "2": "Customized to fit our needs",
+          "3": "Based on Flatpickr"
+        },
+        "5": {
+          "1": "Legacy Browser Support",
+          "2": "Support all browsers down to IE 11",
+          "3": "Separate bundles for modern and legacy clients"
+        }
+      },
+      "links": {
+        "edom": "e-domizil.de"
+      }
+    },
+    "neighboring": {
+      "desc": "Neighboring Satellites is an incredible project that tries to support the local art scene in a burgeoning environment. The most difficult task when working on the project's website was to fit the client's expecations in terms of design and layout. The most time was used to find a fitting theme and then customize it for our needs. Moderating between the realities of web and classic design was extremely fun as well as countless 'live' sessions in which we discussed and adjusted the layout.<br /><br />The rest was fairly standard with setting up a Wordpress blog on a simple webhost. We however tried to set up a system that's easy to maintain later so the authors will be able to do most of the editing and admin work themselves. That's why training folks that were new to publishing on the web, and with Wordpress, was also a key part of the process.",
+      "highlights": {
+        "1": {
+          "1": "Customized Wordpress Blog",
+          "2": "Taking care of base setup",
+          "3": "Integrated dozens of plugins"
+        },
+        "2": {
+          "1": "Train The Authors",
+          "2": "Teach inexperienced users WP basics",
+          "3": "Make sure setup is easy to maintain"
+        },
+        "3": {
+          "1": "Implement a Given Layout",
+          "2": "Search For a Fitting Theme",
+          "3": "Plenty Styling Adjustements"
+        },
+        "4": {
+          "1": "Legal Management",
+          "2": "Handle privacy logic",
+          "3": "Research necessary legal info"
+        },
+        "5": {
+          "1": "Elementor",
+          "2": "Getting used to the Elementor plugin",
+          "3": "Design pages using a given layout"
+        }
+      },
+      "links": {
+        "site": "Website"
+      }
+    },
+    "jferda": {
+      "desc": "j0shi.dev is my personal portfolio site that I primarily made just for fun and to get started with Svelte (and using Webpack alongside it). It also uses Tailwind CSS for the same reasons. I did experiment with a full localization (including a custom router setup with localized urls), all sorts of CSS animations, timings, as well as a distinct import structure to make module management less chaotic.<br /><br />The most fun though was rebranding popular tech logos using my own nickname ('j0Shi') that I'm using since my teenage days. I know the notation looks a bit silly nowadays, but I roll with it because why the heck not! Never growing up is part of my identity.<br /><br />j0shi.dev obviously also showcases everything you would expect from a portfolio site, like projects and skills. Have fun getting to know me!",
+      "highlights": {
+        "1": {
+          "1": "Webpack and Svelte",
+          "2": "Getting used to Svelte and associated packages",
+          "3": "Integrate and customize Webpack"
+        },
+        "2": {
+          "1": "CSS Animations",
+          "2": "Experiment with different CSS animations",
+          "3": "Trying to time and chain them in a fun way"
+        },
+        "3": {
+          "1": "Material Design",
+          "2": "Learning and using the principles",
+          "3": "Implementation with SMUI"
+        },
+        "4": {
+          "1": "Branding",
+          "2": "Rebrand logos using my nickname",
+          "3": "Fun times (and they don't look too bad)"
+        },
+        "5": {
+          "1": "Portfolio",
+          "2": "Present info in a short but meaningful way",
+          "3": "Properly reflect about skills and projects"
+        }
+      },
+      "links": {
+        "repo": "Repository"
+      }
+    }
+  }
 }

@@ -19,7 +19,7 @@ else {
 /**
  * set up media queries that update store values
  */
-if ('matchMedia' in window) {
+if ('matchMedia' in window && process.env.NODE_ENV !== 'test') {
   const mqlMobile = window.matchMedia(mobileBreakpointQueryString)
   // when switching to mobile state the menu should reappear based on user interaction
   const mqlMobileListener = (v) => {

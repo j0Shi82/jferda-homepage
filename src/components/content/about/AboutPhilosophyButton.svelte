@@ -38,7 +38,7 @@
   on:click={initTippy}
   on:keypress={initTippy}
   on:touchstart={initTippy}
-  in:svelteTransitionFly={{
+  in:svelteTransitionFly|global={{
     x: $screenWidth / 2,
     duration: transitionDuration,
     delay,

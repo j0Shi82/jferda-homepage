@@ -5,7 +5,7 @@ import javascriptKnowledgeLogo from 'assets/media/images/knowledge-logos/javascr
 import nodeKnowledgeLogo from 'assets/media/images/knowledge-logos/node.png'
 import phpKnowledgeLogo from 'assets/media/images/knowledge-logos/php.png'
 import svelteKnowledgeLogo from 'assets/media/images/knowledge-logos/svelte.png'
-import titusCorporateLogo from 'assets/media/images/knowledge-logos/titus.png'
+import titusCorporateLogo from 'assets/media/images/knowledge-logos/titus-500.png'
 import vuejsKnowledgeLogo from 'assets/media/images/knowledge-logos/vuejs.png'
 import wpKnowledgeLogo from 'assets/media/images/knowledge-logos/wp.png'
 import { atomTransitionDuration, menuAbout48Icon, menuProjectsIcon } from 'utils/imports/config.js'

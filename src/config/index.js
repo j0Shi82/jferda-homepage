@@ -21,9 +21,9 @@ export default {
       routingFadeDuration: 0,
     },
     animations: {
-      headerTransitionDuration: 500,
-      atomTransitionDuration: 350,
-      atomTransitionDurationShort: 100,
+      headerTransitionDuration: 200,
+      atomTransitionDuration: 150,
+      atomTransitionDurationShort: 75,
     },
     locale: {
       supportedLanguages: ['en', 'de'],

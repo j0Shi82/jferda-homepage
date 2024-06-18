@@ -21,6 +21,7 @@ export default {
       routingFadeDuration: 0,
     },
     animations: {
+      pageTransitionDuration: 750,
       headerTransitionDuration: 200,
       atomTransitionDuration: 150,
       atomTransitionDurationShort: 75,

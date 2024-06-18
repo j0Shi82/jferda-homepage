@@ -7,6 +7,7 @@
   import { animationsActive, screenWidth } from 'utils/imports/store'
 
   export let transitionDelay = 0
+  export let transitionDuration = atomTransitionDurationShort
 
   const transitionX = $screenWidth * -2
 </script>
@@ -15,7 +16,7 @@
   class="jdev-philosophy-hint"
   in:svelteTransitionFly={{
     x: transitionX,
-    duration: $animationsActive ? atomTransitionDurationShort : 0,
+    duration: $animationsActive ? transitionDuration : 0,
     delay: $animationsActive ? transitionDelay : 0,
   }}
 >

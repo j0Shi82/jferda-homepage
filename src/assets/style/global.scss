@@ -74,6 +74,7 @@
   height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
   border: 2px solid #{smui-theme.$primary};
   border-radius: 50%;
+  background-color: #{smui-theme.$primary};
 
   > div {
     width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height} - 4px);

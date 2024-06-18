@@ -1,5 +1,5 @@
 <script>
-  import { atomTransitionDuration, atomTransitionDurationShort, headerTransitionDuration, routingFadeDuration } from 'utils/imports/config'
+  import { atomTransitionDuration, atomTransitionDurationShort, headerTransitionDuration, pageTransitionDuration, routingFadeDuration } from 'utils/imports/config'
   import { aboutPhilosophies } from 'utils/imports/data'
   import { preloadImages } from 'utils/imports/helpers'
   import { isDesktopBreakpoint } from 'utils/imports/store'
@@ -32,26 +32,30 @@
       observer.unobserve(philosophyWrapper)
     }
   })
+
+  const bioTransitionDuration = ((pageTransitionDuration - headerTransitionDuration) * 0.6) / 3
+  const philosophyDelay = bioTransitionDuration * 3 + headerTransitionDuration
+  const philosophyDuration = ((pageTransitionDuration - headerTransitionDuration) * 0.4) / 8
 </script>
 
 <div class="mdc-layout-grid mdc-typography--body1 jdev-route-about" in:svelteTransitionFade={{ duration: routingFadeDuration }}>
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop">
       <FlyingHeadline localeKey="about.bio.headline" transitionDirection={$isDesktopBreakpoint ? ['left', 'left'] : ['left', 'right']} />
-      <AboutBio delay={headerTransitionDuration} transitionDuration={atomTransitionDuration} />
+      <AboutBio delay={headerTransitionDuration} transitionDuration={bioTransitionDuration} />
     </div>
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop jdev-fab-buttons" bind:this={philosophyWrapper}>
       {#if philosophyVisible}
         <FlyingHeadline localeKey="about.philosophy.headline" transitionDirection={$isDesktopBreakpoint ? ['right', 'right'] : ['left', 'right']} />
-        <AboutPhilosophyHint transitionDelay={500} />
+        <AboutPhilosophyHint transitionDelay={philosophyDelay} transitionDuration={philosophyDuration} />
         <div class="jdev-philosophy-wrapper">
           {#each aboutPhilosophies as philosophy, i}
             <AboutPhilosophyButton
               textLocaleIdent={philosophy.textLocaleIdent}
               headlineLocaleIdent={philosophy.headlineLocaleIdent}
               image={philosophy.image}
-              delay={i * (atomTransitionDurationShort / 2) + (headerTransitionDuration + 3 * atomTransitionDuration)}
-              transitionDuration={atomTransitionDurationShort / 2}
+              delay={philosophyDelay + i * philosophyDuration + philosophyDuration}
+              transitionDuration={philosophyDuration}
             />
           {/each}
         </div>

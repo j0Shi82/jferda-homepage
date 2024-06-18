@@ -30,7 +30,7 @@
 <div
   class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone jdev-resume-date"
   class:visible
-  in:svelteTransitionFly={{
+  in:svelteTransitionFly|global={{
     x: $screenWidth / -2,
     duration: transitionDuration,
     delay,
@@ -43,7 +43,7 @@
 <div
   class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone jdev-resume-content"
   class:visible
-  in:svelteTransitionFly={{
+  in:svelteTransitionFly|global={{
     x: $screenWidth / 2,
     duration: transitionDuration,
     delay,

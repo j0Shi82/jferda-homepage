@@ -1,31 +1,52 @@
 <script>
-import { svelteTransitionFade } from 'utils/imports/svelte'
-import { routingFadeDuration, atomTransitionDuration, headerTransitionDuration } from 'utils/imports/config'
-import { resumeEducationList, resumeExperienceList, resumeSkillList } from 'utils/imports/data'
-// components
-import ResumeItem from 'components/content/resume/ResumeItem.svelte'
-import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
+  import { atomTransitionDuration, headerTransitionDuration, pageTransitionDuration, routingFadeDuration } from 'utils/imports/config'
+  import { resumeEducationList, resumeExperienceList, resumeSkillList } from 'utils/imports/data'
+  import { svelteTransitionFade } from 'utils/imports/svelte'
+  // components
+  import ResumeItem from 'components/content/resume/ResumeItem.svelte'
+  import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
 
-import 'assets/style/resume.scss'
+  import 'assets/style/resume.scss'
+
+  let itemCount = 0
+  let transitionDuration = atomTransitionDuration
+
+  $: {
+    itemCount = resumeEducationList.length + resumeExperienceList.length + resumeSkillList.length
+    transitionDuration = (pageTransitionDuration - headerTransitionDuration) / itemCount
+  }
+
+  const data = [
+    {
+      localeKey: 'resume.education.headline',
+      items: resumeEducationList,
+    },
+    {
+      localeKey: 'resume.experience.headline',
+      items: resumeExperienceList,
+    },
+    {
+      localeKey: 'resume.skills.headline',
+      items: resumeSkillList,
+    },
+  ]
+
+  const calcDelay = (index) => {
+    let delay = 0
+    for (let i = 0; i < index; i++) {
+      delay += data[i].items.length * transitionDuration
+    }
+    return delay
+  }
 </script>
 
-<div class="mdc-layout-grid mdc-typography--body1 jdev-route-resume" in:svelteTransitionFade="{{ duration: routingFadeDuration }}">
-    <FlyingHeadline localeKey="resume.education.headline" />
+<div class="mdc-layout-grid mdc-typography--body1 jdev-route-resume" in:svelteTransitionFade={{ duration: routingFadeDuration }}>
+  {#each data as { localeKey, items }, i}
+    <FlyingHeadline {localeKey} />
     <div class="mdc-layout-grid__inner">
-        {#each resumeEducationList as item, i}
-        <ResumeItem item="{item}" delay="{(i * atomTransitionDuration) + (headerTransitionDuration)}" transitionDuration="{atomTransitionDuration}" />
-        {/each}
+      {#each items as item, j}
+        <ResumeItem {item} delay={calcDelay(i) + j * transitionDuration + headerTransitionDuration} {transitionDuration} />
+      {/each}
     </div>
-    <FlyingHeadline localeKey="resume.experience.headline" />
-    <div class="mdc-layout-grid__inner">
-        {#each resumeExperienceList as item, i}
-        <ResumeItem item="{item}" delay="{(i * atomTransitionDuration) + (headerTransitionDuration)}" transitionDuration="{atomTransitionDuration}" />
-        {/each}
-    </div>
-    <FlyingHeadline localeKey="resume.skills.headline" />
-    <div class="mdc-layout-grid__inner">
-        {#each resumeSkillList as item, i}
-        <ResumeItem item="{item}" delay="{(i * atomTransitionDuration) + (headerTransitionDuration)}" transitionDuration="{atomTransitionDuration}" />
-        {/each}
-    </div>
+  {/each}
 </div>

@@ -10,7 +10,7 @@ const {
 } = config.app.menu.icons
 
 const { routingFadeDuration } = config.app.router
-const { headerTransitionDuration, atomTransitionDuration, atomTransitionDurationShort } = config.app.animations
+const { headerTransitionDuration, atomTransitionDuration, atomTransitionDurationShort, pageTransitionDuration } = config.app.animations
 const { standardLanguage, supportedLanguages } = config.app.locale
 const { mobile, tablet, desktop } = config.app.breakpoints
 
@@ -18,8 +18,7 @@ export {
   atomTransitionDuration,
   atomTransitionDurationShort,
   desktop as desktopBreakpointQueryString,
-  headerTransitionDuration,
-  standardLanguage as localeStandardLanguage,
+  headerTransitionDuration, standardLanguage as localeStandardLanguage,
   supportedLanguages as localeSupportedLanguages,
   menuAbout48Icon,
   menuAboutIcon,
@@ -27,7 +26,6 @@ export {
   menuProjectsIcon,
   menuResumeIcon,
   menuSkillsIcon,
-  mobile as mobileBreakpointQueryString,
-  routingFadeDuration,
+  mobile as mobileBreakpointQueryString, pageTransitionDuration, routingFadeDuration,
   tablet as tabletBreakpointQueryString,
 }

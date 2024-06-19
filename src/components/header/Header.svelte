@@ -12,6 +12,7 @@
   // material
   import IconButton from '@smui/icon-button'
   import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar'
+  import 'assets/style/header.scss'
   // components
   import Icon from 'fa-svelte'
 

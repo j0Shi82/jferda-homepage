@@ -1,21 +1,22 @@
 @use 'smui-theme';
-@import '@material/typography/_mixins';
-@import 'src/assets/style/variables.scss';
-@import '@material/shape/_variables.scss';
-@import '@material/fab/_variables.scss';
-@import 'tippy.js/animations/shift-away';
+@use '@material/typography/_mixins' as typography-mixins;
+@use 'src/assets/style/variables.scss' as variables;
+@use '@material/shape/_variables.scss' as shape-variables;
+@use '@material/fab/_variables.scss' as fab-variables;
+
 @import '@smui/fab/_index.scss';
+@import 'tippy.js/animations/shift-away';
 
 div[data-tippy-root] {
   max-width: calc(100% - 5px) !important;
 
   .tippy-box {
-    @include mdc-typography(body2);
+    @include typography-mixins.typography(body2);
 
     background-color: smui-theme.$secondary;
     color: smui-theme.$on-secondary;
     padding: 10px;
-    border-radius: $mdc-shape-small-component-radius;
+    border-radius: shape-variables.$small-component-radius;
   }
 }
 
@@ -31,7 +32,7 @@ div[data-tippy-root] {
     align-items: center;
     flex-wrap: wrap;
 
-    @media #{$breakpoint-desktop} {
+    @media #{variables.$breakpoint-desktop} {
       position: -webkit-sticky; /* Safari */
       position: sticky;
       top: 20px;
@@ -53,8 +54,8 @@ div[data-tippy-root] {
           background-size: cover;
           background-position: center;
           border-radius: 50%;
-          height: $mdc-fab-extended-height;
-          width: $mdc-fab-extended-height;
+          height: fab-variables.$extended-height;
+          width: fab-variables.$extended-height;
           margin-right: 20px;
         }
       }

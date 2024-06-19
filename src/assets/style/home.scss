@@ -1,13 +1,14 @@
 @use 'smui-theme';
-@import '@material/drawer/_variables.scss';
-@import '@material/shape/_variables.scss';
-@import '@material/top-app-bar/_variables.scss';
-@import 'src/assets/style/variables.scss';
-@import '@material/typography/mdc-typography';
+@use '@material/drawer/_variables.scss' as drawer-variables;
+@use '@material/shape/_variables.scss' as shape-variables;
+@use '@material/top-app-bar/_variables.scss' as top-app-bar-variables;
+@use 'src/assets/style/variables.scss' as variables;
+@use '@material/typography/mixins.scss' as typography-mixins;
+
 @import '@smui/fab/_index.scss';
 
 .jdev-route-home {
-  min-height: calc(100vh - #{$mdc-top-app-bar-dense-row-height});
+  min-height: calc(100vh - #{top-app-bar-variables.$dense-row-height});
   display: flex;
   align-items: center;
 
@@ -74,7 +75,7 @@
     height: 32vh;
     overflow: hidden;
 
-    @media #{$breakpoint-mobile} {
+    @media #{variables.$breakpoint-mobile} {
       height: 20vh;
     }
   }
@@ -125,40 +126,40 @@
     }
 
     &.titus b {
-      color: $titus-primary-color;
-      text-shadow: 1px 1px 2px $titus-secondary-color;
+      color: variables.$titus-primary-color;
+      text-shadow: 1px 1px 2px variables.$titus-secondary-color;
     }
     &.vue b {
-      color: $vue-primary-color;
-      text-shadow: 1px 1px 2px $vue-secondary-color;
+      color: variables.$vue-primary-color;
+      text-shadow: 1px 1px 2px variables.$vue-secondary-color;
     }
     &.php b {
-      color: $php-primary-color;
-      text-shadow: 1px 1px 2px $php-secondary-color;
+      color: variables.$php-primary-color;
+      text-shadow: 1px 1px 2px variables.$php-secondary-color;
     }
     &.javascript b {
-      color: $javascript-primary-color;
-      text-shadow: 1px 1px 2px $javascript-secondary-color;
+      color: variables.$javascript-primary-color;
+      text-shadow: 1px 1px 2px variables.$javascript-secondary-color;
     }
     &.docker b {
-      color: $docker-primary-color;
-      text-shadow: 1px 1px 2px $docker-secondary-color;
+      color: variables.$docker-primary-color;
+      text-shadow: 1px 1px 2px variables.$docker-secondary-color;
     }
     &.svelte b {
-      color: $svelte-primary-color;
-      text-shadow: 1px 1px 2px $svelte-secondary-color;
+      color: variables.$svelte-primary-color;
+      text-shadow: 1px 1px 2px variables.$svelte-secondary-color;
     }
     &.wordpress b {
-      color: $wp-primary-color;
-      text-shadow: 1px 1px 2px $wp-primary-color;
+      color: variables.$wp-primary-color;
+      text-shadow: 1px 1px 2px variables.$wp-primary-color;
     }
     &.node b {
-      color: $node-primary-color;
-      text-shadow: 1px 1px 2px $node-secondary-color;
+      color: variables.$node-primary-color;
+      text-shadow: 1px 1px 2px variables.$node-secondary-color;
     }
     &.git b {
-      color: $git-primary-color;
-      text-shadow: 1px 1px 2px $git-secondary-color;
+      color: variables.$git-primary-color;
+      text-shadow: 1px 1px 2px variables.$git-secondary-color;
     }
 
     img {
@@ -168,31 +169,31 @@
 
   .home-routes {
     &.titus .mdc-fab {
-      background-color: $titus-secondary-color;
+      background-color: variables.$titus-secondary-color;
     }
     &.vue .mdc-fab {
-      background-color: $vue-secondary-color;
+      background-color: variables.$vue-secondary-color;
     }
     &.php .mdc-fab {
-      background-color: $php-secondary-color;
+      background-color: variables.$php-secondary-color;
     }
     &.javascript .mdc-fab {
-      background-color: $javascript-secondary-color;
+      background-color: variables.$javascript-secondary-color;
     }
     &.docker .mdc-fab {
-      background-color: $docker-primary-color;
+      background-color: variables.$docker-primary-color;
     }
     &.svelte .mdc-fab {
-      background-color: $svelte-secondary-color;
+      background-color: variables.$svelte-secondary-color;
     }
     &.wordpress .mdc-fab {
-      background-color: $wp-primary-color;
+      background-color: variables.$wp-primary-color;
     }
     &.node .mdc-fab {
-      background-color: $node-secondary-color;
+      background-color: variables.$node-secondary-color;
     }
     &.git .mdc-fab {
-      background-color: $git-secondary-color;
+      background-color: variables.$git-secondary-color;
     }
 
     a {
@@ -230,7 +231,7 @@
         text-align: start;
         width: 100%;
 
-        @include mdc-typography(subtitle2);
+        @include typography-mixins.typography(subtitle2);
 
         color: smui-theme.$on-primary;
       }

@@ -1,12 +1,13 @@
-@use "smui-theme";
-@use 'src/assets/style/variables.scss';
+@use 'smui-theme';
+@use 'assets/style/variables.scss' as variables;
 @use '@material/image-list/index' as image-list;
-@import "glightbox/dist/css/glightbox";
+
+@import 'glightbox/dist/css/glightbox';
 
 .jdev-route-project {
   .jdev-project-image-list {
     @include image-list.standard-columns(5);
-    @include image-list.aspect(calc(4/3));
+    @include image-list.aspect(calc(4 / 3));
 
     @media #{variables.$breakpoint-tablet} {
       @include image-list.standard-columns(3);
@@ -25,7 +26,8 @@
   // --mdc-theme-text-primary-on-background: #{smui-theme.$text-primary-on-background};
   // --mdc-theme-text-secondary-on-background: #{smui-theme.$text-secondary-on-background};
 
-  .mdc-list-item, .mdc-deprecated-list-item {
+  .mdc-list-item,
+  .mdc-deprecated-list-item {
     animation-fill-mode: both;
     animation-duration: var(--jdev-highlights-animation-duration, 500ms);
     animation-name: bounceInRight;

@@ -1,7 +1,12 @@
 @use 'smui-theme';
-@use 'src/assets/style/variables.scss';
+@use 'assets/style/variables.scss' as variables;
 @use '@material/card/variables' as card-variables;
+
 @import '@smui/image-list/_index.scss';
+@import '@smui/list/_index.scss';
+@import '@smui/fab/_index.scss';
+@import '@smui/chips/_index.scss';
+@import '@smui/card/_index.scss';
 
 .jdev-route-projects {
   user-select: none;

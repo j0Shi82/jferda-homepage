@@ -24,20 +24,4 @@
   )
 );
 
-// $text-primary-on-background : rgb(0, 0, 0),
-//     $text-secondary-on-background : hsla(0, 0%, 0%, 0.7),
-//     // $text-hint-on-background : hsla(0, 0%, 100%, 0.5),
-//     // $text-disabled-on-background : hsla(0, 0%, 100%, 0.5);
-//     $text-icon-on-background: hsla(0, 0%, 0%, 0.5),
-//     // $text-primary-on-light : rgba(0, 0, 0, 0.87),
-//     // $text-secondary-on-light : rgba(0, 0, 0, 0.54),
-//     // $text-hint-on-light : rgba(0, 0, 0, 0.38),
-//     // $text-disabled-on-light : rgba(0, 0, 0, 0.38),
-//     // $text-icon-on-light : rgba(0, 0, 0, 0.38),
-//     // $text-primary-on-dark : white,
-//     // $text-secondary-on-dark : hsla(0, 0%, 100%, 0.7),
-//     // $text-hint-on-dark : hsla(0, 0%, 100%, 0.5),
-//     // $text-disabled-on-dark : hsla(0, 0%, 100%, 0.5),
-//     // $text-icon-on-dark : hsla(0, 0%, 100%, 0.5),
-
 @forward '@material/theme/index';

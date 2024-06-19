@@ -14,6 +14,8 @@
   // $on-error : black,
 );
 
+@use '@material/theme/styles';
+
 @use '@material/layout-grid/index' as layout-grid with (
   $breakpoints: (
     desktop: 1024px,

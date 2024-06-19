@@ -1,4 +1,8 @@
-@use "smui-theme";
+@use 'smui-theme';
+
+@import '@smui/tab/_index.scss';
+@import '@smui/tab-bar/_index.scss';
+@import '@smui/chips/_index.scss';
 
 .jdev-route-skills-loader {
   position: absolute;

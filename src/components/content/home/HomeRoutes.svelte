@@ -6,7 +6,6 @@
   import { svelteEasingBackOut, svelteTransitionFly } from 'utils/imports/svelte'
   // material
   import Fab, { Icon, Label } from '@smui/fab'
-  // import '@smui/fab/_index.scss';
 
   export let colorClass
 </script>
@@ -17,7 +16,6 @@
     <div
       class="home-routes {colorClass}"
       in:svelteTransitionFly={{
-
         x: $screenWidth / -2,
         duration: atomTransitionDuration,
         delay: route.transitionDelay,

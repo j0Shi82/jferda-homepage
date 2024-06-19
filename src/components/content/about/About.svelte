@@ -1,5 +1,5 @@
 <script>
-  import { atomTransitionDuration, atomTransitionDurationShort, headerTransitionDuration, pageTransitionDuration, routingFadeDuration } from 'utils/imports/config'
+  import { headerTransitionDuration, pageTransitionDuration, routingFadeDuration } from 'utils/imports/config'
   import { aboutPhilosophies } from 'utils/imports/data'
   import { preloadImages } from 'utils/imports/helpers'
   import { isDesktopBreakpoint } from 'utils/imports/store'

@@ -107,7 +107,7 @@ module.exports = {
             options: {
 
               sassOptions: {
-                loadPaths: ['./src/assets/style', './node_modules'],
+                includePaths: [path.resolve(__dirname, 'src/assets/style'), path.resolve(__dirname, 'node_modules')],
               },
             },
           },

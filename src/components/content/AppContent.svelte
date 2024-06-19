@@ -3,6 +3,7 @@
   import { isMobileBreakpoint, projectInitializing, screenWidth } from 'utils/imports/store'
   // material
   import { AppContent, Scrim } from '@smui/drawer'
+  import 'assets/style/appcontent.scss'
 </script>
 
 {#if $isMobileBreakpoint}<Scrim />{/if}

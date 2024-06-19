@@ -1,10 +1,11 @@
-@use "smui-theme";
+@use 'smui-theme';
 @use 'src/assets/style/variables.scss';
 @use '@material/card/variables' as card-variables;
+@import '@smui/image-list/_index.scss';
 
 .jdev-route-projects {
-  user-select: none; 
-  
+  user-select: none;
+
   .mdc-layout-grid__inner {
     @media #{variables.$breakpoint-tablet} {
       max-width: 500px;
@@ -54,7 +55,6 @@
   }
 
   .jdev-project-card {
-
     &:not(.upcoming) {
       cursor: pointer;
     }
@@ -64,7 +64,8 @@
         transform: rotateY(0deg);
       }
 
-      .jdev-project-front-content, .jdev-project-front-media {
+      .jdev-project-front-content,
+      .jdev-project-front-media {
         transform: rotateY(180deg);
       }
     }
@@ -75,7 +76,9 @@
         transform-style: preserve-3d;
       }
 
-      .jdev-project-front-content, .jdev-project-front-media, .jdev-project-back-media {
+      .jdev-project-front-content,
+      .jdev-project-front-media,
+      .jdev-project-back-media {
         transition: transform 0.8s;
         transform-style: preserve-3d;
       }
@@ -101,20 +104,20 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-  
+
       height: 16px;
       position: relative;
       margin-top: 10px;
       > div {
-          position: absolute;
-          display: flex;
-          width: 100%;
-          justify-content: center;
-          z-index: 2;
-  
-          .jdev-techlogo + .jdev-techlogo {
-              margin-left: 5px;
-          }
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        z-index: 2;
+
+        .jdev-techlogo + .jdev-techlogo {
+          margin-left: 5px;
+        }
       }
     }
 
@@ -122,7 +125,9 @@
       position: relative;
     }
 
-    .jdev-project-front-content, .jdev-project-front-media, .jdev-project-back-media {
+    .jdev-project-front-content,
+    .jdev-project-front-media,
+    .jdev-project-back-media {
       backface-visibility: hidden;
     }
 
@@ -137,7 +142,7 @@
       backface-visibility: hidden;
       transform: rotateY(180deg);
       // background: linear-gradient(0deg, rgba(230,230,230,0) 0%, rgba(230,230,230,0.8) 30%, rgba(230,230,230,0.95) 100%);
-  
+
       .jdev-project-back-overlay {
         box-sizing: border-box;
         position: absolute;
@@ -153,27 +158,28 @@
         width: 100%;
         padding: 16px;
         background: rgba(230, 230, 230, 0.95);
-  
+
         span {
           text-align: center;
-  
+
           &.link {
             cursor: pointer;
           }
         }
-  
-        a, span.link {
+
+        a,
+        span.link {
           font-weight: bold;
           color: smui-theme.$primary;
           text-decoration: none;
-  
+
           &:hover {
             opacity: 0.8;
           }
         }
       }
     }
-  
+
     .jdev-project-upcoming-band {
       background-image: url('../media/images/projects/upcoming-band.png');
       width: 100%;

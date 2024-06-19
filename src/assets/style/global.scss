@@ -5,12 +5,6 @@
 @use '@material/typography/mdc-typography.scss';
 @use '@material/layout-grid/mdc-layout-grid.scss';
 
-:root {
-  --mdc-theme-text-primary-on-background: rgb(0, 0, 0);
-  --mdc-theme-text-secondary-on-background: hsla(0, 0%, 0%, 0.7);
-  --mdc-theme-text-icon-on-background: hsla(0, 0%, 0%, 0.5);
-}
-
 .mdc-top-app-bar__section {
   flex: 1 1 0;
 
@@ -23,14 +17,15 @@
 
 .mdc-drawer-app-content {
   flex: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
+  //   overflow-y: auto;
+  //   overflow-x: hidden;
   position: relative;
   height: calc(100% - #{top-app-bar-variables.$dense-row-height});
 }
 
 .mdc-drawer {
   height: 100vh;
+  position: fixed;
 }
 
 .mdc-drawer .mdc-list-divider {

@@ -14,7 +14,7 @@
 
 <p
   class="jdev-philosophy-hint"
-  in:svelteTransitionFly={{
+  in:svelteTransitionFly|global={{
     x: transitionX,
     duration: $animationsActive ? transitionDuration : 0,
     delay: $animationsActive ? transitionDelay : 0,

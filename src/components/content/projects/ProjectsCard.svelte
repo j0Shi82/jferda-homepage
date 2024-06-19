@@ -30,7 +30,7 @@
 >
   <div
     class="card-container"
-    in:svelteTransitionScale={{
+    in:svelteTransitionScale|global={{
       delay: $animationsActive ? headerTransitionDuration + i * atomTransitionDurationShort : 0,
       duration: $animationsActive ? atomTransitionDuration : 0,
     }}

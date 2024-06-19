@@ -44,7 +44,7 @@
   })
 </script>
 
-<div class="jdev-route-home" in:svelteTransitionFade={{ duration: routingFadeDuration }}>
+<div class="jdev-route-home" in:svelteTransitionFade|global={{ duration: routingFadeDuration }}>
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
       {#each homeKnowledgeLogoItems as logoItem}

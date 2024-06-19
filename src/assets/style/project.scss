@@ -2,9 +2,18 @@
 @use 'assets/style/variables.scss' as variables;
 @use '@material/image-list/index' as image-list;
 
+@import '@smui/image-list/_index.scss';
+@import '@smui/list/_index.scss';
+@import '@smui/fab/_index.scss';
+@import '@smui/linear-progress/_index.scss';
+
 @import 'glightbox/dist/css/glightbox';
 
 .jdev-route-project {
+  --mdc-theme-text-primary-on-background: rgb(0, 0, 0);
+  --mdc-theme-text-secondary-on-background: hsla(0, 0%, 0%, 0.7);
+  --mdc-theme-text-icon-on-background: hsla(0, 0%, 0%, 0.5);
+
   .jdev-project-image-list {
     @include image-list.standard-columns(5);
     @include image-list.aspect(calc(4 / 3));

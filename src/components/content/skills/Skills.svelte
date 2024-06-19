@@ -60,7 +60,7 @@
 </script>
 
 {#if initialPreloadFinished}
-  <div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade={{ duration: routingFadeDuration }}>
+  <div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade|global={{ duration: routingFadeDuration }}>
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         {#if showLeftArrow}<div class="jdev-arrow jdev-left-arrow">

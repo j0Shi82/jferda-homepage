@@ -28,7 +28,7 @@
   let timeout
   const handleScrollLock = (state) => {
     clearTimeout(timeout)
-    if (state) {
+    if (state && $isMobileBreakpoint) {
       window.scrollTo(0, 0)
       timeout = setTimeout(() => {
         document.querySelector('body').classList.add('jdev-scroll-lock')

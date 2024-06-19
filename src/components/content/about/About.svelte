@@ -38,7 +38,7 @@
   const philosophyDuration = ((pageTransitionDuration - headerTransitionDuration) * 0.4) / 8
 </script>
 
-<div class="mdc-layout-grid mdc-typography--body1 jdev-route-about" in:svelteTransitionFade={{ duration: routingFadeDuration }}>
+<div class="mdc-layout-grid mdc-typography--body1 jdev-route-about" in:svelteTransitionFade|global={{ duration: routingFadeDuration }}>
   <div class="mdc-layout-grid__inner">
     <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-6-desktop">
       <FlyingHeadline localeKey="about.bio.headline" transitionDirection={$isDesktopBreakpoint ? ['left', 'left'] : ['left', 'right']} />

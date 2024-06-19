@@ -27,7 +27,7 @@
     transitionDelay={animationParams.headline.delay}
   />
   <p
-    in:svelteTransitionFly={{
+    in:svelteTransitionFly|global={{
       x: $screenWidth / -2,
       duration: animationParams.content.duration,
       delay: animationParams.content.delay + animationParams.content.iterationDelay * 0,

@@ -40,7 +40,7 @@
   }
 </script>
 
-<div class="mdc-layout-grid mdc-typography--body1 jdev-route-resume" in:svelteTransitionFade={{ duration: routingFadeDuration }}>
+<div class="mdc-layout-grid mdc-typography--body1 jdev-route-resume" in:svelteTransitionFade|global={{ duration: routingFadeDuration }}>
   {#each data as { localeKey, items }, i}
     <FlyingHeadline {localeKey} />
     <div class="mdc-layout-grid__inner">

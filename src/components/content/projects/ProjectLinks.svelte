@@ -13,7 +13,7 @@
 </script>
 
 {#if projectData.projectPage.links.length}
-  <div style="display: flex; justify-content: space-evenly;" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly={{ y: -400, duration: animationTotalDuration }}>
+  <div style="display: flex; justify-content: space-evenly;" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly|global={{ y: -400, duration: animationTotalDuration }}>
     {#each projectData.projectPage.links as link}
       {#if link.type === 'web'}
         <Fab

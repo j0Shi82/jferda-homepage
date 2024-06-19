@@ -15,7 +15,7 @@
   {#each homeRoutes as route}
     <div
       class="home-routes {colorClass}"
-      in:svelteTransitionFly={{
+      in:svelteTransitionFly|global={{
         x: $screenWidth / -2,
         duration: atomTransitionDuration,
         delay: route.transitionDelay,

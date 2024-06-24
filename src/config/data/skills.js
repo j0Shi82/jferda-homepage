@@ -52,6 +52,7 @@ import elasticLogo from 'assets/media/images/skills/jspackages/elastic.svg'
 import eslintLogo from 'assets/media/images/skills/jspackages/eslint.svg'
 import gcloudLogo from 'assets/media/images/skills/jspackages/gcloud.png'
 import herokuLogo from 'assets/media/images/skills/jspackages/heroku.png'
+import hetznerLogo from 'assets/media/images/skills/jspackages/hetzner.svg'
 import jestLogo from 'assets/media/images/skills/jspackages/jest.png'
 import matomoLogo from 'assets/media/images/skills/jspackages/matomo.png'
 import npmLogo from 'assets/media/images/skills/jspackages/npm.svg'
@@ -297,6 +298,9 @@ const skills = [
   },
   {
     cat: 'jspackages', subcat: 'cloud', name: 'Google Cloud', class: 'gcloud', logo: gcloudLogo, progress: 0.1,
+  },
+  {
+    cat: 'jspackages', subcat: 'cloud', name: 'Hetzner', class: 'hetzner', logo: hetznerLogo, progress: 0.1,
   },
   {
     cat: 'jspackages', subcat: 'seo', name: 'Partytown', class: 'partytown', logo: partytownLogo, progress: 0.1,

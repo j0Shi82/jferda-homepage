@@ -1,79 +1,169 @@
 // make sure these match the values in config/index
 
-$breakpoint-mobile: "(max-width: 767px)";
-$breakpoint-tablet: "(min-width: 768px) and (max-width: 1023px)";
-$breakpoint-desktop: "(min-width: 1024px)";
+$breakpoint-mobile: '(max-width: 767px)';
+$breakpoint-tablet: '(min-width: 768px) and (max-width: 1023px)';
+$breakpoint-desktop: '(min-width: 1024px)';
 
-$php-primary-color: #787cb5;
-$php-secondary-color: #0b0b0b;
-$java-primary-color: #e27006;
-$java-secondary-color: #8ca9ba;
-$javascript-primary-color: #f7df1e;
-$javascript-secondary-color: #000;
-$sql-primary-color: #349adc;
-$sql-secondary-color: #fff;
-$csharp-primary-color: #813084;
-$csharp-secondary-color: #9a4993;
-$html-primary-color: #f16529;
-$html-secondary-color: #ebebeb;
-$css-primary-color: #29a9df;
-$css-secondary-color: #4bb5e3;
-$bootstrap-primary-color: #563d7c;
-$bootstrap-secondary-color: #fff;
-$node-primary-color: #72aa62;
-$node-secondary-color: #333;
-$jquery-primary-color: #0769ad;
-$jquery-secondary-color: #333;
-$laravel-primary-color: #fc5642;
-$laravel-secondary-color: #343434;
-$material-primary-color: #757575;
-$material-secondary-color: #bdbdbd;
-$phpbb-primary-color: #167db8;
-$phpbb-secondary-color: #acd0e6;
-$svelte-primary-color: #ff3e00;
-$svelte-secondary-color: #4a4a55;
-$titus-primary-color: #eb2526;
-$titus-secondary-color: #231f20;
-$vue-primary-color: #41b883;
-$vue-secondary-color: #34495e;
-$wp-primary-color: #464342;
-$wp-secondary-color: #fff;
-$babel-primary-color: #f9dc3e;
-$babel-secondary-color: #79703e;
-$eslint-primary-color: #4b32c3;
-$eslint-secondary-color: #8080f2;
-$express-primary-color: #99cb60;
-$express-secondary-color: #f7de1f;
-$jest-primary-color: #a04e5b;
-$jest-secondary-color: #dabbbf;
-$npm-primary-color: #cb3837;
-$npm-secondary-color: #e28f8f;
-$webpack-primary-color: #8ed6fb;
-$webpack-secondary-color: #1c78c0;
-$docker-primary-color: #2496ed;
-$docker-secondary-color: #b9defa;
-$git-primary-color: #f05133;
-$git-secondary-color: #413000;
-$jira-primary-color: #156fea;
-$jira-secondary-color: #253858;
-$mysql-primary-color: #f39e24;
-$mysql-secondary-color: #057992;
-$photoshop-primary-color: #070034;
-$photoshop-secondary-color: #a0cbfe;
-$sentry-primary-color: #221f20;
-$sentry-secondary-color: #fff;
-$vscode-primary-color: #0a85d1;
-$vscode-secondary-color: #38a9f2;
-$bulma-primary-color: #00d1b2;
-$bulma-secondary-color: #000000;
-$vite-primary-color: #aa4cff;
-$vite-secondary-color: #ffc31b;
-$qwik-primary-color: #534adb;
-$qwik-secondary-color: #009bff;
-$i18next-primary-color: #26a69a;
-$i18next-secondary-color: #034f42;
-$tailwind-primary-color: #35bef8;
-$tailwind-secondary-color: #0f172a;
+$home-tech-list: ('docker', 'git', 'javascript', 'node', 'php', 'svelte', 'titus', 'vue', 'wp');
+
+$home-tech-bg: (
+  titus: url('../media/images/knowledge-logos/titus-500.png'),
+  vue: url('../media/images/knowledge-logos/vuejs.png'),
+  docker: url('../media/images/knowledge-logos/docker.png'),
+  javascript: url('../media/images/knowledge-logos/javascript.png'),
+  node: url('../media/images/knowledge-logos/node.png'),
+  php: url('../media/images/knowledge-logos/php.png'),
+  svelte: url('../media/images/knowledge-logos/svelte.png'),
+  wp: url('../media/images/knowledge-logos/wp.png'),
+  git: url('../media/images/knowledge-logos/git.png'),
+);
+
+$tech-list: (
+  'adonis',
+  'angular',
+  'astro',
+  'babel',
+  'bc',
+  'bootstrap',
+  'bulma',
+  'csharp',
+  'css',
+  'docker',
+  'epicstack',
+  'eslint',
+  'express',
+  'git',
+  'html',
+  'i18next',
+  'java',
+  'javascript',
+  'jest',
+  'jira',
+  'laravel',
+  'material',
+  'mysql',
+  'node',
+  'npm',
+  'photoshop',
+  'php',
+  'phpbb',
+  'prime',
+  'qwik',
+  'remix',
+  'rust',
+  'sentry',
+  'shopify',
+  'shopware',
+  'slim',
+  'sql',
+  'supabase'
+  'svelte',
+  'tailwind',
+  'titus',
+  'typescript',
+  'vite',
+  'vscode',
+  'vue',
+  'webpack',
+  'wp'
+);
+
+$tech-colors: (
+  astro-primary: #000,
+  astro-secondary: #fff,
+  adonis-primary: #000,
+  adonis-secondary: #fff,
+  angular-primary: #c3002f,
+  angular-secondary: #dd0031,
+  babel-primary: #f9dc3e,
+  babel-secondary: #79703e,
+  bc-primary: #a5f0f5,
+  bc-secondary: #000,
+  bootstrap-primary: #563d7c,
+  bootstrap-secondary: #fff,
+  bulma-primary: #00d1b2,
+  bulma-secondary: #000000,
+  csharp-primary: #813084,
+  csharp-secondary: #9a4993,
+  css-primary: #29a9df,
+  css-secondary: #4bb5e3,
+  docker-primary: #2496ed,
+  docker-secondary: #2496ed,
+  epicstack-primary: #6a24ff,
+  epicstack-secondary: #000,
+  eslint-primary: #4b32c3,
+  eslint-secondary: #8080f2,
+  express-primary: #99cb60,
+  express-secondary: #f7de1f,
+  git-primary: #f05133,
+  git-secondary: #413000,
+  html-primary: #f16529,
+  html-secondary: #ebebeb,
+  i18next-primary: #26a69a,
+  i18next-secondary: #034f42,
+  java-primary: #e27006,
+  java-secondary: #8ca9ba,
+  javascript-primary: #f7df1e,
+  javascript-secondary: #000,
+  jest-primary: #a04e5b,
+  jest-secondary: #dabbbf,
+  jira-primary: #156fea,
+  jira-secondary: #253858,
+  laravel-primary: #fc5642,
+  laravel-secondary: #343434,
+  material-primary: #757575,
+  material-secondary: #bdbdbd,
+  mysql-primary: #f39e24,
+  mysql-secondary: #057992,
+  node-primary: #72aa62,
+  node-secondary: #333,
+  npm-primary: #cb3837,
+  npm-secondary: #e28f8f,
+  photoshop-primary: #070034,
+  photoshop-secondary: #a0cbfe,
+  php-primary: #787cb5,
+  php-secondary: #0b0b0b,
+  phpbb-primary: #167db8,
+  phpbb-secondary: #acd0e6,
+  prime-primary: #000,
+  prime-secondary: #fff,
+  qwik-primary: #534adb,
+  qwik-secondary: #009bff,
+  remix-primary: #000,
+  remix-secondary: #fff,
+  rust-primary: #202020,
+  rust-secondary: #fff,
+  sentry-primary: #221f20,
+  sentry-secondary: #fff,
+  shopify-primary: #95bf46,
+  shopify-secondary: #fff,
+  shopware-primary: #189eff,
+  shopware-secondary: #fff,
+  slim-primary: #6a9a36,
+  slim-secondary: #fff,
+  sql-primary: #dc7630,
+  sql-secondary: #fff,
+  supabase-primary: #3ecf8e,
+  supabase-secondary: #34b77c,
+  svelte-primary: #ff3e00,
+  svelte-secondary: #4a4a55,
+  tailwind-primary: #35bef8,
+  tailwind-secondary: #0f172a,
+  titus-primary: #eb2526,
+  titus-secondary: #231f20,
+  typescript-primary: #3178c6,
+  typescript-secondary: #000,
+  vite-primary: #aa4cff,
+  vite-secondary: #ffc31b,
+  vscode-primary: #0a85d1,
+  vscode-secondary: #38a9f2,
+  vue-primary: #41b883,
+  vue-secondary: #34495e,
+  webpack-primary: #8ed6fb,
+  webpack-secondary: #1c78c0,
+  wp-primary: #464342,
+  wp-secondary: #464342,
+);
 
 $h2-margin: 0.83em;
 

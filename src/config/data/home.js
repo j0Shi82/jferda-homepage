@@ -51,7 +51,7 @@ const knowledgeLogoItems = [
     logo: phpKnowledgeLogo,
   },
   {
-    ident: 'wordpress',
+    ident: 'wp',
     logo: wpKnowledgeLogo,
   },
   {

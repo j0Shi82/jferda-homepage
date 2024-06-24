@@ -35,7 +35,7 @@
       showLogoAnimation = true
       interval = setInterval(() => {
         changeLogo()
-      }, 4000)
+      }, 3000)
     })
 
     return () => {

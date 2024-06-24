@@ -32,7 +32,7 @@
       height: 90%;
       width: 80%;
       left: 10%;
-      animation: flipX 4s linear;
+      animation: flipX 3s linear;
       animation-iteration-count: 1;
       animation-fill-mode: both;
       animation-play-state: paused;
@@ -43,32 +43,10 @@
       }
     }
 
-    &.titus > div.logo {
-      background-image: url('../media/images/knowledge-logos/titus-500.png');
-    }
-    &.vue > div.logo {
-      background-image: url('../media/images/knowledge-logos/vuejs.png');
-    }
-    &.docker > div.logo {
-      background-image: url('../media/images/knowledge-logos/docker.png');
-    }
-    &.javascript > div.logo {
-      background-image: url('../media/images/knowledge-logos/javascript.png');
-    }
-    &.node > div.logo {
-      background-image: url('../media/images/knowledge-logos/node.png');
-    }
-    &.php > div.logo {
-      background-image: url('../media/images/knowledge-logos/php.png');
-    }
-    &.svelte > div.logo {
-      background-image: url('../media/images/knowledge-logos/svelte.png');
-    }
-    &.wordpress > div.logo {
-      background-image: url('../media/images/knowledge-logos/wp.png');
-    }
-    &.git > div.logo {
-      background-image: url('../media/images/knowledge-logos/git.png');
+    @each $tech, $bg in variables.$home-tech-bg {
+      &.#{$tech} > div.logo {
+        background-image: $bg;
+      }
     }
 
     position: relative;
@@ -125,41 +103,11 @@
       transition: all 2s;
     }
 
-    &.titus b {
-      color: variables.$titus-primary-color;
-      text-shadow: 1px 1px 2px variables.$titus-secondary-color;
-    }
-    &.vue b {
-      color: variables.$vue-primary-color;
-      text-shadow: 1px 1px 2px variables.$vue-secondary-color;
-    }
-    &.php b {
-      color: variables.$php-primary-color;
-      text-shadow: 1px 1px 2px variables.$php-secondary-color;
-    }
-    &.javascript b {
-      color: variables.$javascript-primary-color;
-      text-shadow: 1px 1px 2px variables.$javascript-secondary-color;
-    }
-    &.docker b {
-      color: variables.$docker-primary-color;
-      text-shadow: 1px 1px 2px variables.$docker-secondary-color;
-    }
-    &.svelte b {
-      color: variables.$svelte-primary-color;
-      text-shadow: 1px 1px 2px variables.$svelte-secondary-color;
-    }
-    &.wordpress b {
-      color: variables.$wp-primary-color;
-      text-shadow: 1px 1px 2px variables.$wp-primary-color;
-    }
-    &.node b {
-      color: variables.$node-primary-color;
-      text-shadow: 1px 1px 2px variables.$node-secondary-color;
-    }
-    &.git b {
-      color: variables.$git-primary-color;
-      text-shadow: 1px 1px 2px variables.$git-secondary-color;
+    @each $tech in variables.$home-tech-list {
+      &.#{$tech} b {
+        color: map-get(variables.$tech-colors, #{$tech}-primary);
+        text-shadow: 1px 1px 2px map-get(variables.$tech-colors, #{$tech}-secondary);
+      }
     }
 
     img {
@@ -168,32 +116,10 @@
   }
 
   .home-routes {
-    &.titus .mdc-fab {
-      background-color: variables.$titus-secondary-color;
-    }
-    &.vue .mdc-fab {
-      background-color: variables.$vue-secondary-color;
-    }
-    &.php .mdc-fab {
-      background-color: variables.$php-secondary-color;
-    }
-    &.javascript .mdc-fab {
-      background-color: variables.$javascript-secondary-color;
-    }
-    &.docker .mdc-fab {
-      background-color: variables.$docker-primary-color;
-    }
-    &.svelte .mdc-fab {
-      background-color: variables.$svelte-secondary-color;
-    }
-    &.wordpress .mdc-fab {
-      background-color: variables.$wp-primary-color;
-    }
-    &.node .mdc-fab {
-      background-color: variables.$node-secondary-color;
-    }
-    &.git .mdc-fab {
-      background-color: variables.$git-secondary-color;
+    @each $tech in variables.$home-tech-list {
+      &.#{$tech} .mdc-fab {
+        background-color: map-get(variables.$tech-colors, #{$tech}-secondary);
+      }
     }
 
     a {

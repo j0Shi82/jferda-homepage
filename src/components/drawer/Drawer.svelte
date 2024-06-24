@@ -42,9 +42,10 @@
   // control drawer visibility on desktop, home never shows menu
   $: {
     if (drawer && $currentRouteName !== null) {
-      if (!modal && $currentRouteName === 'home') {
+      if ($currentRouteName === 'home') {
         drawer.setOpen(false)
         handleScrollLock(false)
+        menuMobileState.set(false)
       }
       else {
         drawer.setOpen(true)

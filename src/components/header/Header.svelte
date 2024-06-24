@@ -13,7 +13,7 @@
   import IconButton from '@smui/icon-button'
   import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar'
   import 'assets/style/header.scss'
-  // components
+// components
   import Icon from 'fa-svelte'
 
   let pageTitle
@@ -94,7 +94,7 @@
       </Section>
     {/if}
     <Section align="end" toolbar>
-      <div class="jdev-ukraine-heart-icon" style=" background-image: url({ukraineHeartIcon});"></div>
+      <div class="jdev-ukraine-heart-icon" style=" background-image: url({ukraineHeartIcon}); flex: 0 1 48px;"></div>
       <a href="https://www.xing.com/profile/Janosch_Ferda" target="_blank" rel="noreferrer">
         <IconButton class="material-icons" aria-label={$localize('header.label.github')}><Icon icon={faXing}></Icon></IconButton>
       </a>
@@ -123,9 +123,11 @@
     }
 
     .jdev-ukraine-heart-icon {
-      height: 48px;
-      width: 48px;
-      background-size: 48px;
+      height: 100%;
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 

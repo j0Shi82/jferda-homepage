@@ -26,10 +26,6 @@
   svelteLifecycleOnMount(() => {
     fakeGrid = false
   })
-
-  // --jdev-skills-animation-duration is required to pass the animation time to the material component
-  // see project.scss for corresponding style
-  // there might be a smarter way to dynamically set a css value on a third-party component, but it'll do for now
 </script>
 
 {#if projectSkills.length}

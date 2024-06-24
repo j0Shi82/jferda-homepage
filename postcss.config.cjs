@@ -2,6 +2,8 @@ const autoprefixer = require('autoprefixer')
 const postcssDiscardDuplicates = require('postcss-discard-duplicates')
 const purgecss = require('@fullhuman/postcss-purgecss')
 
+// https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env
+
 const plugins = [
   process.env.NODE_ENV === 'production'
     ? purgecss({

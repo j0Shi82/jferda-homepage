@@ -23,10 +23,6 @@
     currentProgress = progress
     currentScale = 1
   }, delay)
-
-  $: {
-    console.log(progressEl?.getElement())
-  }
 </script>
 
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-1-phone {upcoming}" {style}>

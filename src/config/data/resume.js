@@ -10,14 +10,16 @@ const education = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.education.gym',
+    showMoreIdents: [],
     // doc: false,
   },
   {
     startDate: new Date(2006, 9, 1),
-    endDate: new Date(2018, 6, 31),
+    endDate: new Date(2011, 6, 31),
     ended: true,
     range: true,
     textLocaleIdent: 'resume.education.uni',
+    showMoreIdents: [],
     // doc: false,
   },
   {
@@ -26,6 +28,7 @@ const education = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.education.edom',
+    showMoreIdents: [],
     // doc: IHKReport,
   },
 ]
@@ -37,6 +40,7 @@ const experience = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.hs',
+    showMoreIdents: [],
     // doc: HeimspielReport,
   },
   {
@@ -45,6 +49,7 @@ const experience = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.mmb',
+    showMoreIdents: [],
     // doc: false,
   },
   {
@@ -53,22 +58,24 @@ const experience = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.nwoun',
+    showMoreIdents: [],
     // doc: false,
   },
-  {
-    startDate: new Date(2020, 10, 1),
-    endDate: new Date(2021, 3, 1),
-    ended: true,
-    range: true,
-    textLocaleIdent: 'resume.experience.neighboring',
-    // doc: false,
-  },
+  //   {
+  //     startDate: new Date(2020, 10, 1),
+  //     endDate: new Date(2021, 3, 1),
+  //     ended: true,
+  //     range: true,
+  //     textLocaleIdent: 'resume.experience.neighboring',
+  //     // doc: false,
+  //   },
   {
     startDate: new Date(2018, 7, 1),
     endDate: new Date(2022, 11, 31),
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.edom',
+    showMoreIdents: [],
     // doc: false,
   },
   {
@@ -76,7 +83,16 @@ const experience = [
     endDate: new Date(),
     ended: false,
     range: false,
-    textLocaleIdent: 'resume.experience.titus',
+    textLocaleIdent: 'resume.experience.titus.main',
+    showMoreIdents: [
+      'resume.experience.titus.more.consulting',
+      'resume.experience.titus.more.development',
+      'resume.experience.titus.more.tracking',
+      'resume.experience.titus.more.interfaces',
+      'resume.experience.titus.more.shopify',
+      'resume.experience.titus.more.cloud',
+      'resume.experience.titus.more.seo',
+    ],
     // doc: false,
   },
 ]
@@ -88,6 +104,7 @@ const skills = [
     ended: true,
     range: false,
     textLocaleIdent: 'resume.skills.kmk',
+    showMoreIdents: [],
     // doc: EnglishCert,
   },
   {
@@ -96,6 +113,7 @@ const skills = [
     ended: true,
     range: false,
     textLocaleIdent: 'resume.skills.sql',
+    showMoreIdents: [],
     // doc: SQLZert,
   },
 ]

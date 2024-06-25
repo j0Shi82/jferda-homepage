@@ -88,12 +88,23 @@
     },
     "experience": {
       "headline": "Experience",
-      "hs": "Side gig as editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster, Germany. Developed complementary and assisting web apps for personal use.",
+      "hs": "Editor at sports agency <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster, Germany. Developed complementary and assisting web apps for personal use.",
       "mmb": "Author and editor at <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, a NBA basketball community. Developed complementary and assisting web apps for personal use.",
       "nwoun": "Admin of <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, a community and software project for the MMORPG Neverwinter by Cryptic Studios and Gearbox Software.",
       "neighboring": "Plan and develop the Wordpress based web presence <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a>.",
       "edom": "Full-stack developer at <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, an online travel agency for holiday homes.",
-      "titus": "Responsible for the shop system as full-stack developer at <a href='https://www.titus-shop.com/' target='_blank'>Titus</a>, an e-commerce company for skate goods."
+      "titus": {
+        "main": "Responsible for the shop system as full-stack developer at <a href='https://www.titus-shop.com/' target='_blank'>Titus</a>, an e-commerce company for skate goods.",
+        "more": {
+          "consulting": "Consulting in choosing the right e-commerce platform for a relaunch with a key focus on performance",
+          "development": "Active development and maintenance of https://www.titus.de/ and related company sites",
+          "tracking": "Implemented a custom tracking solution with much less user and performance impact than usual",
+          "interfaces": "Active development and maintenance of multiple interfaces to connect various services to Shopify and Business Central 365",
+          "shopify": "Active development and maintenance of Shopify applications",
+          "cloud": "Maintenance of company cloud infrastructure and applications",
+          "seo": "Consulting and assistance in SEO-related topics"
+        }
+      }
     },
     "skills": {
       "headline": "Mixed Skills and Official Certificates",

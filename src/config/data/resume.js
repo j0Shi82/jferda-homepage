@@ -56,19 +56,19 @@ const experience = [
     // doc: false,
   },
   {
-    startDate: new Date(2020, 10, 1),
-    endDate: new Date(2021, 3, 1),
-    ended: true,
-    range: true,
-    textLocaleIdent: 'resume.experience.neighboring',
-    // doc: false,
-  },
-  {
     startDate: new Date(2018, 7, 1),
     endDate: new Date(2022, 11, 31),
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.edom',
+    // doc: false,
+  },
+  {
+    startDate: new Date(2020, 10, 1),
+    endDate: new Date(),
+    ended: false,
+    range: false,
+    textLocaleIdent: 'resume.experience.freelance',
     // doc: false,
   },
   {

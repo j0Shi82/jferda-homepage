@@ -10,25 +10,15 @@
   import TechLogo from 'components/utilities/atoms/TechLogo.svelte'
 
   let hover = false
-  let classes = ''
   export let i
   export let project
-
-  $: {
-    if (hover) {
-      classes = 'jdev-project-card-hover mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone'
-    }
-    else {
-      classes = 'mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone'
-    }
-  }
 </script>
 
 <div
   class:hover={hover || !project.live}
   class:upcoming={!project.live}
   class:animations={$animationsActive}
-  class="jdev-project-card mdc-layout-grid__cell {classes}"
+  class="jdev-project-card mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone"
   on:click={() => {
     hover = !hover
   }}
@@ -108,17 +98,3 @@
     </Card>
   </div>
 </div>
-
-<style lang="scss">
-  .jdev-project-card-hover {
-    grid-row: span 2;
-
-    .card-container {
-      height: 100%;
-
-      :global(.mdc-card) {
-        height: 100%;
-      }
-    }
-  }
-</style>

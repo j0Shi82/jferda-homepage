@@ -1,12 +1,13 @@
 import nodeLogo from 'assets/media/images/knowledge-logos/node.png'
-import pageSpeedInsights from 'assets/media/images/projects/jferda/page-speed-insights.png'
-import pageSpeedInsights250 from 'assets/media/images/projects/jferda/page-speed-insights-250.png'
-import gtmetrixInsights from 'assets/media/images/projects/jferda/gtmetrix-insights.png'
 import gtmetrixInsights250 from 'assets/media/images/projects/jferda/gtmetrix-insights-250.png'
+import gtmetrixInsights from 'assets/media/images/projects/jferda/gtmetrix-insights.png'
+import pageSpeedInsights250 from 'assets/media/images/projects/jferda/page-speed-insights-250.png'
+import pageSpeedInsights from 'assets/media/images/projects/jferda/page-speed-insights.png'
 
 export default {
   ident: 'jferda',
   live: true,
+  featured: true,
   titleLocaleKey: 'navigation.routes.projects_jferda',
   skillsLocaleKeys: ['skills.svelte', 'skills.material', 'skills.webpack'],
   descLocaleKey: 'projects.jferda.desc',

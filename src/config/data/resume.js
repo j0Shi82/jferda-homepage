@@ -10,7 +10,6 @@ const education = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.education.gym',
-    showMoreIdents: [],
     // doc: false,
   },
   {
@@ -19,7 +18,6 @@ const education = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.education.uni',
-    showMoreIdents: [],
     // doc: false,
   },
   {
@@ -28,7 +26,6 @@ const education = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.education.edom',
-    showMoreIdents: [],
     // doc: IHKReport,
   },
 ]
@@ -40,7 +37,6 @@ const experience = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.hs',
-    showMoreIdents: [],
     // doc: HeimspielReport,
   },
   {
@@ -49,7 +45,6 @@ const experience = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.mmb',
-    showMoreIdents: [],
     // doc: false,
   },
   {
@@ -58,7 +53,6 @@ const experience = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.nwoun',
-    showMoreIdents: [],
     // doc: false,
   },
   {
@@ -67,7 +61,6 @@ const experience = [
     ended: true,
     range: true,
     textLocaleIdent: 'resume.experience.edom',
-    showMoreIdents: [],
     // doc: false,
   },
   {
@@ -83,16 +76,7 @@ const experience = [
     endDate: new Date(),
     ended: false,
     range: false,
-    textLocaleIdent: 'resume.experience.titus.main',
-    showMoreIdents: [
-      'resume.experience.titus.more.consulting',
-      'resume.experience.titus.more.development',
-      'resume.experience.titus.more.tracking',
-      'resume.experience.titus.more.interfaces',
-      'resume.experience.titus.more.shopify',
-      'resume.experience.titus.more.cloud',
-      'resume.experience.titus.more.seo',
-    ],
+    textLocaleIdent: 'resume.experience.titus',
     // doc: false,
   },
 ]
@@ -104,7 +88,6 @@ const skills = [
     ended: true,
     range: false,
     textLocaleIdent: 'resume.skills.kmk',
-    showMoreIdents: [],
     // doc: EnglishCert,
   },
   {
@@ -113,7 +96,6 @@ const skills = [
     ended: true,
     range: false,
     textLocaleIdent: 'resume.skills.sql',
-    showMoreIdents: [],
     // doc: SQLZert,
   },
 ]

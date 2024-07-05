@@ -8,7 +8,7 @@ import svelteKnowledgeLogo from 'assets/media/images/knowledge-logos/svelte.png'
 import titusCorporateLogo from 'assets/media/images/knowledge-logos/titus-500.png'
 import vuejsKnowledgeLogo from 'assets/media/images/knowledge-logos/vuejs.png'
 import wpKnowledgeLogo from 'assets/media/images/knowledge-logos/wp.png'
-import { atomTransitionDuration, menuAbout48Icon, menuProjectsIcon } from 'utils/imports/config.js'
+import { atomTransitionDuration, menuAbout48Icon, menuProjects48Icon } from 'utils/imports/config.js'
 
 const menuItems = [
   {
@@ -18,7 +18,7 @@ const menuItems = [
     transitionDelay: atomTransitionDuration * 0,
   },
   {
-    icon: menuProjectsIcon,
+    icon: menuProjects48Icon,
     textLocaleIdent: 'navigation.routes.projects',
     route: 'projects',
     transitionDelay: atomTransitionDuration * 1,

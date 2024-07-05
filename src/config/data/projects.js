@@ -11,16 +11,19 @@ import gallery5Edom from 'assets/media/images/projects/edom/gallery5.jpg'
 import logoEdom from 'assets/media/images/projects/edom/logo.svg'
 
 import easycourses from 'config/data/projects/easycourses.js'
+import gerd from 'config/data/projects/gerd.js'
 import gondtools from 'config/data/projects/gondtools.js'
 import greezy from 'config/data/projects/greezy.js'
 import jferda from 'config/data/projects/jferda.js'
 import neighboring from 'config/data/projects/neighboring.js'
 import nwoun from 'config/data/projects/nwoun.js'
+import titus from 'config/data/projects/titus.js'
 
 const projects = [
   {
     ident: 'edom',
     live: true,
+    featured: true,
     titleLocaleKey: 'navigation.routes.projects_edom',
     skillsLocaleKeys: ['skills.vue', 'skills.laravel', 'skills.docker', 'skills.bootstrap', 'skills.node'],
     descLocaleKey: 'projects.edom.desc',
@@ -103,6 +106,8 @@ const projects = [
   jferda,
   neighboring,
   easycourses,
+  gerd,
+  titus,
 ]
 
 const sortFn = (a, b) => {

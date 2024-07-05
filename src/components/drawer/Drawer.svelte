@@ -88,7 +88,7 @@
 
       <Separator nav />
 
-      <Subheader>{$localize('navigation.routes.projects')}</Subheader>
+      <Subheader>{$localize('navigation.routes.featured')}</Subheader>
       {#each drawerMenuProjectItems as item}
         <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} on:keypress={() => go()} activated={$currentRouteName === item.routeName}>
           <Text>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</Text>

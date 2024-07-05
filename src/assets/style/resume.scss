@@ -1,6 +1,8 @@
 @use 'smui-theme';
 @use 'assets/style/variables.scss' as variables;
 
+@import '@smui/icon-button/_index.scss';
+
 .jdev-route-resume {
   a {
     font-weight: bold;

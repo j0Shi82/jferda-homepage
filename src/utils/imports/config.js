@@ -7,6 +7,7 @@ const {
   resume: menuResumeIcon,
   skills: menuSkillsIcon,
   projects: menuProjectsIcon,
+  projects48: menuProjects48Icon,
 } = config.app.menu.icons
 
 const { routingFadeDuration } = config.app.router
@@ -22,9 +23,7 @@ export {
   supportedLanguages as localeSupportedLanguages,
   menuAbout48Icon,
   menuAboutIcon,
-  menuHomeIcon,
-  menuProjectsIcon,
-  menuResumeIcon,
+  menuHomeIcon, menuProjects48Icon, menuProjectsIcon, menuResumeIcon,
   menuSkillsIcon,
   mobile as mobileBreakpointQueryString, pageTransitionDuration, routingFadeDuration,
   tablet as tabletBreakpointQueryString,

@@ -15,8 +15,8 @@
 
   import 'assets/style/skills.scss'
 
-  const openCat = 'lang'
   let currentCat
+  let initialCat = 'lang'
   let initialPreloadFinished = false
 
   // observe elements on each side of the navigation
@@ -25,13 +25,13 @@
   let leftArrowOberserver
   let showRightArrow = false
   let showLeftArrow = false
+  let observerLeft
+  let observerRight
 
   svelteLifecycleOnMount(() => {
-    let observerLeft
-    let observerRight
     // preload images to smoothen transitions
-    preloadImages(skillList.filter(skill => skill.type === openCat).map(skill => skill.logo)).finally(() => {
-      currentCat = openCat
+    preloadImages(skillList.map(skill => skill.logo)).finally(() => {
+      currentCat = initialCat
       initialPreloadFinished = true
 
       svelteTick().then(() => {
@@ -46,10 +46,6 @@
         observerLeft.observe(leftArrowOberserver)
         observerRight.observe(rightArrowOberserver)
       })
-
-      setTimeout(() => {
-        preloadImages(skillList.filter(skill => skill.type !== openCat).map(skill => skill.logo))
-      }, 250)
     })
 
     return () => {

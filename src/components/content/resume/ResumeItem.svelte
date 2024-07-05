@@ -11,6 +11,7 @@
     ended: true,
     range: true,
     textLocaleIdent: '',
+    showMoreIdents: [],
     // doc: false,
   }
   export let delay = 0

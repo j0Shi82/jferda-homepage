@@ -88,12 +88,23 @@
     },
     "experience": {
       "headline": "Erfahrung",
-      "hs": "Freier redaktioneller und technischer Mitarbeiter bei der <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
+      "hs": "Redaktioneller und technischer Mitarbeiter bei der <a href='https://www.sport.de/' target='_blank'>Heim:Spiel Medien GmbH & Co. KG</a> in Münster. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
       "mmb": "Autor und Editor bei <a href='https://www.mavsmoneyball.com/' target='_blank'>MavsMoneyball</a>, einem Online-Basketball-Blog. Entwicklung und Betreuung von Hilfs- und Webtools für den privaten Gebrauch.",
       "nwoun": "Admin von <a href='https://blog.nwo-uncensored.com/' target='_blank'>Neverwinter Uncensored</a>, einer Online-Community und Software-Projekt für das MMORPG Neverwinter von Cryptic Studios und Gearbox Software.",
       "edom": "Full-Stack Web-Developer bei <a href='https://www.e-domizil.de/' target='_blank'>e-domizil.de</a>, einem Online-Reisebüro für Ferienhäuser.",
       "freelance": "Freiberufliche Beratung und technische Unterstützung bei kleineren Projekten wie <a href='https://neighboringsatellites.ruhr/' target='_blank'>Neighboring Satellites</a> und <a href='https://hieristnichtda.de/' target='_blank'>HIND</a>.",
-      "titus": "Full-Stack-Entwickler des Shopsystems bei <a href='https://www.titus.de/' target='_blank'>Titus</a>, einem E-Commerce-Unternehmen für Skate-Lifestyle."
+      "titus": {
+        "main": "Full-Stack-Entwickler des Shopsystems bei <a href='https://www.titus.de/' target='_blank'>Titus</a>, einem E-Commerce-Unternehmen für Skate-Lifestyle.",
+        "more": {
+          "consulting": "",
+          "development": "",
+          "tracking": "",
+          "interfaces": "",
+          "shopify": "",
+          "cloud": "",
+          "seo": ""
+        }
+      }
     },
     "skills": {
       "headline": "Sonstige Fähigkeiten und Zertifikate",

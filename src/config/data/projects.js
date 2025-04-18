@@ -108,7 +108,6 @@ const projects = [
 const sortFn = (a, b) => {
 	const x = a.ident.toLowerCase()
 	const y = b.ident.toLowerCase()
-	// eslint-disable-next-line no-nested-ternary
 	return x < y ? -1 : x > y ? 1 : 0
 }
 const liveProjects = projects.filter((p) => p.live)

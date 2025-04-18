@@ -9,7 +9,6 @@ export default () => {
 	localeSupportedLanguages.forEach((lang) => {
 		// need to disable prefer-template here because of a bug in babel
 		// https://github.com/babel/babel/issues/11844
-		// eslint-disable-next-line prefer-template
 		import('locale/dict/' + lang + '.json')
 			.then((module) => {
 				addLocalizationFile(lang, module.default)

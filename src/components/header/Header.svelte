@@ -77,6 +77,8 @@
     <Section>
       <div class="jdev-avatar">
         <div
+          role="button"
+          tabindex="0"
           style="background-image: url({avatarImage});"
           on:click={() => {
             routerPush(getLocalizedRoute('home'))

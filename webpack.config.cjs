@@ -109,6 +109,7 @@ module.exports = {
     ],
   },
   mode,
+  stats: 'errors-only',
   plugins: [
     new MiniCssExtractPlugin({
       filename: `[name].[contenthash].${target}.css`,

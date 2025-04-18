@@ -15,6 +15,8 @@
 </script>
 
 <div
+  role="button"
+  tabindex="0"
   class:hover={hover || !project.live}
   class:upcoming={!project.live}
   class:animations={$animationsActive}
@@ -61,9 +63,8 @@
                 .sort((a, b) => {
                   const x = a.toLowerCase()
                   const y = b.toLowerCase()
-                  // eslint-disable-next-line no-nested-ternary
                   return x < y ? -1 : x > y ? 1 : 0
-                }) as skill}
+                }) as skill (skill)}
                 <TechLogo ident={skill} height="16" />
               {/each}
             </div>
@@ -85,9 +86,8 @@
               .sort((a, b) => {
                 const x = a.toLowerCase()
                 const y = b.toLowerCase()
-                // eslint-disable-next-line no-nested-ternary
                 return x < y ? -1 : x > y ? 1 : 0
-              }) as skill}
+              }) as skill (skill)}
               <TechLogo ident={skill} height="16" />
             {/each}
           </div>

@@ -73,9 +73,10 @@
 <Drawer variant={drawerVariant} bind:this={drawer} class="mdc-top-app-bar--fixed-adjust">
   <Content>
     <List>
-      {#each drawerMenuItems as item}
+      {#each drawerMenuItems as item (item.routeName)}
         <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} activated={$currentRouteName === item.routeName} on:keypress={() => go()}>
           <span class="material-icons mdc-deprecated-list-item__graphic" aria-hidden="true">
+            <!-- eslint-disable-next-line svelte/no-at-html-tags -->
             {@html item.icon}
           </span>
           <Text>{$localize(`navigation.routes.${item.routeName}`)}</Text>
@@ -85,7 +86,7 @@
       <Separator nav />
 
       <Subheader>{$localize('navigation.routes.projects')}</Subheader>
-      {#each drawerMenuProjectItems as item}
+      {#each drawerMenuProjectItems as item (item.routeName)}
         <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} on:keypress={() => go()} activated={$currentRouteName === item.routeName}>
           <Text>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</Text>
         </Item>
@@ -103,8 +104,8 @@
       {#if $locales.length > 1}
         <div class="jdev-list-item">
           <!-- <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}"> -->
-          {#each $locales as loc}
-            <div class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)} on:keypress={() => currentLocale.set(loc)}>
+          {#each $locales as loc (loc)}
+            <div role="button" tabindex="0" class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)} on:keypress={() => currentLocale.set(loc)}>
               <div class="jdev-flag {loc}" />
             </div>
             <!-- <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption> -->

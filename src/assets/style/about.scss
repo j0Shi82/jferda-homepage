@@ -1,9 +1,9 @@
-@use "smui-theme";
-@import "@material/typography/_mixins";
-@import 'src/assets/style/variables.scss';
-@import "@material/shape/_variables.scss";
-@import "@material/fab/_variables.scss";
-@import "tippy.js/animations/shift-away";
+@use 'smui-theme';
+@import '@material/typography/_mixins';
+@import 'variables.scss';
+@import '@material/shape/_variables.scss';
+@import '@material/fab/_variables.scss';
+@import 'tippy.js/animations/shift-away';
 
 div[data-tippy-root] {
   max-width: calc(100% - 5px) !important;

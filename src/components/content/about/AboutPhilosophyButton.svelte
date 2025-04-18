@@ -21,7 +21,6 @@
   }
 
   const initTippy = () => {
-    // eslint-disable-next-line no-underscore-dangle
     if (el._tippy) return
     import('tippy.js').then((module) => {
       module.default(el, {
@@ -30,13 +29,14 @@
         placement: 'bottom',
         offset: [0, 0],
       })
-      // eslint-disable-next-line no-underscore-dangle
       el._tippy.show()
     })
   }
 </script>
 
 <div
+  role="button"
+  tabindex="0"
   class="jdev-fab-wrapper"
   bind:this={el}
   on:mouseenter={initTippy}

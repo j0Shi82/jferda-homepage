@@ -11,6 +11,7 @@ export default {
     projects_edom: '/projekte/e-domizil-de',
     projects_neighboring: '/projekte/neighboring-satellites',
     projects_jferda: '/projekte/jferda',
+    projects_titus: '/projekte/titus',
     404: '/*',
   },
   en: {
@@ -25,6 +26,7 @@ export default {
     projects_edom: '/projects/e-domizil-de',
     projects_neighboring: '/projects/neighboring-satellites',
     projects_jferda: '/projects/jferda',
+    projects_titus: '/projects/titus',
     404: '/*',
   },
 }

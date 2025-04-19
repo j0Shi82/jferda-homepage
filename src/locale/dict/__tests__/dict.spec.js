@@ -18,7 +18,6 @@ describe('locale/dict/dict', async () => {
     traverse(dict)
     return count
   })
-  console.log(entryCounts)
 
   it('all language dictionaries have the same amount of entries', () => {
     expect(entryCounts.every(count => count === entryCounts[0])).toBe(true)

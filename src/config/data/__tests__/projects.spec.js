@@ -21,4 +21,16 @@ describe('config/data/projects', () => {
       expect(baseRoutes.map(route => route.name).includes(routeName)).toEqual(true)
     })
   })
+
+  it('all projects have different idents', () => {
+    const projectIdents = projectList.map(project => project.ident)
+    const uniqueProjectIdents = [...new Set(projectIdents)]
+    expect(uniqueProjectIdents.length).toEqual(projectIdents.length)
+  })
+
+  it('all projects have different routeNames', () => {
+    const projectRouteNames = projectList.map(project => project.routeName)
+    const uniqueProjectRouteNames = [...new Set(projectRouteNames)]
+    expect(uniqueProjectRouteNames.length).toEqual(projectRouteNames.length)
+  })
 })

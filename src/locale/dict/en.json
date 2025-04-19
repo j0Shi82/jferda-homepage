@@ -16,6 +16,7 @@
       "projects_edom": "e-domizil.de",
       "projects_neighboring": "Neighboring Satellites",
       "projects_easycourses": "easycourses.io",
+      "projects_titus": "TITUS Online Shop",
       "404": "404 - Not Found"
     },
     "animationSwitchLabel": "Toggle animations"
@@ -146,6 +147,9 @@
     },
     "easycourses": {
       "desc": "I'm currently building a web application that enables users to randomly assign participants to a list of courses in very few steps. The main goals are usability and compliance with strict privacy standards."
+    },
+    "titus": {
+      "desc": "TITUS is a well-known skate shop in Germany. I was responsible for relaunching the shop on Shopify with a custom Liquid theme as well as integrating the shop with the existing ERP system."
     }
   },
   "project": {
@@ -325,7 +329,7 @@
       }
     },
     "jferda": {
-      "desc": "j0shi.dev is my personal portfolio site that I primarily made just for fun and to get started with Svelte (and using Webpack alongside it). It also uses Tailwind CSS for the same reasons. I did experiment with a full localization (including a custom router setup with localized urls), all sorts of CSS animations, timings, as well as a distinct import structure to make module management less chaotic.<br /><br />The most fun though was rebranding popular tech logos using my own nickname ('j0Shi') that I'm using since my teenage days. I know the notation looks a bit silly nowadays, but I roll with it because why the heck not! Never growing up is part of my identity.<br /><br />j0shi.dev obviously also showcases everything you would expect from a portfolio site, like projects and skills. Have fun getting to know me!",
+      "desc": "j0shi.dev is my personal portfolio site that I primarily made just for fun and to get started with Svelte (and using Webpack alongside it). It also uses the Material Design for the same reasons. I did experiment with a full localization (including a custom router setup with localized urls), all sorts of CSS animations, timings, as well as a distinct import structure to make module management less chaotic.<br /><br />The most fun though was rebranding popular tech logos using my own nickname ('j0Shi') that I'm using since my teenage days. I know the notation looks a bit silly nowadays, but I roll with it because why the heck not! Never growing up is part of my identity.<br /><br />j0shi.dev obviously also showcases everything you would expect from a portfolio site, like projects and skills. Have fun getting to know me!",
       "highlights": {
         "1": {
           "1": "Webpack and Svelte",
@@ -355,6 +359,39 @@
       },
       "links": {
         "repo": "Repository"
+      }
+    },
+    "titus": {
+      "desc": "TITUS hired me to take care of their shop relaunch and migration from Shopware 5. We deeply evaluated shop systems and landed on Shopify as it met our needs best. The project was a huge success and we managed to migrate the entire shop in just eight weeks.<br /> <br />I was responsible for the Liquid shop theme and all performance-related optimizations. We implemented countless custom theme functionalities for the launch and also maintained all required connectors and integrations from Shopify to other systems.<br /><br />Over the years we gradually immerged into the Shopify ecosystem and community to built the best experience for user while staying true to the brand's core values.",
+      "highlights": {
+        "1": {
+          "1": "Relaunch in eight weeks",
+          "2": "Migrated from Shopware in eight weeks",
+          "3": "Supreme teamwork and planning"
+        },
+        "2": {
+          "1": "Partytown & Server-Side Tracking",
+          "2": "Zero tracking footprint thanks to Partytown",
+          "3": "Full Google SGTM integration"
+        },
+        "3": {
+          "1": "Custom Liquid Theme",
+          "2": "Extend pre-built theme with custom functions",
+          "3": "Optimize for performance based on Core Web Vitals"
+        },
+        "4": {
+          "1": "Evaluate and Enhance Shopify Apps",
+          "2": "Improve frontend apps for better performance",
+          "3": "Integrate apps into the theme"
+        },
+        "5": {
+          "1": "Connectors and API",
+          "2": "Maintaining multiple connectors to ERP system",
+          "3": "Deep understanding of Shopify's GraphQL API"
+        }
+      },
+      "links": {
+        "site": "Shop"
       }
     }
   }

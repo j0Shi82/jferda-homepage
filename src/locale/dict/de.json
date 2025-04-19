@@ -16,6 +16,7 @@
       "projects_edom": "e-domizil.de",
       "projects_neighboring": "Neighboring Satellites",
       "projects_easycourses": "easycourses.io",
+      "projects_titus": "TITUS Online Shop",
       "404": "404 - Nicht gefunden"
     },
     "animationSwitchLabel": "Animationen"
@@ -146,6 +147,9 @@
     },
     "easycourses": {
       "desc": "Hier entsteht eine Web-Applikation, die es in wenigen Schritten ermöglicht Teilnehmer zufällig auf eine Kursliste zu verteilen. Das Hauptaugenmerk liegt dabei auf einer einfachen Bedienbarkeit und der Einhaltung strikter Datenschutzrichtlinien."
+    },
+    "titus": {
+      "desc": "TITUS ist ein E-Commerce-Unternehmen, das sich auf Skate-Lifestyle spezialisiert hat. Ich war als Entwickler für die Migration von Shopware sowie kontinuierliche Weiterentwicklung und Wartung des Shopsystems inklusiver aller Schnittstellen verantwortlich."
     }
   },
   "project": {
@@ -325,7 +329,7 @@
       }
     },
     "jferda": {
-      "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte & Tailwind CSS). Ich habe zudem eine vollständige Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise heutzutage ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde. Viel Spaß beim Kennenlernen!",
+      "desc": "j0shi.dev ist meine persönliche Portfolio-Seite, die ich primär deswegen angegangen bin, um mir ein paar bis dato noch nicht genutzte Technologien anzuschauen (Svelte & Material Design). Ich habe zudem eine vollständige Lokalisation inklusive angepasster Router-Logik mit lokalisierten URLs umgesetzt sowie mit allerhand CSS-Animationen, Timings und einer klare Import-Struktur zum Module-Management experimentiert. <br /><br />Den meisten Spaß hatte ich allerdings daran, bekannte Technologie-Logos mit meinem Nickname \"j0Shi\" umzudesignen, den ich seit Teenage-Zeiten verwende. Ich gebe zu, dass die Schreibweise heutzutage ein wenig albern erscheint, aber das Nicht-Erwachsen-Werden ist untrennbar mit meiner Persönlichkeit verbunden.<br /><br />Zudem stellt die Seite natürlich auch die Informationen bereit, die man von einem Portfolio erwarten würde. Viel Spaß beim Kennenlernen!",
       "highlights": {
         "1": {
           "1": "Webpack und Svelte",

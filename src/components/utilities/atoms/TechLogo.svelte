@@ -36,6 +36,8 @@
     sentry: () => import('assets/media/images/skills/software/sentry.svg'),
     vscode: () => import('assets/media/images/skills/software/vscode.png'),
     node: () => import('assets/media/images/skills/software/node.svg'),
+
+    shopify: () => import('assets/media/images/skills/software/shopify.svg'),
   }
 
   export let ident = 'bootstrap'

@@ -5,6 +5,10 @@ import screen1250 from 'assets/media/images/projects/titus/titus-screenshot-250.
 import screen3250 from 'assets/media/images/projects/titus/titus-screenshot-3-250.png'
 import screen3 from 'assets/media/images/projects/titus/titus-screenshot-3.png'
 import screen1 from 'assets/media/images/projects/titus/titus-screenshot.png'
+import vic2250 from 'assets/media/images/projects/titus/victorinox-2-250.png'
+import vic2 from 'assets/media/images/projects/titus/victorinox-2.png'
+import vic1250 from 'assets/media/images/projects/titus/victorinox-250.png'
+import vic1 from 'assets/media/images/projects/titus/victorinox.png'
 
 export default {
   ident: 'titus',
@@ -68,6 +72,18 @@ export default {
       {
         thumb: screen3250,
         full: screen3,
+        title: false,
+        description: false,
+      },
+      {
+        thumb: vic1250,
+        full: vic1,
+        title: false,
+        description: false,
+      },
+      {
+        thumb: vic2250,
+        full: vic2,
         title: false,
         description: false,
       },

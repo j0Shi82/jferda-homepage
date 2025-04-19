@@ -150,6 +150,9 @@
     },
     "titus": {
       "desc": "TITUS is a well-known skate shop in Germany. I was responsible for relaunching the shop on Shopify with a custom Liquid theme as well as integrating the shop with the existing ERP system."
+    },
+    "gerd": {
+      "desc": "For our friends and family I'm currently creating a web app that allows us to share vehicles, apartments, and other things. The app has no commercial purpose and is only used for our private use."
     }
   },
   "project": {
@@ -386,7 +389,7 @@
         },
         "5": {
           "1": "Connectors and API",
-          "2": "Maintaining multiple connectors to ERP system",
+          "2": "Maintaining multiple connectors to other systems",
           "3": "Deep understanding of Shopify's GraphQL API"
         }
       },

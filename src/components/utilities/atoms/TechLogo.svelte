@@ -38,6 +38,7 @@
     node: () => import('assets/media/images/skills/software/node.svg'),
 
     shopify: () => import('assets/media/images/skills/software/shopify.svg'),
+    supabase: () => import('assets/media/images/skills/software/supabase.svg'),
   }
 
   export let ident = 'bootstrap'

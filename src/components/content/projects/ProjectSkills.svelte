@@ -18,7 +18,7 @@
     },
   }
 
-  const projectSkills = skillList.filter(el => el.type === projectData.ident)
+  const projectSkills = skillList.filter(el => el.cat === projectData.ident)
 
   // need this fake grid to properly calculate the windows height
   // skills cat slowly unfolds which skews page height so we need a placeholder that immediately disappears

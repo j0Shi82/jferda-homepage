@@ -150,6 +150,9 @@
     },
     "titus": {
       "desc": "TITUS ist ein E-Commerce-Unternehmen, das sich auf Skate-Lifestyle spezialisiert hat. Ich war als Entwickler für die Migration von Shopware sowie kontinuierliche Weiterentwicklung und Wartung des Shopsystems inklusiver aller Schnittstellen verantwortlich."
+    },
+    "gerd": {
+      "desc": "Für unsere Freunde und Familie erstelle ich derzeit eine Applikation, mit der wir Fahrzeuge, Wohnungen und andere Dinge teilen können. Die App hat keinen kommerziellen Zweck und wird nur privat genutzt."
     }
   },
   "project": {
@@ -359,6 +362,39 @@
       },
       "links": {
         "repo": "Repository"
+      }
+    },
+    "titus": {
+      "desc": "Bei TITUS war ich von Beginn an mit dem Relaunch des Shopsystems betraut. Nach einer intensiven Planungsphase haben wir den Shop in nur acht Wochen von Shopware 5 auf Shopify umgestellt. Das Projekt war ein großer Erfolg.<br /><br />Ich war verantwortlich für das Liquid-Theme und aller performance-basierten Optimierungen. Wir haben vor dem Relaunch unzählige maßgeschneiderte Änderungen eingepflegt und Funktionalitäten hinzugefügt. Zusätzlich haben wir mit unserem Team alle Schnittstellen von und zu Shopify technisch betreut.<br /><br />Über die Jahre sind wir immer tiefer ins Shopify-Ökosystem und Community eingetaucht, um unseren Kunde die bestmögliche Erfahrung zu bieten und dabei nie die Markenwerte aus den Augen zu verlieren.",
+      "highlights": {
+        "1": {
+          "1": "Relaunch in acht Wochen",
+          "2": "Migration und Entwicklung in Rekordzeit",
+          "3": "Hervorragende Teamarbeit und Planung"
+        },
+        "2": {
+          "1": "Partytown & Server-Side Tracking",
+          "2": "Keine Performance-Einbußen dank Partytown",
+          "3": "Vollständige Google SGTM-Integration"
+        },
+        "3": {
+          "1": "Maßgeschneidertes Liquid Theme",
+          "2": "Erweiterung des vorgefertigten Themes mit benutzerdefinierten Funktionen",
+          "3": "Optimierung der Performance basierend auf Core Web Vitals"
+        },
+        "4": {
+          "1": "Bewertung und Verbesserung von Shopify-Apps",
+          "2": "Frontend-Apps optimieren",
+          "3": "Apps in das Theme integrieren"
+        },
+        "5": {
+          "1": "Schnittstellen und API",
+          "2": "Wartung mehrerer Schnittstellen zu anderen System",
+          "3": "Tiefes Verständnis der GraphQL-API von Shopify"
+        }
+      },
+      "links": {
+        "site": "Shop"
       }
     }
   }

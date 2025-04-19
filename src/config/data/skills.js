@@ -431,6 +431,18 @@ const skills = [
   {
     cat: 'greezy', subcat: '', name: 'SQL', class: 'sql', logo: sqlLogo, progress: 0.2,
   },
+  {
+    cat: 'titus', subcat: '', name: 'Shopify', class: 'shopify', logo: shopifyLogo, progress: 1,
+  },
+  {
+    cat: 'titus', subcat: '', name: 'CSS', class: 'css', logo: cssLogo, progress: 0.2,
+  },
+  {
+    cat: 'titus', subcat: '', name: 'JavaScript', class: 'javascript', logo: javascriptLogo, progress: 0.8,
+  },
+  {
+    cat: 'titus', subcat: '', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.7,
+  },
 ]
 
 export { cats, skills }

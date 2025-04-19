@@ -24,7 +24,7 @@
   let galleryAnimationParams
 
   function getSectionAnimationParams(projectData) {
-    const skillCount = skillList.filter(el => el.type === projectData.ident).length
+    const skillCount = skillList.filter(el => el.cat === projectData.ident).length
     const keysCount = projectData.projectPage.keys.length
     const galleryCount = projectData.projectPage.gallery.length
     ;[skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams] = getProjectAnimationParams(animationTotalDuration, $animationsActive, [
@@ -50,7 +50,7 @@
     initialized = false
     const images = []
     const [data] = projectList.filter(project => project.ident === $currentProject)
-    const projectSkills = skillList.filter(el => el.type === $currentProject)
+    const projectSkills = skillList.filter(el => el.cat === $currentProject)
     images.push(data.projectPage.titleImage)
     images.push(...data.projectPage.gallery.map(image => image.thumb))
     images.push(...projectSkills.map(skill => skill.logo))

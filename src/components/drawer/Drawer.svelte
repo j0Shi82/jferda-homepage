@@ -28,12 +28,13 @@
   let timeout
   const handleScrollLock = (state) => {
     clearTimeout(timeout)
-    if (state) {
+    if (state && $isMobileBreakpoint) {
       window.scrollTo(0, 0)
       timeout = setTimeout(() => {
         document.querySelector('body').classList.add('jdev-scroll-lock')
       }, 250)
-    } else {
+    }
+    else {
       document.querySelector('body').classList.remove('jdev-scroll-lock')
     }
   }
@@ -41,10 +42,12 @@
   // control drawer visibility on desktop, home never shows menu
   $: {
     if (drawer && $currentRouteName !== null) {
-      if (!modal && $currentRouteName === 'home') {
+      if ($currentRouteName === 'home') {
         drawer.setOpen(false)
         handleScrollLock(false)
-      } else {
+        menuMobileState.set(false)
+      }
+      else {
         drawer.setOpen(true)
         handleScrollLock(true)
       }
@@ -85,7 +88,7 @@
 
       <Separator nav />
 
-      <Subheader>{$localize('navigation.routes.projects')}</Subheader>
+      <Subheader>{$localize('navigation.routes.featured')}</Subheader>
       {#each drawerMenuProjectItems as item (item.routeName)}
         <Item href="#{getLocalizedRoute(item.routeName, $currentLocale)}" on:click={() => go()} on:keypress={() => go()} activated={$currentRouteName === item.routeName}>
           <Text>{$localize(`navigation.routes.projects_${item.localeIdent}`)}</Text>
@@ -105,7 +108,7 @@
         <div class="jdev-list-item">
           <!-- <MaterialSelect class="jdev-language-select {$currentLocale}" bind:value={$currentLocale} label="{$localize('locale.headline')}"> -->
           {#each $locales as loc (loc)}
-            <div role="button" tabindex="0" class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)} on:keypress={() => currentLocale.set(loc)}>
+            <div role="button" tabindex="" class="jdev-language-select {loc === $currentLocale ? 'active' : ''}" on:click={() => currentLocale.set(loc)} on:keypress={() => currentLocale.set(loc)}>
               <div class="jdev-flag {loc}" />
             </div>
             <!-- <MaterialOption value={loc} selected={loc === $currentLocale}>{$localize(`locale.${loc}`)}</MaterialOption> -->

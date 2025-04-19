@@ -25,12 +25,19 @@ module.exports = {
     port: 8090,
     hot: true,
     static: [path.join(__dirname, 'dist'), path.join(__dirname, 'public')],
+    client: {
+      overlay: {
+        warnings: false,
+        errors: true,
+        runtimeErrors: true,
+      },
+    },
   },
   resolve: {
     alias: {
-      svelte: path.resolve('node_modules', 'svelte/src/runtime'),
+      'svelte': path.resolve('node_modules', 'svelte/src/runtime'),
       // workaround for weird error Module not found: Error: Package path . is not exported from package
-      regexparam: path.resolve('node_modules', 'regexparam', 'dist', 'index.mjs'),
+      'regexparam': path.resolve('node_modules', 'regexparam', 'dist', 'index.mjs'),
       'svelte-spa-router/wrap': path.resolve('node_modules', 'svelte-spa-router/wrap.js'),
     },
     extensions: ['.cjs', '.mjs', '.js', '.svelte'],
@@ -98,9 +105,9 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              // eslint-disable-next-line global-require
+
               sassOptions: {
-                loadPaths: ['./src/assets/style', './node_modules'],
+                includePaths: [path.resolve(__dirname, 'src/assets/style'), path.resolve(__dirname, 'node_modules')],
               },
             },
           },
@@ -135,10 +142,10 @@ module.exports = {
     }),
     isProd
       ? new WorkboxPlugin.GenerateSW({
-          clientsClaim: true,
-          skipWaiting: true,
-          exclude: [/legacy/],
-        })
+        clientsClaim: true,
+        skipWaiting: true,
+        exclude: [/legacy/],
+      })
       : () => {},
     isProd ? new WebpackModuleNomodulePlugin(target, 'minimal') : () => {},
     new CopyPlugin({

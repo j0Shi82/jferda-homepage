@@ -7,16 +7,16 @@ import { cats, skills } from 'config/data/skills.js'
 import routeLocales from 'locale/dict/routes.js'
 
 export {
-	aboutPhilosophies,
-	generalMenuItems as drawerMenuItems,
-	projectMenuItems as drawerMenuProjectItems,
-	knowledgeLogoItems as homeKnowledgeLogoItems,
-	menuItems as homeRoutes,
-	projectList,
-	education as resumeEducationList,
-	experience as resumeExperienceList,
-	resumeSkills as resumeSkillList,
-	routeLocales as routeLocaleDict,
-	cats as skillCategories,
-	skills as skillList,
+  aboutPhilosophies,
+  generalMenuItems as drawerMenuItems,
+  projectMenuItems as drawerMenuProjectItems,
+  knowledgeLogoItems as homeKnowledgeLogoItems,
+  menuItems as homeRoutes,
+  projectList,
+  education as resumeEducationList,
+  experience as resumeExperienceList,
+  resumeSkills as resumeSkillList,
+  routeLocales as routeLocaleDict,
+  cats as skillCategories,
+  skills as skillList,
 }

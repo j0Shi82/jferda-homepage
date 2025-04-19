@@ -1,8 +1,8 @@
 <script>
+  import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
+  import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe'
   import { localize } from 'utils/imports/core'
   import { svelteTransitionFly } from 'utils/imports/svelte'
-  import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe'
-  import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
   // material
   import Fab, { Label } from '@smui/fab'
   // components
@@ -13,8 +13,8 @@
 </script>
 
 {#if projectData.projectPage.links.length}
-  <div style="display: flex; justify-content: space-evenly;" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly={{ y: -400, duration: animationTotalDuration }}>
-    {#each projectData.projectPage.links as link, i (i)}
+  <div style="display: flex; justify-content: space-evenly;" class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" in:svelteTransitionFly|global={{ y: -400, duration: animationTotalDuration }}>
+    {#each projectData.projectPage.links as link (link.url)}
       {#if link.type === 'web'}
         <Fab
           style="background-color: {link.bgColor};"
@@ -37,8 +37,8 @@
   </div>
 {/if}
 
-<style lang="scss" global>
-  button > svg.dark.fa-svelte > path {
+<style lang="scss">
+  :global(button > svg.dark.fa-svelte > path) {
     fill: #000;
   }
 </style>

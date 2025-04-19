@@ -1,7 +1,7 @@
 <script>
   import { formatDate, localize } from 'utils/imports/core'
-  import { svelteTransitionFly, svelteEasingBackOut } from 'utils/imports/svelte'
   import { animationsActive, screenWidth } from 'utils/imports/store'
+  import { svelteEasingBackOut, svelteTransitionFly } from 'utils/imports/svelte'
   // import * as FontAwesomeIcon from 'fa-svelte';
   // import { faFilePdf } from '@fortawesome/free-solid-svg-icons/faFilePdf';
 
@@ -11,6 +11,7 @@
     ended: true,
     range: true,
     textLocaleIdent: '',
+    showMoreIdents: [],
     // doc: false,
   }
   export let delay = 0
@@ -30,7 +31,7 @@
 <div
   class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone jdev-resume-date"
   class:visible
-  in:svelteTransitionFly={{
+  in:svelteTransitionFly|global={{
     x: $screenWidth / -2,
     duration: transitionDuration,
     delay,
@@ -43,7 +44,7 @@
 <div
   class="mdc-layout-grid__cell mdc-layout-grid__cell--span-9-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone jdev-resume-content"
   class:visible
-  in:svelteTransitionFly={{
+  in:svelteTransitionFly|global={{
     x: $screenWidth / 2,
     duration: transitionDuration,
     delay,

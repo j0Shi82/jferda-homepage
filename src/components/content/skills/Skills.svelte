@@ -8,10 +8,6 @@
   import { LeadingIcon } from '@smui/chips'
   import Tab, { Label as TabLabel } from '@smui/tab'
   import TabBar from '@smui/tab-bar'
-  // import '@smui/tab/_index.scss';
-  // import '@smui/tab-bar/_index.scss';
-  // import '@smui/chips/_index.scss';
-
   // components
   import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte'
   // polyfill
@@ -19,8 +15,8 @@
 
   import 'assets/style/skills.scss'
 
-  const openCat = 'lang'
   let currentCat
+  let initialCat = 'lang'
   let initialPreloadFinished = false
 
   // observe elements on each side of the navigation
@@ -29,13 +25,13 @@
   let leftArrowOberserver
   let showRightArrow = false
   let showLeftArrow = false
+  let observerLeft
+  let observerRight
 
   svelteLifecycleOnMount(() => {
-    let observerLeft
-    let observerRight
     // preload images to smoothen transitions
-    preloadImages(skillList.filter((skill) => skill.type === openCat).map((skill) => skill.logo)).finally(() => {
-      currentCat = openCat
+    preloadImages(skillList.map(skill => skill.logo)).finally(() => {
+      currentCat = initialCat
       initialPreloadFinished = true
 
       svelteTick().then(() => {
@@ -50,10 +46,6 @@
         observerLeft.observe(leftArrowOberserver)
         observerRight.observe(rightArrowOberserver)
       })
-
-      setTimeout(() => {
-        preloadImages(skillList.filter((skill) => skill.type !== openCat).map((skill) => skill.logo))
-      }, 250)
     })
 
     return () => {
@@ -64,7 +56,7 @@
 </script>
 
 {#if initialPreloadFinished}
-  <div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade={{ duration: routingFadeDuration }}>
+  <div class="mdc-layout-grid mdc-typography--body1 jdev-route-skills" in:svelteTransitionFade|global={{ duration: routingFadeDuration }}>
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         {#if showLeftArrow}<div class="jdev-arrow jdev-left-arrow">

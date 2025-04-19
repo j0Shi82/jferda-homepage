@@ -1,15 +1,15 @@
 <script>
-  import { svelteTransitionFade, svelteLifecycleOnMount, svelteLifecycleOnDestroy } from 'utils/imports/svelte'
-  import { currentProject, animationsActive, projectInitializing } from 'utils/imports/store'
   import { routingFadeDuration } from 'utils/imports/config'
-  import { preloadImages, getProjectAnimationParams } from 'utils/imports/helpers'
   import { projectList, skillList } from 'utils/imports/data'
+  import { getProjectAnimationParams, preloadImages } from 'utils/imports/helpers'
+  import { animationsActive, currentProject, projectInitializing } from 'utils/imports/store'
+  import { svelteLifecycleOnDestroy, svelteLifecycleOnMount, svelteTransitionFade } from 'utils/imports/svelte'
   // components
   import ProjectDescription from 'components/content/projects/ProjectDescription.svelte'
-  import ProjectKeys from 'components/content/projects/ProjectKeys.svelte'
-  import ProjectSkills from 'components/content/projects/ProjectSkills.svelte'
   import ProjectGallery from 'components/content/projects/ProjectGallery.svelte'
+  import ProjectKeys from 'components/content/projects/ProjectKeys.svelte'
   import ProjectLinks from 'components/content/projects/ProjectLinks.svelte'
+  import ProjectSkills from 'components/content/projects/ProjectSkills.svelte'
 
   import 'assets/style/project.scss'
 
@@ -24,7 +24,7 @@
   let galleryAnimationParams
 
   function getSectionAnimationParams(projectData) {
-    const skillCount = skillList.filter((el) => el.type === projectData.ident).length
+    const skillCount = skillList.filter(el => el.type === projectData.ident).length
     const keysCount = projectData.projectPage.keys.length
     const galleryCount = projectData.projectPage.gallery.length
     ;[skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams] = getProjectAnimationParams(animationTotalDuration, $animationsActive, [
@@ -49,11 +49,11 @@
     loading = true
     initialized = false
     const images = []
-    const [data] = projectList.filter((project) => project.ident === $currentProject)
-    const projectSkills = skillList.filter((el) => el.type === $currentProject)
+    const [data] = projectList.filter(project => project.ident === $currentProject)
+    const projectSkills = skillList.filter(el => el.type === $currentProject)
     images.push(data.projectPage.titleImage)
-    images.push(...data.projectPage.gallery.map((image) => image.thumb))
-    images.push(...projectSkills.map((skill) => skill.logo))
+    images.push(...data.projectPage.gallery.map(image => image.thumb))
+    images.push(...projectSkills.map(skill => skill.logo))
     preloadImages(images).finally(() => {
       loading = false
     })
@@ -64,6 +64,8 @@
       initialized = false
       // scale window to device height and unfold when animations finished
       scaleY = (window.innerHeight - 96) / projectContainer.clientHeight
+      console.log(scaleY)
+      document.querySelector('body').classList.add('jdev-scroll-lock')
 
       // changing padding will force browsers to redraw the page, it's an ugly way to get rid of blurry text after scale in chrome
       const el = document.querySelector('.jdev-route-project')
@@ -78,12 +80,13 @@
         scaleY = 1
         initialized = true
         projectInitializing.set(false)
+        document.querySelector('body').classList.remove('jdev-scroll-lock')
       }, animationTotalDuration + 250)
     }
   }
 
   $: {
-    ;[projectData] = projectList.filter((project) => project.ident === $currentProject)
+    ;[projectData] = projectList.filter(project => project.ident === $currentProject)
     ;[skillsAnimationParams, descAnimationParams, keysAnimationParams, galleryAnimationParams] = getSectionAnimationParams(projectData)
     load()
   }
@@ -108,14 +111,20 @@
 </script>
 
 {#if !loading}
-  <div class="jdev-route-project mdc-typography--body1" style="transform: scaleY({scaleY});" in:svelteTransitionFade={{ duration: routingFadeDuration }} class:initialized bind:this={routeContainer}>
+  <div
+    class="jdev-route-project mdc-typography--body1"
+    style="transform: scaleY({scaleY});"
+    in:svelteTransitionFade|global={{ duration: routingFadeDuration }}
+    class:initialized
+    bind:this={routeContainer}
+  >
     <!-- eaching through all projects is the only way I've come up with to restart the animation for every project on route change, at least with my current approach to routes -->
     {#each projectList as project (project.ident)}
       {#if project.ident === $currentProject}
         <div class="mdc-layout-grid" bind:this={projectContainer}>
           <div class="mdc-layout-grid__inner" style="padding-right: {padding}px;">
             <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <div class="jdev-project-banner" style="background-image: url({projectData.projectPage.titleImage});" in:svelteTransitionFade={{ duration: animationTotalDuration }} />
+              <div class="jdev-project-banner" style="background-image: url({projectData.projectPage.titleImage});" in:svelteTransitionFade|global={{ duration: animationTotalDuration }} />
             </div>
             <ProjectLinks {projectData} {animationTotalDuration} />
             <ProjectDescription {projectData} animationParams={descAnimationParams} />

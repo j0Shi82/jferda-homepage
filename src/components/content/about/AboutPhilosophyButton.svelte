@@ -5,9 +5,6 @@
   // material
   import Fab, { Label } from '@smui/fab'
 
-  // plugins
-  const tippy = () => import('tippy.js')
-
   let el
   export let headlineLocaleIdent
   export let textLocaleIdent
@@ -35,19 +32,19 @@
 </script>
 
 <div
-  role="button"
-  tabindex="0"
   class="jdev-fab-wrapper"
   bind:this={el}
   on:mouseenter={initTippy}
   on:click={initTippy}
   on:keypress={initTippy}
   on:touchstart={initTippy}
-  in:svelteTransitionFly={{
+  in:svelteTransitionFly|global={{
     x: $screenWidth / 2,
     duration: transitionDuration,
     delay,
   }}
+  role="button"
+  tabindex=""
 >
   <Fab extended ripple="false" color="primary"><span class="background" style="background-image: url({image});"></span><Label>{$localize(headlineLocaleIdent)}</Label></Fab>
 </div>

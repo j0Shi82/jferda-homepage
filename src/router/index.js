@@ -9,7 +9,7 @@ const routes = {}
 
 // add routes with lang param
 localeSupportedLanguages
-  .filter((lang) => lang !== localeStandardLanguage)
+  .filter(lang => lang !== localeStandardLanguage)
   .forEach((lang) => {
     Object.assign(
       routes,

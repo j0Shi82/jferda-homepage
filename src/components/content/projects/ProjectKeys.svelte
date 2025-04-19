@@ -3,7 +3,6 @@
   import { isDesktopBreakpoint } from 'utils/imports/store'
   // material
   import List, { Item, PrimaryText, SecondaryText, Text } from '@smui/list'
-  // import '@smui/list/_index.scss';
   // components
   import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
 
@@ -20,9 +19,9 @@
     },
   }
 
-  // --jdev-highlights-animation-duration is required to pass the animation time to the material component
-  // see project.scss for corresponding style
-  // there might be a smarter way to dynamically set a css value on a third-party component, but it'll do for now
+    // --jdev-highlights-animation-duration is required to pass the animation time to the material component
+    // see project.scss for corresponding style
+    // there might be a smarter way to dynamically set a css value on a third-party component, but it'll do for now
 </script>
 
 <div

@@ -1,17 +1,17 @@
 <script>
-  import { localize } from 'utils/imports/core'
-  import { svelteTransitionFade, svelteLifecycleOnMount } from 'utils/imports/svelte'
-  import { homeKnowledgeLogoItems } from 'utils/imports/data'
   import { routingFadeDuration } from 'utils/imports/config'
-  import { isMobileBreakpoint, isDesktopBreakpoint, isTabletBreakpoint } from 'utils/imports/store'
+  import { localize } from 'utils/imports/core'
+  import { homeKnowledgeLogoItems } from 'utils/imports/data'
   import { preloadImages } from 'utils/imports/helpers'
+  import { isDesktopBreakpoint, isMobileBreakpoint, isTabletBreakpoint } from 'utils/imports/store'
+  import { svelteLifecycleOnMount, svelteTransitionFade } from 'utils/imports/svelte'
   // compopnents
   import HomeRoutes from 'components/content/home/HomeRoutes.svelte'
   import Loader from 'components/utilities/atoms/Loader.svelte'
 
   import 'assets/style/home.scss'
 
-  const knowledgeLogoSet = homeKnowledgeLogoItems.map((item) => item.ident)
+  const knowledgeLogoSet = homeKnowledgeLogoItems.map(item => item.ident)
   let [currentLogoItem] = homeKnowledgeLogoItems
   let typographyTextClass
   let interval
@@ -25,17 +25,17 @@
   let showLogoAnimation = false
   // let logoGrid;
   function changeLogo() {
-    const currentIndex = homeKnowledgeLogoItems.map((el) => el.ident).indexOf(currentLogoItem.ident)
+    const currentIndex = homeKnowledgeLogoItems.map(el => el.ident).indexOf(currentLogoItem.ident)
     if (knowledgeLogoSet[currentIndex + 1]) currentLogoItem = homeKnowledgeLogoItems[currentIndex + 1]
     else [currentLogoItem] = homeKnowledgeLogoItems
   }
 
   svelteLifecycleOnMount(() => {
-    preloadImages(homeKnowledgeLogoItems.map((el) => el.logo)).finally(() => {
+    preloadImages(homeKnowledgeLogoItems.map(el => el.logo)).finally(() => {
       showLogoAnimation = true
       interval = setInterval(() => {
         changeLogo()
-      }, 4000)
+      }, 3000)
     })
 
     return () => {
@@ -44,7 +44,7 @@
   })
 </script>
 
-<div class="jdev-route-home" in:svelteTransitionFade={{ duration: routingFadeDuration }}>
+<div class="jdev-route-home" in:svelteTransitionFade|global={{ duration: routingFadeDuration }}>
   <div class="mdc-layout-grid">
     <div class="mdc-layout-grid__inner">
       {#each homeKnowledgeLogoItems as logoItem (logoItem.ident)}

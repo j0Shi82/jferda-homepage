@@ -1,7 +1,7 @@
 <script>
   import { localize } from 'utils/imports/core'
-  import { svelteTransitionFly } from 'utils/imports/svelte'
   import { isDesktopBreakpoint, screenWidth } from 'utils/imports/store'
+  import { svelteTransitionFly } from 'utils/imports/svelte'
   // components
   import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
 
@@ -27,7 +27,7 @@
     transitionDelay={animationParams.headline.delay}
   />
   <p
-    in:svelteTransitionFly={{
+    in:svelteTransitionFly|global={{
       x: $screenWidth / -2,
       duration: animationParams.content.duration,
       delay: animationParams.content.delay + animationParams.content.iterationDelay * 0,

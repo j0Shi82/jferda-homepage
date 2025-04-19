@@ -1,6 +1,6 @@
 <script>
-  import { svelteLifecycleOnMount } from 'utils/imports/svelte'
   import { skillList } from 'utils/imports/data'
+  import { svelteLifecycleOnMount } from 'utils/imports/svelte'
   // components
   import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte'
   import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
@@ -18,7 +18,7 @@
     },
   }
 
-  const projectSkills = skillList.filter((el) => el.type === projectData.ident)
+  const projectSkills = skillList.filter(el => el.type === projectData.ident)
 
   // need this fake grid to properly calculate the windows height
   // skills cat slowly unfolds which skews page height so we need a placeholder that immediately disappears
@@ -26,10 +26,6 @@
   svelteLifecycleOnMount(() => {
     fakeGrid = false
   })
-
-  // --jdev-skills-animation-duration is required to pass the animation time to the material component
-  // see project.scss for corresponding style
-  // there might be a smarter way to dynamically set a css value on a third-party component, but it'll do for now
 </script>
 
 {#if projectSkills.length}
@@ -39,7 +35,7 @@
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <div class="mdc-layout-grid__inner">
           {#each projectSkills as skill (skill)}
-            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" style="height: 32px;"></div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" data-skill={skill} style="height: 32px;"></div>
           {/each}
         </div>
       </div>

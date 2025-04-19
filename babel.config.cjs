@@ -1,6 +1,6 @@
-const isTest = process.env.NODE_ENV === 'test';
-const target = process.env.TARGET || 'modern';
-const isLegacy = target === 'legacy';
+const isTest = process.env.NODE_ENV === 'test'
+const target = process.env.TARGET || 'modern'
+const isLegacy = target === 'legacy'
 
 const configTest = {
   presets: [
@@ -13,7 +13,7 @@ const configTest = {
       },
     ],
   ],
-};
+}
 
 const configModern = {
   presets: [
@@ -25,7 +25,7 @@ const configModern = {
       },
     ],
   ],
-};
+}
 
 const configLegacy = {
   presets: [
@@ -38,11 +38,11 @@ const configLegacy = {
       },
     ],
   ],
-};
+}
 
-let config = {};
-if (isTest) config = configTest;
-else if (isLegacy) config = configLegacy;
-else config = configModern;
+let config = {}
+if (isTest) config = configTest
+else if (isLegacy) config = configLegacy
+else config = configModern
 
-module.exports = config;
+module.exports = config

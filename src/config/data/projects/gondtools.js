@@ -1,21 +1,22 @@
-import logo from 'assets/media/images/projects/gondtools/logo.png';
-import logo250 from 'assets/media/images/projects/gondtools/logo-250.png';
-import logoSmall from 'assets/media/images/projects/gondtools/logo-small.png';
-import logoSmall250 from 'assets/media/images/projects/gondtools/logo-small-250.png';
-import screenInfohub from 'assets/media/images/projects/gondtools/gond1.jpg';
-import screenDevtracker from 'assets/media/images/projects/gondtools/gond2.jpg';
-import screenAuctiondata from 'assets/media/images/projects/gondtools/gond3.jpg';
-import screenMobileInfohub from 'assets/media/images/projects/gondtools/gond4.jpg';
-import screenMobileDevtrackerWithMenu from 'assets/media/images/projects/gondtools/gond5.jpg';
-import screenInfohub250 from 'assets/media/images/projects/gondtools/gond1-250.jpg';
-import screenDevtracker250 from 'assets/media/images/projects/gondtools/gond2-250.jpg';
-import screenAuctiondata250 from 'assets/media/images/projects/gondtools/gond3-250.jpg';
-import screenMobileInfohub250 from 'assets/media/images/projects/gondtools/gond4-250.jpg';
-import screenMobileDevtrackerWithMenu250 from 'assets/media/images/projects/gondtools/gond5-250.jpg';
+import screenInfohub250 from 'assets/media/images/projects/gondtools/gond1-250.jpg'
+import screenInfohub from 'assets/media/images/projects/gondtools/gond1.jpg'
+import screenDevtracker250 from 'assets/media/images/projects/gondtools/gond2-250.jpg'
+import screenDevtracker from 'assets/media/images/projects/gondtools/gond2.jpg'
+import screenAuctiondata250 from 'assets/media/images/projects/gondtools/gond3-250.jpg'
+import screenAuctiondata from 'assets/media/images/projects/gondtools/gond3.jpg'
+import screenMobileInfohub250 from 'assets/media/images/projects/gondtools/gond4-250.jpg'
+import screenMobileInfohub from 'assets/media/images/projects/gondtools/gond4.jpg'
+import screenMobileDevtrackerWithMenu250 from 'assets/media/images/projects/gondtools/gond5-250.jpg'
+import screenMobileDevtrackerWithMenu from 'assets/media/images/projects/gondtools/gond5.jpg'
+import logo250 from 'assets/media/images/projects/gondtools/logo-250.png'
+import logoSmall250 from 'assets/media/images/projects/gondtools/logo-small-250.png'
+import logoSmall from 'assets/media/images/projects/gondtools/logo-small.png'
+import logo from 'assets/media/images/projects/gondtools/logo.png'
 
 export default {
   ident: 'nwgondtools',
   live: true,
+  featured: true,
   titleLocaleKey: 'navigation.routes.projects_nwgondtools',
   skillsLocaleKeys: ['skills.svelte', 'skills.tailwind', 'skills.webpack', 'skills.php', 'skills.sql'],
   descLocaleKey: 'projects.gondtools.desc',
@@ -109,4 +110,4 @@ export default {
       },
     ],
   },
-};
+}

@@ -1,5 +1,5 @@
-@import "@material/linear-progress/mixins";
-@import "variables.scss";
+@use 'variables.scss' as variables;
+@use '@material/linear-progress/mixins' as linear-progress-mixins;
 
 .jdev-skills-progress-cat {
   .mdc-linear-progress__bar.mdc-linear-progress__primary-bar {
@@ -15,12 +15,33 @@
     }
   }
 
-  .jdev-skills-logo {
+  .jdev-skills-progress-logo,
+  .jdev-skills-row-logo {
     width: 100%;
-    height: $skill-progress-height;
+    height: variables.$skill-progress-height;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .jdev-skills-progress-subcat-content:has(.jdev-skills-progress-logo) {
+    .jdev-skills-row-logo {
+      height: calc(variables.$skill-progress-height / 2);
+    }
+  }
+
+  .jdev-skills-progress-subcat-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > .smui-paper__content {
+      width: 100%;
+      padding-top: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 
   .jdev-skills-progress-align {
@@ -39,142 +60,12 @@
   }
 
   .jdev-skills-progress {
-    height: calc($skill-progress-height / 2);
+    height: calc(variables.$skill-progress-height / 2);
 
-    &.php {
-      @include mdc-linear-progress-bar-color($php-primary-color);
-    }
-
-    &.java {
-      @include mdc-linear-progress-bar-color($java-primary-color);
-    }
-
-    &.javascript {
-      @include mdc-linear-progress-bar-color($javascript-primary-color);
-    }
-
-    &.sql {
-      @include mdc-linear-progress-bar-color($sql-primary-color);
-    }
-
-    &.csharp {
-      @include mdc-linear-progress-bar-color($csharp-primary-color);
-    }
-
-    &.html {
-      @include mdc-linear-progress-bar-color($html-primary-color);
-    }
-
-    &.css {
-      @include mdc-linear-progress-bar-color($css-primary-color);
-    }
-
-    &.bootstrap {
-      @include mdc-linear-progress-bar-color($bootstrap-primary-color);
-    }
-
-    &.jquery {
-      @include mdc-linear-progress-bar-color($jquery-primary-color);
-    }
-
-    &.node {
-      @include mdc-linear-progress-bar-color( $node-primary-color);
-    }
-
-    &.laravel {
-      @include mdc-linear-progress-bar-color($laravel-primary-color);
-    }
-
-    &.material {
-      @include mdc-linear-progress-bar-color($material-primary-color);
-    }
-
-    &.phpbb {
-      @include mdc-linear-progress-bar-color($phpbb-primary-color);
-    }
-
-    &.svelte {
-      @include mdc-linear-progress-bar-color($svelte-primary-color);
-    }
-
-    &.vue {
-      @include mdc-linear-progress-bar-color($vue-primary-color);
-    }
-
-    &.wp {
-      @include mdc-linear-progress-bar-color($wp-primary-color);
-    }
-
-    &.babel {
-      @include mdc-linear-progress-bar-color($babel-primary-color);
-    }
-
-    &.eslint {
-      @include mdc-linear-progress-bar-color($eslint-primary-color);
-    }
-
-    &.express {
-      @include mdc-linear-progress-bar-color($express-primary-color);
-    }
-
-    &.jest {
-      @include mdc-linear-progress-bar-color($jest-primary-color);
-    }
-
-    &.i18next {
-      @include mdc-linear-progress-bar-color($i18next-primary-color);
-    }
-
-    &.npm {
-      @include mdc-linear-progress-bar-color($npm-primary-color);
-    }
-
-    &.webpack {
-      @include mdc-linear-progress-bar-color($webpack-primary-color);
-    }
-
-    &.docker {
-      @include mdc-linear-progress-bar-color($docker-primary-color);
-    }
-
-    &.git {
-      @include mdc-linear-progress-bar-color($git-primary-color);
-    }
-
-    &.jira {
-      @include mdc-linear-progress-bar-color($jira-primary-color);
-    }
-
-    &.mysql {
-      @include mdc-linear-progress-bar-color($mysql-primary-color);
-    }
-
-    &.photoshop {
-      @include mdc-linear-progress-bar-color($photoshop-primary-color);
-    }
-
-    &.sentry {
-      @include mdc-linear-progress-bar-color($sentry-primary-color);
-    }
-
-    &.vscode {
-      @include mdc-linear-progress-bar-color($vscode-primary-color);
-    }
-
-    &.tailwind {
-      @include mdc-linear-progress-bar-color($tailwind-primary-color);
-    }
-
-    &.qwik {
-      @include mdc-linear-progress-bar-color($qwik-primary-color);
-    }
-
-    &.bulma {
-      @include mdc-linear-progress-bar-color($bulma-primary-color);
-    }
-
-    &.vite {
-      @include mdc-linear-progress-bar-color($vite-primary-color);
+    @each $tech in variables.$tech-list {
+      &.#{$tech} {
+        @include linear-progress-mixins.bar-color(map-get(variables.$tech-colors, #{$tech}-primary));
+      }
     }
   }
 }

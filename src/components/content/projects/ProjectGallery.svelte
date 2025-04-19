@@ -4,7 +4,6 @@
   import GLightbox from 'glightbox'
   // material
   import ImageList, { ImageAspectContainer, Image as ImageListImage, Item as ImageListItem } from '@smui/image-list'
-  // import '@smui/image-list/_index.scss'
   // components
   import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
 
@@ -33,7 +32,7 @@
       },
       openEffect: 'none',
       closeEffect: 'none',
-      elements: projectData.projectPage.gallery.map((el) => ({
+      elements: projectData.projectPage.gallery.map(el => ({
         href: el.full,
         type: 'image',
         title: el.title,

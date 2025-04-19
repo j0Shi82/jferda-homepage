@@ -1,7 +1,8 @@
-import config from 'config/index';
+import config from 'config/index'
+import { describe, expect, test } from 'vitest'
 
 describe('config/index', () => {
-  it('standardLanguage is on supportedLanguages', () => {
-    expect(config.app.locale.supportedLanguages).toContain(config.app.locale.standardLanguage);
-  });
-});
+  test('standardLanguage is on supportedLanguages', () => {
+    expect(config.app.locale.supportedLanguages).toContain(config.app.locale.standardLanguage)
+  })
+})

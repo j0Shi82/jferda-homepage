@@ -1,23 +1,31 @@
 @use 'smui-theme';
-@import '@material/typography/mdc-typography';
-@import '@material/layout-grid/mdc-layout-grid.scss';
-@import '@material/top-app-bar/variables';
-// @import "@smui/snackbar";
+@use '@material/top-app-bar/variables' as top-app-bar-variables;
+@use 'variables.scss' as variables;
+
+@use '@material/typography/mdc-typography.scss';
+@use '@material/layout-grid/mdc-layout-grid.scss';
 
 .mdc-top-app-bar__section {
   flex: 1 1 0;
+
+  &.section-left {
+    @media #{variables.$breakpoint-mobile} {
+      flex: 0 0 auto;
+    }
+  }
 }
 
 .mdc-drawer-app-content {
   flex: auto;
-  overflow-y: auto;
-  overflow-x: hidden;
+  //   overflow-y: auto;
+  //   overflow-x: hidden;
   position: relative;
-  height: calc(100% - $mdc-top-app-bar-dense-row-height);
+  height: calc(100% - #{top-app-bar-variables.$dense-row-height});
 }
 
 .mdc-drawer {
   height: 100vh;
+  position: fixed;
 }
 
 .mdc-drawer .mdc-list-divider {
@@ -35,50 +43,37 @@
   }
 }
 
-@import 'variables.scss';
-
 .jfd-d-desktop-none,
 .jdev-d-desktop-none {
-  @media #{$breakpoint-desktop} {
+  @media #{variables.$breakpoint-desktop} {
     display: none;
   }
 }
 
 .jfd-d-tablet-none,
 .jdev-d-tablet-none {
-  @media #{$breakpoint-tablet} {
+  @media #{variables.$breakpoint-tablet} {
     display: none;
   }
 }
 
 .jfd-d-mobile-none,
 .jdev-d-mobile-none {
-  @media #{$breakpoint-mobile} {
+  @media #{variables.$breakpoint-mobile} {
     display: none;
   }
 }
 
 .jdev-avatar {
-  margin: 0 auto;
-
-  @media #{$breakpoint-tablet} {
-    margin: 0;
-    margin-left: 12px;
-  }
-
-  @media #{$breakpoint-desktop} {
-    margin: 0;
-    margin-left: 12px;
-  }
-
-  width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
-  height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height});
+  width: calc(1.5 * #{top-app-bar-variables.$dense-row-height});
+  height: calc(1.5 * #{top-app-bar-variables.$dense-row-height});
   border: 2px solid #{smui-theme.$primary};
   border-radius: 50%;
+  background-color: #{smui-theme.$primary};
 
   > div {
-    width: calc(1.5 * #{$mdc-top-app-bar-dense-row-height} - 4px);
-    height: calc(1.5 * #{$mdc-top-app-bar-dense-row-height} - 4px);
+    width: calc(1.5 * #{top-app-bar-variables.$dense-row-height} - 4px);
+    height: calc(1.5 * #{top-app-bar-variables.$dense-row-height} - 4px);
     border-radius: 50%;
     border: 2px solid #{smui-theme.$on-primary};
     background-size: contain;

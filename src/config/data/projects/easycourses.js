@@ -1,8 +1,9 @@
-import nodeLogo from 'assets/media/images/knowledge-logos/node.png';
+import nodeLogo from 'assets/media/images/knowledge-logos/node.png'
 
 export default {
   ident: 'easycourses',
   live: false,
+  featured: false,
   titleLocaleKey: 'navigation.routes.projects_easycourses',
   skillsLocaleKeys: ['skills.qwik', 'skills.bulma', 'skills.vite'],
   descLocaleKey: 'projects.easycourses.desc',
@@ -40,4 +41,4 @@ export default {
     ],
     gallery: [],
   },
-};
+}

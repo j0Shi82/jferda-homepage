@@ -15,8 +15,6 @@
 </script>
 
 <div
-  role="button"
-  tabindex="0"
   class:hover={hover || !project.live}
   class:upcoming={!project.live}
   class:animations={$animationsActive}
@@ -27,10 +25,12 @@
   on:keypress={() => {
     hover = !hover
   }}
+  role="button"
+  tabindex=""
 >
   <div
     class="card-container"
-    in:svelteTransitionScale={{
+    in:svelteTransitionScale|global={{
       delay: $animationsActive ? headerTransitionDuration + i * atomTransitionDurationShort : 0,
       duration: $animationsActive ? atomTransitionDuration : 0,
     }}
@@ -59,7 +59,7 @@
           <h3 class="jdev-card-subtitle mdc-typography--subtitle2">
             <div>
               {#each project.skillsLocaleKeys
-                .map((skillLocaleKey) => skillLocaleKey.replace('skills.', ''))
+                .map(skillLocaleKey => skillLocaleKey.replace('skills.', ''))
                 .sort((a, b) => {
                   const x = a.toLowerCase()
                   const y = b.toLowerCase()
@@ -82,7 +82,7 @@
         <h3 class="jdev-card-subtitle mdc-typography--subtitle2">
           <div>
             {#each project.skillsLocaleKeys
-              .map((skillLocaleKey) => skillLocaleKey.replace('skills.', ''))
+              .map(skillLocaleKey => skillLocaleKey.replace('skills.', ''))
               .sort((a, b) => {
                 const x = a.toLowerCase()
                 const y = b.toLowerCase()

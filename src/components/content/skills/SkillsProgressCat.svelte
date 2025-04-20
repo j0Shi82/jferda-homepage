@@ -132,5 +132,9 @@
       //   display: none;
       margin-bottom: 0;
     }
+
+    :global(.jdev-skills-progress-subcat-header) {
+      background-color: var(--mdc-theme-surface);
+    }
   }
 </style>

@@ -35,7 +35,7 @@
     }
   },
   "home": {
-    "maintext": "Hallo! Mein Name ist <b>Janosch</b>. Ich bin <b>Full-Stack Web-Entwickler</b> aus Deutschland und habe Spaß am Erstellen von schnellen, optimierten und modernen <b>Javascript</b> Applikationen. Ich lade dich auf meiner Webseite ein, mehr über meine <b>Philosophie</b> und <b>Antrieb</b> zu erfahren."
+    "maintext": "Hallo! Mein Name ist <b>Janosch</b>. Ich bin <b>Full-Stack Web-Entwickler</b> aus Deutschland und habe Spaß am Erstellen von schnellen, optimierten und modernen <b>JavaScript</b> Applikationen. Ich lade dich auf meiner Webseite ein, mehr über meine <b>Philosophie</b> und <b>Antrieb</b> zu erfahren."
   },
   "about": {
     "bio": {
@@ -109,7 +109,7 @@
     "css": "CSS",
     "docker": "Docker",
     "frameworks": "Frameworks / CMS",
-    "javascript": "Javascript",
+    "javascript": "JavaScript",
     "js": "JavaScript",
     "jspackages": "Tooling",
     "lang": "Programmiersprachen",
@@ -202,7 +202,7 @@
       "desc": "Neverwinter Gond Tools ist als Nachfolger zu Neverwinter Uncensored entstanden. Ich erstelle keine Inhalte mehr für das Spiel, hoste meine Online-Tools aber weiterhin unter einer neuen URL und Marke. Zusätzlich steht der Quell-Code des Frontends als Open-Source zur Verfügung und die zugehörige API sowie der Web-Crawler werden folgen.<br /><br />Die ursprünglichen in jQuery geschriebenen Tools wurden komplett überarbeitet und auf eine modernere Basis gestellt. Das Frontend basiert auf Svelte und Tailwind, die API und der Web-Crawler sind in PHP und MySQL geschrieben. Zusätzlich gibt es einen Game-Crawler, der in einer Windows VM auf der GCP beheimatet ist. Diese verschiedenen Teile miteinander zu verknüpfen war die größte Herausforderung des Projektes und hat viel Spaß gebracht.<br /><br />Es werden hoffentlich in Zukunft noch weitere Features hinzugefügt. Die Original-Tools waren umfangreicher, werden aber Stück für Stück portiert.",
       "highlights": {
         "1": {
-          "1": "Javascript Frontend",
+          "1": "JavaScript Frontend",
           "2": "Basiert auf Svelte, Tailwind, und Webpack",
           "3": "Desktop und mobile Ansichten"
         },
@@ -266,7 +266,7 @@
       }
     },
     "edom": {
-      "desc": "e-domizil.de ist ein Online-Reisebüro für Ferienhäuser. Die Web-Präsenz wurde 2019 mit einem Fokus auf mobile Unterstützung, Geschwindigkeit, SEO und White-Label-Fähigkeit komplett neugestaltet und relaunched. Das Projekt benutzt das VUE.js-Framework und Node.js / Express für Server-Rendering. Die Microservies werden mit Hilfe von Lumen (Laravel) realisiert.<br /><br />Als volles Mitglied des Entwicklungsteams habe ich mitgeholfen, die Applikation in allen Bereichen der Full-Stack-Entwicklung von Grund auf zu gestalten und habe mich im Prozess speziell mit der Rendering-Logik, PWA-Funktionalität, API, Routing, Lokalisation, Bundling und Performance-Analyse befasst. Zudem oblag mir die Anpassung und Konfiguration essentieller Pakete wie Babel, ESLint oder Jest.<br /><br />Über die Zeit habe ich wichtige Erfahrungen mit Javascript-Frameworks und im speziellen mit Vue.js gesammelt und gelernt, wie man verschiedenste Bereiche der Applikation optimiert.",
+      "desc": "e-domizil.de ist ein Online-Reisebüro für Ferienhäuser. Die Web-Präsenz wurde 2019 mit einem Fokus auf mobile Unterstützung, Geschwindigkeit, SEO und White-Label-Fähigkeit komplett neugestaltet und relaunched. Das Projekt benutzt das VUE.js-Framework und Node.js / Express für Server-Rendering. Die Microservies werden mit Hilfe von Lumen (Laravel) realisiert.<br /><br />Als volles Mitglied des Entwicklungsteams habe ich mitgeholfen, die Applikation in allen Bereichen der Full-Stack-Entwicklung von Grund auf zu gestalten und habe mich im Prozess speziell mit der Rendering-Logik, PWA-Funktionalität, API, Routing, Lokalisation, Bundling und Performance-Analyse befasst. Zudem oblag mir die Anpassung und Konfiguration essentieller Pakete wie Babel, ESLint oder Jest.<br /><br />Über die Zeit habe ich wichtige Erfahrungen mit JavaScript-Frameworks und im speziellen mit Vue.js gesammelt und gelernt, wie man verschiedenste Bereiche der Applikation optimiert.",
       "highlights": {
         "1": {
           "1": "Full-Stack Entwicklung",

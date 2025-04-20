@@ -129,10 +129,10 @@ const skills = [
     cat: 'lang', subcat: '', name: 'Java', class: 'java', logo: javaLogo, progress: 0.3,
   },
   {
-    cat: 'lang', subcat: '', name: 'Javascript', class: 'javascript', logo: javascriptLogo, progress: 0.95,
+    cat: 'lang', subcat: '', name: 'JavaScript', class: 'javascript', logo: javascriptLogo, progress: 0.95,
   },
   {
-    cat: 'lang', subcat: '', name: 'TypeScript', class: 'typescript', logo: typescriptLogo, progress: 0.80,
+    cat: 'lang', subcat: '', name: 'TypeScript', class: 'typescript', logo: typescriptLogo, progress: 0.85,
   },
   {
     cat: 'lang', subcat: '', name: 'HTML', class: 'html', logo: htmlLogo, progress: 1,
@@ -439,6 +439,9 @@ const skills = [
   },
   {
     cat: 'titus', subcat: '', name: 'JavaScript', class: 'javascript', logo: javascriptLogo, progress: 0.8,
+  },
+  {
+    cat: 'titus', subcat: '', name: 'TypeScript', class: 'ts', logo: typescriptLogo, progress: 0.6,
   },
   {
     cat: 'titus', subcat: '', name: 'PHP', class: 'php', logo: phpLogo, progress: 0.7,

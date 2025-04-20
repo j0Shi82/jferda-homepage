@@ -13,7 +13,7 @@ export default {
   live: false,
   featured: false,
   titleLocaleKey: 'navigation.routes.projects_greezy',
-  skillsLocaleKeys: ['skills.nuxt', 'skills.vite', 'skills.tailwind', 'skills.sql'],
+  skillsLocaleKeys: ['skills.nuxt', 'skills.ts', 'skills.vite', 'skills.tailwind', 'skills.sql'],
   descLocaleKey: 'projects.greezy.desc',
   routeName: 'projects_greezy',
   projectPage: {

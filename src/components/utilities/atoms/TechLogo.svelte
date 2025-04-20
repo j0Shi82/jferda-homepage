@@ -6,6 +6,7 @@
     java: () => import('assets/media/images/skills/language/java.svg'),
     html: () => import('assets/media/images/skills/language/html.svg'),
     js: () => import('assets/media/images/skills/language/javascript.svg'),
+    ts: () => import('assets/media/images/skills/language/ts.svg'),
     css: () => import('assets/media/images/skills/language/css.svg'),
 
     bootstrap: () => import('assets/media/images/skills/frameworks/bootstrap.svg'),

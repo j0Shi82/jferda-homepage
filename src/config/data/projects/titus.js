@@ -15,7 +15,7 @@ export default {
   live: true,
   featured: true,
   titleLocaleKey: 'navigation.routes.projects_titus',
-  skillsLocaleKeys: ['skills.js', 'skills.php', 'skills.shopify', 'skills.css', 'skills.html'],
+  skillsLocaleKeys: ['skills.js', 'skills.ts', 'skills.php', 'skills.shopify', 'skills.css', 'skills.html'],
   descLocaleKey: 'projects.titus.desc',
   routeName: 'projects_titus',
   projectPage: {

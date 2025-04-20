@@ -35,7 +35,7 @@
     }
   },
   "home": {
-    "maintext": "Hey! My name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating lightweight, fast, and modern <b>Javascript</b> applications. Explore this website to learn more about my <b>philosophy</b> and <b>passion</b>."
+    "maintext": "Hey! My name is <b>Janosch</b>. I'm a <b>full-stack web developer</b> from Germany with a focus on creating lightweight, fast, and modern <b>JavaScript</b> applications. Explore this website to learn more about my <b>philosophy</b> and <b>passion</b>."
   },
   "about": {
     "bio": {
@@ -109,7 +109,7 @@
     "css": "CSS",
     "docker": "Docker",
     "frameworks": "Frameworks / CMS",
-    "javascript": "Javascript",
+    "javascript": "JavaScript",
     "js": "JavaScript",
     "jspackages": "Tooling",
     "lang": "Languages",
@@ -165,7 +165,7 @@
       "github": "Repository"
     },
     "nwoun": {
-      "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain all features on the site or create content.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, Javascript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
+      "desc": "Neverwinter Uncensored was born in 2015 because I was searching for an independent news platform and community for a MMORPG I had played since 2013. And because there was none, I created it myself! Originally started as a fan project, NWO:UN grew to become the game's #1 fan site. In the heyday, we delivered our content and tools to over 100,000 players per month. It was a tough decision to shut down the site in January 2019, but unfortunately I was no longer able to properly maintain all features on the site or create content.<br /><br />It was truly an insane experience. Building and managing a community and website is just so diverse. The core of the project was a Wordpress blog, which I customized (HTML, CSS, JS) to fit my needs, and online tools for the game build with the plugin system of a forum software (PHP, HTML, JavaScript). But I also gained tons of experience in social platforms (Twitter, Discord, Facebook etc.), creating content (YouTube, Wordpress), as well as SEO, SEA, and monetization.",
       "highlights": {
         "1": {
           "1": "Customized Wordpress Blog",
@@ -175,7 +175,7 @@
         "2": {
           "1": "Game-Specific Apps",
           "2": "Data fetching without official API",
-          "3": "Unique PHP/Javascript based online tools"
+          "3": "Unique PHP/JavaScript based online tools"
         },
         "3": {
           "1": "Monthly Traffic",
@@ -202,7 +202,7 @@
       "desc": "Neverwinter Gond Tools is a partial successor to Neverwinter Uncensored. I no longer create content for the game, but host my tool collection under a new website and brand. The front end is already open source and the associated API and web crawler will soon follow.<br /><br />I completely revamped the original tools that were mostly written in jQuery and based the project on a more modern tech stack. It consists of the front end (Svelte, Tailwind), the API (PHP, MySQL), a web crawler (PHP), and a game crawler (Windows VM, currently hosted on GCP). Connecting all these different tools to work alongside each other has been a major challenge and tons of fun.<br /><br />I hope to add more features to the site eventually. The original set of tools was way bigger and I'm refactoring them one by one.",
       "highlights": {
         "1": {
-          "1": "Javascript Frontend",
+          "1": "JavaScript Frontend",
           "2": "Based on Svelte, Tailwind, and Webpack",
           "3": "Full desktop and mobile support"
         },

@@ -63,8 +63,7 @@
     if ($animationsActive) {
       initialized = false
       // scale window to device height and unfold when animations finished
-      scaleY = (window.innerHeight - 96) / projectContainer.clientHeight
-      console.log(scaleY)
+      scaleY = (window.outerHeight - 96) / projectContainer.clientHeight
       document.querySelector('body').classList.add('jdev-scroll-lock')
 
       // changing padding will force browsers to redraw the page, it's an ugly way to get rid of blurry text after scale in chrome
@@ -92,7 +91,7 @@
   }
 
   $: {
-    // using bing:this as onUpdateOnMount service
+    // using bind:this as onUpdateOnMount service
     // route change => new content gets rendered => projectContainer gets updated => scale gets triggered
     if (routeContainer) {
       scale()

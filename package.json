@@ -52,7 +52,7 @@
     "workbox-webpack-plugin": "^7.3.0"
   },
   "scripts": {
-    "build": "pnpm run build:legacy && yapnpmrn run build:modern",
+    "build": "pnpm run build:legacy && pnpm run build:modern",
     "build:modern": "cross-env NODE_ENV=production TARGET=modern webpack",
     "build:legacy": "cross-env NODE_ENV=production TARGET=legacy webpack",
     "dev": "webpack serve --no-client-overlay-warnings",

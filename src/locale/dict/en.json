@@ -101,7 +101,10 @@
     "skills": {
       "headline": "Mixed Skills and Official Certificates",
       "kmk": "KMK-Certificate 'English for IT Professionals', Level C1",
-      "sql": "SQL qualification at University Hagen, Germany"
+      "sql": "SQL qualification at University Hagen, Germany",
+      "certdevvue": "Certified Mid-Level Vue.js Developer (Certificates.dev)",
+      "certdevnuxt": "Certified Mid-Level Nuxt Developer (Certificates.dev)",
+      "certdevjs": "Certified Senior JavaScript Developer (Certificates.dev)"
     }
   },
   "skills": {

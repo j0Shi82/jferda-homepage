@@ -98,6 +98,27 @@ const skills = [
     textLocaleIdent: 'resume.skills.sql',
     // doc: SQLZert,
   },
+  {
+    startDate: new Date(),
+    endDate: new Date(2024, 7, 2),
+    ended: true,
+    range: false,
+    textLocaleIdent: 'resume.skills.certdevvue',
+  },
+  {
+    startDate: new Date(),
+    endDate: new Date(2024, 10, 13),
+    ended: true,
+    range: false,
+    textLocaleIdent: 'resume.skills.certdevnuxt',
+  },
+  {
+    startDate: new Date(),
+    endDate: new Date(2025, 1, 15),
+    ended: true,
+    range: false,
+    textLocaleIdent: 'resume.skills.certdevjs',
+  },
 ]
 
 export { education, experience, skills }

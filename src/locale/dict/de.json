@@ -101,7 +101,10 @@
     "skills": {
       "headline": "Sonstige Fähigkeiten und Zertifikate",
       "kmk": "KMK-Fremdsprachenzertifikat Englisch für IT-Berufe, Niveau C1",
-      "sql": "Weiterbildungslehrgang SQL der Fernuniversität Hagen"
+      "sql": "Weiterbildungslehrgang SQL der Fernuniversität Hagen",
+      "certdevvue": "Zertifizierter Mid-Level Vue.js Entwickler (Certificates.dev)",
+      "certdevnuxt": "Zertifizierter Mid-Level Nuxt Entwickler (Certificates.dev)",
+      "certdevjs": "Zertifizierter Senior JavaScript Entwickler (Certificates.dev)"
     }
   },
   "skills": {

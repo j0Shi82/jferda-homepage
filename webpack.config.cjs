@@ -2,7 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const WebpackModuleNomodulePlugin = require('webpack-module-nomodule-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin')
+// const WorkboxPlugin = require('workbox-webpack-plugin')
 const RobotstxtPlugin = require('robotstxt-webpack-plugin')
 const Visualizer = require('webpack-visualizer-plugin2')
 const webpack = require('webpack')
@@ -140,13 +140,13 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.BASEURL': JSON.stringify(baseURL),
     }),
-    isProd
-      ? new WorkboxPlugin.GenerateSW({
-        clientsClaim: true,
-        skipWaiting: true,
-        exclude: [/legacy/],
-      })
-      : () => {},
+    // isProd
+    //   ? new WorkboxPlugin.GenerateSW({
+    //     clientsClaim: true,
+    //     skipWaiting: true,
+    //     exclude: [/legacy/],
+    //   })
+    //   : () => {},
     isProd ? new WebpackModuleNomodulePlugin(target, 'minimal') : () => {},
     new CopyPlugin({
       patterns: [{ from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') }],

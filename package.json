@@ -44,7 +44,7 @@
     "svelte-loader": "^3.2.4",
     "svelte-preprocess": "^6.0.3",
     "vitest": "^3.1.1",
-    "webpack": "^5.99.6",
+    "webpack": "^5.104.1",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1",
     "webpack-module-nomodule-plugin": "^1.1.1",

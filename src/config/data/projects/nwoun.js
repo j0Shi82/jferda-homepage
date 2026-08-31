@@ -45,12 +45,12 @@ export default {
   projectPage: {
     titleImage: logoUn1000,
     links: [
-      {
-        type: 'web',
-        url: 'https://www.nwo-uncensored.com',
-        labelLocaleIdent: 'project.nwoun.links.forum',
-        bgColor: '#b51208',
-      },
+    //   {
+    //     type: 'web',
+    //     url: 'https://www.nwo-uncensored.com',
+    //     labelLocaleIdent: 'project.nwoun.links.forum',
+    //     bgColor: '#b51208',
+    //   },
     ],
     descLocaleKey: 'project.nwoun.desc',
     keys: [

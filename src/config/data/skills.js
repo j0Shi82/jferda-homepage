@@ -43,6 +43,7 @@ import analyticsLogo from 'assets/media/images/skills/jspackages/analytics.png'
 import awsLogo from 'assets/media/images/skills/jspackages/aws.png'
 import babelLogo from 'assets/media/images/skills/jspackages/babel.svg'
 import bunLogo from 'assets/media/images/skills/jspackages/bun.svg'
+import claudeLogo from 'assets/media/images/skills/jspackages/claude.svg'
 import cloudflareLogo from 'assets/media/images/skills/jspackages/cloudflare.png'
 import clworkersLogo from 'assets/media/images/skills/jspackages/clworkers.png'
 import composerLogo from 'assets/media/images/skills/jspackages/composer.png'
@@ -54,6 +55,7 @@ import gcloudLogo from 'assets/media/images/skills/jspackages/gcloud.png'
 import herokuLogo from 'assets/media/images/skills/jspackages/heroku.png'
 import hetznerLogo from 'assets/media/images/skills/jspackages/hetzner.svg'
 import jestLogo from 'assets/media/images/skills/jspackages/jest.png'
+import klaviyoLogo from 'assets/media/images/skills/jspackages/klaviyo.svg'
 import matomoLogo from 'assets/media/images/skills/jspackages/matomo.png'
 import npmLogo from 'assets/media/images/skills/jspackages/npm.svg'
 import openaiLogo from 'assets/media/images/skills/jspackages/openai.png'
@@ -147,22 +149,22 @@ const skills = [
     cat: 'software', subcat: '', name: 'Photoshop CS6', class: 'css', logo: photoshopLogo, progress: 0.5,
   },
   {
-    cat: 'software', subcat: '', name: 'Git', class: 'git', logo: gitLogo, progress: 0.7,
+    cat: 'software', subcat: '', name: 'Git', class: 'git', logo: gitLogo, progress: 0.9,
   },
   {
     cat: 'software', subcat: '', name: 'Docker', class: 'docker', logo: dockerLogo, progress: 0.45,
   },
   {
-    cat: 'software', subcat: '', name: 'VSCode', class: 'vscode', logo: vscodeLogo, progress: 0.9,
+    cat: 'software', subcat: '', name: 'VSCode', class: 'vscode', logo: vscodeLogo, progress: 1,
   },
   {
     cat: 'software', subcat: '', name: 'Jira', class: 'jira', logo: jiraLogo, progress: 0.8,
   },
   {
-    cat: 'software', subcat: '', name: 'Shopify', class: 'shopify', logo: shopifyLogo, progress: 0.9,
+    cat: 'software', subcat: '', name: 'Shopify', class: 'shopify', logo: shopifyLogo, progress: 1,
   },
   {
-    cat: 'software', subcat: '', name: 'Business Central', class: 'bc', logo: businessCentralLogo, progress: 0.4,
+    cat: 'software', subcat: '', name: 'Business Central', class: 'bc', logo: businessCentralLogo, progress: 0.7,
   },
   {
     cat: 'software', subcat: '', name: 'Supabase', class: 'supabase', logo: supabaseLogo, progress: 0.4,
@@ -285,6 +287,9 @@ const skills = [
     cat: 'jspackages', subcat: 'ai', name: 'Open AI', class: 'openai', logo: openaiLogo, progress: 0.1,
   },
   {
+    cat: 'jspackages', subcat: 'ai', name: 'Claude', class: 'claude', logo: claudeLogo, progress: 0.1,
+  },
+  {
     cat: 'jspackages', subcat: 'cloud', name: 'Cloudflare', class: 'cloudflare', logo: cloudflareLogo, progress: 0.1,
   },
   {
@@ -319,6 +324,9 @@ const skills = [
   },
   {
     cat: 'jspackages', subcat: 'seo', name: 'Core Web Vitals', class: 'pagespeed', logo: pagespeedLogo, progress: 0.1,
+  },
+  {
+    cat: 'jspackages', subcat: 'seo', name: 'Klaviyo', class: 'klaviyo', logo: klaviyoLogo, progress: 0.1,
   },
   {
     cat: 'jspackages', subcat: 'database', name: 'MySQL', class: 'mysql', logo: mysqlLogo, progress: 0.1,

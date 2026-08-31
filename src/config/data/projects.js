@@ -10,12 +10,12 @@ import gallery5Edom250 from 'assets/media/images/projects/edom/gallery5-250.jpg'
 import gallery5Edom from 'assets/media/images/projects/edom/gallery5.jpg'
 import logoEdom from 'assets/media/images/projects/edom/logo.svg'
 
-import easycourses from 'config/data/projects/easycourses.js'
-import gerd from 'config/data/projects/gerd.js'
+// import easycourses from 'config/data/projects/easycourses.js'
+// import gerd from 'config/data/projects/gerd.js'
 import gondtools from 'config/data/projects/gondtools.js'
 import greezy from 'config/data/projects/greezy.js'
 import jferda from 'config/data/projects/jferda.js'
-import neighboring from 'config/data/projects/neighboring.js'
+// import neighboring from 'config/data/projects/neighboring.js'
 import nwoun from 'config/data/projects/nwoun.js'
 import titus from 'config/data/projects/titus.js'
 
@@ -104,9 +104,9 @@ const projects = [
   gondtools,
   greezy,
   jferda,
-  neighboring,
-  easycourses,
-  gerd,
+  //   neighboring,
+  //   easycourses,
+  //   gerd,
   titus,
 ]
 

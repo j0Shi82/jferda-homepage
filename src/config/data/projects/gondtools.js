@@ -24,12 +24,12 @@ export default {
   projectPage: {
     titleImage: logo,
     links: [
-      {
-        type: 'web',
-        url: 'https://www.gond.tools',
-        labelLocaleIdent: 'project.gondtools.links.web',
-        bgColor: '#b51208',
-      },
+    //   {
+    //     type: 'web',
+    //     url: 'https://www.gond.tools',
+    //     labelLocaleIdent: 'project.gondtools.links.web',
+    //     bgColor: '#b51208',
+    //   },
       {
         type: 'github',
         url: 'https://github.com/j0Shi82/nwoun-gond-tools',

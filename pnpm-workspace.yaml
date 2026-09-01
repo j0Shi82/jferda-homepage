@@ -12,4 +12,5 @@ publicHoistPattern:
 allowBuilds:
   '@parcel/watcher': false
   esbuild: false
+  es5-ext: false
   svelte-preprocess: false

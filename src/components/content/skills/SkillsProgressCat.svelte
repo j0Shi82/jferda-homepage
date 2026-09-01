@@ -11,7 +11,7 @@
 
   import 'assets/style/skillsprogress.scss'
 
-  let subcats = []
+  let subcats
   let subcatOrder = ['javascript', 'php', 'css', 'ai', 'cloud', 'seo', 'runtime', 'database', 'pm', 'bundler', 'testing', 'linting']
 
   function getSortedSkillProgressList(subcat = null) {

@@ -1,9 +1,9 @@
 import baseRoutes from 'router/baseRoutes.js'
 import getGuards from 'router/utils/getGuards.js'
 // import wrap from 'utils/helpers/wrap.js'
+import getLocalizedRoute from 'locale/utils/routeHelper.js'
 import { wrap } from 'svelte-spa-router/wrap'
 import { localeStandardLanguage, localeSupportedLanguages } from 'utils/imports/config.js'
-import { getLocalizedRoute } from 'utils/imports/core.js'
 
 const routes = {}
 

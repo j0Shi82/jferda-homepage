@@ -11,7 +11,6 @@
   // components
   import SkillsProgressCat from 'components/content/skills/SkillsProgressCat.svelte'
   // polyfill
-  import 'intersection-observer'
 
   import 'assets/style/skills.scss'
 

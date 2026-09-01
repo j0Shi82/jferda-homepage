@@ -8,7 +8,7 @@
 
   import 'assets/style/resume.scss'
 
-  let itemCount = 0
+  let itemCount
   let transitionDuration = atomTransitionDuration
 
   $: {

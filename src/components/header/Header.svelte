@@ -13,7 +13,7 @@
   import IconButton from '@smui/icon-button'
   import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar'
   // components
-  import Icon from 'fa-svelte'
+  import Icon from 'components/utilities/atoms/FaIcon.svelte'
 
   let pageTitle
   let canonical

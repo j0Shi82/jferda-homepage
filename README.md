@@ -4,3 +4,4 @@ Built with:
 
 - Svelte
 - Material UI
+- Vite

@@ -7,10 +7,8 @@ let loadedCount = 0
 
 export default () => {
   localeSupportedLanguages.forEach((lang) => {
-    // need to disable prefer-template here because of a bug in babel
-    // https://github.com/babel/babel/issues/11844
-
-    import('locale/dict/' + lang + '.json')
+    // Relative + template literal so Vite/Rollup can statically glob the dicts.
+    import(`./dict/${lang}.json`)
       .then((module) => {
         addLocalizationFile(lang, module.default)
       })

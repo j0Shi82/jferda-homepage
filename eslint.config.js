@@ -1,4 +1,3 @@
-import babelParser from '@babel/eslint-parser'
 import js from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import eslintPluginSvelte from 'eslint-plugin-svelte'
@@ -32,7 +31,6 @@ export default [
         ...globals.node,
         // ...globals.es6,
       },
-      parser: babelParser,
     },
   },
   {

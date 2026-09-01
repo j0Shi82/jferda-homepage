@@ -1,8 +1,8 @@
 # pnpm 11 no longer reads pnpm-specific settings from .npmrc; they live here.
 
-# @material/* are transitive deps (via @smui/*), but the Sass sources import
-# them by bare specifier with node_modules on the load path, so they must be
-# hoisted into the root node_modules to resolve.
+# @material/* are mostly transitive deps (via @smui/*), but the Sass sources
+# import them by bare specifier with node_modules on the load path, so they must
+# be hoisted into the root node_modules to resolve.
 publicHoistPattern:
   - '@material/*'
 
@@ -11,7 +11,5 @@ publicHoistPattern:
 # not fail with ERR_PNPM_IGNORED_BUILDS.
 allowBuilds:
   '@parcel/watcher': false
-  core-js: false
-  es5-ext: false
   esbuild: false
   svelte-preprocess: false

@@ -10,7 +10,6 @@
   import AboutPhilosophyHint from 'components/content/about/AboutPhilosophyHint.svelte'
   import FlyingHeadline from 'components/utilities/atoms/FlyingHeadline.svelte'
   // polyfill
-  import 'intersection-observer'
 
   import 'assets/style/about.scss'
 

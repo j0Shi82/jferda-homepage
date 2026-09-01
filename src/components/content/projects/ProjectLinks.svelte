@@ -6,7 +6,7 @@
   // material
   import Fab, { Label } from '@smui/fab'
   // components
-  import Icon from 'fa-svelte'
+  import Icon from 'components/utilities/atoms/FaIcon.svelte'
 
   export let projectData
   export let animationTotalDuration

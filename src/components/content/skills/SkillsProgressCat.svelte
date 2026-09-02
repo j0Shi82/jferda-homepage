@@ -3,10 +3,10 @@
   import { skillList } from 'utils/imports/data'
   import { animationsActive, screenWidth } from 'utils/imports/store'
   import { svelteTransitionFly, svelteTransitionSlide } from 'utils/imports/svelte'
-  // components
+// components
   import SkillsListRow from 'components/content/skills/SkillsListRow.svelte'
   import SkillsProgressRow from 'components/content/skills/SkillsProgressRow.svelte'
-  // smui
+// smui
   import Paper, { Content } from '@smui/paper'
 
   import 'assets/style/skillsprogress.scss'
@@ -69,13 +69,14 @@
             style="display: grid;"
           >
             <Paper color="default" class="jdev-skills-progress-subcat-header">
-              <Content style="background-image: url({skillList.filter(el => el.class === cat)[0].logo});"></Content>
+              <Content style='background-image: url("{skillList.filter(el => el.class === cat)[0].logo}");'></Content>
             </Paper>
           </div>
           <Paper
             color="default"
             class="mdc-layout-grid__cell--span-10-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-3-phone jdev-skills-progress-subcat-content"
             style="display: flex; align-items: center;"
+            variant="unelevated"
           >
             <Content class="mdc-layout-grid__inner" style="flex: 1;">
               {#each getSortedSkillProgressList(cat) as skill (skill.name)}

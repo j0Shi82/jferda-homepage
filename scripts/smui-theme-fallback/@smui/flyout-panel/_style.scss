@@ -1,0 +1,5 @@
+// Empty stub. smui-theme@9.0.4's _style.scss does `@use '@smui/flyout-panel/style'`
+// for every SMUI package, but its bundled fallback/ directory ships `quick-panel`
+// instead of `flyout-panel`, so the compile fails for projects (like this one)
+// that don't install that package. This mirrors what smui-theme's own fallback
+// stubs do. Remove once smui-theme ships a matching fallback.

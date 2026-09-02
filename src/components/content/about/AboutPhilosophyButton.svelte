@@ -46,5 +46,5 @@
   role="button"
   tabindex=""
 >
-  <Fab extended ripple="false" color="primary"><span class="background" style="background-image: url({image});"></span><Label>{$localize(headlineLocaleIdent)}</Label></Fab>
+  <Fab extended ripple="false" color="primary"><span class="background" style='background-image: url("{image}");'></span><Label>{$localize(headlineLocaleIdent)}</Label></Fab>
 </div>

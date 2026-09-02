@@ -18,7 +18,7 @@
       {#if link.type === 'web'}
         <Fab
           style="background-color: {link.bgColor};"
-          on:click={() => {
+          onclick={() => {
             window.open(link.url)
           }}
           extended><Icon class="{link.colorClass} mdc-fab__icon" icon={faGlobe}></Icon><Label style="color: {link.color}">{$localize(link.labelLocaleIdent)}</Label></Fab
@@ -27,7 +27,7 @@
       {#if link.type === 'github'}
         <Fab
           style="background-color: {link.bgColor};"
-          on:click={() => {
+          onclick={() => {
             window.open(link.url)
           }}
           extended><Icon class="{link.colorClass} mdc-fab__icon" icon={faGithub}></Icon><Label style="color: {link.color}">{$localize(link.labelLocaleIdent)}</Label></Fab

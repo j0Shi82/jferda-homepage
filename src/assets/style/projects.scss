@@ -1,6 +1,6 @@
 @use 'smui-theme';
 @use 'variables.scss';
-@use '@material/card/variables' as card-variables;
+@use '@smui/card/styles/variables' as card-variables;
 
 .jdev-route-projects {
   user-select: none;
@@ -90,6 +90,7 @@
     .jdev-project-front-content {
       background-color: rgba(card-variables.$outline-color, 25%);
       border-top: 1px solid card-variables.$outline-color;
+      padding: 0;
     }
 
     .jdev-card-headline {
@@ -145,6 +146,10 @@
       backface-visibility: hidden;
       transform: rotateY(180deg);
       // background: linear-gradient(0deg, rgba(230,230,230,0) 0%, rgba(230,230,230,0.8) 30%, rgba(230,230,230,0.95) 100%);
+
+      .smui-card__content {
+        padding: 0;
+      }
 
       .jdev-project-back-overlay {
         box-sizing: border-box;

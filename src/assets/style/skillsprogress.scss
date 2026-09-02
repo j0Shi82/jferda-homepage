@@ -1,5 +1,5 @@
 @use 'variables.scss' as variables;
-@use '@material/linear-progress/mixins' as linear-progress-mixins;
+@use '@smui/linear-progress/styles/mixins' as linear-progress-mixins;
 
 .jdev-skills-progress-cat {
   .mdc-linear-progress__bar.mdc-linear-progress__primary-bar {
@@ -22,6 +22,10 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .jdev-skills-progress-subcat-content {
+    --mdc-theme-surface: none;
   }
 
   .jdev-skills-progress-subcat-content:has(.jdev-skills-progress-logo) {
@@ -61,6 +65,8 @@
 
   .jdev-skills-progress {
     height: calc(variables.$skill-progress-height / 2);
+    --mdc-linear-progress-active-indicator-height: #{calc(variables.$skill-progress-height / 2)};
+    --mdc-linear-progress-track-height: #{calc(variables.$skill-progress-height / 2)};
 
     @each $tech in variables.$tech-list {
       &.#{$tech} {

@@ -1,8 +1,8 @@
 @use 'smui-theme';
-@use '@material/typography/_mixins' as typography-mixins;
+@use '@smui/common/typography/mixins' as typography-mixins;
 @use 'variables.scss' as variables;
-@use '@material/shape/_variables.scss' as shape-variables;
-@use '@material/fab/_variables.scss' as fab-variables;
+@use '@smui/common/shape/variables' as shape-variables;
+@use '@smui/fab/styles/variables' as fab-variables;
 
 @import 'tippy.js/animations/shift-away';
 

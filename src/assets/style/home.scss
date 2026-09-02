@@ -1,9 +1,9 @@
 @use 'smui-theme';
-@use '@material/drawer/_variables.scss' as drawer-variables;
-@use '@material/shape/_variables.scss' as shape-variables;
-@use '@material/top-app-bar/_variables.scss' as top-app-bar-variables;
+@use '@smui/drawer/styles/variables' as drawer-variables;
+@use '@smui/common/shape/variables' as shape-variables;
+@use '@smui/top-app-bar/styles/variables' as top-app-bar-variables;
 @use 'variables.scss' as variables;
-@use '@material/typography/mixins.scss' as typography-mixins;
+@use '@smui/common/typography/mixins' as typography-mixins;
 
 .jdev-route-home {
   min-height: calc(100vh - #{top-app-bar-variables.$dense-row-height});

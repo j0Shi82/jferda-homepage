@@ -60,8 +60,8 @@
           <ImageListImage
             src={item.thumb}
             tag="div"
-            style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url({item.thumb});"
-            on:click={() => {
+            style="animation-delay: {animationParams.content.delay + animationParams.content.iterationDelay * i}ms; background-size: contain; background-image: url('{item.thumb}');"
+            onclick={() => {
               openGallery(i)
             }}
           />

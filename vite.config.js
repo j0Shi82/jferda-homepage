@@ -27,6 +27,17 @@ export default defineConfig(({ mode }) => ({
     preprocessorOptions: {
       scss: {
         api: 'modern',
+        // SMUI 9 does not export its MDC Sass internals, and those files import
+        // each other with extensionless bare specifiers. Vite's own Sass resolver
+        // goes through the package exports map and rejects both, so resolve
+        // @smui/@material specifiers as plain file paths the way the smui-theme
+        // CLI does, and let Sass apply its usual partial/extension rules.
+        importers: [{
+          findFileUrl(url) {
+            if (!url.startsWith('@smui/') && !url.startsWith('@material/')) return null
+            return new URL(`./node_modules/${url}`, import.meta.url)
+          },
+        }],
         // `@use 'variables.scss'`, `@import 'src/assets/style/...'` and bare
         // package imports (@material/*, tippy.js, glightbox) respectively.
         loadPaths: [

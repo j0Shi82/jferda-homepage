@@ -1,8 +1,8 @@
 @use 'sass:color';
 
-@use '@material/theme/color-palette';
+@use '@smui/common/theme/color-palette';
 
-@use '@material/theme/index' as theme with (
+@use '@smui/common/theme/index' as theme with (
   $primary: color-palette.$light-green-700,
   $secondary: color-palette.$grey-700,
   $background: color-palette.$grey-900,
@@ -14,7 +14,7 @@
   // $on-error : black,
 );
 
-@use '@material/theme/styles';
+@use '@smui/common/theme/styles';
 
 @use '@material/layout-grid/index' as layout-grid with (
   $breakpoints: (
@@ -24,4 +24,4 @@
   )
 );
 
-@forward '@material/theme/index';
+@forward '@smui/common/theme/index';

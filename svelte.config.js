@@ -1,22 +1,9 @@
-import { fileURLToPath } from 'node:url'
-import sveltePreprocess from 'svelte-preprocess'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
-const resolvePath = (relative) => fileURLToPath(new URL(relative, import.meta.url))
-
-// Lives in svelte.config.js rather than inline in vite.config.js so the Svelte
-// language server (IDE) picks up the same preprocessor the build uses.
-// svelte-preprocess (not vitePreprocess) because the components rely on its
-// `<style global>` support, which vitePreprocess does not implement.
+// Lives here rather than inline in vite.config.js so the Svelte language server
+// (IDE) picks up the same preprocessor the build uses. vitePreprocess runs
+// <style lang="scss"> through Vite's own CSS pipeline (see css.preprocessorOptions
+// in vite.config.js) and handles the TypeScript that @smui/* ships in its components.
 export default {
-  preprocess: sveltePreprocess({
-    scss: {
-      // `@use 'smui-theme'`, `@import 'src/assets/style/...'` and bare package
-      // imports respectively.
-      includePaths: [
-        resolvePath('./src/assets/style'),
-        resolvePath('.'),
-        resolvePath('./node_modules'),
-      ],
-    },
-  }),
+  preprocess: vitePreprocess(),
 }

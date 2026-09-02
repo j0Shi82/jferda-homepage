@@ -1,7 +1,7 @@
 <script>
   import { animationsActive } from 'utils/imports/store'
   import { svelteTransitionFly } from 'utils/imports/svelte'
-  // material
+// material
   import { Icon } from '@smui/fab'
   import LinearProgress from '@smui/linear-progress'
 
@@ -26,7 +26,7 @@
 </script>
 
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-1-phone {upcoming}" {style}>
-  <div class="jdev-skills-progress-logo" title={logoAlt} style="background-image: url({logoSrc}); transform: scale({currentScale})" />
+  <div class="jdev-skills-progress-logo" title={logoAlt} style='background-image: url("{logoSrc}"); transform: scale({currentScale})'></div>
 </div>
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-5-tablet mdc-layout-grid__cell--span-3-phone jdev-skills-progress-align {upcoming}" {style}>
   <LinearProgress class="jdev-skills-progress {themeClass}" aria-label={logoAlt} progress={currentProgress} bind:this={progressEl} />
@@ -47,10 +47,6 @@
 
 <style lang="scss">
   @import 'src/assets/style/variables.scss';
-  :global(.jdev-skills-progress .mdc-linear-progress__bar-inner) {
-    border-top-width: $skill-progress-height;
-    border-top-style: solid;
-  }
 
   .jdev-skills-progress-logo {
     transition: transform var(--jdev-skills-progress-duration) ease-in-out;

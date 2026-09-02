@@ -12,6 +12,10 @@
 .jdev-route-skills {
   min-height: 90vh;
 
+  .smui-paper {
+    padding: 0;
+  }
+
   .mdc-tab-bar {
     background-color: smui-theme.$surface;
   }

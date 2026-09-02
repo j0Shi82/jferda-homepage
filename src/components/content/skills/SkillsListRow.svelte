@@ -14,7 +14,7 @@
 </script>
 
 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-1-phone {themeClass}" {style}>
-  <div class="jdev-skills-row-logo" title={logoAlt} style="background-image: url({logoSrc}); transform: scale({currentScale});" />
+  <div class="jdev-skills-row-logo" title={logoAlt} style='background-image: url("{logoSrc}"); transform: scale({currentScale});'></div>
 </div>
 
 <style lang="scss">

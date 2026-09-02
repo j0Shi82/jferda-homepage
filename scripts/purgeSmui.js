@@ -1,17 +1,30 @@
 import fs from 'fs'
+import path from 'path'
 import { PurgeCSS } from 'purgecss'
+
+// The class names SMUI emits live in its own sources, so they have to be scanned
+// or the purge strips the components' styles. Under pnpm, node_modules/@smui/* are
+// symlinks into the store and glob will not descend into them, so resolve each
+// package to its real directory and glob that instead of './node_modules/@smui/**'.
+// Every installed @smui package, not just the directly declared ones: components
+// like tab-bar render classes that live in their transitive deps (tab-scroller,
+// tab-indicator, ripple), and those would otherwise be purged away.
+const scannedPackages = [
+  ...fs.readdirSync('node_modules/@smui').map(name => `@smui/${name}`),
+  'glightbox',
+]
+
+const packageContent = scannedPackages.flatMap((name) => {
+  const dir = fs.realpathSync(path.join('node_modules', name)).split(path.sep).join('/')
+  return [`${dir}/**/*.svelte`, `${dir}/**/*.js`, `${dir}/**/*.ts`]
+})
 
 const purgeCSSResult = await new PurgeCSS().purge({
   content: [
     './src/**/*.html',
     './src/**/*.svelte',
     './src/**/*.js',
-    './node_modules/@smui/**/*.svelte',
-    './node_modules/@smui/**/*.js',
-    './node_modules/@smui/**/*.ts',
-    './node_modules/@material/**/*.js',
-    './node_modules/@material/**/*.ts',
-    './node_modules/glightbox/**/*.js',
+    ...packageContent,
   ],
   safelist: [
     /g(lightbox|slide|fade|zoom|loader|overlay|container|close|prev|next|btn)/, /^svelte-/,

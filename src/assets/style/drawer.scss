@@ -1,6 +1,7 @@
 @use 'smui-theme';
-@use '@material/drawer/_variables.scss' as drawer-variables;
-@use '@material/drawer/_mixins.scss' as drawer-mixins;
+@use '@smui/drawer/styles/variables' as drawer-variables;
+@use '@smui/drawer/styles/mixins' as drawer-mixins;
+@use 'variables.scss' as variables;
 
 .mdc-drawer .mdc-deprecated-list-item__graphic > svg {
   fill: rgba(smui-theme.$background, 0.6);
@@ -60,4 +61,22 @@
 
 .mdc-deprecated-list-divider {
   @include drawer-mixins.border-color(drawer-variables.$divider-color);
+}
+
+// Moved out of the Drawer.svelte <style global> block: these target MDC classes
+// rendered by @smui/drawer, so they must stay unscoped.
+.mdc-drawer {
+  @media #{variables.$breakpoint-mobile} {
+    width: 100%;
+  }
+}
+
+.mdc-drawer--modal {
+  /* This is not needed for a page-wide modal. */
+  position: absolute;
+}
+
+.mdc-drawer-scrim {
+  /* This is not needed for a page-wide modal. */
+  position: absolute;
 }

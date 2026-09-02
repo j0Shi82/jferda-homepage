@@ -1,16 +1,18 @@
 # pnpm 11 no longer reads pnpm-specific settings from .npmrc; they live here.
 
-# @material/* are mostly transitive deps (via @smui/*), but the Sass sources
-# import them by bare specifier with node_modules on the load path, so they must
-# be hoisted into the root node_modules to resolve.
+# The Sass sources import these by bare specifier with node_modules on the load
+# path, and Sass resolves them as plain file paths rather than through node
+# resolution, so every package reachable from the stylesheets must sit in the
+# root node_modules -- including ones that are only transitive deps of @smui/*
+# (e.g. @smui/touch-target, pulled in by @smui/button's styles).
 publicHoistPattern:
   - '@material/*'
+  - '@smui/*'
 
 # None of these need their install scripts to run (esbuild's binaries come from
 # its optional platform packages). Declared explicitly so `pnpm install` does
 # not fail with ERR_PNPM_IGNORED_BUILDS.
 allowBuilds:
   '@parcel/watcher': false
-  esbuild: false
   es5-ext: false
-  svelte-preprocess: false
+  esbuild: false

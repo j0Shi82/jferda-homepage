@@ -15,6 +15,8 @@
   // components
   import Icon from 'components/utilities/atoms/FaIcon.svelte'
 
+  import 'assets/style/header.scss'
+
   let pageTitle
   let canonical
   let isHomeRoute = false
@@ -57,7 +59,7 @@
     <Section align="start" class="section-left">
       <div class="jdev-avatar">
         <div
-          style="background-image: url({avatarImage});"
+          style='background-image: url("{avatarImage}");'
           on:click={() => {
             routerPush(getLocalizedRoute('home'))
           }}
@@ -72,8 +74,7 @@
         <IconButton
           class="material-icons jdev-drawer-toggle"
           aria-label={$localize(!$menuMobileState ? 'header.label.menu_open' : 'header.label.menu_close')}
-          on:click={menuMobileState.set(!$menuMobileState)}
-          on:keypress={menuMobileState.set(!$menuMobileState)}
+          onclick={() => menuMobileState.set(!$menuMobileState)}
         >
           {#if !$menuMobileState}
             <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#FFFFFF"
@@ -93,7 +94,7 @@
       </Section>
     {/if}
     <Section align="end" toolbar>
-      <div class="jdev-ukraine-heart-icon" style=" background-image: url({ukraineHeartIcon}); flex: 0 1 48px;"></div>
+      <div class="jdev-ukraine-heart-icon" style=' background-image: url("{ukraineHeartIcon}"); flex: 0 1 48px;'></div>
       <a href="https://www.xing.com/profile/Janosch_Ferda" target="_blank" rel="noreferrer">
         <IconButton class="material-icons" aria-label={$localize('header.label.github')}><Icon icon={faXing}></Icon></IconButton>
       </a>
@@ -109,38 +110,3 @@
     </Section>
   </Row>
 </TopAppBar>
-
-<style lang="scss" global>
-  .mdc-top-app-bar {
-    z-index: 7;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.75);
-
-    .jdev-title {
-      padding-left: 0;
-      width: 100%;
-      text-align: center;
-    }
-
-    .jdev-ukraine-heart-icon {
-      height: 100%;
-      width: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  @import 'src/assets/style/variables.scss';
-
-  .mdc-top-app-bar .jdev-drawer-toggle {
-    display: none;
-
-    @media #{$breakpoint-mobile} {
-      display: block;
-    }
-
-    @media #{$breakpoint-tablet} {
-      display: block;
-    }
-  }
-</style>

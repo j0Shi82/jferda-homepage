@@ -48,8 +48,8 @@
     })
 
     return () => {
-      if (observerLeft) observerLeft.unobserve(leftArrowOberserver)
-      if (observerRight) observerRight.unobserve(rightArrowOberserver)
+      if (observerLeft && leftArrowOberserver) observerLeft.unobserve(leftArrowOberserver)
+      if (observerRight && rightArrowOberserver) observerRight.unobserve(rightArrowOberserver)
     }
   })
 </script>
@@ -65,12 +65,14 @@
               >
             </LeadingIcon>
           </div>{/if}
-        <TabBar tabs={skillCategories} let:tab bind:active={currentCat}>
-          {#if tab === skillCategories[0]}<div class="jdev-scroll-start" bind:this={leftArrowOberserver} />{/if}
-          <Tab {tab}>
-            <TabLabel>{$localize(`skills.${tab}`)}</TabLabel>
-          </Tab>
-          {#if tab === [...skillCategories].pop()}<div class="jdev-scroll-end" bind:this={rightArrowOberserver} />{/if}
+        <TabBar tabs={skillCategories} bind:active={currentCat}>
+          {#snippet tab(tabKey)}
+            {#if tabKey === skillCategories[0]}<div class="jdev-scroll-start" bind:this={leftArrowOberserver}></div>{/if}
+            <Tab tab={tabKey}>
+              <TabLabel>{$localize(`skills.${tabKey}`)}</TabLabel>
+            </Tab>
+            {#if tabKey === [...skillCategories].pop()}<div class="jdev-scroll-end" bind:this={rightArrowOberserver}></div>{/if}
+          {/snippet}
         </TabBar>
         {#if showRightArrow}<div class="jdev-arrow jdev-right-arrow">
             <LeadingIcon class="material-icons">
